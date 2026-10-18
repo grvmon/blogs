@@ -38,7 +38,7 @@
     </div>
   </header>
 
-  <!-- Hero & Live Search Section (Inspired by SSI, Minimalist in acre&key) -->
+  <!-- Hero & Live Search Section (70/30 Whitespace Rule per Styleguide) -->
   <section class="blog-home-hero">
     <div class="hero-wrap">
       <div class="kicker-badge">Property Intelligence &amp; Research</div>
@@ -69,11 +69,11 @@
   <main id="main-content" class="container">
     <!-- Category Filter Strip -->
     <div class="category-filter-strip" role="group" aria-label="Filter articles by category">
-      <button class="cat-btn active" data-category="All" onclick="setCategoryFilter('All', this)">All Analyses</button>
-      <button class="cat-btn" data-category="Micro-Markets" onclick="setCategoryFilter('Micro-Markets', this)">Micro-Markets</button>
-      <button class="cat-btn" data-category="Valuation" onclick="setCategoryFilter('Valuation', this)">Valuation</button>
-      <button class="cat-btn" data-category="Asset Fundamentals" onclick="setCategoryFilter('Asset Fundamentals', this)">Asset Fundamentals</button>
-      <button class="cat-btn" data-category="Regulatory &amp; Tax" onclick="setCategoryFilter('Regulatory &amp; Tax', this)">Regulatory &amp; Tax</button>
+      <button type="button" class="cat-btn active" data-category="All" onclick="setCategoryFilter('All', this)">All Analyses</button>
+      <button type="button" class="cat-btn" data-category="Micro-Markets" onclick="setCategoryFilter('Micro-Markets', this)">Micro-Markets</button>
+      <button type="button" class="cat-btn" data-category="Valuation" onclick="setCategoryFilter('Valuation', this)">Valuation</button>
+      <button type="button" class="cat-btn" data-category="Asset Fundamentals" onclick="setCategoryFilter('Asset Fundamentals', this)">Asset Fundamentals</button>
+      <button type="button" class="cat-btn" data-category="Regulatory &amp; Tax" onclick="setCategoryFilter('Regulatory &amp; Tax', this)">Regulatory &amp; Tax</button>
     </div>
 
     <!-- 3-Column Responsive Cards Grid -->
@@ -81,8 +81,8 @@
       
       <!-- Article 1 -->
       <article class="blog-card" data-category="Micro-Markets">
-        <a href="posts/hello-world.html" class="blog-card-media" aria-label="Read Whitefield Micro-Market Yield &amp; Capital Appreciation Dossier">
-          <svg class="blog-card-img" viewBox="0 0 400 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <a href="posts/hello-world.html" class="blog-card-media" aria-label="Read Whitefield micro-market yield &amp; capital appreciation dossier">
+          <svg class="blog-card-img" viewBox="0 0 400 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <rect width="400" height="220" fill="#2B2D31"/>
             <path d="M0,160 L120,90 L240,130 L400,40 L400,220 L0,220 Z" fill="#804526" opacity="0.45"/>
             <path d="M0,180 L140,120 L280,160 L400,90 L400,220 L0,220 Z" fill="#E88D67" opacity="0.3"/>
@@ -99,13 +99,13 @@
             <span>Bengaluru East</span>
           </div>
           <h2 class="blog-card-title">
-            <a href="posts/hello-world.html">Whitefield Micro-Market Yield &amp; Capital Appreciation Dossier (2026–2028)</a>
+            <a href="posts/hello-world.html">Whitefield micro-market yield &amp; capital appreciation dossier (2026–2028)</a>
           </h2>
           <p class="blog-card-excerpt">
             A clinical breakdown of rental yields, Phase 2 Purple Line metro ridership impacts, and structural price corrections across Grade-A inventory in Whitefield.
           </p>
           <a href="posts/hello-world.html" class="blog-card-readmore">
-            <span>Read Analysis</span>
+            <span>Read analysis</span>
             <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
@@ -113,8 +113,8 @@
 
       <!-- Article 2 -->
       <article class="blog-card" data-category="Valuation">
-        <a href="posts/hello-world.html" class="blog-card-media" aria-label="Read Valuation Matrix: Decoupling Developer Premiums">
-          <svg class="blog-card-img" viewBox="0 0 400 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <a href="posts/hello-world.html" class="blog-card-media" aria-label="Read Valuation matrix: Decoupling developer premiums from structural reality">
+          <svg class="blog-card-img" viewBox="0 0 400 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <rect width="400" height="220" fill="#383b42"/>
             <line x1="40" y1="40" x2="360" y2="40" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
             <line x1="40" y1="90" x2="360" y2="90" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
@@ -135,13 +135,13 @@
             <span>Framework</span>
           </div>
           <h2 class="blog-card-title">
-            <a href="posts/hello-world.html">Valuation Matrix: Decoupling Developer Premiums from Structural Reality</a>
+            <a href="posts/hello-world.html">Valuation matrix: Decoupling developer premiums from structural reality</a>
           </h2>
           <p class="blog-card-excerpt">
-            How to evaluate raw land component value against super built-up loading, ensuring you never overpay for ephemeral lifestyle marketing fluff.
+            How to evaluate raw land component value against super built-up loading, ensuring you never overpay for marketing narratives.
           </p>
           <a href="posts/hello-world.html" class="blog-card-readmore">
-            <span>Read Analysis</span>
+            <span>Read analysis</span>
             <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
@@ -149,8 +149,8 @@
 
       <!-- Article 3 -->
       <article class="blog-card" data-category="Asset Fundamentals">
-        <a href="posts/hello-world.html" class="blog-card-media" aria-label="Read Grade-A Asset Fundamentals">
-          <svg class="blog-card-img" viewBox="0 0 400 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <a href="posts/hello-world.html" class="blog-card-media" aria-label="Read Grade-A asset fundamentals: The 5 non-negotiable structural criteria">
+          <svg class="blog-card-img" viewBox="0 0 400 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <rect width="400" height="220" fill="#1e2229"/>
             <polygon points="200,30 340,180 60,180" fill="none" stroke="#804526" stroke-width="2"/>
             <circle cx="200" cy="115" r="45" fill="rgba(232,141,103,0.15)"/>
@@ -167,13 +167,13 @@
             <span>Technical Audit</span>
           </div>
           <h2 class="blog-card-title">
-            <a href="posts/hello-world.html">Grade-A Asset Fundamentals: The 5 Non-Negotiable Structural Criteria</a>
+            <a href="posts/hello-world.html">Grade-A asset fundamentals: The 5 non-negotiable structural criteria</a>
           </h2>
           <p class="blog-card-excerpt">
-            From core-to-perimeter floor plate ratios to dedicated transformer tap-offs: an engineering checklist for institutional-quality residential assets.
+            From core-to-perimeter floor plate ratios to dedicated transformer tap-offs: an engineering checklist for institutional-grade residential assets.
           </p>
           <a href="posts/hello-world.html" class="blog-card-readmore">
-            <span>Read Analysis</span>
+            <span>Read analysis</span>
             <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
@@ -181,8 +181,8 @@
 
       <!-- Article 4 -->
       <article class="blog-card" data-category="Regulatory &amp; Tax">
-        <a href="posts/hello-world.html" class="blog-card-media" aria-label="Read Capital Gains Tax Strategy">
-          <svg class="blog-card-img" viewBox="0 0 400 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <a href="posts/hello-world.html" class="blog-card-media" aria-label="Read Capital gains tax strategy (Section 54F) for high-value property divestment">
+          <svg class="blog-card-img" viewBox="0 0 400 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <rect width="400" height="220" fill="#2d3038"/>
             <circle cx="150" cy="110" r="60" fill="none" stroke="#804526" stroke-width="2"/>
             <circle cx="230" cy="110" r="60" fill="none" stroke="#E88D67" stroke-width="2"/>
@@ -199,13 +199,13 @@
             <span>Taxation</span>
           </div>
           <h2 class="blog-card-title">
-            <a href="posts/hello-world.html">Capital Gains Tax Strategy (Section 54F) for High-Value Property Divestment</a>
+            <a href="posts/hello-world.html">Capital gains tax strategy (Section 54F) for high-value property divestment</a>
           </h2>
           <p class="blog-card-excerpt">
             Navigating statutory timelines, capital gains account schemes, and reinvestment ceilings to preserve generational family wealth.
           </p>
           <a href="posts/hello-world.html" class="blog-card-readmore">
-            <span>Read Analysis</span>
+            <span>Read analysis</span>
             <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
@@ -213,8 +213,8 @@
 
       <!-- Article 5 -->
       <article class="blog-card" data-category="Micro-Markets">
-        <a href="posts/hello-world.html" class="blog-card-media" aria-label="Read North Bengaluru Aerotropolis Corridor">
-          <svg class="blog-card-img" viewBox="0 0 400 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <a href="posts/hello-world.html" class="blog-card-media" aria-label="Read North Bengaluru aerotropolis corridor: Clinical yield projections">
+          <svg class="blog-card-img" viewBox="0 0 400 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <rect width="400" height="220" fill="#22252a"/>
             <path d="M40,180 C120,120 220,160 360,60" fill="none" stroke="#E88D67" stroke-width="3"/>
             <circle cx="360" cy="60" r="8" fill="#804526"/>
@@ -231,13 +231,13 @@
             <span>North Bengaluru</span>
           </div>
           <h2 class="blog-card-title">
-            <a href="posts/hello-world.html">North Bengaluru Aerotropolis Corridor: Clinical Yield Projections</a>
+            <a href="posts/hello-world.html">North Bengaluru aerotropolis corridor: Clinical yield projections</a>
           </h2>
           <p class="blog-card-excerpt">
             Evaluating the Bellary Road and Satellite Ring Road intersection: commercial absorption cycles versus speculative residential inventory.
           </p>
           <a href="posts/hello-world.html" class="blog-card-readmore">
-            <span>Read Analysis</span>
+            <span>Read analysis</span>
             <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
@@ -245,8 +245,8 @@
 
       <!-- Article 6 -->
       <article class="blog-card" data-category="Regulatory &amp; Tax">
-        <a href="posts/hello-world.html" class="blog-card-media" aria-label="Read RERA Compliance Checklist">
-          <svg class="blog-card-img" viewBox="0 0 400 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <a href="posts/hello-world.html" class="blog-card-media" aria-label="Read The RERA compliance checklist: Mitigating title and encumbrance risks">
+          <svg class="blog-card-img" viewBox="0 0 400 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <rect width="400" height="220" fill="#30333b"/>
             <rect x="70" y="40" width="260" height="140" fill="none" stroke="#804526" stroke-width="1.5"/>
             <line x1="100" y1="80" x2="300" y2="80" stroke="#E88D67" stroke-width="1.5"/>
@@ -264,13 +264,13 @@
             <span>Due Diligence</span>
           </div>
           <h2 class="blog-card-title">
-            <a href="posts/hello-world.html">The RERA Compliance Checklist: Mitigating Title and Encumbrance Risks</a>
+            <a href="posts/hello-world.html">The RERA compliance checklist: Mitigating title and encumbrance risks</a>
           </h2>
           <p class="blog-card-excerpt">
             How to verify 30-year mother deed continuity, khata certificates, sanctioned master plans, and escrow disbursement ratios prior to commitment.
           </p>
           <a href="posts/hello-world.html" class="blog-card-readmore">
-            <span>Read Analysis</span>
+            <span>Read analysis</span>
             <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
@@ -278,7 +278,7 @@
 
     </div>
 
-    <!-- No Results Message -->
+    <!-- No Results State -->
     <div id="noResults" style="display:none; text-align:center; padding: 4rem 1rem; color: var(--neutral-grey);">
       <p style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--obsidian-black); margin-bottom: 0.5rem;">No matching property dossiers found.</p>
       <p>Try refining your search keyword or selecting "All Analyses".</p>
@@ -331,7 +331,6 @@
     function setCategoryFilter(category, buttonElement) {
       activeCategory = category;
       
-      // Update button active state
       document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
       buttonElement.classList.add('active');
 
