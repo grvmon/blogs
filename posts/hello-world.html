@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building a Lightweight, Modern Blog with Pure HTML &amp; CSS — Gaurav Mongia</title>
+  <meta name="description" content="Why returning to native HTML and CSS primitives can create a faster, cleaner, and timeless blogging experience.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#article-content" class="skip-link">Skip to content</a>
+
+  <!-- Global Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="../index.html" class="brand" aria-label="Gaurav's Blog Homepage">
+        <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path>
+          <path d="M6 6h10"></path>
+          <path d="M6 10h10"></path>
+        </svg>
+        <span>Gaurav's Blog</span>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="../index.html">Articles</a></li>
+          <li><a href="https://github.com/grvmon/blogs" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light and dark mode" title="Toggle theme">
+              <svg id="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Article Main -->
+  <main id="article-content" class="main-content">
+    <div class="container prose">
+      <nav aria-label="Breadcrumb">
+        <a href="../index.html" class="back-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:1rem;height:1rem;">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          Back to all articles
+        </a>
+      </nav>
+
+      <article>
+        <!-- Header -->
+        <header class="article-header">
+          <div class="post-meta">
+            <time datetime="2026-10-18">October 18, 2026</time>
+            <span class="post-meta-dot" aria-hidden="true">•</span>
+            <span>4 min read</span>
+            <span class="post-meta-dot" aria-hidden="true">•</span>
+            <span>By Gaurav Mongia</span>
+          </div>
+
+          <h1 class="article-title">Building a Lightweight, Modern Blog with Pure HTML &amp; CSS</h1>
+
+          <div class="post-tags">
+            <span class="tag">Web Dev</span>
+            <span class="tag">HTML5</span>
+            <span class="tag">Performance</span>
+          </div>
+        </header>
+
+        <!-- Body -->
+        <div class="article-body">
+          <p>
+            In an era where personal websites often require multiple build tools, complex bundlers, and hundreds of megabytes of <code>node_modules</code>, there is an understated joy in stepping back and crafting something using pure, semantic HTML and modern CSS.
+          </p>
+
+          <h2>The Case for Radical Simplicity</h2>
+          <p>
+            When you write standard HTML, you are writing for the open web. There are no breaking API changes between framework major versions, no hydration mismatches, and no build pipeline that randomly breaks three years down the line when a dependency gets deprecated.
+          </p>
+
+          <blockquote>
+            "Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away."
+            <br>
+            <span style="font-size: 0.875em; opacity: 0.8; font-style: normal;">— Antoine de Saint-Exupéry</span>
+          </blockquote>
+
+          <h2>Modern Web Capabilities in CSS</h2>
+          <p>
+            CSS has evolved tremendously over the past few years. Features that used to require custom JavaScript or heavy utility libraries are now native to the browser:
+          </p>
+
+          <ul>
+            <li><strong>CSS Custom Properties (Variables):</strong> Effortless theming with instant dark/light mode toggles.</li>
+            <li><strong>Modern Text Wrapping:</strong> Using <code>text-wrap: balance</code> on headlines ensures visual symmetry without ugly line runts, while <code>text-wrap: pretty</code> optimizes body paragraphs to prevent orphaned words.</li>
+            <li><strong>Fluid Typography:</strong> With <code>clamp()</code>, font sizes scale smoothly across phone screens and desktop monitors without requiring dozens of media queries.</li>
+            <li><strong>Backdrop Filters:</strong> Subtle frosted glass effects (<code>backdrop-filter: blur(12px)</code>) on sticky navigation bars.</li>
+          </ul>
+
+          <div class="callout">
+            <strong>Pro Tip: Zero Build Step</strong>
+            This site has zero build steps. You can double click <code>index.html</code> right now from your file manager or run a simple local web server and it renders instantly.
+          </div>
+
+          <h2>Code Example: Semantic Article Structure</h2>
+          <p>
+            Here is a snippet showing how clean and readable semantic HTML structure is:
+          </p>
+
+          <pre><code>&lt;article class="post-card"&gt;
+  &lt;div class="post-meta"&gt;
+    &lt;time datetime="2026-10-18"&gt;October 18, 2026&lt;/time&gt;
+    &lt;span&gt;4 min read&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;h3&gt;
+    &lt;a href="posts/article.html"&gt;Your Article Title&lt;/a&gt;
+  &lt;/h3&gt;
+  &lt;p&gt;A short excerpt highlighting the key takeaway...&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+
+          <h2>Hosting for Free on GitHub Pages</h2>
+          <p>
+            Because this blog consists entirely of static HTML, CSS, and lightweight vanilla JavaScript, it can be hosted on GitHub Pages for free with custom domain support and automatic SSL.
+          </p>
+          <ol>
+            <li>Commit and push your files to the repository.</li>
+            <li>Go to <strong>Settings &gt; Pages</strong> in your GitHub repo.</li>
+            <li>Set the source to <strong>Deploy from a branch</strong>, choose <strong>main</strong> and <strong>/ (root)</strong>.</li>
+            <li>Your site will be live across the globe within seconds.</li>
+          </ol>
+        </div>
+
+        <!-- Author Card -->
+        <div class="author-card">
+          <div class="author-avatar" aria-hidden="true">GM</div>
+          <div class="author-info">
+            <h3>Gaurav Mongia</h3>
+            <p>Engineer, writer, and creator. Sharing thoughts on modern web development, software architecture, and clean design.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content prose">
+      <p>&copy; 2026 Gaurav Mongia. Built with semantic HTML &amp; modern CSS.</p>
+      <ul class="footer-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="https://github.com/grvmon/blogs" target="_blank" rel="noopener noreferrer">Source Code</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Theme Toggle Script -->
+  <script>
+    (function() {
+      const toggleBtn = document.getElementById('theme-toggle');
+      const root = document.documentElement;
+
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        root.setAttribute('data-theme', savedTheme);
+      }
+
+      function updateIcon() {
+        const isDark = root.getAttribute('data-theme') === 'dark' || 
+          (!root.getAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        
+        toggleBtn.innerHTML = isDark
+          ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:1.125rem;height:1.125rem;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>'
+          : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:1.125rem;height:1.125rem;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>';
+      }
+
+      updateIcon();
+
+      toggleBtn.addEventListener('click', () => {
+        const currentTheme = root.getAttribute('data-theme');
+        let nextTheme = 'light';
+        if (!currentTheme) {
+          nextTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'light' : 'dark';
+        } else {
+          nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        }
+        root.setAttribute('data-theme', nextTheme);
+        localStorage.setItem('theme', nextTheme);
+        updateIcon();
+      });
+    })();
+  </script>
+</body>
+</html>
