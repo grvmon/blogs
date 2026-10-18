@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gaurav Mongia — Blog & Notes</title>
-  <meta name="description" content="Personal blog, thoughts on engineering, modern web technologies, and clean design.">
+  <title>Property Intelligence &amp; Market Research | acre&amp;key</title>
+  <meta name="description" content="Clinical property advisory, valuation matrices, and micro-market intelligence for institutional and high-net-worth asset acquisitions.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,167 +14,358 @@
   <!-- Global Header -->
   <header class="site-header">
     <div class="container nav-container">
-      <a href="index.html" class="brand" aria-label="Gaurav's Blog Homepage">
-        <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path>
-          <path d="M6 6h10"></path>
-          <path d="M6 10h10"></path>
-        </svg>
-        <span>Gaurav's Blog</span>
+      <a href="index.html" class="nav-brand" aria-label="acre and key home">
+        <span class="brand-logo-text">acre&amp;key</span>
       </a>
 
       <nav aria-label="Primary Navigation">
         <ul class="nav-links">
-          <li><a href="index.html" aria-current="page">Articles</a></li>
-          <li><a href="https://github.com/grvmon/blogs" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://acrenkey.com/#who-were-for">Clientele</a></li>
+          <li><a href="https://acrenkey.com/#framework">Decision Framework</a></li>
+          <li><a href="https://acrenkey.com/#core">CORE</a></li>
+          <li><a href="index.html" class="active" aria-current="page">Articles</a></li>
           <li>
-            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light and dark mode" title="Toggle theme">
-              <svg id="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="5"></circle>
-                <line x1="12" y1="1" x2="12" y2="3"></line>
-                <line x1="12" y1="21" x2="12" y2="23"></line>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                <line x1="1" y1="12" x2="3" y2="12"></line>
-                <line x1="21" y1="12" x2="23" y2="12"></line>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            <a href="https://acrenkey.com/" class="primary-cta-btn">
+              <span>Request Advisory Call</span>
+              <svg class="cta-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line>
+                <polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline>
               </svg>
-            </button>
+            </a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container prose">
-      <h1 class="hero-title">Thoughts, code &amp; design reflections.</h1>
-      <p class="hero-subtitle">
-        A minimalist journal exploring modern frontend, web performance, software craft, and thoughtful user interfaces.
+  <!-- Hero & Live Search Section (Inspired by SSI, Minimalist in acre&key) -->
+  <section class="blog-home-hero">
+    <div class="hero-wrap">
+      <div class="kicker-badge">Property Intelligence &amp; Research</div>
+      <h1>Clinical analysis of Indian micro-markets.</h1>
+      <p class="hero-lead">
+        Evidence-based valuations, micro-market yield matrices, and structural asset fundamentals curated for high-net-worth property acquisitions.
       </p>
+
+      <!-- Instant Live Search Bar -->
+      <div class="search-container">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input 
+          type="text" 
+          id="blogSearchInput" 
+          class="search-input" 
+          placeholder="Search dossiers (e.g., Whitefield, valuation, capital gains, RERA)..."
+          aria-label="Search articles and dossiers"
+          oninput="handleSearchAndFilter()"
+        >
+      </div>
     </div>
   </section>
 
-  <!-- Main Content & Articles Feed -->
-  <main id="main-content" class="main-content">
-    <div class="container prose">
-      <div class="feed-header">
-        <h2 class="feed-title">Recent Articles</h2>
-        <span class="feed-count">3 Posts</span>
-      </div>
+  <!-- Main Content Container -->
+  <main id="main-content" class="container">
+    <!-- Category Filter Strip -->
+    <div class="category-filter-strip" role="group" aria-label="Filter articles by category">
+      <button class="cat-btn active" data-category="All" onclick="setCategoryFilter('All', this)">All Analyses</button>
+      <button class="cat-btn" data-category="Micro-Markets" onclick="setCategoryFilter('Micro-Markets', this)">Micro-Markets</button>
+      <button class="cat-btn" data-category="Valuation" onclick="setCategoryFilter('Valuation', this)">Valuation</button>
+      <button class="cat-btn" data-category="Asset Fundamentals" onclick="setCategoryFilter('Asset Fundamentals', this)">Asset Fundamentals</button>
+      <button class="cat-btn" data-category="Regulatory &amp; Tax" onclick="setCategoryFilter('Regulatory &amp; Tax', this)">Regulatory &amp; Tax</button>
+    </div>
 
-      <div class="posts-grid">
-        <!-- Article 1 -->
-        <article class="post-card">
-          <div class="post-meta">
+    <!-- 3-Column Responsive Cards Grid -->
+    <div class="blog-grid" id="blogGrid">
+      
+      <!-- Article 1 -->
+      <article class="blog-card" data-category="Micro-Markets">
+        <a href="posts/hello-world.html" class="blog-card-media" aria-label="Read Whitefield Micro-Market Yield &amp; Capital Appreciation Dossier">
+          <svg class="blog-card-img" viewBox="0 0 400 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="220" fill="#2B2D31"/>
+            <path d="M0,160 L120,90 L240,130 L400,40 L400,220 L0,220 Z" fill="#804526" opacity="0.45"/>
+            <path d="M0,180 L140,120 L280,160 L400,90 L400,220 L0,220 Z" fill="#E88D67" opacity="0.3"/>
+            <circle cx="280" cy="70" r="32" fill="#E88D67" opacity="0.25"/>
+          </svg>
+          <span class="cat-badge">Micro-Markets</span>
+        </a>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
             <time datetime="2026-10-18">October 18, 2026</time>
-            <span class="post-meta-dot" aria-hidden="true">•</span>
-            <span>4 min read</span>
-          </div>
-          <h3 class="post-card-title">
-            <a href="posts/hello-world.html">Building a Lightweight, Modern Blog with Pure HTML &amp; CSS</a>
-          </h3>
-          <p class="post-excerpt">
-            Why stripping away heavy javascript frameworks and returning to native web primitives can lead to faster, more resilient, and easily maintainable personal blogs.
-          </p>
-          <div class="post-tags">
-            <span class="tag">Web Dev</span>
-            <span class="tag">HTML5</span>
-            <span class="tag">Performance</span>
-          </div>
-        </article>
-
-        <!-- Article 2 -->
-        <article class="post-card">
-          <div class="post-meta">
-            <time datetime="2026-10-10">October 10, 2026</time>
-            <span class="post-meta-dot" aria-hidden="true">•</span>
+            <span class="meta-sep" aria-hidden="true">•</span>
             <span>6 min read</span>
+            <span class="meta-sep" aria-hidden="true">•</span>
+            <span>Bengaluru East</span>
           </div>
-          <h3 class="post-card-title">
-            <a href="posts/hello-world.html">The Art of Typography: Designing for Reading Comfort</a>
-          </h3>
-          <p class="post-excerpt">
-            Exploring line-length constraints, balanced headlines, orphan-free paragraphs with modern CSS text-wrap, and fluid type scaling across viewports.
+          <h2 class="blog-card-title">
+            <a href="posts/hello-world.html">Whitefield Micro-Market Yield &amp; Capital Appreciation Dossier (2026–2028)</a>
+          </h2>
+          <p class="blog-card-excerpt">
+            A clinical breakdown of rental yields, Phase 2 Purple Line metro ridership impacts, and structural price corrections across Grade-A inventory in Whitefield.
           </p>
-          <div class="post-tags">
-            <span class="tag">Typography</span>
-            <span class="tag">CSS</span>
-            <span class="tag">Design</span>
-          </div>
-        </article>
+          <a href="posts/hello-world.html" class="blog-card-readmore">
+            <span>Read Analysis</span>
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </article>
 
-        <!-- Article 3 -->
-        <article class="post-card">
-          <div class="post-meta">
-            <time datetime="2026-09-28">September 28, 2026</time>
-            <span class="post-meta-dot" aria-hidden="true">•</span>
-            <span>5 min read</span>
+      <!-- Article 2 -->
+      <article class="blog-card" data-category="Valuation">
+        <a href="posts/hello-world.html" class="blog-card-media" aria-label="Read Valuation Matrix: Decoupling Developer Premiums">
+          <svg class="blog-card-img" viewBox="0 0 400 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="220" fill="#383b42"/>
+            <line x1="40" y1="40" x2="360" y2="40" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+            <line x1="40" y1="90" x2="360" y2="90" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+            <line x1="40" y1="140" x2="360" y2="140" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+            <rect x="80" y="100" width="35" height="80" fill="#804526"/>
+            <rect x="150" y="70" width="35" height="110" fill="#E88D67"/>
+            <rect x="220" y="50" width="35" height="130" fill="#804526"/>
+            <rect x="290" y="30" width="35" height="150" fill="#E88D67"/>
+          </svg>
+          <span class="cat-badge">Valuation</span>
+        </a>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <time datetime="2026-10-12">October 12, 2026</time>
+            <span class="meta-sep" aria-hidden="true">•</span>
+            <span>8 min read</span>
+            <span class="meta-sep" aria-hidden="true">•</span>
+            <span>Framework</span>
           </div>
-          <h3 class="post-card-title">
-            <a href="posts/hello-world.html">Crafting Dark Mode That Doesn't Hurt Your Eyes</a>
-          </h3>
-          <p class="post-excerpt">
-            Deep pure blacks vs. warm dark slates: best practices for contrast ratios, elevation shadows, and smooth transitions when implementing color schemes.
+          <h2 class="blog-card-title">
+            <a href="posts/hello-world.html">Valuation Matrix: Decoupling Developer Premiums from Structural Reality</a>
+          </h2>
+          <p class="blog-card-excerpt">
+            How to evaluate raw land component value against super built-up loading, ensuring you never overpay for ephemeral lifestyle marketing fluff.
           </p>
-          <div class="post-tags">
-            <span class="tag">UI/UX</span>
-            <span class="tag">Color Theory</span>
+          <a href="posts/hello-world.html" class="blog-card-readmore">
+            <span>Read Analysis</span>
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Article 3 -->
+      <article class="blog-card" data-category="Asset Fundamentals">
+        <a href="posts/hello-world.html" class="blog-card-media" aria-label="Read Grade-A Asset Fundamentals">
+          <svg class="blog-card-img" viewBox="0 0 400 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="220" fill="#1e2229"/>
+            <polygon points="200,30 340,180 60,180" fill="none" stroke="#804526" stroke-width="2"/>
+            <circle cx="200" cy="115" r="45" fill="rgba(232,141,103,0.15)"/>
+            <line x1="200" y1="30" x2="200" y2="180" stroke="#E88D67" stroke-width="1" stroke-dasharray="4"/>
+          </svg>
+          <span class="cat-badge">Asset Fundamentals</span>
+        </a>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <time datetime="2026-10-04">October 4, 2026</time>
+            <span class="meta-sep" aria-hidden="true">•</span>
+            <span>5 min read</span>
+            <span class="meta-sep" aria-hidden="true">•</span>
+            <span>Technical Audit</span>
           </div>
-        </article>
-      </div>
+          <h2 class="blog-card-title">
+            <a href="posts/hello-world.html">Grade-A Asset Fundamentals: The 5 Non-Negotiable Structural Criteria</a>
+          </h2>
+          <p class="blog-card-excerpt">
+            From core-to-perimeter floor plate ratios to dedicated transformer tap-offs: an engineering checklist for institutional-quality residential assets.
+          </p>
+          <a href="posts/hello-world.html" class="blog-card-readmore">
+            <span>Read Analysis</span>
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Article 4 -->
+      <article class="blog-card" data-category="Regulatory &amp; Tax">
+        <a href="posts/hello-world.html" class="blog-card-media" aria-label="Read Capital Gains Tax Strategy">
+          <svg class="blog-card-img" viewBox="0 0 400 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="220" fill="#2d3038"/>
+            <circle cx="150" cy="110" r="60" fill="none" stroke="#804526" stroke-width="2"/>
+            <circle cx="230" cy="110" r="60" fill="none" stroke="#E88D67" stroke-width="2"/>
+            <line x1="60" y1="180" x2="340" y2="180" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+          </svg>
+          <span class="cat-badge">Regulatory &amp; Tax</span>
+        </a>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <time datetime="2026-09-24">September 24, 2026</time>
+            <span class="meta-sep" aria-hidden="true">•</span>
+            <span>7 min read</span>
+            <span class="meta-sep" aria-hidden="true">•</span>
+            <span>Taxation</span>
+          </div>
+          <h2 class="blog-card-title">
+            <a href="posts/hello-world.html">Capital Gains Tax Strategy (Section 54F) for High-Value Property Divestment</a>
+          </h2>
+          <p class="blog-card-excerpt">
+            Navigating statutory timelines, capital gains account schemes, and reinvestment ceilings to preserve generational family wealth.
+          </p>
+          <a href="posts/hello-world.html" class="blog-card-readmore">
+            <span>Read Analysis</span>
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Article 5 -->
+      <article class="blog-card" data-category="Micro-Markets">
+        <a href="posts/hello-world.html" class="blog-card-media" aria-label="Read North Bengaluru Aerotropolis Corridor">
+          <svg class="blog-card-img" viewBox="0 0 400 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="220" fill="#22252a"/>
+            <path d="M40,180 C120,120 220,160 360,60" fill="none" stroke="#E88D67" stroke-width="3"/>
+            <circle cx="360" cy="60" r="8" fill="#804526"/>
+            <line x1="40" y1="180" x2="360" y2="180" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          </svg>
+          <span class="cat-badge">Micro-Markets</span>
+        </a>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <time datetime="2026-09-15">September 15, 2026</time>
+            <span class="meta-sep" aria-hidden="true">•</span>
+            <span>6 min read</span>
+            <span class="meta-sep" aria-hidden="true">•</span>
+            <span>North Bengaluru</span>
+          </div>
+          <h2 class="blog-card-title">
+            <a href="posts/hello-world.html">North Bengaluru Aerotropolis Corridor: Clinical Yield Projections</a>
+          </h2>
+          <p class="blog-card-excerpt">
+            Evaluating the Bellary Road and Satellite Ring Road intersection: commercial absorption cycles versus speculative residential inventory.
+          </p>
+          <a href="posts/hello-world.html" class="blog-card-readmore">
+            <span>Read Analysis</span>
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Article 6 -->
+      <article class="blog-card" data-category="Regulatory &amp; Tax">
+        <a href="posts/hello-world.html" class="blog-card-media" aria-label="Read RERA Compliance Checklist">
+          <svg class="blog-card-img" viewBox="0 0 400 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="220" fill="#30333b"/>
+            <rect x="70" y="40" width="260" height="140" fill="none" stroke="#804526" stroke-width="1.5"/>
+            <line x1="100" y1="80" x2="300" y2="80" stroke="#E88D67" stroke-width="1.5"/>
+            <line x1="100" y1="110" x2="260" y2="110" stroke="#E88D67" stroke-width="1.5"/>
+            <line x1="100" y1="140" x2="220" y2="140" stroke="#E88D67" stroke-width="1.5"/>
+          </svg>
+          <span class="cat-badge">Regulatory &amp; Tax</span>
+        </a>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <time datetime="2026-08-30">August 30, 2026</time>
+            <span class="meta-sep" aria-hidden="true">•</span>
+            <span>9 min read</span>
+            <span class="meta-sep" aria-hidden="true">•</span>
+            <span>Due Diligence</span>
+          </div>
+          <h2 class="blog-card-title">
+            <a href="posts/hello-world.html">The RERA Compliance Checklist: Mitigating Title and Encumbrance Risks</a>
+          </h2>
+          <p class="blog-card-excerpt">
+            How to verify 30-year mother deed continuity, khata certificates, sanctioned master plans, and escrow disbursement ratios prior to commitment.
+          </p>
+          <a href="posts/hello-world.html" class="blog-card-readmore">
+            <span>Read Analysis</span>
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- No Results Message -->
+    <div id="noResults" style="display:none; text-align:center; padding: 4rem 1rem; color: var(--neutral-grey);">
+      <p style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--obsidian-black); margin-bottom: 0.5rem;">No matching property dossiers found.</p>
+      <p>Try refining your search keyword or selecting "All Analyses".</p>
     </div>
   </main>
 
   <!-- Global Footer -->
   <footer class="site-footer">
-    <div class="container footer-content prose">
-      <p>&copy; 2026 Gaurav Mongia. Built with semantic HTML &amp; modern CSS.</p>
-      <ul class="footer-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="https://github.com/grvmon/blogs" target="_blank" rel="noopener noreferrer">Source Code</a></li>
-      </ul>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="brand-logo-text">acre&amp;key</span>
+          <p style="margin-top: 0.5rem; color: var(--neutral-grey); line-height: 1.6;">
+            Buyer-first, evidence-based property advisors for institutional acquisitions and high-net-worth families.
+          </p>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Micro-Markets</h4>
+          <ul class="footer-nav-links">
+            <li><a href="posts/hello-world.html">Whitefield Corridor</a></li>
+            <li><a href="posts/hello-world.html">North Bengaluru Aerotropolis</a></li>
+            <li><a href="posts/hello-world.html">Outer Ring Road (ORR)</a></li>
+            <li><a href="posts/hello-world.html">Koramangala &amp; Indiranagar</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Advisory</h4>
+          <ul class="footer-nav-links">
+            <li><a href="https://acrenkey.com/#framework">Decision Framework</a></li>
+            <li><a href="https://acrenkey.com/#core">CORE Methodology</a></li>
+            <li><a href="https://acrenkey.com/#who-were-for">Clientele</a></li>
+            <li><a href="https://acrenkey.com/style-guide/">Design System v2.1</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 acre&amp;key. Strictly adhering to acre&amp;key Design System v2.1. All rights reserved.</p>
+        <p style="font-size: 0.75rem; color: var(--neutral-grey);">Bengaluru, Karnataka, India &middot; RERA Registered Advisory</p>
+      </div>
     </div>
   </footer>
 
-  <!-- Theme Toggle Script -->
+  <!-- Fast Client-Side Real-Time Filter & Search Script -->
   <script>
-    (function() {
-      const toggleBtn = document.getElementById('theme-toggle');
-      const root = document.documentElement;
+    let activeCategory = 'All';
 
-      // Check saved preference or system preference
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme) {
-        root.setAttribute('data-theme', savedTheme);
-      }
+    function setCategoryFilter(category, buttonElement) {
+      activeCategory = category;
+      
+      // Update button active state
+      document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
+      buttonElement.classList.add('active');
 
-      function updateIcon() {
-        const isDark = root.getAttribute('data-theme') === 'dark' || 
-          (!root.getAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
-        
-        toggleBtn.innerHTML = isDark
-          ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:1.125rem;height:1.125rem;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>'
-          : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:1.125rem;height:1.125rem;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>';
-      }
+      handleSearchAndFilter();
+    }
 
-      updateIcon();
+    function handleSearchAndFilter() {
+      const query = (document.getElementById('blogSearchInput').value || '').trim().toLowerCase();
+      const cards = document.querySelectorAll('#blogGrid .blog-card');
+      let visibleCount = 0;
 
-      toggleBtn.addEventListener('click', () => {
-        const currentTheme = root.getAttribute('data-theme');
-        let nextTheme = 'light';
-        if (!currentTheme) {
-          nextTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'light' : 'dark';
+      cards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category') || '';
+        const titleText = (card.querySelector('.blog-card-title')?.textContent || '').toLowerCase();
+        const excerptText = (card.querySelector('.blog-card-excerpt')?.textContent || '').toLowerCase();
+
+        const matchesCategory = (activeCategory === 'All') || (cardCategory === activeCategory);
+        const matchesQuery = !query || titleText.includes(query) || excerptText.includes(query) || cardCategory.toLowerCase().includes(query);
+
+        if (matchesCategory && matchesQuery) {
+          card.style.display = 'flex';
+          visibleCount++;
         } else {
-          nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+          card.style.display = 'none';
         }
-        root.setAttribute('data-theme', nextTheme);
-        localStorage.setItem('theme', nextTheme);
-        updateIcon();
       });
-    })();
+
+      const noResults = document.getElementById('noResults');
+      if (visibleCount === 0) {
+        noResults.style.display = 'block';
+      } else {
+        noResults.style.display = 'none';
+      }
+    }
   </script>
 </body>
 </html>
