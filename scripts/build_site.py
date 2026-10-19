@@ -560,13 +560,15 @@ def head_tags(title: str, description: str, canonical: str, root: str, og_type: 
     lines = [
         '<meta charset="UTF-8">',
         '<meta name="viewport" content="width=device-width, initial-scale=1.0">',
-        '<meta name="theme-color" content="#FAFAFA">',
+        '<meta name="theme-color" content="#2B2D31">',
         f"<title>{esc(title)} | {brand}</title>",
         f'<meta name="description" content="{esc(description)}">',
         f'<meta name="author" content="{esc(author or "Acrenkey Realty LLP")}">',
         f'<link rel="canonical" href="{esc(canonical)}">',
-        f'<link rel="icon" href="{root}favicon.svg" type="image/svg+xml">',
+        f'<link rel="icon" type="image/svg+xml" href="{root}favicon.svg">',
         f'<link rel="stylesheet" href="{root}style.css">',
+        f'<link rel="stylesheet" href="{root}assets/ak-chrome.css">',
+        f'<script src="{root}assets/ak-chrome.js" defer></script>',
         f'<meta property="og:title" content="{esc(title)}">',
         f'<meta property="og:description" content="{esc(description)}">',
         f'<meta property="og:url" content="{esc(canonical)}">',
@@ -591,75 +593,24 @@ def head_tags(title: str, description: str, canonical: str, root: str, og_type: 
     return "\n  ".join(lines)
 
 
+PARTIALS = Path(__file__).resolve().parent / "partials"
+
+
 def header(root: str) -> str:
-    return f"""<a href="#main-content" class="skip-link">Skip to main content</a>
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="{root}index.html" class="nav-brand" aria-label="acre and key home">
-        <span class="brand-logo-text">acre&amp;key</span>
-      </a>
-      <nav aria-label="Primary Navigation">
-        <ul class="nav-links">
-          <li><a href="https://acrenkey.com/#who-were-for">Clientele</a></li>
-          <li><a href="https://acrenkey.com/#framework">Decision Framework</a></li>
-          <li><a href="https://acrenkey.com/#core">CORE</a></li>
-          <li><a href="{root}index.html" class="active" aria-current="page">Articles</a></li>
-          <li class="nav-cta">
-            <a href="https://acrenkey.com/" class="primary-cta-btn">
-              <span class="cta-label-full">Request Advisory Call</span>
-              <span class="cta-label-short">Advisory</span>
-              {CTA_ARROW}
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>"""
+    """acrenkey.com header, copied from grvmon/a-K index.html (scripts/partials/header.html)."""
+    return '<a href="#main-content" class="skip-link">Skip to main content</a>\n  ' + (PARTIALS / "header.html").read_text().strip()
 
 
 def footer(root: str) -> str:
-    return f"""<footer class="site-footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <span class="brand-logo-text">acre&amp;key</span>
-          <p style="margin-top: 0.5rem; color: var(--neutral-grey); line-height: 1.6;">
-            Published by Acrenkey Realty LLP for people buying a home in Bengaluru.
-          </p>
-        </div>
-        <div class="footer-nav-col">
-          <h4>Read</h4>
-          <ul class="footer-nav-links">
-            <li><a href="{root}index.html">All guides</a></li>
-            <li><a href="{root}index.html#blog">Blog</a></li>
-            <li><a href="{root}index.html#insights">Insights</a></li>
-            <li><a href="{root}index.html#areas">Areas</a></li>
-          </ul>
-        </div>
-        <div class="footer-nav-col">
-          <h4>Advisory</h4>
-          <ul class="footer-nav-links">
-            <li><a href="https://acrenkey.com/#framework">Decision Framework</a></li>
-            <li><a href="https://acrenkey.com/#core">CORE Methodology</a></li>
-            <li><a href="https://acrenkey.com/#who-were-for">Clientele</a></li>
-            <li><a href="https://acrenkey.com/calculators/">Calculators</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 acre&amp;key. All rights reserved.</p>
-        <p style="font-size: 0.75rem; color: var(--neutral-grey);">Acrenkey Realty LLP &middot; Bengaluru, Karnataka, India</p>
-      </div>
-    </div>
-  </footer>"""
+    """acrenkey.com homepage footer, copied from grvmon/a-K index.html (scripts/partials/footer.html)."""
+    return (PARTIALS / "footer.html").read_text().strip()
 
 
 def cta_link(extra_class: str = "") -> str:
     classes = "primary-cta-btn" + (f" {extra_class}" if extra_class else "")
     return f"""<a href="https://acrenkey.com/" class="{classes}">
-              <span class="cta-label-full">Request Advisory Call</span>
-              <span class="cta-label-short">Advisory</span>
-              {CTA_ARROW}
+              <span>Request Advisory Call</span>
+              <span class="cta-arrow-badge" aria-hidden="true">{CTA_ARROW}</span>
             </a>"""
 
 
@@ -815,9 +766,9 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
       <ol class="breadcrumb">
         <li><a href="https://acrenkey.com/">Home</a></li>
         <li class="meta-sep" aria-hidden="true">/</li>
-        <li><a href="{root}index.html">Articles</a></li>
+        <li><a href="{esc(config['baseUrl'])}">Articles</a></li>
         <li class="meta-sep" aria-hidden="true">/</li>
-        <li><a href="{root}index.html#{esc(post['section'])}">{esc(section_label)}</a></li>
+        <li><a href="{esc(config['baseUrl'])}#{esc(post['section'])}">{esc(section_label)}</a></li>
         <li class="meta-sep" aria-hidden="true">/</li>
         <li class="bc-current" aria-current="page">{esc(post['h1'])}</li>
       </ol>
