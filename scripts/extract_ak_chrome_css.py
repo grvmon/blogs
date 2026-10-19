@@ -3,7 +3,7 @@ css=open('/tmp/a-K/website.min.css').read()
 _h=open('/tmp/a-K/index.html').read()
 css+='\n'+'\n'.join(re.findall(r'<style[^>]*>(.*?)</style>',_h,re.S))
 css=re.sub(r'/\*.*?\*/','',css,flags=re.S)
-KEY=re.compile(r'header-nav|nav-container|nav-brand|brand-logo-text|nav-links|nav-cta-btn|primary-cta-btn|cta-arrow-badge|mobile-toggle|hamburger|mobile-nav|mobile-drawer|drawer-open|site-footer|footer-')
+KEY=re.compile(r'header-nav|nav-container|nav-brand|brand-logo-text|nav-links|nav-cta-btn|primary-cta-btn|cta-arrow-badge|mobile-toggle|hamburger|mobile-nav|mobile-drawer|drawer-open|site-footer|ak-footer|footer-')
 def blocks(s):
     i=0;out=[]
     while i<len(s):

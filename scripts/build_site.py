@@ -886,7 +886,7 @@ def render_index(config: dict, posts: list[dict], excerpts: dict[str, str]) -> s
         "Plain-language guides for people buying a home in Bengaluru: costs, loans, "
         "legal checks, and how neighbourhoods differ."
     )
-    title = "Bengaluru home buying guides"
+    title = "Bengaluru home buying guides: costs, loans, legal checks"
     counts = {section: sum(1 for post in posts if post["section"] == section) for section in SECTIONS}
     cards = []
     for post in posts:
@@ -929,7 +929,7 @@ def render_index(config: dict, posts: list[dict], excerpts: dict[str, str]) -> s
     page = f"""<!DOCTYPE html>
 <html lang="en-IN">
 <head>
-  {head_tags(title, description, canonical, '', 'website', None, None)}
+  {head_tags(title, description, canonical, '', 'website', None, None, abs_url(config['baseUrl'], 'assets/img/first-time-home-buyer-guide-bengaluru.webp'))}
 </head>
 <body>
   {header('')}

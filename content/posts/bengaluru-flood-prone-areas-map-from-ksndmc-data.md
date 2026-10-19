@@ -25,7 +25,7 @@ status: "DRAFT FOR REVIEW. Do not publish. Interactive map still pending officia
 > - Bengaluru's flood data is a **list of vulnerable points**, not a parcel-level flood map. A point on a road isn't a verdict on every building around it.
 > - **101 flood-prone locations** across the five corporations as of April 2026, per TNIE; the GBA set **49** for fixing this year. Older lists counted 209 to 226 points on BBMP's zones.
 > - **Lake buffers changed on 18 Feb 2026.** Karnataka Act 19 of 2026 replaced the flat 30 m buffer with buffers of 0 m to 30 m based on the lake's size, measured from its revenue boundary. The NGT has taken notice of the change.
-> - A legal buffer is a building rule, not a flood guarantee. Water doesn't read the amendment.
+> - A legal buffer is a building rule. It doesn't stop a site from flooding.
 > - Run the **four-layer check**: city list, lake buffer, drain buffer, and the site itself after rain.
 
 Every monsoon the same clips come back: cars stalled at Silk Board, a basement being pumped out near a lake. And every year a few buyers tell us they wish they'd asked about water before they booked. This page isn't here to write off any part of the city. It shows what the official data says, how old it is, where it disagrees with itself, and how to check one specific address.

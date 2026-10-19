@@ -1364,3 +1364,6 @@ p, blockquote, li {
 body {
   padding-top: 80px;
 }
+
+/* Mobile tap target (QC 2026-10-20) */
+.blog-card-readmore{display:inline-flex;align-items:center;gap:6px;min-height:44px}

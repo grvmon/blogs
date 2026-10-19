@@ -46,7 +46,7 @@ In panchayat areas, the gram panchayat updates the record on e-Swathu (Form 9 or
 
 ## How do I move electricity and water into my name?
 
-After the e-Khata shows your name, BESCOM texts you a link. You check the details, pay ₹100, e-sign an indemnity bond for ₹1,194 and authenticate with Aadhaar ([Times of India](https://timesofindia.indiatimes.com/city/bengaluru/now-transfer-bangalore-electricity-supply-company-power-connection-in-just-few-clicks/articleshow/130521700.cms), news). For water, apply on [BWSSB's transfer portal](https://bwsajala.karnataka.gov.in/bwssbtoc/) for ₹250, with a 10-day service guarantee. Our [BESCOM and BWSSB transfer guide](https://answers.acrenkey.com/bescom-bwssb-name-transfer-resale/) covers the details.
+After the e-Khata shows your name, BESCOM texts you a link. You check the details, pay ₹100, e-sign an indemnity bond for ₹1,194 and authenticate with Aadhaar ([Times of India](https://timesofindia.indiatimes.com/city/bengaluru/now-transfer-bangalore-electricity-supply-company-power-connection-in-just-few-clicks/articleshow/130521700.cms), news). For water, apply on [BWSSB's transfer portal](https://bwsajala.karnataka.gov.in/bwssbtoc/) for ₹250, with a 10-day service timeline. Our [BESCOM and BWSSB transfer guide](https://answers.acrenkey.com/bescom-bwssb-name-transfer-resale/) covers the details.
 
 ## Why pull another encumbrance certificate?
 
@@ -151,7 +151,7 @@ Inside GBA, finish mutation first. BESCOM then sends a link; pay ₹100, e-sign 
 
 ### How long does a BWSSB transfer take?
 
-BWSSB's transfer portal lists a 10-day service guarantee and a ₹250 fee. Extra construction may send you to the new-connection route instead.
+BWSSB's transfer portal lists a 10-day service timeline and a ₹250 fee. Extra construction may send you to the new-connection route instead.
 
 ### Why get an EC after buying?
 
@@ -260,7 +260,7 @@ Checked 19 Oct 2026.
      "name": "How long does a BWSSB transfer take?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "BWSSB's transfer portal lists a 10-day service guarantee and a ₹250 fee. Extra construction may send you to the new-connection route instead."
+      "text": "BWSSB's transfer portal lists a 10-day service timeline and a ₹250 fee. Extra construction may send you to the new-connection route instead."
      }
     },
     {

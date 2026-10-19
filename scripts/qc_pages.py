@@ -18,7 +18,7 @@ except ImportError:
     Image = None
 HEADER_FOOTER_MARKERS = (
     '<header class="header-nav" id=header-nav>', 'href="https://acrenkey.com/blogs/" class=nav-brand',
-    'id=mobile-toggle-btn', 'id=mobile-drawer ', '<footer class="site-footer" id="footer">',
+    'id=mobile-toggle-btn', 'id=mobile-drawer ', '<footer class="site-footer ak-footer" id="footer">',
     'assets/ak-chrome.css', 'assets/ak-chrome.js', 'favicon.svg',
 )
 def internal_index_href(page):
