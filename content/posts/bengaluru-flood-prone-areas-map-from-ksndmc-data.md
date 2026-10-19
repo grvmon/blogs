@@ -71,6 +71,9 @@ There's an official map of points, not a buyer-friendly parcel map. KSNDMC perio
 
 Use Varunamitra to see whether a vulnerable spot sits on your approach road. Use the app during the monsoon. Neither will tell you whether a particular basement floods.
 
+> [!NOTE]
+> **Official portal status:** The Karnataka government's Varunamitra map portal frequently suffers from connectivity and SSL certificate timeouts. For a fully documented breakdown of the 101 GBA vulnerable locations, lake buffer rules, and SWD zones, refer to the [East Bengaluru flood risk guide](https://answers.acrenkey.com/flood-risk-check-east-bengaluru-flat/).
+
 We'll add an interactive map of the 2026 points over the new corporation boundaries once the official location data is available in a form we can map accurately. We'd rather wait than draw dots from news copy. Meanwhile, our [ward and city corporation lookup](https://acrenkey.com/blogs/which-ward-and-city-corporation-is-my-flat-in-gba-pin-code-lookup/) tells you which corporation a flat sits in.
 
 ## What are the lake buffer zone rules in Bengaluru now?

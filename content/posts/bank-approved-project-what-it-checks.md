@@ -98,7 +98,7 @@ The builder says only one bank has approved the project, and its rate is 0.25 po
 | Extra per month | | ₹1,192 |
 | Extra over 240 months | | ₹2,85,975 |
 
-Faster processing can be worth something, but you can also ask your own bank to review the project. ICICI Bank's blog notes that approval by one bank doesn't mean another will approve it, and that you can ask your bank to take up the review, though it takes time ([ICICI Bank](https://www.icici.bank.in/blogs/home-loan/what-are-bank-approved-projects)). If your bank declines, ask why. That answer can tell you more than any approval list ([home loan questions to ask](https://acrenkey.com/blogs/home-loans-20-questions-to-ask-and-15-mistakes-to-avoid/)).
+Faster processing can be worth something, but you can also ask your own bank to review the project. ICICI Bank's blog notes that approval by one bank doesn't mean another will approve it, and that you can ask your bank to take up the review, though it takes time ([ICICI Bank](https://www.icicibank.com/blogs/home-loan/what-are-bank-approved-projects)). If your bank declines, ask why. That answer can tell you more than any approval list ([home loan questions to ask](https://acrenkey.com/blogs/home-loans-20-questions-to-ask-and-15-mistakes-to-avoid/)).
 
 ## The SCOPE check (our framework)
 
@@ -199,7 +199,7 @@ If a project's "bank-approved" line is doing a lot of work in the pitch, we can 
 2. Real Estate (Regulation and Development) Act, 2016, ss. 4(2)(l), 11(4)(h) (India Code): https://www.indiacode.nic.in/handle/123456789/2158
 3. Canara Bank, Approved housing projects: https://www.canarabank.bank.in/approved-housing-projects
 4. ICICI Home Finance, What is an APF number: https://www.icicihfc.com/en/articles/apf-number-and-its-role-in-home-loan
-5. ICICI Bank, What are bank approved projects: https://www.icici.bank.in/blogs/home-loan/what-are-bank-approved-projects
+5. ICICI Bank, What are bank approved projects: https://www.icicibank.com/blogs/home-loan/what-are-bank-approved-projects
 6. Kotak Mahindra Bank, APF number: https://www.kotak.bank.in/en/personal-banking/loans/home-loan/apf-approved-project-financial-number.html
 
 ## Related reading
