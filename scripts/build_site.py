@@ -9,6 +9,7 @@ Change the public address in site.config.json (baseUrl), then run:
 from __future__ import annotations
 
 import csv
+import hashlib
 import html
 import json
 import os
@@ -566,9 +567,10 @@ def head_tags(title: str, description: str, canonical: str, root: str, og_type: 
         f'<meta name="author" content="{esc(author or "Acrenkey Realty LLP")}">',
         f'<link rel="canonical" href="{esc(canonical)}">',
         f'<link rel="icon" type="image/svg+xml" href="{root}favicon.svg">',
-        f'<link rel="stylesheet" href="{root}style.css">',
-        f'<link rel="stylesheet" href="{root}assets/ak-chrome.css">',
-        f'<script src="{root}assets/ak-chrome.js" defer></script>',
+        f'<link rel="stylesheet" href="{root}{asset("style.css")}">',
+        f'<link rel="stylesheet" href="{root}{asset("assets/ak-chrome.css")}">',
+        f'<link rel="stylesheet" href="{root}{asset("assets/ak-lead-form.css")}">',
+        f'<script src="{root}{asset("assets/ak-chrome.js")}" defer></script>',
         f'<meta property="og:title" content="{esc(title)}">',
         f'<meta property="og:description" content="{esc(description)}">',
         f'<meta property="og:url" content="{esc(canonical)}">',
@@ -594,6 +596,19 @@ def head_tags(title: str, description: str, canonical: str, root: str, og_type: 
 
 
 PARTIALS = Path(__file__).resolve().parent / "partials"
+
+
+def asset(rel: str) -> str:
+    """Asset path with a content-hash query so edge caches (Cloudflare, max-age 7d) pick up new CSS/JS on deploy."""
+    digest = hashlib.sha1((ROOT / rel).read_bytes()).hexdigest()[:10]
+    return f"{rel}?v={digest}"
+
+
+def consult_modal(root: str) -> str:
+    """acrenkey.com "Start Consultation" pop-up: markup from grvmon/a-K index.html (scripts/partials/lead-form-modal.html)
+    plus its script (assets/ak-lead-form.js = a-K lead-form.min.js, which defines window.openModal and posts to HubSpot)."""
+    markup = (PARTIALS / "lead-form-modal.html").read_text().strip()
+    return f'<script src="{root}{asset("assets/ak-lead-form.js")}" defer></script>{markup}'
 
 
 def header(root: str) -> str:
@@ -855,7 +870,8 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
     </div>
   </main>
   {footer(root)}
-  <script src="{root}site.js"></script>
+  <script src="{root}{asset("site.js")}"></script>
+  {consult_modal(root)}
 </body>
 </html>
 """
@@ -940,7 +956,6 @@ def render_index(config: dict, posts: list[dict], excerpts: dict[str, str]) -> s
       <button type="button" class="cat-btn" data-section="insights" aria-pressed="false">Insights ({counts['insights']})</button>
       <button type="button" class="cat-btn" data-section="areas" aria-pressed="false">Areas ({counts['areas']})</button>
     </div>
-    <p id="resultCount" class="result-count">Showing {len(posts)} guides</p>
     <div class="blog-grid" id="blogGrid">
       {grid}
     </div>
@@ -950,7 +965,8 @@ def render_index(config: dict, posts: list[dict], excerpts: dict[str, str]) -> s
     </div>
   </main>
   {footer('')}
-  <script src="site.js"></script>
+  <script src="{asset("site.js")}"></script>
+  {consult_modal('')}
 </body>
 </html>
 """
