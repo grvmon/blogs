@@ -72,7 +72,7 @@ blogs/
 └── README.md
 ```
 
-Canonical URLs use `baseUrl` from `site.config.json` (currently `https://acrenkey.com/blog/`). Blog guides live at `{baseUrl}{slug}/`. Insights and areas keep a section folder: `{baseUrl}insights/{slug}/` and `{baseUrl}areas/{slug}/`.
+Canonical URLs use `baseUrl` from `site.config.json` (currently `https://acrenkey.com/blogs/`). Blog guides live at `{baseUrl}{slug}/`. Insights and areas keep a section folder: `{baseUrl}insights/{slug}/` and `{baseUrl}areas/{slug}/`.
 
 Rebuild after changing the base URL:
 
@@ -91,7 +91,7 @@ python3 scripts/build_site.py
 python3 -m http.server 8000
 ```
 
-Open `http://127.0.0.1:8000/`. Directory URLs such as `/blog/<slug>/` need the server; opening a single HTML file directly will not resolve them.
+Open `http://127.0.0.1:8000/`. Directory URLs such as `/blogs/<slug>/` need the server; opening a single HTML file directly will not resolve them.
 
 ### Hosting
 
@@ -99,11 +99,11 @@ GitHub Pages is not enabled on this repository, and this project does not change
 
 To publish the files:
 
-1. Serve this directory at `https://acrenkey.com/blog/` so the canonical URLs match `site.config.json`, or
+1. Serve this directory at `https://acrenkey.com/blogs/` so the canonical URLs match `site.config.json`, or
 2. Point a host such as `blog.acrenkey.com` at the directory and set `baseUrl` to `https://blog.acrenkey.com/` before rebuilding, or
 3. Enable GitHub Pages yourself (Settings → Pages → Deploy from `main` / root). That host would be `https://grvmon.github.io/blogs/`, so change `baseUrl` and rebuild first or the canonicals will not match the Pages URL.
 
-`robots.txt` is read only when this directory is the host root (a Pages site or `blog.acrenkey.com`). If the files are mounted at `acrenkey.com/blog/`, the apex `robots.txt` needs a `Sitemap:` line pointing at `https://acrenkey.com/blog/sitemap.xml`.
+`robots.txt` is read only when this directory is the host root (a Pages site or `blog.acrenkey.com`). If the files are mounted at `acrenkey.com/blogs/`, the apex `robots.txt` needs a `Sitemap:` line pointing at `https://acrenkey.com/blogs/sitemap.xml`.
 
 ---
 

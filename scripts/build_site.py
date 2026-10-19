@@ -112,7 +112,7 @@ def abs_url(base: str, path: str = "") -> str:
 
 def public_path(section: str, slug: str) -> str:
     """Path under the site root. Blog guides sit directly under baseUrl, so the
-    canonical is /blog/{slug}/ rather than /blog/blog/{slug}/."""
+    canonical is /blogs/{slug}/ rather than /blogs/blog/{slug}/."""
     if section == "blog":
         return f"{slug}/"
     return f"{section}/{slug}/"
@@ -1059,8 +1059,8 @@ def validate(config: dict, posts: list[dict], unlinked: list[dict], pages: dict[
             problems.append(f"{rel} missing canonical")
         if "@type" in page and "Person" in page and re.search(r'"@type"\s*:\s*"Person"', page):
             problems.append(f"{rel} has Person schema")
-        if "/blog/blog/" in page:
-            problems.append(f"{rel} still uses a doubled /blog/blog/ path")
+        if "/blogs/blogs/" in page:
+            problems.append(f"{rel} still uses a doubled /blogs/blogs/ path")
         if "100%" in re.sub(r"https?://\S+", " ", visible_text(page)):
             problems.append(f"{rel} still contains 100% in visible copy")
         if path.name == "index.html" and path.parent == ROOT:
@@ -1077,7 +1077,7 @@ def validate(config: dict, posts: list[dict], unlinked: list[dict], pages: dict[
         old_hrefs = [
             href
             for href in re.findall(r'href="([^"]+)"', page)
-            if re.search(r"https://acrenkey\.com/(?:blogs|insights)/", href)
+            if re.search(r"https://acrenkey\.com/(?:blog(?!s)/|insights/)", href)
         ]
         if old_hrefs:
             problems.append(f"{rel} still links to an old blog path")
