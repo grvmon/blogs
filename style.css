@@ -1,5 +1,5 @@
 /* ==========================================================================
-   acre&key Design System v2.1 — Official Blog Stylesheet (100% QC Compliant)
+   acre&key Design System v2.1 — Blog stylesheet
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Josefin+Sans:wght@300;400;600;700&family=Manrope:wght@400;500;600;700&display=swap');
@@ -346,7 +346,7 @@ p, blockquote, li {
   background: var(--white);
   padding: 0 1.25rem 0 3rem;
   font-family: var(--font-sans);
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--obsidian-black);
   outline: none;
   transition: border-color 0.4s ease, box-shadow 0.4s ease;
@@ -520,6 +520,10 @@ p, blockquote, li {
   line-height: 1.6;
   margin-bottom: var(--space-md);
   flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .blog-card-readmore {
@@ -839,6 +843,80 @@ p, blockquote, li {
   text-decoration-color: rgba(128, 69, 38, 1);
 }
 
+.article-prose a,
+.short-answer a,
+.summary-list a {
+  overflow-wrap: anywhere;
+}
+
+.article-prose ul,
+.article-prose ol {
+  padding-left: 1.25rem;
+}
+
+.article-prose li + li {
+  margin-top: 0.4rem;
+}
+
+.article-prose strong,
+.short-answer strong,
+.summary-list strong {
+  color: var(--obsidian-black);
+  font-weight: 650;
+}
+
+.article-prose em {
+  font-style: italic;
+}
+
+.article-prose code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.84em;
+  word-break: break-word;
+  color: var(--obsidian-black);
+}
+
+.short-answer {
+  background: var(--white);
+  border: 0.5px solid var(--divider);
+  border-left: 3px solid var(--text-copper-aaa);
+  border-radius: var(--radius-strict);
+  padding: var(--space-md) var(--space-lg);
+  margin-bottom: var(--space-xl);
+  color: var(--obsidian-black);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.short-answer p {
+  color: var(--obsidian-black);
+  margin: 0;
+}
+
+.tone-blog {
+  background: linear-gradient(145deg, #2B2D31 0%, #804526 78%);
+}
+
+.tone-insights {
+  background: linear-gradient(145deg, #2B2D31 0%, #55555A 82%);
+}
+
+.tone-areas {
+  background: linear-gradient(145deg, #3a332f 0%, #9E3F23 84%);
+}
+
+.result-count {
+  text-align: center;
+  color: var(--neutral-grey);
+  font-size: 0.82rem;
+  margin-top: calc(var(--space-md) * -1);
+  margin-bottom: var(--space-lg);
+}
+
+.cta-label-short {
+  display: none;
+}
+
 .article-prose blockquote {
   border-left: 2px solid var(--text-copper-aaa);
   padding: var(--space-md) 0 var(--space-md) var(--space-lg);
@@ -923,11 +1001,14 @@ p, blockquote, li {
   display: block;
 }
 
+.in-article-advisory-banner h2,
 .in-article-advisory-banner h3 {
   font-family: var(--font-serif);
   font-size: clamp(1.4rem, 1.15rem + 0.6vw, 1.85rem);
+  font-weight: 400;
   color: var(--titanium-frost);
-  margin-bottom: var(--space-sm);
+  margin: 0 0 var(--space-sm);
+  letter-spacing: -0.015em;
 }
 
 .in-article-advisory-banner p {
@@ -1297,8 +1378,47 @@ p, blockquote, li {
 }
 
 @media (max-width: 768px) {
+  :root {
+    --header-height: 64px;
+  }
+
+  .brand-logo-text {
+    font-size: 1.55rem;
+  }
+
   .nav-links {
+    display: flex;
+    gap: var(--space-sm);
+  }
+
+  .nav-links li:not(.nav-cta) {
     display: none;
+  }
+
+  .primary-cta-btn {
+    padding: 0.55rem 0.75rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+  }
+
+  .cta-label-full {
+    display: none;
+  }
+
+  .cta-label-short {
+    display: inline;
+  }
+
+  .blog-card-media {
+    height: 112px;
+  }
+
+  .blog-home-hero {
+    padding: var(--space-xl) var(--space-md) var(--space-lg);
+  }
+
+  .article-title {
+    font-size: clamp(1.7rem, 1.2rem + 2vw, 2.2rem);
   }
 }
 

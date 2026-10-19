@@ -56,32 +56,54 @@ A minimalist, high-performance property intelligence blog engineered strictly ac
 
 ```
 blogs/
-├── index.html            # Minimalist blog home with live search & category filters
-├── style.css             # Complete acre&key v2.1 design system stylesheet
-├── posts/
-│   └── hello-world.html  # Full property intelligence dossier & detail page
-└── README.md             # Project documentation
+├── site.config.json      # Public base URL, publish date, organization
+├── scripts/build_site.py # Rebuilds HTML from content/posts
+├── content/              # Source markdown and manifest.csv
+├── index.html            # Guide index with search and Blog / Insights / Areas filters
+├── style.css             # acre&key v2.1 stylesheet
+├── site.js               # Search, filters, FAQ accordion, reading progress
+├── blog/                 # Section pages: blog/<slug>/index.html
+├── insights/             # Section pages: insights/<slug>/index.html
+├── areas/                # Section pages: areas/<slug>/index.html
+├── sitemap.xml
+├── robots.txt
+├── llms.txt              # Plain list of every guide
+├── posts/hello-world.html# Design specimen (not listed on the index)
+└── README.md
+```
+
+Canonical URLs use `baseUrl` from `site.config.json` (currently `https://acrenkey.com/blog/`). A guide lives at `{baseUrl}{section}/{slug}/`.
+
+Rebuild after changing the base URL:
+
+```bash
+pip install markdown
+python3 scripts/build_site.py
 ```
 
 ---
 
-## 🚀 Local Preview & Deployment
+## 🚀 Local Preview & Hosting
 
 ### View Locally
-Open `index.html` directly in your browser, or launch a local server:
 
 ```bash
-# Python
 python3 -m http.server 8000
-
-# or npx serve
-npx serve .
 ```
 
-### GitHub Pages Deployment
-1. Go to repository **Settings** &gt; **Pages** on [grvmon/blogs](https://github.com/grvmon/blogs).
-2. Set Source to **Deploy from a branch**, Branch to **`main`**, and folder to **`/(root)`**.
-3. Your site will be published at `https://grvmon.github.io/blogs/`.
+Open `http://127.0.0.1:8000/`. Directory URLs such as `/blog/<slug>/` need the server; opening a single HTML file directly will not resolve them.
+
+### Hosting
+
+GitHub Pages is not enabled on this repository, and this project does not change repository settings.
+
+To publish the files:
+
+1. Serve this directory at `https://acrenkey.com/blog/` so the canonical URLs match `site.config.json`, or
+2. Point a host such as `blog.acrenkey.com` at the directory and set `baseUrl` to `https://blog.acrenkey.com/` before rebuilding, or
+3. Enable GitHub Pages yourself (Settings → Pages → Deploy from `main` / root). That host would be `https://grvmon.github.io/blogs/`, so change `baseUrl` and rebuild first or the canonicals will not match the Pages URL.
+
+`robots.txt` is read only when this directory is the host root (a Pages site or `blog.acrenkey.com`). If the files are mounted at `acrenkey.com/blog/`, the apex `robots.txt` needs a `Sitemap:` line pointing at `https://acrenkey.com/blog/sitemap.xml`.
 
 ---
 
