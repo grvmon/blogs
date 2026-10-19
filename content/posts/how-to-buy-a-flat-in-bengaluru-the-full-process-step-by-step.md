@@ -93,7 +93,7 @@ On the project page, two things are worth your time. The Karnataka RERA Rules re
 
 The core set is the title deed and its chain, the encumbrance certificate (EC), the e-Khata and tax receipts, the sanctioned plan, the occupancy certificate (for a ready flat) and the RERA registration. Your lawyer reads them as one set.
 
-Two you can start on yourself. Apply for the EC on Kaveri; the IGR says EC applications are 100% digital with an e-sign from the applicant ([IGR presentation](https://cdnbbsr.s3waas.gov.in/s3d69116f8b0140cdeb1f99a4d5096ffe4/uploads/2024/09/20240912765319552.pdf)). And check the khata: since 30 September 2024, e-Khata has been needed for registration, according to the Revenue Minister as reported by [The Hindu](https://www.thehindu.com/news/cities/bangalore/e-khata-is-mandatory-from-september-30-krishna-byre-gowda/article68691510.ece). Ask whether it's a draft or final e-Khata, and in whose name.
+Two you can start on yourself. Apply for the EC on Kaveri; the IGR says EC applications are fully digital with an e-sign from the applicant ([IGR presentation](https://cdnbbsr.s3waas.gov.in/s3d69116f8b0140cdeb1f99a4d5096ffe4/uploads/2024/09/20240912765319552.pdf)). And check the khata: since 30 September 2024, e-Khata has been needed for registration, according to the Revenue Minister as reported by [The Hindu](https://www.thehindu.com/news/cities/bangalore/e-khata-is-mandatory-from-september-30-krishna-byre-gowda/article68691510.ece). Ask whether it's a draft or final e-Khata, and in whose name.
 
 The title opinion itself is a lawyer's job. Get it in writing.
 

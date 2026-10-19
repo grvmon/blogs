@@ -31,7 +31,7 @@ Yeshwanthpur is a north-west Bengaluru area at the city end of Tumkur Road. It h
 
 ## Who governs Yeshwanthpur?
 
-The West City Corporation. PIN 560022 is 100% West, covering the Goraguntepalya, Peenya and Nalwadi Krishnaraja Wadiyar wards. It's inside GBA, so stamp duty, cess, surcharge and registration add up to 7.6%. Mathikere, to the east, is PIN 560054, split between the North and West corporations, so check yours with our [ward and corporation lookup](https://acrenkey.com/blogs/which-ward-and-city-corporation-is-my-flat-in-gba-pin-code-lookup/).
+The West City Corporation. All of PIN 560022 is in the West corporation, covering the Goraguntepalya, Peenya and Nalwadi Krishnaraja Wadiyar wards. It's inside GBA, so stamp duty, cess, surcharge and registration add up to 7.6%. Mathikere, to the east, is PIN 560054, split between the North and West corporations, so check yours with our [ward and corporation lookup](https://acrenkey.com/blogs/which-ward-and-city-corporation-is-my-flat-in-gba-pin-code-lookup/).
 
 ## What are property rates in Yeshwanthpur?
 

@@ -98,20 +98,20 @@ These are the pin codes with at least 5% of their area in the East corporation. 
 
 | Pin code | Inside GBA | Corporation split | Wards (5%+) | Largest wards |
 |---|---|---|---|---|
-| 560008 | 100% | Central 95%, East 5% | 8 | Kodihalli, Agaram, Jogpalya |
+| 560008 | all | Central 95%, East 5% | 8 | Kodihalli, Agaram, Jogpalya |
 | 560016 | 94% | East 94% | 9 | Bhattarahalli, A Narayanapura, Kotthur |
-| 560017 | 100% | East 91%, Central 9% | 6 | Vibhootipura, Vignananagara, Yamalur |
+| 560017 | all | East 91%, Central 9% | 6 | Vibhootipura, Vignananagara, Yamalur |
 | 560035 | 90% | East 68%, South 21% | 4 | Gunjur, Panathur, Shivanasamudra |
-| 560036 | 100% | East 100% | 6 | Basavanapura, Anandapura, Krishnanagar |
-| 560037 | 100% | East 100% | 7 | Panathur, Yamalur, Ashwath Nagar |
+| 560036 | all | all East | 6 | Basavanapura, Anandapura, Krishnanagar |
+| 560037 | all | all East | 7 | Panathur, Yamalur, Ashwath Nagar |
 | 560043 | 94% | East 75%, North 15%, Central 4% | 8 | Horamavu, Kalkere, Babusab Palya |
-| 560048 | 100% | East 100% | 6 | Kaveri Nagara, Dodda Nekkundi, Bharath Aikya |
+| 560048 | all | all East | 6 | Kaveri Nagara, Dodda Nekkundi, Bharath Aikya |
 | 560066 | 72% | East 72% | 5 | Hagaduru, Kundalahalli, Varthur |
 | 560067 | 73% | East 73% | 4 | Belathur, Kadugodi, Hoodi |
-| 560075 | 100% | Central 81%, East 19% | 4 | Jeevan Bhimanagar, New Thippasandra, Indiranagar |
+| 560075 | all | Central 81%, East 19% | 4 | Jeevan Bhimanagar, New Thippasandra, Indiranagar |
 | 560077 | 89% | North 45%, East 44% | 4 | K Narayanapura, Kogilu, Thanisandra |
 | 560087 | 99% | East 99% | 2 | Varthur, Gunjur |
-| 560093 | 100% | East 58%, Central 42% | 6 | Mahadevapura, Kaggadasapura, G.M Palya |
+| 560093 | all | East 58%, Central 42% | 6 | Mahadevapura, Kaggadasapura, G.M Palya |
 | 560103 | 62% | East 25%, South 22%, Central 14% | 4 | Agaram, Yamalur, Kasavanahalli |
 
 "Inside GBA" is the share of the pin code's mapped area inside ward polygons. Lakes and other areas left out of ward polygons count as outside, which is likely why lake-heavy pin codes such as 560103 (Bellandur) score lower. The two maps come from different sources, so slivers along edges are expected; we ignore anything under 5%.

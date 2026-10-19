@@ -58,7 +58,7 @@ Not every project needs RERA registration. Land up to 500 sq m, or up to eight a
 
 ### What can you verify online yourself in a day?
 
-- **EC** on Kaveri: the IGR says EC applications are 100% digital with the applicant's e-sign ([IGR presentation](https://cdnbbsr.s3waas.gov.in/s3d69116f8b0140cdeb1f99a4d5096ffe4/uploads/2024/09/20240912765319552.pdf)).
+- **EC** on Kaveri: the IGR says EC applications are fully digital with the applicant's e-sign ([IGR presentation](https://cdnbbsr.s3waas.gov.in/s3d69116f8b0140cdeb1f99a4d5096ffe4/uploads/2024/09/20240912765319552.pdf)).
 - **RERA status**: the "Know About Your Project" search takes a project name, promoter, application or registration number, district or taluk.
 - **Khata**: since 30 Sep 2024, e-Khata has been needed for registration, with e-Aasthi (urban) and e-Swathu (rural) linked to the registration system ([The Hindu](https://www.thehindu.com/news/cities/bangalore/e-khata-is-mandatory-from-september-30-krishna-byre-gowda/article68691510.ece), news). Check A or B with our [khata guide](https://acrenkey.com/blogs/a-khata-vs-b-khata-vs-e-khata-what-bengaluru-buyers-must-know/).
 - **Panchayat Form 9**: issued only for converted land with an approved plan, government housing beneficiaries or Tahsildar-certified gramathana property ([e-Swathu FAQ](https://eswathu.karnataka.gov.in/PublicFAQ.aspx)).

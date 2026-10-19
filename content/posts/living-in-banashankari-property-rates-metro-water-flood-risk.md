@@ -31,7 +31,7 @@ Banashankari is a large BDA-planned area in south-west Bengaluru, laid out in si
 
 ## Who governs Banashankari?
 
-Two corporations. Banashankari 2nd Stage's PIN 560070 is 100% South. PINs 560050 and 560085, covering Kathriguppe, Srinivasa Nagara and nearby wards, are 100% West. All are inside GBA, so stamp duty, cess, surcharge and registration add up to 7.6%. Check your plot with our [ward and corporation lookup](https://acrenkey.com/blogs/which-ward-and-city-corporation-is-my-flat-in-gba-pin-code-lookup/).
+Two corporations. All of Banashankari 2nd Stage's PIN 560070 is in the South corporation. PINs 560050 and 560085, covering Kathriguppe, Srinivasa Nagara and nearby wards, are all in the West corporation. All are inside GBA, so stamp duty, cess, surcharge and registration add up to 7.6%. Check your plot with our [ward and corporation lookup](https://acrenkey.com/blogs/which-ward-and-city-corporation-is-my-flat-in-gba-pin-code-lookup/).
 
 ## What are property rates in Banashankari?
 

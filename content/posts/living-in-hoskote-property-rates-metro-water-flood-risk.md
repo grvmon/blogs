@@ -67,7 +67,7 @@ We pulled every Karnataka RERA registration in Hosakote taluk on 15 Oct 2026 ([K
 
 | Hosakote taluk, approved projects | Count | Share |
 |---|---|---|
-| Total (housing and plotted) | 233 | 100% |
+| Total (housing and plotted) | 233 | all |
 | Residential or group housing | 120 | 51.5% |
 | Plotted development | 112 | 48.1% |
 | Registered in 2025 or 2026 | 85 | 36.5% |

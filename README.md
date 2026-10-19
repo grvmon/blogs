@@ -62,9 +62,9 @@ blogs/
 ├── index.html            # Guide index with search and Blog / Insights / Areas filters
 ├── style.css             # acre&key v2.1 stylesheet
 ├── site.js               # Search, filters, FAQ accordion, reading progress
-├── blog/                 # Section pages: blog/<slug>/index.html
-├── insights/             # Section pages: insights/<slug>/index.html
-├── areas/                # Section pages: areas/<slug>/index.html
+├── <slug>/               # Blog guides, served as {baseUrl}<slug>/
+├── insights/             # Insights: insights/<slug>/index.html
+├── areas/                # Areas: areas/<slug>/index.html
 ├── sitemap.xml
 ├── robots.txt
 ├── llms.txt              # Plain list of every guide
@@ -72,7 +72,7 @@ blogs/
 └── README.md
 ```
 
-Canonical URLs use `baseUrl` from `site.config.json` (currently `https://acrenkey.com/blog/`). A guide lives at `{baseUrl}{section}/{slug}/`.
+Canonical URLs use `baseUrl` from `site.config.json` (currently `https://acrenkey.com/blog/`). Blog guides live at `{baseUrl}{slug}/`. Insights and areas keep a section folder: `{baseUrl}insights/{slug}/` and `{baseUrl}areas/{slug}/`.
 
 Rebuild after changing the base URL:
 

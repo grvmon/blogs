@@ -43,7 +43,7 @@ The most recent count we could find covers the five city corporations under the 
 | Bengaluru East | 20 | 19.8% |
 | Bengaluru North | 6 | 5.9% |
 | Bengaluru Central | 3 | 3.0% |
-| **Total** | **101** | 100% |
+| **Total** | **101** | all |
 
 Source: TNIE, citing information available with the paper. We haven't seen the official list itself.
 

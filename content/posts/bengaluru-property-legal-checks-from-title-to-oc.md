@@ -48,7 +48,7 @@ If you're earlier in the journey, the whole buying sequence is in [how to buy a 
 
 ## Step 1: How do you check the title chain and EC?
 
-Collect every sale deed back through the chain, plus the mother deed, and pull the encumbrance certificate yourself. The IGR says EC applications are 100% digital, with an e-sign from the applicant ([IGR presentation](https://cdnbbsr.s3waas.gov.in/s3d69116f8b0140cdeb1f99a4d5096ffe4/uploads/2024/09/20240912765319552.pdf)).
+Collect every sale deed back through the chain, plus the mother deed, and pull the encumbrance certificate yourself. The IGR says EC applications are fully digital, with an e-sign from the applicant ([IGR presentation](https://cdnbbsr.s3waas.gov.in/s3d69116f8b0140cdeb1f99a4d5096ffe4/uploads/2024/09/20240912765319552.pdf)).
 
 Then match. Every sale in the deeds should appear on the EC, and every entry on the EC should be explained. A mortgage with no release, or a sale to someone you've never heard of, is the kind of thing that ends a deal.
 

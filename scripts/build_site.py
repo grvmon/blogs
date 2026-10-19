@@ -11,6 +11,7 @@ from __future__ import annotations
 import csv
 import html
 import json
+import os
 import re
 import shutil
 import sys
@@ -107,6 +108,26 @@ def abs_url(base: str, path: str = "") -> str:
     if not path:
         return root
     return root + path.lstrip("/")
+
+
+def public_path(section: str, slug: str) -> str:
+    """Path under the site root. Blog guides sit directly under baseUrl, so the
+    canonical is /blog/{slug}/ rather than /blog/blog/{slug}/."""
+    if section == "blog":
+        return f"{slug}/"
+    return f"{section}/{slug}/"
+
+
+def site_prefix(public: str) -> str:
+    depth = len([part for part in public.split("/") if part])
+    return "../" * depth
+
+
+def relative_href(from_public: str, to_public: str) -> str:
+    rel = os.path.relpath(to_public.strip("/"), start=from_public.strip("/") or ".")
+    if not rel.endswith("/"):
+        rel += "/"
+    return rel
 
 
 def quoted_field(front_matter: str, key: str) -> str:
@@ -313,7 +334,7 @@ def load_posts(config: dict) -> tuple[list[dict], list[dict]]:
                 "rank": int(row["rank"]),
                 "section": section,
                 "h1": h1_match.group(1).strip(),
-                "path": f"{section}/{slug}/",
+                "path": public_path(section, slug),
             }
         )
 
@@ -357,10 +378,10 @@ def prepare_body(post: dict, slug_section: dict[str, str], unlinked: list[dict],
             slug = match.group(1)
             section = slug_section.get(slug)
             if section:
-                href = f"../../{section}/{slug}/{fragment}"
+                href = relative_href(post["path"], public_path(section, slug)) + fragment
                 visible = label
                 if label.strip().rstrip("/") == target.rstrip("/"):
-                    visible = abs_url(base_url, f"{section}/{slug}/")
+                    visible = abs_url(base_url, public_path(section, slug))
                 return f"[{visible}]({href})"
             unlinked.append(
                 {
@@ -686,7 +707,7 @@ def related_sidebar(post: dict, posts: list[dict]) -> str:
         picked.extend(others[: 4 - len(picked)])
     items = []
     for item in picked:
-        href = f"../../{item['path']}"
+        href = relative_href(post["path"], item["path"])
         items.append(
             f"""<li>
               <a href="{esc(href)}">
@@ -704,7 +725,7 @@ def prev_next(post: dict, posts: list[dict]) -> str:
     if index > 0:
         prev_post = posts[index - 1]
         cards.append(
-            f"""<a href="../../{esc(prev_post['path'])}" class="nav-article-card">
+            f"""<a href="{esc(relative_href(post['path'], prev_post['path']))}" class="nav-article-card">
               <span class="nav-kicker">&larr; Previous</span>
               <p class="nav-card-heading">{esc(prev_post['h1'])}</p>
             </a>"""
@@ -712,7 +733,7 @@ def prev_next(post: dict, posts: list[dict]) -> str:
     if index < len(posts) - 1:
         next_post = posts[index + 1]
         cards.append(
-            f"""<a href="../../{esc(next_post['path'])}" class="nav-article-card">
+            f"""<a href="{esc(relative_href(post['path'], next_post['path']))}" class="nav-article-card">
               <span class="nav-kicker">Next &rarr;</span>
               <p class="nav-card-heading">{esc(next_post['h1'])}</p>
             </a>"""
@@ -722,7 +743,7 @@ def prev_next(post: dict, posts: list[dict]) -> str:
 
 def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids: IdFactory) -> str:
     canonical = abs_url(config["baseUrl"], post["path"])
-    root = "../../"
+    root = site_prefix(post["path"])
     content_html = wrap_tables(ids.stamp(render_markdown(prepared["content_md"])))
     sources_html = wrap_tables(ids.stamp(render_markdown(prepared["sources_md"])))
     short_html = render_markdown(prepared["short"])
@@ -1038,6 +1059,10 @@ def validate(config: dict, posts: list[dict], unlinked: list[dict], pages: dict[
             problems.append(f"{rel} missing canonical")
         if "@type" in page and "Person" in page and re.search(r'"@type"\s*:\s*"Person"', page):
             problems.append(f"{rel} has Person schema")
+        if "/blog/blog/" in page:
+            problems.append(f"{rel} still uses a doubled /blog/blog/ path")
+        if "100%" in re.sub(r"https?://\S+", " ", visible_text(page)):
+            problems.append(f"{rel} still contains 100% in visible copy")
         if path.name == "index.html" and path.parent == ROOT:
             if "institutional and high-net-worth asset acquisitions" in page:
                 problems.append("index meta was not replaced")
@@ -1056,7 +1081,7 @@ def validate(config: dict, posts: list[dict], unlinked: list[dict], pages: dict[
         ]
         if old_hrefs:
             problems.append(f"{rel} still links to an old blog path")
-        body = visible_text(page)
+        body = re.sub(r"https?://\S+", " ", visible_text(page))
         for name, snippet in find_banned(body):
             body_hits.append((rel, name, snippet))
         for name, snippet in find_banned(head_text(page)):
@@ -1080,6 +1105,9 @@ def validate(config: dict, posts: list[dict], unlinked: list[dict], pages: dict[
             if not target.exists():
                 problems.append(f"{path.relative_to(ROOT)} -> missing {href}")
 
+    if body_hits or head_hits:
+        sample = body_hits[:8] + head_hits[:4]
+        problems.append("brand check still has hits: " + "; ".join(f"{name} in {rel}" for rel, name, _ in sample))
     if problems:
         raise SystemExit("Validation failed:\n" + "\n".join(problems[:40]))
 
@@ -1104,7 +1132,10 @@ def main() -> None:
         prepared[post["slug"]] = prepare_body(post, slug_section, unlinked, config["baseUrl"])
         dropped += prepared[post["slug"]]["dropped_images"]
 
-    for section in SECTIONS:
+    legacy_blog = ROOT / "blog"
+    if legacy_blog.is_dir():
+        shutil.rmtree(legacy_blog)
+    for section in ("insights", "areas"):
         destination = ROOT / section
         if destination.exists():
             shutil.rmtree(destination)
@@ -1115,7 +1146,7 @@ def main() -> None:
     for post in posts:
         ids = IdFactory()
         html_page = render_post(config, post, prepared[post["slug"]], posts, ids)
-        path = ROOT / post["section"] / post["slug"] / "index.html"
+        path = ROOT / post["path"] / "index.html"
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(html_page)
         pages[path] = html_page

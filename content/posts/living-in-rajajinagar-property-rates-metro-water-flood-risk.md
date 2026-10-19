@@ -31,7 +31,7 @@ Rajajinagar is a planned residential area in west Bengaluru, laid out in numbere
 
 ## Who governs Rajajinagar?
 
-The West City Corporation. PIN 560010 is 100% West, with Kethamaranahalli, Rajajinagara, Rama Mandira and Subramanyanagara wards. PIN 560044 (Dr Rajkumar Ward, Thimmenahalli) is also fully West. It's inside GBA, so stamp duty, cess, surcharge and registration add up to 7.6%. Check your plot with our [ward and corporation lookup](https://acrenkey.com/blogs/which-ward-and-city-corporation-is-my-flat-in-gba-pin-code-lookup/).
+The West City Corporation. All of PIN 560010 is in the West corporation, with Kethamaranahalli, Rajajinagara, Rama Mandira and Subramanyanagara wards. PIN 560044 (Dr Rajkumar Ward, Thimmenahalli) is also fully West. It's inside GBA, so stamp duty, cess, surcharge and registration add up to 7.6%. Check your plot with our [ward and corporation lookup](https://acrenkey.com/blogs/which-ward-and-city-corporation-is-my-flat-in-gba-pin-code-lookup/).
 
 ## What are property rates in Rajajinagar?
 
