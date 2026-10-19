@@ -91,6 +91,18 @@ TOC_ICON = (
 MD = markdown.Markdown(extensions=["tables", "sane_lists", "fenced_code"], output_format="html")
 
 
+AUTHORS = ("Gaurav", "Nitin", "Arvind")
+IMAGE_W, IMAGE_H = 1200, 675
+
+
+def img_tag(root: str, post: dict, cls: str, hero: bool = False) -> str:
+    loading = 'loading="eager" fetchpriority="high"' if hero else 'loading="lazy"'
+    return (
+        f'<img src="{root}{esc(post["image"])}" width="{IMAGE_W}" height="{IMAGE_H}" '
+        f'alt="{esc(post["image_alt"])}" class="{cls}" {loading} decoding="async">'
+    )
+
+
 def esc(value: str) -> str:
     return html.escape(value, quote=True)
 
@@ -335,10 +347,18 @@ def load_posts(config: dict) -> tuple[list[dict], list[dict]]:
                 "section": section,
                 "h1": h1_match.group(1).strip(),
                 "path": public_path(section, slug),
+                "author": (row.get("author") or "").strip(),
+                "image_alt": (row.get("image_alt") or "").strip(),
+                "image": f"assets/img/{slug}.webp",
             }
         )
 
     posts.sort(key=lambda post: post["rank"])
+    for post in posts:
+        if post["author"] not in AUTHORS:
+            raise SystemExit(f"Unknown or missing author for {post['file']}: {post['author']!r}")
+        if not post["image_alt"]:
+            raise SystemExit(f"Missing image_alt for {post['file']}")
     slugs = [post["slug"] for post in posts]
     if len(slugs) != len(set(slugs)):
         raise SystemExit("Duplicate slugs")
@@ -487,7 +507,12 @@ def json_ld(config: dict, post: dict, canonical: str, faqs: list[tuple[str, str]
             "inLanguage": "en-IN",
             "mainEntityOfPage": {"@type": "WebPage", "@id": canonical},
             "url": canonical,
-            "author": organization,
+            "image": abs_url(config["baseUrl"], post["image"]),
+            "author": {
+                "@type": "Person",
+                "name": post["author"],
+                "worksFor": {"@type": "Organization", "name": org["name"], "url": org["url"]},
+            },
             "publisher": organization,
         },
         {
@@ -530,28 +555,37 @@ def json_ld(config: dict, post: dict, canonical: str, faqs: list[tuple[str, str]
     return payload.replace("<", "\\u003c")
 
 
-def head_tags(title: str, description: str, canonical: str, root: str, og_type: str, published: str | None, jsonld: str | None) -> str:
+def head_tags(title: str, description: str, canonical: str, root: str, og_type: str, published: str | None, jsonld: str | None, image: str | None = None, author: str | None = None) -> str:
     brand = "acre&amp;key"
     lines = [
         '<meta charset="UTF-8">',
         '<meta name="viewport" content="width=device-width, initial-scale=1.0">',
-        '<meta name="theme-color" content="#FAFAFA">',
+        '<meta name="theme-color" content="#2B2D31">',
         f"<title>{esc(title)} | {brand}</title>",
         f'<meta name="description" content="{esc(description)}">',
-        '<meta name="author" content="Acrenkey Realty LLP">',
+        f'<meta name="author" content="{esc(author or "Acrenkey Realty LLP")}">',
         f'<link rel="canonical" href="{esc(canonical)}">',
-        f'<link rel="icon" href="{root}favicon.svg" type="image/svg+xml">',
+        f'<link rel="icon" type="image/svg+xml" href="{root}favicon.svg">',
         f'<link rel="stylesheet" href="{root}style.css">',
+        f'<link rel="stylesheet" href="{root}assets/ak-chrome.css">',
+        f'<script src="{root}assets/ak-chrome.js" defer></script>',
         f'<meta property="og:title" content="{esc(title)}">',
         f'<meta property="og:description" content="{esc(description)}">',
         f'<meta property="og:url" content="{esc(canonical)}">',
         f'<meta property="og:type" content="{og_type}">',
         f'<meta property="og:site_name" content="{brand}">',
         '<meta property="og:locale" content="en_IN">',
-        '<meta name="twitter:card" content="summary">',
+        f'<meta name="twitter:card" content="{"summary_large_image" if image else "summary"}">',
         f'<meta name="twitter:title" content="{esc(title)}">',
         f'<meta name="twitter:description" content="{esc(description)}">',
     ]
+    if image:
+        lines += [
+            f'<meta property="og:image" content="{esc(image)}">',
+            f'<meta property="og:image:width" content="{IMAGE_W}">',
+            f'<meta property="og:image:height" content="{IMAGE_H}">',
+            f'<meta name="twitter:image" content="{esc(image)}">',
+        ]
     if published:
         lines.append(f'<meta property="article:published_time" content="{esc(published)}">')
     if jsonld:
@@ -559,75 +593,24 @@ def head_tags(title: str, description: str, canonical: str, root: str, og_type: 
     return "\n  ".join(lines)
 
 
+PARTIALS = Path(__file__).resolve().parent / "partials"
+
+
 def header(root: str) -> str:
-    return f"""<a href="#main-content" class="skip-link">Skip to main content</a>
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="{root}index.html" class="nav-brand" aria-label="acre and key home">
-        <span class="brand-logo-text">acre&amp;key</span>
-      </a>
-      <nav aria-label="Primary Navigation">
-        <ul class="nav-links">
-          <li><a href="https://acrenkey.com/#who-were-for">Clientele</a></li>
-          <li><a href="https://acrenkey.com/#framework">Decision Framework</a></li>
-          <li><a href="https://acrenkey.com/#core">CORE</a></li>
-          <li><a href="{root}index.html" class="active" aria-current="page">Articles</a></li>
-          <li class="nav-cta">
-            <a href="https://acrenkey.com/" class="primary-cta-btn">
-              <span class="cta-label-full">Request Advisory Call</span>
-              <span class="cta-label-short">Advisory</span>
-              {CTA_ARROW}
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>"""
+    """acrenkey.com header, copied from grvmon/a-K index.html (scripts/partials/header.html)."""
+    return '<a href="#main-content" class="skip-link">Skip to main content</a>\n  ' + (PARTIALS / "header.html").read_text().strip()
 
 
 def footer(root: str) -> str:
-    return f"""<footer class="site-footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <span class="brand-logo-text">acre&amp;key</span>
-          <p style="margin-top: 0.5rem; color: var(--neutral-grey); line-height: 1.6;">
-            Published by Acrenkey Realty LLP for people buying a home in Bengaluru.
-          </p>
-        </div>
-        <div class="footer-nav-col">
-          <h4>Read</h4>
-          <ul class="footer-nav-links">
-            <li><a href="{root}index.html">All guides</a></li>
-            <li><a href="{root}index.html#blog">Blog</a></li>
-            <li><a href="{root}index.html#insights">Insights</a></li>
-            <li><a href="{root}index.html#areas">Areas</a></li>
-          </ul>
-        </div>
-        <div class="footer-nav-col">
-          <h4>Advisory</h4>
-          <ul class="footer-nav-links">
-            <li><a href="https://acrenkey.com/#framework">Decision Framework</a></li>
-            <li><a href="https://acrenkey.com/#core">CORE Methodology</a></li>
-            <li><a href="https://acrenkey.com/#who-were-for">Clientele</a></li>
-            <li><a href="https://acrenkey.com/calculators/">Calculators</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 acre&amp;key. All rights reserved.</p>
-        <p style="font-size: 0.75rem; color: var(--neutral-grey);">Acrenkey Realty LLP &middot; Bengaluru, Karnataka, India</p>
-      </div>
-    </div>
-  </footer>"""
+    """acrenkey.com homepage footer, copied from grvmon/a-K index.html (scripts/partials/footer.html)."""
+    return (PARTIALS / "footer.html").read_text().strip()
 
 
 def cta_link(extra_class: str = "") -> str:
     classes = "primary-cta-btn" + (f" {extra_class}" if extra_class else "")
     return f"""<a href="https://acrenkey.com/" class="{classes}">
-              <span class="cta-label-full">Request Advisory Call</span>
-              <span class="cta-label-short">Advisory</span>
-              {CTA_ARROW}
+              <span>Request Advisory Call</span>
+              <span class="cta-arrow-badge" aria-hidden="true">{CTA_ARROW}</span>
             </a>"""
 
 
@@ -710,8 +693,8 @@ def related_sidebar(post: dict, posts: list[dict]) -> str:
         href = relative_href(post["path"], item["path"])
         items.append(
             f"""<li>
-              <a href="{esc(href)}">
-                <span style="color:var(--text-copper-aaa); font-weight:700;">&bull;</span>
+              <a href="{esc(href)}" class="widget-link-thumb">
+                {img_tag(site_prefix(post['path']), item, 'widget-thumb')}
                 <span>{esc(item['h1'])}</span>
               </a>
             </li>"""
@@ -726,6 +709,7 @@ def prev_next(post: dict, posts: list[dict]) -> str:
         prev_post = posts[index - 1]
         cards.append(
             f"""<a href="{esc(relative_href(post['path'], prev_post['path']))}" class="nav-article-card">
+              {img_tag(site_prefix(post['path']), prev_post, 'nav-card-img')}
               <span class="nav-kicker">&larr; Previous</span>
               <p class="nav-card-heading">{esc(prev_post['h1'])}</p>
             </a>"""
@@ -734,6 +718,7 @@ def prev_next(post: dict, posts: list[dict]) -> str:
         next_post = posts[index + 1]
         cards.append(
             f"""<a href="{esc(relative_href(post['path'], next_post['path']))}" class="nav-article-card">
+              {img_tag(site_prefix(post['path']), next_post, 'nav-card-img')}
               <span class="nav-kicker">Next &rarr;</span>
               <p class="nav-card-heading">{esc(next_post['h1'])}</p>
             </a>"""
@@ -771,7 +756,7 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
     page = f"""<!DOCTYPE html>
 <html lang="en-IN">
 <head>
-  {head_tags(post['seo_title'], post['meta'], canonical, root, 'article', published, ld)}
+  {head_tags(post['seo_title'], post['meta'], canonical, root, 'article', published, ld, abs_url(config['baseUrl'], post['image']), post['author'])}
 </head>
 <body>
   <div id="scroll-progress-bar" aria-hidden="true"></div>
@@ -781,9 +766,9 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
       <ol class="breadcrumb">
         <li><a href="https://acrenkey.com/">Home</a></li>
         <li class="meta-sep" aria-hidden="true">/</li>
-        <li><a href="{root}index.html">Articles</a></li>
+        <li><a href="{esc(config['baseUrl'])}">Articles</a></li>
         <li class="meta-sep" aria-hidden="true">/</li>
-        <li><a href="{root}index.html#{esc(post['section'])}">{esc(section_label)}</a></li>
+        <li><a href="{esc(config['baseUrl'])}#{esc(post['section'])}">{esc(section_label)}</a></li>
         <li class="meta-sep" aria-hidden="true">/</li>
         <li class="bc-current" aria-current="page">{esc(post['h1'])}</li>
       </ol>
@@ -793,11 +778,10 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
       <h1 class="article-title">{esc(post['h1'])}</h1>
       <div class="article-meta-row">
         <div class="author-meta">
-          <div class="author-avatar" aria-hidden="true">a&amp;k</div>
+          <div class="author-avatar" aria-hidden="true">{esc(post['author'][0])}</div>
           <div>
-            <span class="author-details-name">acre&amp;key</span>
-            <div class="author-details-sub">
-              <span>Acrenkey Realty LLP</span>
+            <div class="author-details-sub byline">
+              <span>By <span class="author-details-name">{esc(post['author'])}</span></span>
               <span class="meta-sep" aria-hidden="true">&bull;</span>
               <time datetime="{esc(published)}">{esc(shown_date)}</time>
               <span class="meta-sep" aria-hidden="true">&bull;</span>
@@ -814,6 +798,9 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
         </div>
       </div>
     </header>
+    <figure class="article-hero">
+      {img_tag(root, post, 'article-hero-img', hero=True)}
+    </figure>
     <div class="blog-layout-grid">
       <article class="article-content">
         <div class="short-answer">{short_html}</div>
@@ -831,7 +818,7 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
         <div class="author-bio-card">
           <div class="author-bio-avatar" aria-hidden="true">a&amp;k</div>
           <div>
-            <p class="author-bio-title">acre&amp;key</p>
+            <p class="author-bio-title">Written by {esc(post['author'])}</p>
             <span class="author-bio-role">Acrenkey Realty LLP</span>
             <p class="author-bio-desc">Published by Acrenkey Realty LLP, a property advisory for people buying a home in Bengaluru.</p>
           </div>
@@ -900,10 +887,13 @@ def render_index(config: dict, posts: list[dict], excerpts: dict[str, str]) -> s
         cards.append(
             f"""<article class="blog-card" data-section="{esc(post['section'])}" data-rank="{post['rank']}" data-search="{esc(search)}">
         <a href="{esc(post['path'])}" class="blog-card-media tone-{esc(post['section'])}" aria-label="Read {esc(post['h1'])}">
+          {img_tag('', post, 'blog-card-img')}
           <span class="cat-badge">{esc(SECTION_LABEL[post['section']])}</span>
         </a>
         <div class="blog-card-body">
           <div class="blog-card-meta">
+            <span>By {esc(post['author'])}</span>
+            <span class="meta-sep" aria-hidden="true">&bull;</span>
             <time datetime="{esc(config['datePublished'])}">{esc(format_date(config['datePublished']))}</time>
             <span class="meta-sep" aria-hidden="true">&bull;</span>
             <span>{esc(SECTION_LABEL[post['section']])}</span>
@@ -1002,7 +992,7 @@ def render_llms(config: dict, posts: list[dict], excerpts: dict[str, str]) -> st
         "",
         "> Guides from Acrenkey Realty LLP for people buying a home in Bengaluru.",
         "",
-        "Published by the organization Acrenkey Realty LLP. There is no person byline.",
+        "Published by the organization Acrenkey Realty LLP. Each guide carries a byline from one of the team: Gaurav, Nitin or Arvind.",
         "",
     ]
     for section in SECTIONS:
@@ -1012,7 +1002,7 @@ def render_llms(config: dict, posts: list[dict], excerpts: dict[str, str]) -> st
             if post["section"] != section:
                 continue
             url = abs_url(config["baseUrl"], post["path"])
-            lines.append(f"- [{post['h1']}]({url}): {excerpts[post['slug']]}")
+            lines.append(f"- [{post['h1']}]({url}) (by {post['author']}): {excerpts[post['slug']]}")
         lines.append("")
     return "\n".join(lines).rstrip() + "\n"
 
@@ -1047,6 +1037,13 @@ def find_banned(text: str) -> list[tuple[str, str]]:
 
 def validate(config: dict, posts: list[dict], unlinked: list[dict], pages: dict[Path, str]) -> dict:
     problems = []
+    by_path = {ROOT / post["path"] / "index.html": post for post in posts}
+    for post in posts:
+        image_file = ROOT / post["image"]
+        if not image_file.is_file():
+            problems.append(f"missing image file {post['image']}")
+        elif image_file.stat().st_size > 150 * 1024:
+            problems.append(f"{post['image']} is over 150 KB")
     body_hits = []
     head_hits = []
     bangalore_body = []
@@ -1057,8 +1054,6 @@ def validate(config: dict, posts: list[dict], unlinked: list[dict], pages: dict[
             problems.append(f"{rel} has {len(h1s)} h1 tags")
         if 'rel="canonical"' not in page:
             problems.append(f"{rel} missing canonical")
-        if "@type" in page and "Person" in page and re.search(r'"@type"\s*:\s*"Person"', page):
-            problems.append(f"{rel} has Person schema")
         if "/blogs/blogs/" in page:
             problems.append(f"{rel} still uses a doubled /blogs/blogs/ path")
         if "100%" in re.sub(r"https?://\S+", " ", visible_text(page)):
@@ -1072,8 +1067,32 @@ def validate(config: dict, posts: list[dict], unlinked: list[dict], pages: dict[
                 problems.append(f"{rel} missing {token}")
         if config["datePublished"] not in page:
             problems.append(f"{rel} missing datePublished")
-        if "Gaurav" in page or "Mongia" in page:
-            problems.append(f"{rel} has a person byline")
+        if "Mongia" in page:
+            problems.append(f"{rel} carries a surname")
+        post = by_path.get(path)
+        if post:
+            blocks = re.findall(r'<script type="application/ld\+json">(.*?)</script>', page, re.S)
+            try:
+                graph = [node for block in blocks for node in json.loads(block)["@graph"]]
+            except (ValueError, KeyError) as exc:
+                problems.append(f"{rel} JSON-LD does not parse: {exc}")
+                graph = []
+            article = next((node for node in graph if node.get("@type") == "Article"), {})
+            author = article.get("author", {})
+            if author.get("@type") != "Person" or author.get("name") != post["author"]:
+                problems.append(f"{rel} JSON-LD author is not {post['author']}")
+            if article.get("publisher", {}).get("@type") != "Organization":
+                problems.append(f"{rel} publisher is not the Organization")
+            want_img = abs_url(config["baseUrl"], post["image"])
+            if article.get("image") != want_img:
+                problems.append(f"{rel} Article image mismatch")
+            for prop in ('property="og:image"', 'name="twitter:image"'):
+                if f'{prop} content="{want_img}"' not in page:
+                    problems.append(f"{rel} missing {prop}")
+            if not re.search(r'class="author-details-sub byline">\s*<span>By <span class="author-details-name">' + re.escape(post["author"]) + "<", page):
+                problems.append(f"{rel} byline does not show {post['author']}")
+            if 'fetchpriority="high"' not in page or 'class="article-hero-img" loading="eager"' not in page:
+                problems.append(f"{rel} hero image missing eager/fetchpriority")
         old_hrefs = [
             href
             for href in re.findall(r'href="([^"]+)"', page)
@@ -1090,6 +1109,24 @@ def validate(config: dict, posts: list[dict], unlinked: list[dict], pages: dict[
             start = max(0, match.start() - 40)
             end = min(len(body), match.end() + 40)
             bangalore_body.append((rel, re.sub(r"\s+", " ", body[start:end])))
+
+    # Images: every <img> has a non-empty alt, size attributes and a file that exists.
+    for path, page in pages.items():
+        for tag in re.findall(r"<img\b[^>]*>", page):
+            src = re.search(r'src="([^"]*)"', tag)
+            alt = re.search(r'alt="([^"]*)"', tag)
+            if not alt or not alt.group(1).strip():
+                problems.append(f"{path.relative_to(ROOT)} img without alt: {tag[:80]}")
+            if 'width="' not in tag or 'height="' not in tag:
+                problems.append(f"{path.relative_to(ROOT)} img without width/height")
+            if src and not src.group(1).startswith(("http://", "https://", "data:")):
+                target = (path.parent / src.group(1)).resolve()
+                if not target.is_file():
+                    problems.append(f"{path.relative_to(ROOT)} -> missing image {src.group(1)}")
+        for attr, value in re.findall(r'\b(href|src)="(/[^"]*)"', page):
+            if not value.startswith("//"):
+                problems.append(f"{path.relative_to(ROOT)} has root-relative {attr}={value}")
+                break
 
     # Internal relative links resolve.
     for path, page in pages.items():
