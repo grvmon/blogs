@@ -246,7 +246,8 @@ p, blockquote, li {
    Home Hero & Instant Live Search (70/30 Whitespace Rule)
    ========================================================================== */
 .blog-home-hero {
-  padding: var(--space-2xl) var(--space-md) var(--space-xl);
+  /* body already clears the fixed 80px header; this is the visible gap above the eyebrow (homepage-style breathing room). */
+  padding: 104px var(--space-md) var(--space-xl);
   text-align: center;
   border-bottom: 0.5px solid var(--divider);
   background: linear-gradient(180deg, rgba(128, 69, 38, 0.03) 0%, transparent 100%);
@@ -261,8 +262,15 @@ p, blockquote, li {
   font-size: 1.05rem;
   color: var(--neutral-grey);
   line-height: 1.65;
-  max-width: 680px;
+  max-width: 760px;
   margin: var(--space-sm) auto var(--space-lg);
+}
+
+/* Desktop: keep the hero lead on a single line (it is ~710px wide at 1.05rem). */
+@media (min-width: 1024px) {
+  .hero-lead {
+    white-space: nowrap;
+  }
 }
 
 /* Search Bar (Strict 4px & 0.5px Hairline) */
@@ -1284,7 +1292,7 @@ p, blockquote, li {
   }
 
   .blog-home-hero {
-    padding: var(--space-xl) var(--space-md) var(--space-lg);
+    padding: 72px var(--space-md) var(--space-lg);
   }
 
   .article-title {
