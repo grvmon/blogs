@@ -1,17 +1,6 @@
 /* Header behaviour copied from acrenkey.com (grvmon/a-K website.js lines 59-143). */
 document.addEventListener('DOMContentLoaded', function () {
   const headerNav = document.getElementById('header-nav');
-  const hasHero = document.querySelector('.hero-section');
-
-  window.addEventListener('scroll', function () {
-    if (headerNav) {
-      if (window.scrollY > 30) {
-        headerNav.classList.add('scrolled');
-      } else {
-        headerNav.classList.remove('scrolled');
-      }
-    }
-  }, { passive: true });
 
   function ensureHeaderCtaBadges() {
     var navCtas = document.querySelectorAll('.header-nav .nav-cta-btn, .header-nav .primary-cta-btn, .header-nav .mobile-drawer-cta');

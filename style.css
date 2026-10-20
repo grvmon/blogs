@@ -48,7 +48,7 @@
   --radius-strict: 4px;        /* Strict 4px architectural geometry across all UI */
   --container-max: 1280px;     /* Centred 1280px maximum container width */
   --content-max: 75ch;         /* Capped reading line-length for optimal ergonomics */
-  --header-height: 80px;       /* 80px fixed / sticky header offset */
+  --header-height: 0px;        /* Header is static and scrolls with the page */
 }
 
 /* ==========================================================================
@@ -1266,7 +1266,7 @@ p, blockquote, li {
 
 @media (max-width: 768px) {
   :root {
-    --header-height: 64px;
+    --header-height: 0px;
   }
 
   
@@ -1362,9 +1362,9 @@ p, blockquote, li {
   border-radius: var(--radius-strict);
 }
 
-/* acrenkey.com header (assets/ak-chrome.css) is position:fixed at 80px; offset page content below it. */
+/* acrenkey.com header (assets/ak-chrome.css) is static; zero extra body padding needed. */
 body {
-  padding-top: 80px;
+  padding-top: 0;
 }
 
 /* Mobile tap target (QC 2026-10-20) */
