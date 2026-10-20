@@ -41,26 +41,34 @@
 }
 
 /* --------------------------------------------------------------------------
-   Header Nav Container & Static Shell (1 Static Header Only, Zero Scroll Header)
+   Header Nav Container & Fixed Glassmorphic Shell (Exact Homepage Replica)
    -------------------------------------------------------------------------- */
 .header-nav {
-  position: relative !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
   width: 100% !important;
   max-width: 100% !important;
   height: 80px !important;
   z-index: 1000 !important;
-  background: var(--obsidian-black, #2B2D31) !important;
-  background-color: var(--obsidian-black, #2B2D31) !important;
+  background: rgba(43, 45, 49, 0.90) !important;
+  background-color: rgba(43, 45, 49, 0.90) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
   border-bottom: 0.5px solid rgba(255, 255, 255, 0.12) !important;
   box-shadow: none !important;
   border-radius: 0 !important;
+  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease !important;
 }
 
 .header-nav.scrolled {
-  position: relative !important;
-  background: var(--obsidian-black, #2B2D31) !important;
-  background-color: var(--obsidian-black, #2B2D31) !important;
-  border-bottom: 0.5px solid rgba(255, 255, 255, 0.12) !important;
+  position: fixed !important;
+  background: rgba(43, 45, 49, 0.95) !important;
+  background-color: rgba(43, 45, 49, 0.95) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.18) !important;
   box-shadow: none !important;
   height: 80px !important;
 }
@@ -68,9 +76,11 @@
 @media (max-width: 991px) {
   .header-nav,
   .header-nav.scrolled {
-    position: relative !important;
-    background: var(--obsidian-black, #2B2D31) !important;
-    background-color: var(--obsidian-black, #2B2D31) !important;
+    position: fixed !important;
+    background: rgba(43, 45, 49, 0.95) !important;
+    background-color: rgba(43, 45, 49, 0.95) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.12) !important;
   }
 }

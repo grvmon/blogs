@@ -2,6 +2,19 @@
 document.addEventListener('DOMContentLoaded', function () {
   const headerNav = document.getElementById('header-nav');
 
+  function updateHeaderScroll() {
+    if (headerNav) {
+      if (window.scrollY > 30) {
+        headerNav.classList.add('scrolled');
+      } else {
+        headerNav.classList.remove('scrolled');
+      }
+    }
+  }
+
+  window.addEventListener('scroll', updateHeaderScroll, { passive: true });
+  updateHeaderScroll();
+
   function ensureHeaderCtaBadges() {
     var navCtas = document.querySelectorAll('.header-nav .nav-cta-btn, .header-nav .primary-cta-btn, .header-nav .mobile-drawer-cta');
     navCtas.forEach(function (btn) {
