@@ -19,7 +19,7 @@ except ImportError:
 HEADER_FOOTER_MARKERS = (
     'class="header-nav', 'class="nav-brand"',
     'id="mobile-toggle-btn"', 'id="mobile-drawer"', '<footer class="site-footer ak-footer" id="footer">',
-    'assets/ak-chrome.css', 'assets/ak-chrome.js', 'favicon.svg',
+    'assets/ak-chrome.css', 'assets/ak-chrome.js', 'favicon.svg', 'favicon-32x32.png', 'apple-touch-icon.png',
 )
 def internal_index_href(page):
     """index.html in any internal href (relative or acrenkey.com). External sites are out of scope."""
