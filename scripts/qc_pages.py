@@ -28,7 +28,25 @@ def internal_index_href(page):
 
 
 idx = (ROOT / "index.html").read_text()
-idx_ok = not internal_index_href(idx) and all(x in idx for x in HEADER_FOOTER_MARKERS)
+idx_graph = []
+try:
+    idx_graph = [n for blk in re.findall(r'<script type="application/ld\+json">(.*?)</script>', idx, re.S) for n in json.loads(blk)["@graph"]]
+except Exception:
+    pass
+idx_types = set()
+for n in idx_graph:
+    t = n.get("@type")
+    if isinstance(t, list):
+        idx_types.update(t)
+    elif isinstance(t, str):
+        idx_types.add(t)
+idx_ok = (
+    not internal_index_href(idx)
+    and all(x in idx for x in HEADER_FOOTER_MARKERS)
+    and "RealEstateAgent" in idx_types
+    and "WebSite" in idx_types
+    and "Blog" in idx_types
+)
 for post in posts:
     path = ROOT / post["path"] / "index.html"
     page = path.read_text()
@@ -46,7 +64,21 @@ for post in posts:
     try:
         graph = [n for blk in re.findall(r'<script type="application/ld\+json">(.*?)</script>', page, re.S) for n in json.loads(blk)["@graph"]]
         art = next(n for n in graph if n["@type"] == "Article")
-        r["jsonld_parse_author"] = art["author"] == {"@type": "Person", "name": post["author"], "worksFor": {"@type": "Organization", "name": "Acrenkey Realty LLP", "url": "https://acrenkey.com/"}} and art["publisher"]["@type"] == "Organization" and art["image"] == b.abs_url(config["baseUrl"], post["image"])
+        prof = b.AUTHOR_PROFILES[post["author"]]
+        author_ok = (
+            art["author"]["@type"] == "Person"
+            and art["author"]["name"] == prof["name"]
+            and art["author"]["image"] == prof["avatar"]
+            and art["author"]["sameAs"] == [prof["linkedin"]]
+        )
+        pub_type = art["publisher"]["@type"]
+        pub_ok = pub_type == "Organization" or (isinstance(pub_type, list) and "Organization" in pub_type)
+        r["jsonld_parse_author"] = (
+            author_ok
+            and pub_ok
+            and art["image"] == b.abs_url(config["baseUrl"], post["image"])
+            and art.get("speakable", {}).get("@type") == "SpeakableSpecification"
+        )
     except Exception:
         r["jsonld_parse_author"] = False
     want = b.abs_url(config["baseUrl"], post["image"])

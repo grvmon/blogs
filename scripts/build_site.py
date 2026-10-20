@@ -97,20 +97,26 @@ AUTHOR_PROFILES = {
     "Gaurav": {
         "name": "Gaurav Mongia",
         "role": "Market Strategy · Product · Tech",
+        "jobTitle": "Co-founder & Head of Product & Strategy",
         "avatar": "https://acrenkey.com/style-guide/assets/gaurav-mongia-founder-acre-key.webp",
         "linkedin": "https://www.linkedin.com/in/gaurav-a-mongia/",
+        "description": "Building data-driven evaluation models and micro-market frameworks to give buyers absolute clarity.",
     },
     "Nitin": {
-        "name": "Nitin Kochhar",
+        "name": "Nitin Gupta",
         "role": "Investments · Decision Framework",
-        "avatar": "https://acrenkey.com/style-guide/assets/Nitin_Kocchar.webp",
-        "linkedin": "https://www.linkedin.com/in/nitin-kochhar/",
+        "jobTitle": "Co-founder & Head of Investments",
+        "avatar": "https://acrenkey.com/style-guide/assets/nitin-gupta-founder-acre-key.webp",
+        "linkedin": "https://www.linkedin.com/in/nitin-gupta-7446864/",
+        "description": "Former corporate finance leader applying institutional diligence and quantitative risk models to home buying in Bengaluru.",
     },
     "Arvind": {
         "name": "Arvind Patidar",
         "role": "Advisory · Execution",
+        "jobTitle": "Co-founder & Head of Operations",
         "avatar": "https://acrenkey.com/style-guide/assets/arvind-patidar-founder-acre-key.webp",
         "linkedin": "https://www.linkedin.com/in/arvind-patidar/",
+        "description": "Operations and engineering leader ensuring flawless execution, civic compliance, and zero-compromise due diligence.",
     },
 }
 IMAGE_W, IMAGE_H = 1200, 675
@@ -540,11 +546,54 @@ def prepare_body(post: dict, slug_section: dict[str, str], unlinked: list[dict],
 
 def json_ld(config: dict, post: dict, canonical: str, faqs: list[tuple[str, str]], answer_html: list[str], howto: dict | None = None) -> str:
     org = config["organization"]
+    author_key = post["author"]
+    profile = AUTHOR_PROFILES[author_key]
+    author_id_slug = slugify(profile["name"])
     organization = {
         "@type": "Organization",
-        "name": org["name"],
-        "alternateName": org["brand"],
+        "@id": "https://acrenkey.com/#organization",
+        "name": org["brand"],
+        "alternateName": "acreNkey",
+        "legalName": org["name"],
         "url": org["url"],
+        "logo": {
+            "@type": "ImageObject",
+            "@id": "https://acrenkey.com/#logo",
+            "url": "https://acrenkey.com/style-guide/assets/logo.jpg",
+            "contentUrl": "https://acrenkey.com/style-guide/assets/logo.jpg",
+        },
+        "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "Karnataka RERA Agent Registration",
+            "value": "PRM/KA/RERA/1251/446/AG/260814/007659",
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "8th floor, Summit A, Brigade Metropolis, Brigade Metro Rd, Garudachar Palya, Mahadevapura",
+            "addressLocality": "Bengaluru",
+            "addressRegion": "Karnataka",
+            "postalCode": "560048",
+            "addressCountry": "IN",
+        },
+        "sameAs": [
+            "https://www.linkedin.com/company/acrenkey/",
+            "https://www.instagram.com/acrenkey/",
+            "https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw",
+            "https://x.com/acreNkey",
+            "https://www.facebook.com/profile.php?id=61589792184848",
+        ],
+        "telephone": "+91-9071693393",
+    }
+    author_entity = {
+        "@type": "Person",
+        "@id": f"https://acrenkey.com/#{author_id_slug}",
+        "name": profile["name"],
+        "jobTitle": profile.get("jobTitle") or profile["role"],
+        "image": profile["avatar"],
+        "description": profile.get("description", ""),
+        "worksFor": {"@id": "https://acrenkey.com/#organization"},
+        "url": "https://acrenkey.com/",
+        "sameAs": [profile["linkedin"]],
     }
     section_label = SECTION_LABEL[post["section"]]
     graph = [
@@ -558,12 +607,12 @@ def json_ld(config: dict, post: dict, canonical: str, faqs: list[tuple[str, str]
             "mainEntityOfPage": {"@type": "WebPage", "@id": canonical},
             "url": canonical,
             "image": abs_url(config["baseUrl"], post["image"]),
-            "author": {
-                "@type": "Person",
-                "name": post["author"],
-                "worksFor": {"@type": "Organization", "name": org["name"], "url": org["url"]},
-            },
+            "author": author_entity,
             "publisher": organization,
+            "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": [".article-title", ".short-answer"],
+            },
         },
         {
             "@type": "FAQPage",
@@ -663,6 +712,90 @@ def json_ld(config: dict, post: dict, canonical: str, faqs: list[tuple[str, str]
                 ],
             }
         )
+    payload = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False)
+    return payload.replace("<", "\\u003c")
+
+
+def json_ld_index(config: dict, posts: list[dict]) -> str:
+    org = config["organization"]
+    canonical = abs_url(config["baseUrl"])
+    organization = {
+        "@type": ["RealEstateAgent", "Organization"],
+        "@id": "https://acrenkey.com/#organization",
+        "name": org["brand"],
+        "alternateName": "acreNkey",
+        "legalName": org["name"],
+        "url": org["url"],
+        "logo": {
+            "@type": "ImageObject",
+            "@id": "https://acrenkey.com/#logo",
+            "url": "https://acrenkey.com/style-guide/assets/logo.jpg",
+            "contentUrl": "https://acrenkey.com/style-guide/assets/logo.jpg",
+        },
+        "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "Karnataka RERA Agent Registration",
+            "value": "PRM/KA/RERA/1251/446/AG/260814/007659",
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "8th floor, Summit A, Brigade Metropolis, Brigade Metro Rd, Garudachar Palya, Mahadevapura",
+            "addressLocality": "Bengaluru",
+            "addressRegion": "Karnataka",
+            "postalCode": "560048",
+            "addressCountry": "IN",
+        },
+        "sameAs": [
+            "https://www.linkedin.com/company/acrenkey/",
+            "https://www.instagram.com/acrenkey/",
+            "https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw",
+            "https://x.com/acreNkey",
+            "https://www.facebook.com/profile.php?id=61589792184848",
+        ],
+        "telephone": "+91-9071693393",
+    }
+    graph = [
+        organization,
+        {
+            "@type": "WebSite",
+            "@id": f"{canonical}#website",
+            "url": canonical,
+            "name": "acre&key Bengaluru Home Buying Guides",
+            "description": (
+                "Plain-language guides for people buying a home in Bengaluru: costs, loans, "
+                "legal checks, and how neighbourhoods differ."
+            ),
+            "publisher": {"@id": "https://acrenkey.com/#organization"},
+            "inLanguage": "en-IN",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": f"{canonical}?q={{search_term_string}}",
+                },
+                "query-input": "required name=search_term_string",
+            },
+        },
+        {
+            "@type": "Blog",
+            "@id": f"{canonical}#blog",
+            "url": canonical,
+            "name": "Bengaluru Home Buying Guides",
+            "description": (
+                "Plain-language guides for people buying a home in Bengaluru: costs, loans, "
+                "legal checks, and how neighbourhoods differ."
+            ),
+            "publisher": {"@id": "https://acrenkey.com/#organization"},
+            "inLanguage": "en-IN",
+        },
+        {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": org["url"]},
+                {"@type": "ListItem", "position": 2, "name": "Blog", "item": canonical},
+            ],
+        },
+    ]
     payload = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False)
     return payload.replace("<", "\\u003c")
 
@@ -966,7 +1099,7 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
         <div class="author-bio-card">
           <div class="author-bio-avatar" aria-hidden="true">a&amp;k</div>
           <div>
-            <p class="author-bio-title">Written by {esc(post['author'])}</p>
+            <p class="author-bio-title">Written by {esc(profile['name'])}</p>
             <span class="author-bio-role">Acrenkey Realty LLP</span>
             <p class="author-bio-desc">Published by Acrenkey Realty LLP, a property advisory for people buying a home in Bengaluru.</p>
           </div>
@@ -1041,7 +1174,7 @@ def render_index(config: dict, posts: list[dict], excerpts: dict[str, str]) -> s
         </a>
         <div class="blog-card-body">
           <div class="blog-card-meta">
-            <span>By {esc(post['author'])}</span>
+            <span>By {esc(AUTHOR_PROFILES[post['author']]['name'])}</span>
             <span class="meta-sep" aria-hidden="true">&bull;</span>
             <time datetime="{esc(post.get('published') or config['datePublished'])}">{esc(format_date(post.get('published') or config['datePublished']))}</time>
           </div>
@@ -1057,10 +1190,11 @@ def render_index(config: dict, posts: list[dict], excerpts: dict[str, str]) -> s
       </article>"""
         )
     grid = "\n\n      ".join(cards)
+    ld = json_ld_index(config, posts)
     page = f"""<!DOCTYPE html>
 <html lang="en-IN">
 <head>
-  {head_tags(title, description, canonical, '', 'website', None, None, abs_url(config['baseUrl'], 'assets/img/first-time-home-buyer-guide-bengaluru.webp'))}
+  {head_tags(title, description, canonical, '', 'website', None, ld, abs_url(config['baseUrl'], 'assets/img/first-time-home-buyer-guide-bengaluru.webp'))}
 </head>
 <body>
   {header('')}
@@ -1211,6 +1345,8 @@ def validate(config: dict, posts: list[dict], unlinked: list[dict], pages: dict[
         if path.name == "index.html" and path.parent == ROOT:
             if "institutional and high-net-worth asset acquisitions" in page:
                 problems.append("index meta was not replaced")
+            if "Blog" not in page or "WebSite" not in page or "RealEstateAgent" not in page:
+                problems.append("index.html missing JSON-LD schemas")
             continue
         for token in ("Article", "FAQPage", "BreadcrumbList"):
             if token not in page:
@@ -1229,10 +1365,13 @@ def validate(config: dict, posts: list[dict], unlinked: list[dict], pages: dict[
                 graph = []
             article = next((node for node in graph if node.get("@type") == "Article"), {})
             author = article.get("author", {})
-            if author.get("@type") != "Person" or author.get("name") != post["author"]:
-                problems.append(f"{rel} JSON-LD author is not {post['author']}")
+            prof = AUTHOR_PROFILES[post["author"]]
+            if author.get("@type") != "Person" or author.get("name") != prof["name"]:
+                problems.append(f"{rel} JSON-LD author is not {prof['name']}")
             if article.get("publisher", {}).get("@type") != "Organization":
                 problems.append(f"{rel} publisher is not the Organization")
+            if article.get("speakable", {}).get("@type") != "SpeakableSpecification":
+                problems.append(f"{rel} missing speakable schema")
             want_img = abs_url(config["baseUrl"], post["image"])
             if article.get("image") != want_img:
                 problems.append(f"{rel} Article image mismatch")
