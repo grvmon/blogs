@@ -191,7 +191,7 @@ If you're looking near a metro station and want to know how much is planned on y
 
 Checked 19 Oct 2026.
 
-1. High Court of Karnataka, judgment of 15 Jun 2026 in WA 1983 of 2025 with WP 14959 of 2020 and WP 2807 of 2026 (copy): https://www.legalrepublic.in/high-courts/karnataka-hc/karnataka-hc-premium-far-ktcp-act-section-18b-constitutional-validity-krishnamurthy/judgment.pdf
+1. High Court of Karnataka, judgment of 15 Jun 2026 in WA 1983 of 2025 with WP 14959 of 2020 and WP 2807 of 2026 ([copy of the judgment](https://www.legalrepublic.in/high-courts/karnataka-hc/karnataka-hc-premium-far-ktcp-act-section-18b-constitutional-validity-krishnamurthy/judgment.pdf))
 2. The Hindu, BMRCL property monetisation at S.V. Road metro station, 9 Jan 2026 (news): https://www.thehindu.com/news/national/karnataka/bengaluru-metro-turns-to-property-monetisation-floats-tender-to-appoint-a-transaction-advisor-for-sv-road-metro-station-land-development/article70490741.ece
 3. Real Estate (Regulation and Development) Act 2016, s.14(2) (India Code): https://www.indiacode.nic.in/handle/123456789/2158
 4. Karnataka RERA, View All Projects: https://rera.karnataka.gov.in/viewAllProjects?language=en
