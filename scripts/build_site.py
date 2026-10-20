@@ -598,7 +598,7 @@ def json_ld(config: dict, post: dict, canonical: str, faqs: list[tuple[str, str]
     section_label = SECTION_LABEL[post["section"]]
     graph = [
         {
-            "@type": "Article",
+            "@type": "BlogPosting",
             "headline": post["h1"],
             "description": post["meta"],
             "datePublished": post.get("published") or config["datePublished"],
@@ -1348,7 +1348,7 @@ def validate(config: dict, posts: list[dict], unlinked: list[dict], pages: dict[
             if "Blog" not in page or "WebSite" not in page or "RealEstateAgent" not in page:
                 problems.append("index.html missing JSON-LD schemas")
             continue
-        for token in ("Article", "FAQPage", "BreadcrumbList"):
+        for token in ("BlogPosting", "FAQPage", "BreadcrumbList"):
             if token not in page:
                 problems.append(f"{rel} missing {token}")
         post_for_date = by_path.get(path)
@@ -1363,7 +1363,7 @@ def validate(config: dict, posts: list[dict], unlinked: list[dict], pages: dict[
             except (ValueError, KeyError) as exc:
                 problems.append(f"{rel} JSON-LD does not parse: {exc}")
                 graph = []
-            article = next((node for node in graph if node.get("@type") == "Article"), {})
+            article = next((node for node in graph if node.get("@type") == "BlogPosting"), {})
             author = article.get("author", {})
             prof = AUTHOR_PROFILES[post["author"]]
             if author.get("@type") != "Person" or author.get("name") != prof["name"]:

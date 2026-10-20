@@ -63,7 +63,7 @@ for post in posts:
     r["byline_author"] = "author-byline-card" in page and "author-details-name" in page and post["author"] in page
     try:
         graph = [n for blk in re.findall(r'<script type="application/ld\+json">(.*?)</script>', page, re.S) for n in json.loads(blk)["@graph"]]
-        art = next(n for n in graph if n["@type"] == "Article")
+        art = next(n for n in graph if n["@type"] == "BlogPosting")
         prof = b.AUTHOR_PROFILES[post["author"]]
         author_ok = (
             art["author"]["@type"] == "Person"
