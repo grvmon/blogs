@@ -1470,3 +1470,17 @@ body {
     height: 320px;
   }
 }
+
+/* Mobile readability + tap targets (approved 20 Oct 2026) */
+@media (max-width: 767px) {
+  html body .faq-body p, html body .faq-body li,
+  html body .summary-list li,
+  html body .toc-list li, html body .toc-list a,
+  html body .author-bio-desc,
+  html body .ak-map-note { font-size: 16px; }
+  html body .nav-brand, html body .mobile-drawer-brand,
+  html body .author-name-link, html body .ak-footer-logo,
+  html body .mobile-drawer a, html body .mobile-nav a {
+    min-height: 44px; display: inline-flex; align-items: center;
+  }
+}
