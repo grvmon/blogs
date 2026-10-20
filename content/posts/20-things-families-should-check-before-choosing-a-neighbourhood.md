@@ -1,6 +1,6 @@
 ---
-title: "Neighbourhood Checklist for Families: 20 Checks in Bengaluru"
-meta_description: "A neighbourhood checklist for Bengaluru families: 20 checks on schools, hospitals, water, flooding and commute, with school-run maths and a scoring method."
+title: "Neighbourhood Checklist for Families: 20 Bengaluru Checks"
+meta_description: "Neighbourhood checklist for families in Bengaluru: 20 checks on schools, hospitals, water, flooding and commute, with school-run maths and scoring."
 slug: "20-things-families-should-check-before-choosing-a-neighbourhood"
 canonical: "https://acrenkey.com/blogs/20-things-families-should-check-before-choosing-a-neighbourhood/"
 primary_keyword: "neighbourhood checklist for families"
@@ -12,7 +12,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# 20 things families should check before choosing a neighbourhood
+# Neighbourhood checklist for families: 20 things to check in Bengaluru
 
 **Short answer:** Use this neighbourhood checklist for families before you shortlist flats, not after. Time the school run and the drive to a hospital at peak hour. Check where the water comes from and whether the approach road floods. Then weight each check by what your family needs and score two or three areas side by side.
 

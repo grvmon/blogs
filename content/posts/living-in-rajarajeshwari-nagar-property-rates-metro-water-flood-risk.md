@@ -14,7 +14,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Living in Rajarajeshwari Nagar: rates, metro, water and flood risk
+# Rajarajeshwari Nagar property rates (2026): metro, water and flood risk
 
 **Short answer:** Rajarajeshwari Nagar property rates averaged ₹7,800 per sq ft for launches in Q4 2025, according to ANAROCK. Guidance values for its housing society layouts are mostly ₹75,000 to ₹80,000 per sq m, many apartment lines are ₹50,200, and the Mysore Road frontage is ₹1,20,000. The Purple Line stops at Rajarajeshwari Nagar.
 

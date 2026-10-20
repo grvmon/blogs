@@ -1,6 +1,6 @@
 ---
 title: "Marathahalli Property Rates 2026: Metro, Water, Flood Risk"
-meta_description: "Living in Marathahalli, Bangalore: guidance values by road, Knight Frank price ranges, Blue Line and suburban rail status, Cauvery water and flood points."
+meta_description: "Marathahalli property rates: guidance values by road, Knight Frank price ranges, Blue Line and suburban rail status, Cauvery water and flood points."
 slug: "living-in-marathahalli-property-rates-metro-water-flood-risk"
 canonical: "https://acrenkey.com/blogs/living-in-marathahalli-property-rates-metro-water-flood-risk/"
 lives: "blog /areas/"
@@ -14,7 +14,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Living in Marathahalli: property rates, metro, water and flood risk
+# Marathahalli property rates (2026): metro, water and flood risk
 
 **Short answer:** Marathahalli property rates for flats run ₹7,310 to ₹15,500 per sq ft (Knight Frank, H1 2026), up 15% in a year, the fourth-fastest rise of 17 Bengaluru locations. Official guidance values are high too: ₹84,187 per sq m for the village site line and ₹1,20,150 on the ring road. The Blue Line station is still being built.
 

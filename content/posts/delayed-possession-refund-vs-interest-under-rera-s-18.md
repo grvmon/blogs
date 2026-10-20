@@ -1,5 +1,5 @@
 ---
-title: "Delayed Possession Compensation RERA Karnataka: What You Get"
+title: "Delayed Possession Compensation RERA Karnataka Guide"
 meta_description: "Flat possession delayed in Bangalore? RERA s.18 lets you take a refund with interest or stay and get monthly interest. See the maths and how to file."
 slug: "delayed-possession-refund-vs-interest-under-rera-s-18"
 canonical: "https://acrenkey.com/blogs/delayed-possession-refund-vs-interest-under-rera-s-18/"

@@ -14,7 +14,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Living in Yeshwanthpur: rates, metro, water and flood risk
+# Yeshwanthpur property rates (2026): metro, water and flood risk
 
 **Short answer:** Yeshwanthpur property rates were ₹7,700 to ₹14,500 per sq ft in H1 2026, up 9% in a year, according to Knight Frank. Guidance values run from ₹1,30,000 per sq m on Tumkur Road to ₹45,000 in Baiyanna Layout, with apartment lines at ₹75,000 to ₹1,00,000. The Green Line stops at Yeshwanthpur.
 

@@ -1,6 +1,6 @@
 ---
 title: "DC Conversion Karnataka: Section 95 Rules for Plot Buyers"
-meta_description: "DC conversion in Karnataka explained for plot buyers: the 2025 Section 95 rules, the 30-day deemed approval, conversion fines and how to check an order."
+meta_description: "DC conversion in Karnataka for plot buyers: the 2025 Section 95 rules, the 30-day deemed approval, conversion fines and how to check an order."
 slug: "land-conversion-dc-conversion-section-95-explained-for-plot-buyers"
 canonical: "https://acrenkey.com/blogs/land-conversion-dc-conversion-section-95-explained-for-plot-buyers/"
 lives: "blog"
@@ -14,7 +14,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Land conversion (DC conversion and Section 95) explained for plot buyers
+# DC conversion in Karnataka and Section 95 explained for plot buyers
 
 **Short answer:** DC conversion in Karnataka is permission under Section 95 of the Karnataka Land Revenue Act to use farm land for other purposes. Since 23 Dec 2025, land inside an approved master plan needs no Deputy Commissioner's permission. Elsewhere, the DC must decide within 30 days or approval is deemed. Either way, check the order against the RTC.
 

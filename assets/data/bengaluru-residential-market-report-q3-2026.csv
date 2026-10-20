@@ -1,0 +1,13 @@
+metric,period,tracker,value,unit,yoy_change,qoq_change,source_url,notes
+sales,Q3 2026,ANAROCK,16650,units,12%,9%,https://investmentguruindia.com/editorial/uploads/news-pdf/12601e58_Q3_2026_Pan_India_Residential_Market_Viewpoints_9cf1a7e616.pdf,Top 7 cities report; Q2 2026 15300; Q3 2025 14850
+sales,Q3 2026,Knight Frank,15172,units,4%,2%,https://content.knightfrank.com/research/3138/documents/en/india-real-estate-residential-market-jul-sep-2026-13033.pdf,Q2 2026 14876; YTD change +5%
+sales,Q3 2026,PropEquity,17340,units,1%,,https://www.outlookmoney.com/personal-finance/housing-sales-soften-6-per-cent-in-q3-as-developers-pull-back-on-new-supply-propequity,Via news report; original PropEquity release not read
+launches,Q3 2026,ANAROCK,17700,units,16%,-18%,(ANAROCK PDF above),Q2 2026 21700; Q3 2025 15200
+launches,Q3 2026,Knight Frank,18393,units,3%,5%,(Knight Frank PDF above),Q2 2026 17564
+available_inventory,end Q3 2026,ANAROCK,80200,units,35%,1%,(ANAROCK PDF above),Q2 79200; Q3 2025 59250
+inventory_overhang,Q3 2026,ANAROCK,15,months,22%,-2%,(ANAROCK PDF above),Lowest of top 7
+quarters_to_sell,Q3 2026,Knight Frank,5.5,quarters,,,(Knight Frank PDF above),Up from 4.6; inventory +21% YoY
+avg_price,Q3 2026,ANAROCK,9600,INR per sq ft (BSP on super built-up),8%,2%,(ANAROCK PDF above),
+avg_price,Q3 2026,Knight Frank,9794,INR per sq ft (inventory-weighted),11%,5%,(Knight Frank PDF above),KF says partly reflects higher-priced stock added
+launch_mix_above_1.5cr,Q3 2026,ANAROCK,52,% of launches,,,(ANAROCK PDF above),Affordable + lower mid (<80 L) about 1%
+repo_rate,7 Oct 2026,RBI,5.50,%,,+0.25 pp,https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63742,Stance: calibrated tightening

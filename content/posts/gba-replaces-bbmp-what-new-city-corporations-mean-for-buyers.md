@@ -1,6 +1,6 @@
 ---
 title: "Greater Bengaluru Authority Property: What Changed in 2026"
-meta_description: "BBMP is gone. What the GBA and five city corporations changed for flat buyers: 369 wards, e-Aasthi 2.0, e-Khata, the 5% B-to-A fee, tax and registration."
+meta_description: "Greater Bengaluru Authority property rules for flat buyers: 369 wards, five corporations, e-Aasthi 2.0, e-Khata, the 5% B-to-A fee, tax and registration."
 slug: "gba-replaces-bbmp-what-new-city-corporations-mean-for-buyers"
 canonical: "https://acrenkey.com/insights/gba-replaces-bbmp-what-new-city-corporations-mean-for-buyers/"
 lives: "/insights/"
@@ -18,7 +18,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish (/insights/ waits for review)."
 ---
 
-# GBA replaces BBMP: what the new city corporations mean for flat buyers
+# Greater Bengaluru Authority property rules: what the new city corporations mean for flat buyers
 
 **Short answer:** For Greater Bengaluru Authority property buyers, the rules you pay under barely moved; the offices and portals did. Five city corporations replaced BBMP, with 369 wards. e-Khata is still needed to register, now through e-Aasthi 2.0 since 22 Sep 2026. Converting B-Khata to A-Khata costs 5% of guidance value from 24 Aug 2026.
 

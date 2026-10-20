@@ -1,5 +1,5 @@
 ---
-title: "Resale vs New Flat in Bengaluru: Price, Tax and Risk in 2026"
+title: "Resale vs New Flat in Bengaluru: Price, Tax and Risk 2026"
 meta_description: "Resale vs new flat Bangalore buyers can compare in rupees: GST, stamp duty, carpet area, waiting costs, RERA protection, title risk and a 4-step check."
 slug: "resale-vs-new-flat-in-bengaluru-price-tax-risk"
 canonical: "https://acrenkey.com/blogs/resale-vs-new-flat-in-bengaluru-price-tax-risk/"

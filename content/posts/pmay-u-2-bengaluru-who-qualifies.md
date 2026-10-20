@@ -14,7 +14,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# PMAY-U 2.0 in Bengaluru: who qualifies
+# PMAY-U 2.0 eligibility in Bengaluru: who qualifies
 
 **Short answer:** PMAY-U 2.0 eligibility for the home loan subsidy has five tests: family income up to ₹9 lakh, no pucca house anywhere in India, a loan up to ₹25 lakh on a home worth up to ₹35 lakh, carpet area up to 120 sq m, and a loan from 1 September 2024. In Bengaluru, the ₹35 lakh cap bites.
 

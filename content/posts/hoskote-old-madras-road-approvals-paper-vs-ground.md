@@ -14,7 +14,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Hoskote and Old Madras Road: approvals on paper vs on the ground
+# Hoskote RERA approved projects and Old Madras Road: approvals on paper vs on the ground
 
 **Short answer:** Hoskote RERA approved projects numbered 233 on 15 October 2026, and 53.2% had a completion date that had already passed. The register doesn't show occupancy certificates, so "approved" and "past due" tell you little about what's built. On this corridor, check the planning approval, the khata type, the OC and water supply separately.
 

@@ -1,6 +1,6 @@
 ---
 title: "KR Puram Property Rates 2026: Metro, Water and Flood Risk"
-meta_description: "Living in KR Puram, Bangalore: official guidance values, price ranges, the Purple and Blue Line metro, Cauvery water, RERA delivery and flood checks."
+meta_description: "KR Puram property rates, Bangalore: official guidance values, price ranges, the Purple and Blue Line metro, Cauvery water, RERA delivery and flood checks."
 slug: "living-in-kr-puram-property-rates-metro-water-flood-risk"
 canonical: "https://acrenkey.com/blogs/living-in-kr-puram-property-rates-metro-water-flood-risk/"
 lives: "blog /areas/"
@@ -15,7 +15,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Living in KR Puram: property rates, metro, water and flood risk
+# KR Puram property rates (2026): metro, water and flood risk
 
 **Short answer:** KR Puram property rates for flats run ₹6,400 to ₹13,400 per sq ft (Knight Frank, H1 2026), up 20% in a year, the fastest rise of the 17 Bengaluru locations it tracks. Official site guidance values run ₹40,000 to ₹75,000 per sq m. The Purple Line already stops here; the Blue Line is due from 2027.
 

@@ -14,7 +14,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Living in Indiranagar: rates, metro, water and flood risk
+# Indiranagar property rates (2026): metro, water and flood risk
 
 **Short answer:** Indiranagar property rates aren't published by Knight Frank or ANAROCK, so official guidance values are the firmest guide. HAL 2nd Stage is ₹1,25,000 to ₹1,30,000 per sq m (about ₹11,600 to ₹12,080 per sq ft), the 80 ft road ₹1,87,000 and the 100 ft road ₹2,70,000. The Purple Line has run through Indiranagar for years.
 

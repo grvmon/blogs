@@ -14,7 +14,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish. Rebuilt 19 Oct from the 18 Oct draft (byline, disclosure and author box removed)."
 ---
 
-# What should you check before paying a token or booking amount in Bengaluru?
+# Token amount checklist: what to check before paying a booking amount in Bengaluru
 
 **Short answer:** Use this token amount checklist before any money moves: confirm the project's RERA registration, the encumbrance certificate, the khata and approvals, and a written refund if your checks fail. Under Section 13 of the RERA Act, a builder can't take more than 10% of the cost before a registered agreement for sale.
 

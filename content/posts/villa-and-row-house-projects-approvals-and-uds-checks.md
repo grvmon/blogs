@@ -1,6 +1,6 @@
 ---
 title: "Villa Projects Bangalore: Approvals, UDS and Plot Checks"
-meta_description: "Villa and row-house project approval checks in Bengaluru: marked plot or undivided share, conversion, layout and plan sanction, RERA, OC and association."
+meta_description: "Villa projects Bangalore approval checks: marked plot or undivided share, conversion, layout and plan sanction, RERA, OC and the association."
 slug: "villa-and-row-house-projects-approvals-and-uds-checks"
 canonical: "https://acrenkey.com/blogs/villa-and-row-house-projects-approvals-and-uds-checks/"
 lives: "blog"
@@ -13,7 +13,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Villa and row-house projects in Bengaluru: approvals and UDS checks
+# Villa projects in Bengaluru: approval and UDS checks for villas and row houses
 
 **Short answer:** Villa project approval checks start with one question: does the deed give you a marked plot, or an undivided share (UDS) of the whole site? That decides what you can rebuild, sell and borrow against. Then check the land conversion, layout approval, building plan sanction, RERA registration and an occupancy certificate for each villa.
 

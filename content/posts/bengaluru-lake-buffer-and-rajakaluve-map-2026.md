@@ -1,6 +1,7 @@
 ---
-title: "Bengaluru Lake Buffer and Rajakaluve Map for Homebuyers (2026)"
-meta_description: "A Bengaluru map of KSRSAC tanks, BBMP lake points and primary and secondary drains, the 2026 buffer table, and how to check one plot."
+title: "Bengaluru Lake Buffer and Rajakaluve Map (2026)"
+meta_description: "Bengaluru lake buffer map: KSRSAC tanks, BBMP lake points and primary and secondary drains, the 2026 buffer table, and how to check one plot."
+primary_keyword: "bengaluru lake buffer map"
 slug: "bengaluru-lake-buffer-and-rajakaluve-map-2026"
 date_modified: "2026-10-20"
 date_published: "2026-10-20"

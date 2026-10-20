@@ -1,6 +1,6 @@
 ---
 title: "How to Buy a Flat in Bangalore Step by Step (2026 Process)"
-meta_description: "The full process of buying a flat in Bengaluru in nine steps: budget, RERA, legal checks, token, agreement, loan, Kaveri registration, TDS and khata."
+meta_description: "How to buy a flat in Bangalore step by step: budget, RERA, legal checks, token, agreement, loan, Kaveri registration, TDS and khata in nine stages."
 slug: "how-to-buy-a-flat-in-bengaluru-the-full-process-step-by-step"
 canonical: "https://acrenkey.com/blogs/how-to-buy-a-flat-in-bengaluru-the-full-process-step-by-step/"
 lives: "blog"
@@ -17,7 +17,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# How do you buy a flat in Bengaluru, step by step?
+# How to buy a flat in Bengaluru, step by step
 
 **Short answer:** Here's how to buy a flat in Bengaluru step by step: set an all-in budget, shortlist RERA-registered projects, verify title and approvals, pay a token only after checks, sign and register the agreement for sale, get the loan sanctioned, register the sale deed on Kaveri, deduct TDS, and move the e-Khata and utilities into your name.
 

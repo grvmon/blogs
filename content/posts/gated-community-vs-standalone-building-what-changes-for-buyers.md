@@ -14,7 +14,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Gated community vs standalone building: what changes for buyers
+# Gated community vs standalone apartment: what changes for buyers
 
 **Short answer:** Gated community vs standalone apartment isn't only about pools and guards. In Bengaluru, a small standalone building may not need RERA registration at all, so you lose its protections. Gated projects carry bigger shared systems, like STPs, and fixed costs spread over more flats. Check the legal status, land share and running costs, not the brochure.
 

@@ -1,6 +1,6 @@
 ---
 title: "Yelahanka Property Rates 2026: Metro, Water and Flood Risk"
-meta_description: "Living in Yelahanka, Bangalore: guidance values, Knight Frank price ranges, the airport metro timeline, Cauvery water, lake flooding and RERA supply."
+meta_description: "Yelahanka property rates, Bangalore: guidance values, Knight Frank price ranges, the airport metro timeline, Cauvery water, lake flooding and RERA supply."
 slug: "living-in-yelahanka-property-rates-metro-water-flood-risk"
 canonical: "https://acrenkey.com/blogs/living-in-yelahanka-property-rates-metro-water-flood-risk/"
 lives: "blog /areas/"
@@ -14,7 +14,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Living in Yelahanka: property rates, metro, water and flood risk
+# Yelahanka property rates (2026): metro, water and flood risk
 
 **Short answer:** Yelahanka property rates for flats run ₹6,300 to ₹12,700 per sq ft (Knight Frank, H1 2026), up 18% in a year, the second-fastest rise of 17 Bengaluru locations. Official guidance values range from ₹29,100 per sq m in the old town to ₹74,410 on New Town's LIC office road. The airport metro's Yelahanka station isn't open yet.
 

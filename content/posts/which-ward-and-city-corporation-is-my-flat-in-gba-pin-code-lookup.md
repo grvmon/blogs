@@ -1,6 +1,6 @@
 ---
 title: "Which Corporation Is My Area in Bangalore? GBA Ward Lookup"
-meta_description: "Find your GBA city corporation and ward in Bengaluru. Our pin-code overlay shows a third of city pin codes span two or more corporations. Steps and table."
+meta_description: "Which corporation is my area in Bangalore GBA? Find your city corporation and ward; our pin-code overlay shows a third of pin codes span two or more."
 slug: "which-ward-and-city-corporation-is-my-flat-in-gba-pin-code-lookup"
 canonical: "https://acrenkey.com/blogs/which-ward-and-city-corporation-is-my-flat-in-gba-pin-code-lookup/"
 lives: "blog"
@@ -16,7 +16,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Which city corporation and ward is my Bengaluru property in?
+# Which corporation is my area in Bengaluru (GBA)? Ward and pin-code lookup
 
 **Short answer:** To find which corporation your area is in under the GBA, drop a pin on your building in GBA's official ward map, not just your pin code. Bengaluru has five city corporations and 369 wards. In our overlay, 31 of the 94 city pin codes spanned two or more corporations, and a typical pin code covered five wards.
 

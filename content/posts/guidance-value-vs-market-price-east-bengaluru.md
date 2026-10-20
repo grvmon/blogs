@@ -1,6 +1,6 @@
 ---
 title: "Guidance Value vs Market Value Bangalore: The East Gap"
-meta_description: "East Bengaluru flats sell at roughly 1.3 to 3.2 times the notified guidance value. What the gap means for your stamp duty, income tax and resale pricing."
+meta_description: "Guidance value vs market value in Bangalore's east: flats sell at about 1.3 to 3.2 times guidance value. What it means for stamp duty, tax and resale."
 slug: "guidance-value-vs-market-price-east-bengaluru"
 canonical: "https://acrenkey.com/insights/guidance-value-vs-market-price-east-bengaluru/"
 lives: "/insights/"
@@ -15,7 +15,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Guidance value vs market price in East Bengaluru: how big is the gap?
+# Guidance value vs market value in East Bengaluru: how big is the gap?
 
 **Short answer:** On guidance value vs market value in Bengaluru's east, the gap is wide. Knight Frank's H1 2026 flat prices for Whitefield, Marathahalli and KR Puram run about 1.3 to 3.2 times the median apartment guidance value we parsed for the Mahadevapura sub-registrar area. So for most flats, stamp duty is charged on your price, not the guidance value.
 

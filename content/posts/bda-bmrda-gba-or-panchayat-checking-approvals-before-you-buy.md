@@ -1,6 +1,6 @@
 ---
 title: "Building Plan Approval Bangalore: BDA, GBA or Panchayat?"
-meta_description: "Which body approved your flat or plot in Bengaluru? Find the right authority, check the plan sanction, NOCs, OC and khata, and spot mismatches early."
+meta_description: "Building plan approval in Bangalore: find which body approved your flat or plot, check the sanction, NOCs, OC and khata, and spot mismatches early."
 slug: "bda-bmrda-gba-or-panchayat-checking-approvals-before-you-buy"
 canonical: "https://acrenkey.com/blogs/bda-bmrda-gba-or-panchayat-checking-approvals-before-you-buy/"
 lives: "blog"
@@ -15,7 +15,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Lawyer review before publishing. Do not publish."
 ---
 
-# BDA, BMRDA, GBA or panchayat: which approvals should you check before buying?
+# Building plan approval in Bengaluru: BDA, BMRDA, GBA or panchayat?
 
 **Short answer:** For building plan approval in Bengaluru, first find out where the land sits: a GBA city corporation, a BDA layout, a local planning authority under BMRDA, or a gram panchayat. Then check that the plan sanction, NOCs, occupancy certificate and khata all come from the bodies that cover that land, and that they match each other.
 

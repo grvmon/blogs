@@ -1,6 +1,6 @@
 ---
 title: "Buying Under-Construction in Bengaluru: 20 Questions"
-meta_description: "Buying an under-construction flat in Bengaluru? Ask these 20 questions on RERA dates, payment plans, delay history, GST, pre-EMI and possession terms."
+meta_description: "Buying under-construction in Bengaluru? Ask these 20 questions on RERA dates, payment plans, delay history, GST, pre-EMI and possession terms."
 slug: "20-questions-before-buying-in-an-under-construction-project"
 canonical: "https://acrenkey.com/blogs/20-questions-before-buying-in-an-under-construction-project/"
 primary_keyword: "buying under-construction in bengaluru"
@@ -12,7 +12,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# 20 questions before buying in an under-construction project
+# Buying under-construction in Bengaluru: 20 questions to ask first
 
 **Short answer:** Before buying under-construction in Bengaluru, ask whether your phase is on K-RERA and its date has moved, whether payments follow construction, what a delay would cost you in rent and pre-EMI, how much GST you'll pay, and what the agreement says about carpet area, the OC and exit. Price the wait before you price the flat.
 

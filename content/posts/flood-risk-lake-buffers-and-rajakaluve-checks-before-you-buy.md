@@ -1,6 +1,6 @@
 ---
 title: "Buying Near a Lake in Bangalore: Lake and Rajakaluve Checks"
-meta_description: "Buying a flat or plot near a lake or stormwater drain in Bengaluru: 2026 lake buffers, rajakaluve buffers, survey maps to pull and the questions to ask."
+meta_description: "Buying near a lake in Bangalore or a stormwater drain: 2026 lake buffers, rajakaluve buffers, survey maps to pull and the questions to ask."
 slug: "flood-risk-lake-buffers-and-rajakaluve-checks-before-you-buy"
 canonical: "https://acrenkey.com/blogs/flood-risk-lake-buffers-and-rajakaluve-checks-before-you-buy/"
 lives: "blog"
@@ -15,7 +15,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Is it safe to buy near a lake or rajakaluve in Bengaluru?
+# Buying near a lake in Bengaluru: is it safe near a lake or rajakaluve?
 
 **Short answer:** Buying near a lake in Bengaluru can be fine, but only after three checks on the specific property: its distance from the lake's revenue boundary or the drain, the survey map that proves where that boundary is, and the date the plan was approved. Lake buffers became size-based on 18 Feb 2026, and drain encroachments are still being cleared.
 

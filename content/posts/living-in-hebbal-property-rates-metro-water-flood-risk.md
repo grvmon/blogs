@@ -1,6 +1,6 @@
 ---
 title: "Hebbal Property Rates 2026: Metro, Water and Flood Risk"
-meta_description: "Living in Hebbal, Bangalore: official guidance values, market price ranges, the airport and Red Line metro timelines, water supply and flood checks."
+meta_description: "Hebbal property rates, Bangalore: official guidance values, market price ranges, the airport and Red Line metro timelines, water supply and flood checks."
 slug: "living-in-hebbal-property-rates-metro-water-flood-risk"
 canonical: "https://acrenkey.com/blogs/living-in-hebbal-property-rates-metro-water-flood-risk/"
 lives: "blog /areas/"
@@ -15,7 +15,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Living in Hebbal: property rates, metro, water and flood risk
+# Hebbal property rates (2026): metro, water and flood risk
 
 **Short answer:** Hebbal property rates for flats run ₹7,800 to ₹15,000 per sq ft (Knight Frank, H1 2026), up 11% in a year. Official guidance values are much lower: ₹68,200 per sq m (₹6,336 per sq ft) for the Hebbala village site line. Hebbal has no running metro yet; the airport line's Hebbal stretch is targeted for September 2027.
 

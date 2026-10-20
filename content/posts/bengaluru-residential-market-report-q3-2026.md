@@ -1,6 +1,6 @@
 ---
 title: "Bangalore Real Estate Market 2026: Q3 Report and Data"
-meta_description: "Bengaluru housing in Q3 2026: sales, launches, unsold stock, prices and the RBI's October rate hike, from three trackers side by side, with what it means."
+meta_description: "Bangalore real estate market 2026, Q3: sales, launches, unsold stock, prices and the RBI October rate hike, from three trackers side by side."
 slug: "bengaluru-residential-market-report-q3-2026"
 canonical: "https://acrenkey.com/insights/bengaluru-residential-market-report-q3-2026/"
 lives: "/insights/"
@@ -16,7 +16,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish (/insights/ waits for review)."
 ---
 
-# Bengaluru residential market report: Q3 2026 (July to September)
+# Bengaluru real estate market 2026: Q3 residential report (July to September)
 
 **Short answer:** The Bengaluru real estate market in 2026 grew slowly in Q3. Sales rose 1% to 12% year on year depending on the tracker, while ANAROCK counted 80,200 unsold homes, up 35% in a year. Average prices rose 8% (ANAROCK) to 11% (Knight Frank). Then on 7 Oct 2026, the RBI raised the repo rate to 5.50%.
 
@@ -139,7 +139,7 @@ Market data is general information, not investment advice.
 
 ## Method
 
-We read the Q3 2026 reports from ANAROCK (Residential Market Viewpoints, Pan-India) and Knight Frank (India Real Estate, Residential, Jul–Sep 2026) in full, and PropEquity's figures via Outlook Money. Rates are from the RBI's 7 Oct 2026 statement. We didn't use listing-portal asking prices. Worked examples are illustrative and computed by us. Data: [bengaluru-residential-market-report-q3-2026.csv](/insights/data/bengaluru-residential-market-report-q3-2026.csv). Next update: after Q4 2026 reports (expected early January 2027).
+We read the Q3 2026 reports from ANAROCK (Residential Market Viewpoints, Pan-India) and Knight Frank (India Real Estate, Residential, Jul–Sep 2026) in full, and PropEquity's figures via Outlook Money. Rates are from the RBI's 7 Oct 2026 statement. We didn't use listing-portal asking prices. Worked examples are illustrative and computed by us. Data: [bengaluru-residential-market-report-q3-2026.csv](https://acrenkey.com/blogs/assets/data/bengaluru-residential-market-report-q3-2026.csv). Next update: after Q4 2026 reports (expected early January 2027).
 
 ## Frequently asked questions
 

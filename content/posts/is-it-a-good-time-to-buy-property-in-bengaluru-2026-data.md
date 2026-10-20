@@ -1,6 +1,6 @@
 ---
 title: "Is It a Good Time to Buy Property in Bangalore? 2026 Data"
-meta_description: "What Q3 2026 data says about buying in Bengaluru: sales, unsold stock, prices, the RBI's rate hike and rental yields, plus a four-question timing test."
+meta_description: "Is it a good time to buy property in Bangalore in 2026? Q3 sales, unsold stock, prices, the RBI rate hike and rental yields, plus a four-question test."
 slug: "is-it-a-good-time-to-buy-property-in-bengaluru-2026-data"
 canonical: "https://acrenkey.com/blogs/is-it-a-good-time-to-buy-property-in-bengaluru-2026-data/"
 lives: "blog"
@@ -16,7 +16,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Is it a good time to buy property in Bengaluru? What the 2026 data says
+# Is it a good time to buy property in Bengaluru in 2026? What the data says
 
 **Short answer:** Is it a good time to buy property in Bengaluru in 2026? If you'll live in it, it's a reasonable time, not a rush. Sales are rising slowly, unsold stock is up 35% in a year, prices grew 8% to 11%, and the RBI raised rates on 7 Oct 2026. Your own finances matter more than the market.
 

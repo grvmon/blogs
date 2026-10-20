@@ -1,6 +1,6 @@
 ---
 title: "NRI Buying Property in Bangalore (2026): FEMA, POA, TDS"
-meta_description: "NRI guide to buying in Bengaluru: what FEMA allows, NRE vs NRO, power of attorney rules in Karnataka, TDS under the 2025 Act, home loans and repatriation."
+meta_description: "NRI buying property in Bangalore: what FEMA allows, NRE vs NRO, power of attorney rules in Karnataka, TDS under the 2025 Act, home loans and repatriation."
 slug: "nri-guide-to-buying-in-bengaluru-fema-poa-tds-loans-repatriation"
 canonical: "https://acrenkey.com/blogs/nri-guide-to-buying-in-bengaluru-fema-poa-tds-loans-repatriation/"
 primary_keyword: "nri buying property in bangalore"
@@ -19,7 +19,7 @@ rates_verified_on: "2026-10-18 (Karnataka rates, RBI LTV); 2026-10-19 (RBI FAQ, 
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# NRI guide to buying property in Bengaluru: FEMA, POA, TDS, loans and repatriation
+# NRI buying property in Bengaluru: FEMA, POA, TDS, loans and repatriation
 
 **Short answer:** NRIs buying property in Bengaluru don't need RBI permission for flats, houses, plots or commercial property, and OCIs are treated the same. Agricultural land, farmhouses and plantations are off-limits. Pay only through banking channels or NRE, FCNR(B) or NRO accounts. Register in person or by power of attorney. Use NRE or FCNR(B) if you may want sale money abroad later.
 

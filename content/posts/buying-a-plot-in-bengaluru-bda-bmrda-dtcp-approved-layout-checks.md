@@ -15,7 +15,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# How do you check if a plot in Bengaluru is in an approved layout?
+# BDA approved plots checklist: is a Bengaluru plot in an approved layout?
 
 **Short answer:** A BDA approved plots checklist starts with one question: who approved the layout? It might be BDA, a local planning authority under BMRDA, or another body. Get the approval and plan, verify them with that authority, then confirm release, land conversion, the khata or Form 9, and RERA registration.
 

@@ -12,7 +12,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Corner units and floor choice: 12 questions before you pick
+# Corner flat and floor choice: 12 questions before you pick
 
 **Short answer:** On a corner flat and floor choice, there's no single right answer. Ask what the floor rise and corner charges add after GST and stamp duty, which walls take the afternoon sun, what you share walls with, how many lifts run on backup, and whether the extra is worth it to you. We haven't found resale data on these charges.
 

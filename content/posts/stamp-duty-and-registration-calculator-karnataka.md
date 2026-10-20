@@ -1,6 +1,6 @@
 ---
 title: "Stamp Duty Calculator Karnataka (2026): Rates and Examples"
-meta_description: "Work out Karnataka stamp duty, cess, surcharge and 2% registration fee line by line, with a ready-reckoner from ₹20 lakh to ₹5 crore and a Kaveri check."
+meta_description: "Stamp duty calculator Karnataka: work out duty, cess, surcharge and the 2% registration fee line by line, with a ready-reckoner from ₹20 lakh to ₹5 crore."
 slug: "stamp-duty-and-registration-calculator-karnataka"
 canonical: "https://acrenkey.com/blogs/stamp-duty-and-registration-calculator-karnataka/"
 lives: "blog /tools/"
@@ -18,7 +18,7 @@ rates_verified_on: "2026-10-18"
 status: "DRAFT FOR REVIEW. Do not publish. Embed or link the live calculator at /calculators/stamp-duty-registration-calculator/; test 3 cases against Kaveri before launch."
 ---
 
-# Stamp duty and registration calculator for Karnataka (2026)
+# Stamp duty calculator Karnataka (2026): duty, cess and registration
 
 **Short answer:** To calculate stamp duty in Karnataka, take the market value (the higher of price and guidance value), apply 5% duty (2% or 3% for first-sale flats up to ₹45 lakh), add a cess of 10% and, in Greater Bengaluru, a surcharge of 2% of that duty, then add a 2% registration fee. A ₹1 crore resale flat: ₹7,60,000.
 

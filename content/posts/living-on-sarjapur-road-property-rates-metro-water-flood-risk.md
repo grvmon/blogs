@@ -1,6 +1,6 @@
 ---
 title: "Sarjapur Road Property Rates 2026: Metro, Water, Flood Risk"
-meta_description: "Living on Sarjapur Road, Bangalore: guidance values by stretch, market ranges, rent, the Red Line metro plan, water supply and flood checks, with maths."
+meta_description: "Sarjapur Road property rates: guidance values by stretch, market ranges, rent, the Red Line metro plan, water supply and flood checks, with maths."
 slug: "living-on-sarjapur-road-property-rates-metro-water-flood-risk"
 canonical: "https://acrenkey.com/blogs/living-on-sarjapur-road-property-rates-metro-water-flood-risk/"
 lives: "blog /areas/"
@@ -15,7 +15,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Living on Sarjapur Road: property rates, metro, water and flood risk
+# Sarjapur Road property rates (2026): metro, water and flood risk
 
 **Short answer:** Sarjapur Road property rates for flats run ₹5,700 to ₹11,300 per sq ft (Knight Frank, H1 2026), up just 3% in a year. Official guidance values fall steeply along the road, from ₹1,69,000 per sq m at Koramangala to ₹20,000 in Sarjapura village. There's no metro on the road yet, and water and approvals change once you leave the city.
 
