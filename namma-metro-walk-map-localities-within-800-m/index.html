@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2B2D31">
+  <title>Namma Metro Walk Map: Localities Within 800 m of Each Station | acre&amp;key</title>
+  <meta name="description" content="Open and under-construction Namma Metro stations in Bengaluru, with every OSM locality node inside 800 m of the station.">
+  <meta name="author" content="Arvind">
+  <link rel="canonical" href="https://acrenkey.com/blogs/namma-metro-walk-map-localities-within-800-m/">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../style.css?v=e53d014b2b">
+  <link rel="stylesheet" href="../assets/ak-chrome.css?v=924e6258e8">
+  <link rel="stylesheet" href="../assets/ak-lead-form.css?v=b23f8b59b6">
+  <script src="../assets/ak-chrome.js?v=24e0f41f5e" defer></script>
+  <meta property="og:title" content="Namma Metro Walk Map: Localities Within 800 m of Each Station">
+  <meta property="og:description" content="Open and under-construction Namma Metro stations in Bengaluru, with every OSM locality node inside 800 m of the station.">
+  <meta property="og:url" content="https://acrenkey.com/blogs/namma-metro-walk-map-localities-within-800-m/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="acre&amp;key">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Namma Metro Walk Map: Localities Within 800 m of Each Station">
+  <meta name="twitter:description" content="Open and under-construction Namma Metro stations in Bengaluru, with every OSM locality node inside 800 m of the station.">
+  <meta property="og:image" content="https://acrenkey.com/blogs/assets/img/namma-metro-walk-map-localities-within-800-m.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta name="twitter:image" content="https://acrenkey.com/blogs/assets/img/namma-metro-walk-map-localities-within-800-m.webp">
+  <meta property="article:published_time" content="2026-10-20">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Namma Metro walk map: localities within 800 m of each station", "description": "Open and under-construction Namma Metro stations in Bengaluru, with every OSM locality node inside 800 m of the station.", "datePublished": "2026-10-20", "dateModified": "2026-10-20", "inLanguage": "en-IN", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://acrenkey.com/blogs/namma-metro-walk-map-localities-within-800-m/"}, "url": "https://acrenkey.com/blogs/namma-metro-walk-map-localities-within-800-m/", "image": "https://acrenkey.com/blogs/assets/img/namma-metro-walk-map-localities-within-800-m.webp", "author": {"@type": "Person", "name": "Arvind", "worksFor": {"@type": "Organization", "name": "Acrenkey Realty LLP", "url": "https://acrenkey.com/"}}, "publisher": {"@type": "Organization", "name": "Acrenkey Realty LLP", "alternateName": "acre&key", "url": "https://acrenkey.com/"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is 800 m a walking distance?", "acceptedAnswer": {"@type": "Answer", "text": "It is a straight-line distance from the station node to the place node, on a sphere of radius 6,371,000 m. It is not the length of a footpath and not a time."}}, {"@type": "Question", "name": "How many stations are on the map?", "acceptedAnswer": {"@type": "Answer", "text": "Eighty-two on Purple, Green or Yellow route relations, and 47 tagged under construction. Proposed Orange and Red nodes in the same OSM extract are not included."}}, {"@type": "Question", "name": "Why does one station name appear twice?", "acceptedAnswer": {"@type": "Answer", "text": "Nagawara has a Pink under-construction node and a Blue under-construction node, 186 m apart, so both are listed. Jayadeva Hospital (Yellow, operating) and Jayadeva Interchange (Pink, under construction) are different nodes."}}, {"@type": "Question", "name": "What if my area is not in the locality cell?", "acceptedAnswer": {"@type": "Answer", "text": "The cell only contains OSM place nodes inside 800 m. A real neighbourhood with no such node, or a node just beyond 800 m, will be missing. That is a gap in the extract, not a finding that the area is far from the station."}}, {"@type": "Question", "name": "Which line is a station on?", "acceptedAnswer": {"@type": "Answer", "text": "For operating stations, the line is the route relation: Purple, Green, Yellow, or both where the station is on two. For under-construction stations, the line is the colour tag on the node."}}, {"@type": "Question", "name": "Does a station inside 800 m change the guidance value?", "acceptedAnswer": {"@type": "Answer", "text": "This page does not calculate a price or a guidance value. The 2023 guidance-value notification does not have a station-distance column. Our note on guidance value near metro roads is about road rows in that gazette, not about this 800 m list."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://acrenkey.com/"}, {"@type": "ListItem", "position": 2, "name": "Articles", "item": "https://acrenkey.com/blogs/"}, {"@type": "ListItem", "position": 3, "name": "Blog", "item": "https://acrenkey.com/blogs/#blog"}, {"@type": "ListItem", "position": 4, "name": "Namma Metro walk map: localities within 800 m of each station", "item": "https://acrenkey.com/blogs/namma-metro-walk-map-localities-within-800-m/"}]}, {"@type": "Dataset", "name": "Namma Metro stations and OSM localities within 800 m", "description": "OpenStreetMap station nodes on the Purple, Green and Yellow route relations, nodes tagged under construction, and named place nodes within 800 m. Extracted 20 Oct 2026.", "url": "https://acrenkey.com/blogs/namma-metro-walk-map-localities-within-800-m/", "creator": {"@type": "Organization", "name": "Acrenkey Realty LLP", "alternateName": "acre&key", "url": "https://acrenkey.com/"}, "spatialCoverage": {"@type": "Place", "name": "Bengaluru"}, "distribution": [{"@type": "DataDownload", "encodingFormat": "application/geo+json", "contentUrl": "https://acrenkey.com/blogs/assets/data/namma-metro-800m-stations.geojson"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://acrenkey.com/blogs/assets/data/namma-metro-800m-stations.csv"}]}, {"@type": "HowTo", "name": "How to check a home against this list", "step": [{"@type": "HowToStep", "position": 1, "name": "Find the station the brochure names", "text": "Use the station name in the table, not the locality name in the advertisement. Majestic in OSM is Nadaprabhu Kempegowda Station, Majestic. Hosahalli is Sri Balagangadharanatha Swamiji Station, Hosahalli. Jayadeva Hospital is on the Yellow line and is an operating station. Jayadeva Interchange is a separate under-construction Pink node."}, {"@type": "HowToStep", "position": 2, "name": "Read the locality cell", "text": "If your neighbourhood is named there, the figure in metres is the straight-line distance from the station node to the place node. Indiranagar's Purple station, for example, has Indiranagar 1st Stage at 124 m and the Indiranagar suburb node at 594 m. Both are inside 800 m. They are two different OSM nodes."}, {"@type": "HowToStep", "position": 3, "name": "Do not turn 800 m into a walk time", "text": "The test does not follow footpaths, station exits or the road you would actually use. A place node 600 m away can be a longer walk once you leave by the far exit. Our questions before buying near a metro station cover the exit, the last train and the road, which this table does not."}, {"@type": "HowToStep", "position": 4, "name": "Check the status column before you treat the station as open", "text": "\"Operating route\" means the node is on a Purple, Green or Yellow relation in this extract. \"Under construction\" means OSM tags it construction=station. An under-construction station is not a station you can board. For where Pink and Blue construction stood in October 2026, use the metro lines page, which cites the government answers."}, {"@type": "HowToStep", "position": 5, "name": "Treat a missing name as a gap in the map, not a verdict", "text": "If the locality you care about is not in the cell, look at the latitude and longitude and measure your own address against the station. The place-node layer is incomplete by nature. It is a published OSM tag, not a municipal ward list."}]}]}</script>
+</head>
+<body>
+  <div id="scroll-progress-bar" aria-hidden="true"></div>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <header class="header-nav" id=header-nav><div class="container nav-container"><a href="https://acrenkey.com/blogs/" class=nav-brand><span class=brand-logo-text>acre&amp;key</span></a><ul class=nav-links><li><a href="https://acrenkey.com/#our-customers">Clientele</a></li><li><a href="https://acrenkey.com/#framework">Decision Framework</a></li><li><a href="https://acrenkey.com/#core">Methodology</a></li><li><a href="https://acrenkey.com/#about-us">Team</a></li><li><a href="https://acrenkey.com/#testimonials">Client Outcomes</a></li></ul><a href="https://acrenkey.com/" class="nav-cta-btn primary-cta-btn" onclick="if (typeof window.openModal === 'function') { window.openModal(); return false; }"><span>Start Consultation</span><span class="cta-arrow-badge" aria-hidden="true"><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></a><button type="button" class=mobile-toggle id=mobile-toggle-btn aria-label="Toggle Navigation Menu" aria-expanded=false><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class=mobile-nav-overlay id=mobile-nav-overlay aria-hidden=true></div><div class=mobile-drawer id=mobile-drawer role=dialog aria-modal=true aria-label="Navigation Menu"><div class=mobile-drawer-inner><div class=mobile-drawer-header><a href="https://acrenkey.com/blogs/" class=mobile-drawer-brand aria-label="Acre and Key Home"><span class=brand-logo-text>acre&amp;key</span></a><button type="button" class=mobile-drawer-close id=mobile-drawer-close aria-label="Close Navigation Menu"><svg aria-hidden="true" width=22 height=22 viewbox="0 0 24 24" fill=none stroke=var(--deep-navy) stroke-width=2 stroke-linecap=round stroke-linejoin=round><line x1=18 y1=6 x2=6 y2=18></line><line x1=6 y1=6 x2=18 y2=18></line></svg></button></div><nav class=mobile-nav-list><a href="https://acrenkey.com/#our-customers" class=mobile-nav-item><span class=mobile-nav-label>Clientele</span><svg aria-hidden="true" class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="https://acrenkey.com/#framework" class=mobile-nav-item><span class=mobile-nav-label>Decision Framework</span><svg aria-hidden="true" class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="https://acrenkey.com/#core" class=mobile-nav-item><span class=mobile-nav-label>Methodology</span><svg aria-hidden="true" class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="https://acrenkey.com/#about-us" class=mobile-nav-item><span class=mobile-nav-label>Team</span><svg aria-hidden="true" class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="https://acrenkey.com/#testimonials" class=mobile-nav-item><span class=mobile-nav-label>Client Outcomes</span><svg aria-hidden="true" class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class=mobile-drawer-footer><button type="button" class="mobile-drawer-cta primary-cta-btn" onclick="if (typeof window.openModal === 'function') { window.openModal(); } else { window.location.href = 'https://acrenkey.com/'; }"><span>Start Consultation</span><span class="cta-arrow-badge" aria-hidden="true"><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></button><span class=mobile-drawer-subtext>Expert Property Guidance</span><div class=mobile-drawer-socials><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter/X><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 23.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></div></div></div></div></header>
+  <main id="main-content" class="container blog-detail-container">
+    <nav aria-label="Breadcrumb">
+      <ol class="breadcrumb">
+        <li><a href="https://acrenkey.com/">Home</a></li>
+        <li class="meta-sep" aria-hidden="true">/</li>
+        <li><a href="https://acrenkey.com/blogs/">Articles</a></li>
+        <li class="meta-sep" aria-hidden="true">/</li>
+        <li><a href="https://acrenkey.com/blogs/#blog">Blog</a></li>
+        <li class="meta-sep" aria-hidden="true">/</li>
+        <li class="bc-current" aria-current="page">Namma Metro walk map: localities within 800 m of each station</li>
+      </ol>
+    </nav>
+    <header class="article-header">
+      <div class="kicker-badge">Blog</div>
+      <h1 class="article-title">Namma Metro walk map: localities within 800 m of each station</h1>
+      <div class="article-meta-row">
+        <div class="author-meta">
+          <div class="author-avatar" aria-hidden="true">A</div>
+          <div>
+            <div class="author-details-sub byline">
+              <span>By <span class="author-details-name">Arvind</span></span>
+              <span class="meta-sep" aria-hidden="true">&bull;</span>
+              <time datetime="2026-10-20">20 Oct 2026</time>
+              <span class="meta-sep" aria-hidden="true">&bull;</span>
+              <span>26 min read</span>
+            </div>
+          </div>
+        </div>
+        <div class="share-strip">
+          <span class="share-label">Share:</span>
+          <a href="https://api.whatsapp.com/send?text=Namma%20Metro%20walk%20map%3A%20localities%20within%20800%20m%20of%20each%20station%20https%3A//acrenkey.com/blogs/namma-metro-walk-map-localities-within-800-m/" target="_blank" rel="noopener noreferrer" class="share-btn" aria-label="Share on WhatsApp" title="Share on WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Facrenkey.com%2Fblogs%2Fnamma-metro-walk-map-localities-within-800-m%2F" target="_blank" rel="noopener noreferrer" class="share-btn" aria-label="Share on LinkedIn" title="Share on LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+          <a href="https://twitter.com/intent/tweet?text=Namma%20Metro%20walk%20map%3A%20localities%20within%20800%20m%20of%20each%20station&amp;url=https%3A%2F%2Facrenkey.com%2Fblogs%2Fnamma-metro-walk-map-localities-within-800-m%2F" target="_blank" rel="noopener noreferrer" class="share-btn" aria-label="Share on X" title="Share on X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg></a>
+          <button type="button" class="share-btn" data-copy-link aria-label="Copy link to clipboard" title="Copy article link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+        </div>
+      </div>
+    </header>
+    <figure class="article-hero">
+      <img src="../assets/img/namma-metro-walk-map-localities-within-800-m.webp" width="1200" height="675" alt="Map of Namma Metro stations in Bengaluru with localities inside an 800 metre circle" class="article-hero-img" loading="eager" fetchpriority="high" decoding="async">
+    </figure>
+    <div class="blog-layout-grid">
+      <article class="article-content">
+        <div class="short-answer"><p><strong>Short answer:</strong> This page lists 82 Namma Metro stations that OpenStreetMap maps on the Purple, Green or Yellow route relations, and 47 stations tagged under construction. For each one it names the OSM locality nodes whose own coordinates fall within 800 m. It does not estimate a walking time.</p></div>
+        <div class="executive-summary-box">
+          <div class="summary-heading">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+            <span>Key takeaways</span>
+          </div>
+          <ul class="summary-list">
+<li><strong>82 stations</strong> sit on a Purple, Green or Yellow route relation: 36 Purple, 29 Green, 15 Yellow, plus Majestic on Purple and Green, and Rashtreeya Vidyalaya Road on Green and Yellow.</li>
+<li><strong>47 stations</strong> are tagged <code>construction=station</code> and carry "(u/c)" in the OSM name: 18 Pink and 29 Blue. Filled circles on the map are the operating routes. Rings are under construction.</li>
+<li><strong>800 m is a straight-line test</strong> on the place node's coordinates, using a haversine radius of 6,371,000 m. It is not a walking path and not a neighbourhood boundary.</li>
+<li><strong>1,234 named place nodes</strong> (suburb, neighbourhood, quarter, locality) were in the extract. Thirteen stations have none of them within 800 m.</li>
+<li>Stations OSM tags as proposed, including later Orange and Red alignments, are not plotted. Line progress beyond these tags is on our <a href="../bengaluru-metro-lines-2026-status-of-every-line-for-homebuyers/">metro lines page</a>.</li>
+</ul>
+        </div>
+        <div class="toc-box">
+          <div class="toc-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+            <span>Table of contents</span>
+          </div>
+          <ol class="toc-list">
+            <li><a href="#how-the-800-m-list-was-built">How the 800 m list was built</a></li>
+            <li><a href="#how-to-check-a-home-against-this-list">How to check a home against this list</a></li>
+            <li><a href="#station-by-station">Station by station</a></li>
+            <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+            <li><a href="#talk-it-through-with-acre-and-key">Talk it through with acre&amp;key</a></li>
+            <li><a href="#sources">Sources</a></li>
+          </ol>
+        </div>
+        <div class="article-prose">
+          <p>The coordinates and the locality names are from OpenStreetMap, extracted on 20 Oct 2026. The copyright sits with OpenStreetMap contributors under the Open Database Licence. A locality that exists on the ground but has no place node in this extract will not appear. A place node just outside 800 m will not appear even if the neighbourhood itself reaches the station.</p>
+<div class="ak-map-wrap">
+<div id="metro-map" class="ak-map" data-root="../" data-geo="../assets/data/namma-metro-800m-stations.geojson" data-legend="metro-legend" role="region" aria-label="Map of Namma Metro stations in Bengaluru"></div>
+<script type="application/json" id="metro-legend">[{"id":"open","label":"Operating route","on":true},{"id":"uc","label":"Under construction","on":true}]</script>
+<p class="ak-map-note">Scroll to load the map. It needs JavaScript and OpenStreetMap tiles. Filled circles are stations on an operating route relation. Rings are tagged under construction. The full locality list is in the table, which works without JavaScript.</p>
+<script src="../assets/ak-map.js" defer></script>
+</div>
+
+<p>Downloads: <a href="../assets/data/namma-metro-800m-stations.geojson">GeoJSON</a>, <a href="../assets/data/namma-metro-800m-stations.csv">CSV</a>.</p>
+<h2 id="how-the-800-m-list-was-built">How the 800 m list was built</h2>
+<p>The extract covers 12.70° N to 13.35° N and 77.30° E to 77.90° E. Station nodes are those with <code>network=Namma Metro</code>.</p>
+<p><strong>Operating route.</strong> The node is <code>railway=station</code> and <code>station=subway</code>, and it belongs to a route relation whose <code>ref</code> is Purple, Green or Yellow, or a stop node within 80 m has the same name after a trailing parenthesis is removed and "Stn." is read as "Station". That second step is how Nadaprabhu Kempegowda Station, Majestic picks up both Purple and Green, and how Sri Balagangadharanatha Swamiji Station, Hosahalli picks up Purple. All 82 station nodes matched a route.</p>
+<p><strong>Under construction.</strong> The node name contains "(u/c)" and <code>construction=station</code>. The line is the OSM <code>colour</code> tag: pink or blue. Three nodes named Jayadeva Interchange (u/c) sat within 50 m of each other. The table keeps the one whose colour tag is pink, which is the Pink line. Nagawara has a separate Pink node and a separate Blue node, 186 m apart, so both stay.</p>
+<p><strong>Localities.</strong> Every named node tagged suburb, neighbourhood, quarter or locality in the box was tested. Distance is the haversine on a sphere of radius 6,371,000 m, and a node is listed when that distance is 800 m or less. The metres in the table are that distance rounded to the nearest metre. The place type is the OSM <code>place</code> tag, in brackets.</p>
+<p>Halasuru, on the Purple line, has the longest list in this extract: 14 place nodes, the nearest being Dodakattappa at 170 m. Thirteen stations have an empty list. Airport City, Doddajala and KIAL Terminals are three of the under-construction stations in that group. An empty cell means the extract had no place node inside the circle. It does not mean nobody lives there.</p>
+<p>OSM also has nodes tagged <code>proposed=station</code> for alignments that are not these operating routes and not these under-construction tags. They are left off the map so a proposed pin is not read as a station under construction. Phase 3 is covered, as a route description rather than a walk map, in our <a href="../namma-metro-phase-3-route-areas-likely-to-gain-access/">Phase 3 guide</a>.</p>
+<h2 id="how-to-check-a-home-against-this-list">How to check a home against this list</h2>
+<h3 id="find-the-station-the-brochure-names">Find the station the brochure names</h3>
+<p>Use the station name in the table, not the locality name in the advertisement. Majestic in OSM is Nadaprabhu Kempegowda Station, Majestic. Hosahalli is Sri Balagangadharanatha Swamiji Station, Hosahalli. Jayadeva Hospital is on the Yellow line and is an operating station. Jayadeva Interchange is a separate under-construction Pink node.</p>
+<h3 id="read-the-locality-cell">Read the locality cell</h3>
+<p>If your neighbourhood is named there, the figure in metres is the straight-line distance from the station node to the place node. Indiranagar's Purple station, for example, has Indiranagar 1st Stage at 124 m and the Indiranagar suburb node at 594 m. Both are inside 800 m. They are two different OSM nodes.</p>
+<h3 id="do-not-turn-800-m-into-a-walk-time">Do not turn 800 m into a walk time</h3>
+<p>The test does not follow footpaths, station exits or the road you would actually use. A place node 600 m away can be a longer walk once you leave by the far exit. Our <a href="../15-questions-before-buying-near-a-metro-station/">questions before buying near a metro station</a> cover the exit, the last train and the road, which this table does not.</p>
+<h3 id="check-the-status-column-before-you-treat-the-station-as-open">Check the status column before you treat the station as open</h3>
+<p>"Operating route" means the node is on a Purple, Green or Yellow relation in this extract. "Under construction" means OSM tags it <code>construction=station</code>. An under-construction station is not a station you can board. For where Pink and Blue construction stood in October 2026, use the <a href="../bengaluru-metro-lines-2026-status-of-every-line-for-homebuyers/">metro lines page</a>, which cites the government answers.</p>
+<h3 id="treat-a-missing-name-as-a-gap-in-the-map-not-a-verdict">Treat a missing name as a gap in the map, not a verdict</h3>
+<p>If the locality you care about is not in the cell, look at the latitude and longitude and measure your own address against the station. The place-node layer is incomplete by nature. It is a published OSM tag, not a municipal ward list.</p>
+<h2 id="station-by-station">Station by station</h2>
+<p>Localities are <code>name (place tag, metres)</code>. "None in this OSM place-node extract" means no named suburb, neighbourhood, quarter or locality node fell inside 800 m.</p>
+<div class="data-matrix-table-wrap"><table class="data-matrix-table">
+<thead>
+<tr>
+<th>Station</th>
+<th>OSM status</th>
+<th>Line</th>
+<th>Latitude</th>
+<th>Longitude</th>
+<th>Place nodes within 800 m</th>
+<th>Localities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Attiguppe</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.96189</td>
+<td>77.53358</td>
+<td>6</td>
+<td>Hampi Nagar (quarter, 268 m); Attiguppe (quarter, 490 m); Vijaya Nagar (suburb, 539 m); PF Layout (neighbourhood, 647 m); Vinayaka Layout (neighbourhood, 724 m); BCC Layout (quarter, 730 m)</td>
+</tr>
+<tr>
+<td>Baiyappanahalli</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.99076</td>
+<td>77.65236</td>
+<td>3</td>
+<td>Ramaswamy Layout (neighbourhood, 610 m); Baiyyappanahalli (suburb, 629 m); Krishnaiahnapalya (neighbourhood, 726 m)</td>
+</tr>
+<tr>
+<td>Banashankari</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>12.91522</td>
+<td>77.5736</td>
+<td>4</td>
+<td>Shakambari Nagar (neighbourhood, 313 m); Teacher's Colony (neighbourhood, 654 m); Jayanagar 8th Block (quarter, 664 m); JP Nagar 1st Phase (quarter, 774 m)</td>
+</tr>
+<tr>
+<td>Benniganahalli</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.99652</td>
+<td>77.66846</td>
+<td>6</td>
+<td>Pai Layout (neighbourhood, 425 m); Udaya Nagar (neighbourhood, 432 m); Gangappa Layout (neighbourhood, 433 m); Darga Mohalla (neighbourhood, 625 m); Benniganahalli (neighbourhood, 659 m); Putanna Garden (neighbourhood, 729 m)</td>
+</tr>
+<tr>
+<td>Beratena Agrahara</td>
+<td>Operating route</td>
+<td>Yellow</td>
+<td>12.86388</td>
+<td>77.6579</td>
+<td>0</td>
+<td>None in this OSM place-node extract</td>
+</tr>
+<tr>
+<td>Biocon Hebbagodi</td>
+<td>Operating route</td>
+<td>Yellow</td>
+<td>12.82903</td>
+<td>77.68137</td>
+<td>1</td>
+<td>Hebbagodi (neighbourhood, 300 m)</td>
+</tr>
+<tr>
+<td>Bommanahalli</td>
+<td>Operating route</td>
+<td>Yellow</td>
+<td>12.91062</td>
+<td>77.62648</td>
+<td>5</td>
+<td>Roopena Agrahara (neighbourhood, 287 m); Bommanahalli (quarter, 335 m); N. G. R. Layout (neighbourhood, 471 m); MCHS Colony (neighbourhood, 551 m); Sector 6 (quarter, 702 m)</td>
+</tr>
+<tr>
+<td>BTM Layout</td>
+<td>Operating route</td>
+<td>Yellow</td>
+<td>12.91659</td>
+<td>77.60812</td>
+<td>10</td>
+<td>BTM Layout 2nd Stage (quarter, 287 m); BTM Layout (suburb, 371 m); BTM Layout 1st Stage (quarter, 436 m); Maruthi Layout (neighbourhood, 449 m); MICO Layout (neighbourhood, 618 m); Tavarekere (neighbourhood, 624 m); Kuvempu Nagar (neighbourhood, 655 m); IAS Officers Colony (neighbourhood, 665 m); Gurappana Palya (neighbourhood, 696 m); SFHS Layout (neighbourhood, 753 m)</td>
+</tr>
+<tr>
+<td>Central Silk Board</td>
+<td>Operating route</td>
+<td>Yellow</td>
+<td>12.91658</td>
+<td>77.62057</td>
+<td>8</td>
+<td>Dollar Scheme Colony (neighbourhood, 207 m); BTM 2nd Stage (neighbourhood, 333 m); Jai Bheema Nagar (neighbourhood, 502 m); N. G. R. Layout (neighbourhood, 549 m); MCHS Colony (neighbourhood, 649 m); Sidhartha Colony (neighbourhood, 725 m); Roopena Agrahara (neighbourhood, 749 m); Kuvempu Nagar (neighbourhood, 776 m)</td>
+</tr>
+<tr>
+<td>Challaghatta</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.89735</td>
+<td>77.46129</td>
+<td>1</td>
+<td>Anchepalya (neighbourhood, 706 m)</td>
+</tr>
+<tr>
+<td>Chickpete</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>12.9669</td>
+<td>77.57456</td>
+<td>7</td>
+<td>Ranasingpete (neighbourhood, 238 m); Old Tharagupete (neighbourhood, 246 m); Chikkapete (suburb, 344 m); Sultanpete (neighbourhood, 346 m); Mamulpete (neighbourhood, 406 m); Sowrashtrapet (locality, 641 m); Balepet (neighbourhood, 708 m)</td>
+</tr>
+<tr>
+<td>Chikkabidarakallu</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>13.05236</td>
+<td>77.48792</td>
+<td>1</td>
+<td>Manjunath Nagar (neighbourhood, 676 m)</td>
+</tr>
+<tr>
+<td>Cubbon Park</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.98096</td>
+<td>77.59758</td>
+<td>0</td>
+<td>None in this OSM place-node extract</td>
+</tr>
+<tr>
+<td>Dasarahalli</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>13.04326</td>
+<td>77.51255</td>
+<td>0</td>
+<td>None in this OSM place-node extract</td>
+</tr>
+<tr>
+<td>Deepanjali Nagar</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.95206</td>
+<td>77.53701</td>
+<td>8</td>
+<td>Deepanjali Nagar (locality, 164 m); BCC Layout (locality, 415 m); Bapuji Nagar (quarter, 533 m); KHR Colony (neighbourhood, 621 m); NTY Layout (neighbourhood, 656 m); Byataranyapura (quarter, 681 m); Ganapathy Nagar (neighbourhood, 696 m); BCC Layout (quarter, 737 m)</td>
+</tr>
+<tr>
+<td>Delta Electronics Bommasandra</td>
+<td>Operating route</td>
+<td>Yellow</td>
+<td>12.81939</td>
+<td>77.68835</td>
+<td>1</td>
+<td>Bommasandra (suburb, 498 m)</td>
+</tr>
+<tr>
+<td>Doddakallasandra</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>12.88464</td>
+<td>77.55275</td>
+<td>1</td>
+<td>Narayana Nagara (neighbourhood, 420 m)</td>
+</tr>
+<tr>
+<td>Dr. B. R. Ambedkar Station, Vidhana Soudha</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.97874</td>
+<td>77.59164</td>
+<td>0</td>
+<td>None in this OSM place-node extract</td>
+</tr>
+<tr>
+<td>Electronic City</td>
+<td>Operating route</td>
+<td>Yellow</td>
+<td>12.85651</td>
+<td>77.66352</td>
+<td>2</td>
+<td>Konappana Agrahara (neighbourhood, 646 m); Electronics City Phase 1 (quarter, 775 m)</td>
+</tr>
+<tr>
+<td>Garudacharpalya</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.99345</td>
+<td>77.70368</td>
+<td>5</td>
+<td>Garudacharpalya (neighbourhood, 343 m); Kaveri Nagara (neighbourhood, 510 m); Devasandra Industrial Estate (neighbourhood, 533 m); ITI Industrial Estate (neighbourhood, 675 m); RHB Colony (neighbourhood, 728 m)</td>
+</tr>
+<tr>
+<td>Halasuru</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.9765</td>
+<td>77.62669</td>
+<td>14</td>
+<td>Dodakattappa (neighbourhood, 170 m); Jogupalya (neighbourhood, 248 m); Halasuru (suburb, 267 m); Gupta Layout (neighbourhood, 410 m); Hoysala Nagar (neighbourhood, 419 m); Someshwarpura (neighbourhood, 427 m); Lakshmipuram (neighbourhood, 448 m); MV Garden (neighbourhood, 511 m); Jayaraj Nagar (neighbourhood, 519 m); Saraswathipuram (neighbourhood, 568 m); LBS Nagar (neighbourhood, 605 m); Keshavaraj Layout (neighbourhood, 623 m); Corporation Colony (neighbourhood, 713 m); Cambridge Layout (neighbourhood, 719 m)</td>
+</tr>
+<tr>
+<td>Hongasandra</td>
+<td>Operating route</td>
+<td>Yellow</td>
+<td>12.9017</td>
+<td>77.63199</td>
+<td>2</td>
+<td>Mangamannapalya (neighbourhood, 460 m); GarvebhaviPalya (neighbourhood, 789 m)</td>
+</tr>
+<tr>
+<td>Hoodi</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.9888</td>
+<td>77.71133</td>
+<td>2</td>
+<td>Hoodi (suburb, 631 m); Ashraya Layout (neighbourhood, 717 m)</td>
+</tr>
+<tr>
+<td>Hopefarm Channasandra</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.9873</td>
+<td>77.75388</td>
+<td>3</td>
+<td>Maithri Layout (neighbourhood, 349 m); Prashanth Extension (neighbourhood, 682 m); Kadugodi Colony (neighbourhood, 698 m)</td>
+</tr>
+<tr>
+<td>Hosa Road</td>
+<td>Operating route</td>
+<td>Yellow</td>
+<td>12.87075</td>
+<td>77.65245</td>
+<td>0</td>
+<td>None in this OSM place-node extract</td>
+</tr>
+<tr>
+<td>Huskur Road</td>
+<td>Operating route</td>
+<td>Yellow</td>
+<td>12.83916</td>
+<td>77.67737</td>
+<td>1</td>
+<td>Electronics City Phase 2 (West) (quarter, 571 m)</td>
+</tr>
+<tr>
+<td>Indiranagar</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.97833</td>
+<td>77.63866</td>
+<td>13</td>
+<td>Indiranagar 1st Stage (neighbourhood, 124 m); Indiranagar 2nd Stage (neighbourhood, 139 m); Old Binnamangala (neighbourhood, 342 m); Indiranagar 3rd Stage (neighbourhood, 343 m); Appareddipalaya (neighbourhood, 486 m); Subedar Garden (neighbourhood, 561 m); Motappanapalya (neighbourhood, 575 m); Defence Colony (neighbourhood, 580 m); Indiranagar (suburb, 594 m); Hutting Colony (neighbourhood, 599 m); Eshwara Layout (neighbourhood, 689 m); Binnamangala (neighbourhood, 709 m); LBS Nagar (neighbourhood, 722 m)</td>
+</tr>
+<tr>
+<td>Infosys Foundation Konappana Agrahara</td>
+<td>Operating route</td>
+<td>Yellow</td>
+<td>12.84644</td>
+<td>77.67119</td>
+<td>3</td>
+<td>Electronics City Phase 2 (East) (quarter, 624 m); Electronics City Phase 1 (quarter, 764 m); Konappana Agrahara (neighbourhood, 785 m)</td>
+</tr>
+<tr>
+<td>Jalahalli</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>13.03941</td>
+<td>77.51974</td>
+<td>0</td>
+<td>None in this OSM place-node extract</td>
+</tr>
+<tr>
+<td>Jaya Prakash Nagar</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>12.90747</td>
+<td>77.57313</td>
+<td>3</td>
+<td>Ilyas Nagar (neighbourhood, 417 m); Sarakki (neighbourhood, 744 m); Shakambari Nagar (neighbourhood, 744 m)</td>
+</tr>
+<tr>
+<td>Jayadeva Hospital</td>
+<td>Operating route</td>
+<td>Yellow</td>
+<td>12.91673</td>
+<td>77.59997</td>
+<td>5</td>
+<td>BHBCS Layout (neighbourhood, 187 m); SFHS Layout (neighbourhood, 339 m); Gurappana Palya (neighbourhood, 578 m); MICO Layout (neighbourhood, 587 m); JP Nagar 3rd Phase (quarter, 606 m)</td>
+</tr>
+<tr>
+<td>Jayanagar</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>12.92951</td>
+<td>77.58014</td>
+<td>7</td>
+<td>Jayanagar (suburb, 248 m); Jayanagar 6th Block (quarter, 250 m); Jayanagar 4th Block (quarter, 489 m); Jayanagar 7th Block (quarter, 530 m); Jayanagar 3rd Block (quarter, 577 m); Geetha Colony (neighbourhood, 580 m); Yediyuru (neighbourhood, 650 m)</td>
+</tr>
+<tr>
+<td>Jnanabharathi</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.93542</td>
+<td>77.51218</td>
+<td>1</td>
+<td>Ideal Homes Layout (neighbourhood, 381 m)</td>
+</tr>
+<tr>
+<td>Kadugodi Tree Park</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.98565</td>
+<td>77.74701</td>
+<td>2</td>
+<td>Prashanth Extension (neighbourhood, 314 m); Kadugodi Colony (neighbourhood, 779 m)</td>
+</tr>
+<tr>
+<td>Kengeri</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.90791</td>
+<td>77.47658</td>
+<td>0</td>
+<td>None in this OSM place-node extract</td>
+</tr>
+<tr>
+<td>Kengeri Bus Terminal</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.91479</td>
+<td>77.48777</td>
+<td>2</td>
+<td>Vijayashree Layout (neighbourhood, 437 m); BDA Jnanabharathi Residential Enclave (neighbourhood, 585 m)</td>
+</tr>
+<tr>
+<td>Konanakunte Cross</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>12.88897</td>
+<td>77.56267</td>
+<td>0</td>
+<td>None in this OSM place-node extract</td>
+</tr>
+<tr>
+<td>Krantivira Sangolli Rayanna Railway Station</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.97588</td>
+<td>77.56538</td>
+<td>1</td>
+<td>Nagamma Nagar (neighbourhood, 779 m)</td>
+</tr>
+<tr>
+<td>Krishna Rajendra Market</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>12.96088</td>
+<td>77.57466</td>
+<td>2</td>
+<td>Kalasipalyam (quarter, 380 m); Ranasingpete (neighbourhood, 779 m)</td>
+</tr>
+<tr>
+<td>Krishnarajapura</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.9999</td>
+<td>77.67767</td>
+<td>3</td>
+<td>Darga Mohalla (neighbourhood, 489 m); Udaya Nagar (neighbourhood, 689 m); A Narayanapura (neighbourhood, 799 m)</td>
+</tr>
+<tr>
+<td>Kudlu Gate</td>
+<td>Operating route</td>
+<td>Yellow</td>
+<td>12.88993</td>
+<td>77.63922</td>
+<td>1</td>
+<td>GarvebhaviPalya (neighbourhood, 761 m)</td>
+</tr>
+<tr>
+<td>Kundalahalli</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.97759</td>
+<td>77.71556</td>
+<td>3</td>
+<td>Channama Layout (neighbourhood, 357 m); Green Domain Layout (neighbourhood, 533 m); Sitaramapalya (quarter, 548 m)</td>
+</tr>
+<tr>
+<td>Lalbagh</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>12.94653</td>
+<td>77.58002</td>
+<td>4</td>
+<td>Kankanpalya (neighbourhood, 652 m); Basavanagudi (suburb, 724 m); Mavalli (neighbourhood, 734 m); Jayanagar 2nd Block (quarter, 789 m)</td>
+</tr>
+<tr>
+<td>Madavara</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>13.05742</td>
+<td>77.47281</td>
+<td>1</td>
+<td>Madhavara (suburb, 470 m)</td>
+</tr>
+<tr>
+<td>Magadi Road</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.97563</td>
+<td>77.55535</td>
+<td>3</td>
+<td>Rajajinagar 6th Block (neighbourhood, 347 m); Kempapura Agrahara (suburb, 557 m); Rajajinagar 4M Block (neighbourhood, 769 m)</td>
+</tr>
+<tr>
+<td>Mahakavi Kuvempu Road</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>12.99853</td>
+<td>77.5569</td>
+<td>7</td>
+<td>Gayatri Nagar (neighbourhood, 284 m); Mariappanapalya (neighbourhood, 297 m); Rajajinagar 2nd Block (neighbourhood, 581 m); Ketamaranahalli (neighbourhood, 601 m); Subrahmanya Nagar (quarter, 608 m); Jooganahalli (neighbourhood, 650 m); Maruthi Extension (neighbourhood, 679 m)</td>
+</tr>
+<tr>
+<td>Mahalakshmi</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>13.00805</td>
+<td>77.54881</td>
+<td>7</td>
+<td>Rajajinagara 1st R Block (neighbourhood, 94 m); Rajajinagara 1st N Block (neighbourhood, 496 m); Mahalakshmi Layout (suburb, 575 m); Rajajinagar 1st Block (neighbourhood, 603 m); Nagapura (neighbourhood, 691 m); Ashokapuram (neighbourhood, 762 m); Subramanya Nagar 2nd Stage (neighbourhood, 781 m)</td>
+</tr>
+<tr>
+<td>Mahatma Gandhi Road</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.97553</td>
+<td>77.60679</td>
+<td>2</td>
+<td>Tasker Town (neighbourhood, 526 m); Ashok Nagar (quarter, 727 m)</td>
+</tr>
+<tr>
+<td>Manjunathanagara</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>13.05009</td>
+<td>77.49445</td>
+<td>2</td>
+<td>Manjunath Nagar (neighbourhood, 441 m); Muniswamappa Layout (neighbourhood, 798 m)</td>
+</tr>
+<tr>
+<td>Mantri Square Sampige Road</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>12.99046</td>
+<td>77.57073</td>
+<td>5</td>
+<td>Valluvarpuram (neighbourhood, 576 m); Seshadripuram (quarter, 584 m); Nehru Nagar (neighbourhood, 652 m); Sriramapuram (quarter, 752 m); Kumara Park West (neighbourhood, 782 m)</td>
+</tr>
+<tr>
+<td>Mysore Road</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.94672</td>
+<td>77.53016</td>
+<td>2</td>
+<td>KHR Colony (neighbourhood, 574 m); Pantarapalya (neighbourhood, 690 m)</td>
+</tr>
+<tr>
+<td>Nadaprabhu Kempegowda Station, Majestic</td>
+<td>Operating route</td>
+<td>Purple, Green</td>
+<td>12.97571</td>
+<td>77.57288</td>
+<td>5</td>
+<td>Sowrashtrapet (locality, 355 m); Balepet (neighbourhood, 439 m); Sultanpete (neighbourhood, 651 m); Chikkapete (suburb, 726 m); Gandhinagar (suburb, 792 m)</td>
+</tr>
+<tr>
+<td>Nagasandra</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>13.04795</td>
+<td>77.50014</td>
+<td>2</td>
+<td>Rukmini Nagara (neighbourhood, 645 m); Nagasandra (suburb, 777 m)</td>
+</tr>
+<tr>
+<td>Nallurahalli</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.97664</td>
+<td>77.72488</td>
+<td>1</td>
+<td>EPIP Zone (suburb, 174 m)</td>
+</tr>
+<tr>
+<td>National College</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>12.95053</td>
+<td>77.57369</td>
+<td>3</td>
+<td>VV Puram (quarter, 395 m); Shankarapuram (neighbourhood, 447 m); Gandhi Bazaar (neighbourhood, 620 m)</td>
+</tr>
+<tr>
+<td>Pantharapalya - Nayandahalli</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.94167</td>
+<td>77.52512</td>
+<td>3</td>
+<td>Pantarapalya (neighbourhood, 392 m); Nayandahalli (neighbourhood, 461 m); Pramodha Layout (neighbourhood, 678 m)</td>
+</tr>
+<tr>
+<td>Pattanagere</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.9243</td>
+<td>77.49828</td>
+<td>1</td>
+<td>Dubasi Palya (neighbourhood, 605 m)</td>
+</tr>
+<tr>
+<td>Pattandur Agrahara</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.98764</td>
+<td>77.73777</td>
+<td>0</td>
+<td>None in this OSM place-node extract</td>
+</tr>
+<tr>
+<td>Peenya</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>13.03302</td>
+<td>77.5332</td>
+<td>1</td>
+<td>Peenya (suburb, 637 m)</td>
+</tr>
+<tr>
+<td>Peenya Industry</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>13.03632</td>
+<td>77.52549</td>
+<td>1</td>
+<td>Peenya (suburb, 425 m)</td>
+</tr>
+<tr>
+<td>Ragigudda</td>
+<td>Operating route</td>
+<td>Yellow</td>
+<td>12.91708</td>
+<td>77.5883</td>
+<td>7</td>
+<td>DK Naik Nagar (neighbourhood, 114 m); Marenahalli (quarter, 387 m); Jayanagar 9th Block (quarter, 466 m); LIC Colony (neighbourhood, 534 m); Jayanagar 5th Block (quarter, 603 m); JP Nagar 2nd Phase (quarter, 632 m); KSRTC Layout (neighbourhood, 734 m)</td>
+</tr>
+<tr>
+<td>Rajajinagar</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>13.00052</td>
+<td>77.54966</td>
+<td>10</td>
+<td>Ketamaranahalli (neighbourhood, 254 m); West of Chord Road 2nd Stage (neighbourhood, 297 m); Rajajinagar 1st Block (neighbourhood, 332 m); Mahalakshmipuram (quarter, 401 m); Nagapura (neighbourhood, 419 m); Rajajinagara 1st N Block (neighbourhood, 592 m); Mariappanapalya (neighbourhood, 637 m); Indiranagar (neighbourhood, 668 m); Manjunath Nagar (neighbourhood, 751 m); Rajajinagar 2nd Block (neighbourhood, 762 m)</td>
+</tr>
+<tr>
+<td>Rajarajeshwari Nagar</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.9366</td>
+<td>77.51968</td>
+<td>2</td>
+<td>Ideal Homes Layout (neighbourhood, 728 m); Javaranadoddi (neighbourhood, 738 m)</td>
+</tr>
+<tr>
+<td>Rashtreeya Vidyalaya Road</td>
+<td>Operating route</td>
+<td>Green, Yellow</td>
+<td>12.92158</td>
+<td>77.5802</td>
+<td>4</td>
+<td>Jayanagar 8th Block (quarter, 347 m); Jayanagar 5th Block (quarter, 409 m); Jayanagar 7th Block (quarter, 519 m); Jayanagar 4th Block (quarter, 661 m)</td>
+</tr>
+<tr>
+<td>Sandal Soap Factory</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>13.01465</td>
+<td>77.55398</td>
+<td>2</td>
+<td>Ashokapuram (neighbourhood, 691 m); Milk Colony (neighbourhood, 754 m)</td>
+</tr>
+<tr>
+<td>Seetharampalya</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.98086</td>
+<td>77.70879</td>
+<td>2</td>
+<td>Channama Layout (neighbourhood, 463 m); Ashraya Layout (neighbourhood, 660 m)</td>
+</tr>
+<tr>
+<td>Silk Institute</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>12.86173</td>
+<td>77.52995</td>
+<td>0</td>
+<td>None in this OSM place-node extract</td>
+</tr>
+<tr>
+<td>Singasandra</td>
+<td>Operating route</td>
+<td>Yellow</td>
+<td>12.88082</td>
+<td>77.64485</td>
+<td>3</td>
+<td>Singasandra (quarter, 452 m); Wellington Paradise Layout (neighbourhood, 506 m); AECS Layout, A block (neighbourhood, 638 m)</td>
+</tr>
+<tr>
+<td>Singayyanapalya</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.99654</td>
+<td>77.69272</td>
+<td>8</td>
+<td>B Chikkanna Layout (neighbourhood, 483 m); RHB Colony (neighbourhood, 549 m); Maheshwari Nagar (neighbourhood, 571 m); ITI Industrial Estate (neighbourhood, 610 m); Mahadevapura (suburb, 673 m); Kamdhenu Nagar (neighbourhood, 681 m); Saraswathi Nagar (neighbourhood, 716 m); Justice Bheemiah Layout (neighbourhood, 736 m)</td>
+</tr>
+<tr>
+<td>Sir M. Visvesvaraya Stn., Central College</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.97452</td>
+<td>77.58422</td>
+<td>2</td>
+<td>Gandhinagar (suburb, 540 m); Cubbonpet (neighbourhood, 678 m)</td>
+</tr>
+<tr>
+<td>South End Circle</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>12.93826</td>
+<td>77.58006</td>
+<td>4</td>
+<td>Jayanagar 2nd Block (quarter, 334 m); Jayanagar 3rd Block (quarter, 586 m); Kankanpalya (neighbourhood, 605 m); Basavanagudi (suburb, 626 m)</td>
+</tr>
+<tr>
+<td>Sri Balagangadharanatha Swamiji Station, Hosahalli</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.97429</td>
+<td>77.54562</td>
+<td>4</td>
+<td>Dasarahalli (neighbourhood, 556 m); Cholourpalya (neighbourhood, 586 m); RPC Layout (neighbourhood, 593 m); Hosahalli (neighbourhood, 658 m)</td>
+</tr>
+<tr>
+<td>Sri Sathya Sai Hospital</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.98119</td>
+<td>77.72754</td>
+<td>2</td>
+<td>EPIP Zone (suburb, 458 m); Pattanduru Agrahara (suburb, 706 m)</td>
+</tr>
+<tr>
+<td>Srirampura</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>12.99653</td>
+<td>77.5632</td>
+<td>5</td>
+<td>Maruthi Extension (neighbourhood, 125 m); Prakash Nagar (neighbourhood, 185 m); Valluvarpuram (neighbourhood, 583 m); Gayatri Nagar (neighbourhood, 598 m); Sriramapuram (quarter, 619 m)</td>
+</tr>
+<tr>
+<td>Swami Vivekananda Road</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.98593</td>
+<td>77.6449</td>
+<td>8</td>
+<td>New Baiyyappanahalli Extension (neighbourhood, 157 m); Ramaswamy Layout (neighbourhood, 398 m); Binnamangala (neighbourhood, 410 m); Hutting Colony (neighbourhood, 529 m); Michaelpalya (neighbourhood, 568 m); BM Kaval (neighbourhood, 603 m); Subedar Garden (neighbourhood, 675 m); Old Binnamangala (neighbourhood, 794 m)</td>
+</tr>
+<tr>
+<td>Thalaghattapura</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>12.87141</td>
+<td>77.5384</td>
+<td>3</td>
+<td>Thalaghattapura (neighbourhood, 345 m); Judicial Layout (neighbourhood, 616 m); Ganigarapalya (neighbourhood, 752 m)</td>
+</tr>
+<tr>
+<td>Trinity</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.97302</td>
+<td>77.61702</td>
+<td>5</td>
+<td>Craig Park Layout (neighbourhood, 223 m); Hanumanthappa Layout (neighbourhood, 374 m); Yellappa Chetty Layout (neighbourhood, 524 m); Someshwarpura (neighbourhood, 699 m); Corporation Quarters (neighbourhood, 725 m)</td>
+</tr>
+<tr>
+<td>Vajarahalli</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>12.87744</td>
+<td>77.54474</td>
+<td>1</td>
+<td>Vajrahalli (quarter, 314 m)</td>
+</tr>
+<tr>
+<td>Vijayanagar</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.97096</td>
+<td>77.5374</td>
+<td>10</td>
+<td>M C Layout (neighbourhood, 323 m); Binny Layout (neighbourhood, 358 m); Vijaya Nagar (suburb, 551 m); Central Excise Layout (neighbourhood, 578 m); PF Layout (neighbourhood, 596 m); Hosahalli (neighbourhood, 619 m); Thimanahalli (neighbourhood, 660 m); Govindaraj Nagara (quarter, 704 m); NHCS Layout (neighbourhood, 707 m); Marenahalli (neighbourhood, 772 m)</td>
+</tr>
+<tr>
+<td>Whitefield (Kadugodi)</td>
+<td>Operating route</td>
+<td>Purple</td>
+<td>12.99574</td>
+<td>77.75795</td>
+<td>1</td>
+<td>Kadugodi (suburb, 454 m)</td>
+</tr>
+<tr>
+<td>Yelachenahalli</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>12.89605</td>
+<td>77.57012</td>
+<td>2</td>
+<td>Yelachenahalli (neighbourhood, 214 m); Eshwara Layout (neighbourhood, 793 m)</td>
+</tr>
+<tr>
+<td>Yeshwantpur</td>
+<td>Operating route</td>
+<td>Green</td>
+<td>13.02327</td>
+<td>77.54988</td>
+<td>1</td>
+<td>Yeswanthpur (suburb, 368 m)</td>
+</tr>
+<tr>
+<td>Agara Lake</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>12.92068</td>
+<td>77.64373</td>
+<td>4</td>
+<td>Agara (neighbourhood, 484 m); Sector 4 (quarter, 720 m); Jakkasandra (neighbourhood, 779 m); Sector 1 (quarter, 795 m)</td>
+</tr>
+<tr>
+<td>Airport City</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>13.19835</td>
+<td>77.68699</td>
+<td>0</td>
+<td>None in this OSM place-node extract</td>
+</tr>
+<tr>
+<td>Bagalur Cross</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>13.11936</td>
+<td>77.60982</td>
+<td>1</td>
+<td>Palanahalli (neighbourhood, 624 m)</td>
+</tr>
+<tr>
+<td>Bagmane DRDO Sports Complex</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>12.98592</td>
+<td>77.69076</td>
+<td>5</td>
+<td>Shivaganga Layout (neighbourhood, 408 m); Mahadevapura (suburb, 602 m); Saraswathi Nagar (neighbourhood, 629 m); Maheshwari Nagar (neighbourhood, 652 m); B Chikkanna Layout (neighbourhood, 732 m)</td>
+</tr>
+<tr>
+<td>Cantonment</td>
+<td>Under construction</td>
+<td>Pink</td>
+<td>12.99179</td>
+<td>77.60622</td>
+<td>3</td>
+<td>Cleveland Town (quarter, 635 m); Benson Town (quarter, 676 m); Shivajinagar (suburb, 702 m)</td>
+</tr>
+<tr>
+<td>Central Silk Board</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>12.9174</td>
+<td>77.62347</td>
+<td>8</td>
+<td>MCHS Colony (neighbourhood, 383 m); Dollar Scheme Colony (neighbourhood, 434 m); N. G. R. Layout (neighbourhood, 616 m); BTM 2nd Stage (neighbourhood, 619 m); Sidhartha Colony (neighbourhood, 716 m); Jai Bheema Nagar (neighbourhood, 739 m); Roopena Agrahara (neighbourhood, 753 m); Koramangala 2nd Block (neighbourhood, 779 m)</td>
+</tr>
+<tr>
+<td>Dairy Circle</td>
+<td>Under construction</td>
+<td>Pink</td>
+<td>12.94122</td>
+<td>77.60243</td>
+<td>4</td>
+<td>Lakkasandra (quarter, 370 m); Eramma Layout (neighbourhood, 493 m); Chinnayanapalya (neighbourhood, 762 m); Adugodi (quarter, 766 m)</td>
+</tr>
+<tr>
+<td>Doddajala</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>13.18838</td>
+<td>77.64463</td>
+<td>0</td>
+<td>None in this OSM place-node extract</td>
+</tr>
+<tr>
+<td>Doddanakundi</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>12.97561</td>
+<td>77.69703</td>
+<td>7</td>
+<td>Doddanekundi (quarter, 481 m); Ambedkar Colony (neighbourhood, 561 m); Wasa Layout (neighbourhood, 570 m); Shamanna Reddy Layout (neighbourhood, 698 m); Karthik Nagar (quarter, 750 m); Ferns Habitat (neighbourhood, 757 m); LRDE Layout (neighbourhood, 789 m)</td>
+</tr>
+<tr>
+<td>Embassy Tech Village Kadubeesanahalli</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>12.93221</td>
+<td>77.68755</td>
+<td>2</td>
+<td>Kariyammana Agrahara (neighbourhood, 550 m); Devarabeesanahalli (quarter, 631 m)</td>
+</tr>
+<tr>
+<td>HBR Layout</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>13.03252</td>
+<td>77.62982</td>
+<td>5</td>
+<td>HBR Layout (suburb, 197 m); HBR Layout 4th Block (quarter, 212 m); Grace Town (neighbourhood, 512 m); HBR Layout 3rd Block (quarter, 537 m); HBR Layout 5th Block (quarter, 561 m)</td>
+</tr>
+<tr>
+<td>Hebbal</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>13.04395</td>
+<td>77.59316</td>
+<td>2</td>
+<td>Arkavathy Layout 22nd Block (locality, 584 m); Hebbal (suburb, 652 m)</td>
+</tr>
+<tr>
+<td>Horamavu</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>13.01739</td>
+<td>77.65956</td>
+<td>1</td>
+<td>Vijaya Bank Colony (neighbourhood, 205 m)</td>
+</tr>
+<tr>
+<td>HRBR Layout</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>13.02257</td>
+<td>77.64737</td>
+<td>7</td>
+<td>Nanjappa Garden (neighbourhood, 343 m); HRBR Layout 1st Block (quarter, 384 m); Bank Avenue Colony (neighbourhood, 588 m); CNR Layout (neighbourhood, 629 m); Malappa Layout (neighbourhood, 647 m); Babusabpalya (neighbourhood, 725 m); Kalyan Nagar (suburb, 763 m)</td>
+</tr>
+<tr>
+<td>HSR Layout</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>12.91646</td>
+<td>77.63315</td>
+<td>7</td>
+<td>Sector 5 (quarter, 274 m); Sector 6 (quarter, 283 m); Teacher's Colony (neighbourhood, 283 m); Venkatpura (neighbourhood, 693 m); MCHS Colony (neighbourhood, 712 m); MCHS Colony (neighbourhood, 731 m); Sector 7 (quarter, 748 m)</td>
+</tr>
+<tr>
+<td>Hulimavu</td>
+<td>Under construction</td>
+<td>Pink</td>
+<td>12.88084</td>
+<td>77.59585</td>
+<td>1</td>
+<td>Arekere (quarter, 709 m)</td>
+</tr>
+<tr>
+<td>Ibbaluru</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>12.92103</td>
+<td>77.66315</td>
+<td>2</td>
+<td>Iblur (quarter, 170 m); Ambalipura (neighbourhood, 599 m)</td>
+</tr>
+<tr>
+<td>IIMB</td>
+<td>Under construction</td>
+<td>Pink</td>
+<td>12.89582</td>
+<td>77.59962</td>
+<td>2</td>
+<td>Panduranga Nagar (neighbourhood, 486 m); Govinda Reddy Layout (neighbourhood, 706 m)</td>
+</tr>
+<tr>
+<td>ISRO</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>12.96898</td>
+<td>77.70112</td>
+<td>5</td>
+<td>LRDE Layout (neighbourhood, 118 m); Karthik Nagar (quarter, 163 m); Wasa Layout (neighbourhood, 369 m); Doddanekundi (quarter, 566 m); Ambedkar Colony (neighbourhood, 677 m)</td>
+</tr>
+<tr>
+<td>Jakkur Cross</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>13.07005</td>
+<td>77.59312</td>
+<td>1</td>
+<td>Byatarayanapura (neighbourhood, 398 m)</td>
+</tr>
+<tr>
+<td>Jayadeva Interchange</td>
+<td>Under construction</td>
+<td>Pink</td>
+<td>12.91693</td>
+<td>77.59993</td>
+<td>5</td>
+<td>BHBCS Layout (neighbourhood, 209 m); SFHS Layout (neighbourhood, 360 m); Gurappana Palya (neighbourhood, 563 m); MICO Layout (neighbourhood, 606 m); JP Nagar 3rd Phase (quarter, 624 m)</td>
+</tr>
+<tr>
+<td>JP Nagar 4th Phase</td>
+<td>Under construction</td>
+<td>Pink</td>
+<td>12.90985</td>
+<td>77.60009</td>
+<td>7</td>
+<td>JP Nagar 3rd Phase (quarter, 344 m); NS Palya (neighbourhood, 383 m); SFHS Layout (neighbourhood, 507 m); MICO Layout (neighbourhood, 531 m); BHBCS Layout (neighbourhood, 596 m); JP Nagar 4th Phase (quarter, 637 m); KSRTC Layout (neighbourhood, 789 m)</td>
+</tr>
+<tr>
+<td>Kadugundanahalli</td>
+<td>Under construction</td>
+<td>Pink</td>
+<td>13.02996</td>
+<td>77.62073</td>
+<td>3</td>
+<td>Rashad Nagar (neighbourhood, 379 m); Govindapura (neighbourhood, 472 m); Shampura (neighbourhood, 784 m)</td>
+</tr>
+<tr>
+<td>Kalena Agrahara</td>
+<td>Under construction</td>
+<td>Pink</td>
+<td>12.87148</td>
+<td>77.59368</td>
+<td>2</td>
+<td>Nobo Nagar (neighbourhood, 483 m); Kalena Agrahara (neighbourhood, 686 m)</td>
+</tr>
+<tr>
+<td>Kalyan Nagar</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>13.02621</td>
+<td>77.63807</td>
+<td>7</td>
+<td>HRBR Layout 2nd Block (quarter, 322 m); Palm Grove (neighbourhood, 366 m); HRBR Layout 3rd Block (quarter, 386 m); Kalyan Nagar (suburb, 515 m); Chelekere (neighbourhood, 552 m); Meghanapalya (neighbourhood, 582 m); Grace Town (neighbourhood, 643 m)</td>
+</tr>
+<tr>
+<td>Kasturinagara</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>13.00803</td>
+<td>77.66263</td>
+<td>4</td>
+<td>B Channasandra (neighbourhood, 331 m); Kasturi Nagar (quarter, 466 m); Doctors Layout (neighbourhood, 567 m); Kasturi Nagar 2nd Stage (neighbourhood, 738 m)</td>
+</tr>
+<tr>
+<td>Kempapura</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>13.0437</td>
+<td>77.60516</td>
+<td>4</td>
+<td>Vishwanath Nagenahalli (quarter, 577 m); Jogappa Layout (neighbourhood, 663 m); Coffee Board Layout (neighbourhood, 743 m); Kanaka Nagar (neighbourhood, 774 m)</td>
+</tr>
+<tr>
+<td>KIAL Terminals</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>13.19818</td>
+<td>77.71291</td>
+<td>0</td>
+<td>None in this OSM place-node extract</td>
+</tr>
+<tr>
+<td>Kodibisanahalli</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>12.94521</td>
+<td>77.69811</td>
+<td>1</td>
+<td>Kaadubeesanahalli (quarter, 647 m)</td>
+</tr>
+<tr>
+<td>Kodigehalli</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>13.05674</td>
+<td>77.59368</td>
+<td>1</td>
+<td>Amruthnagar (neighbourhood, 481 m)</td>
+</tr>
+<tr>
+<td>Krishnarajapuram</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>13.00008</td>
+<td>77.67737</td>
+<td>2</td>
+<td>Darga Mohalla (neighbourhood, 458 m); Udaya Nagar (neighbourhood, 675 m)</td>
+</tr>
+<tr>
+<td>Lakkasandra</td>
+<td>Under construction</td>
+<td>Pink</td>
+<td>12.94949</td>
+<td>77.60304</td>
+<td>7</td>
+<td>Chinnayanapalya (neighbourhood, 289 m); JK Pura (neighbourhood, 329 m); Vinayaka Nagara (neighbourhood, 412 m); Eramma Layout (neighbourhood, 428 m); Gajendra Nagara (neighbourhood, 615 m); Wilson Garden (quarter, 676 m); Lakkasandra (quarter, 784 m)</td>
+</tr>
+<tr>
+<td>Langford Town</td>
+<td>Under construction</td>
+<td>Pink</td>
+<td>12.95623</td>
+<td>77.60586</td>
+<td>6</td>
+<td>Langford Town (neighbourhood, 303 m); Bethel Layout (neighbourhood, 385 m); Gajendra Nagara (neighbourhood, 670 m); Pudupadacheri (neighbourhood, 708 m); JK Pura (neighbourhood, 775 m); Anepalya (neighbourhood, 798 m)</td>
+</tr>
+<tr>
+<td>Mahatma Gandhi Road</td>
+<td>Under construction</td>
+<td>Pink</td>
+<td>12.97624</td>
+<td>77.60838</td>
+<td>3</td>
+<td>Tasker Town (neighbourhood, 518 m); Commercial Street Market (neighbourhood, 697 m); Ashok Nagar (quarter, 762 m)</td>
+</tr>
+<tr>
+<td>Marathahalli</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>12.95796</td>
+<td>77.70133</td>
+<td>12</td>
+<td>Ramanjaneya Layout (locality, 175 m); Ashwath Nagar (neighbourhood, 197 m); Hemanth Nagar (locality, 338 m); Ananda Nagara (neighbourhood, 353 m); Marathahalli (suburb, 436 m); Ayappa Layout (locality, 466 m); Chinnappanahalli (neighbourhood, 497 m); P R Layout (neighbourhood, 587 m); Sanjay Nagar (neighbourhood, 591 m); Vivekananda Layout (locality, 615 m); MSR Layout (neighbourhood, 674 m); Gandhi Nagar (neighbourhood, 742 m)</td>
+</tr>
+<tr>
+<td>Nagawara</td>
+<td>Under construction</td>
+<td>Pink</td>
+<td>13.04122</td>
+<td>77.62502</td>
+<td>3</td>
+<td>Nagavara (suburb, 444 m); Telecom Layout 10th Block (neighbourhood, 509 m); HBR Layout 5th Block (quarter, 584 m)</td>
+</tr>
+<tr>
+<td>Nagawara</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>13.03956</td>
+<td>77.62477</td>
+<td>3</td>
+<td>Nagavara (suburb, 266 m); HBR Layout 5th Block (quarter, 495 m); Telecom Layout 10th Block (neighbourhood, 566 m)</td>
+</tr>
+<tr>
+<td>Pottery Town</td>
+<td>Under construction</td>
+<td>Pink</td>
+<td>13.00065</td>
+<td>77.60943</td>
+<td>8</td>
+<td>Pottery Town (neighbourhood, 180 m); Williams Town (neighbourhood, 334 m); SK Garden (neighbourhood, 509 m); Frazer Town (suburb, 572 m); Sagayapura (neighbourhood, 671 m); ITI Layout (neighbourhood, 700 m); Benson Town (quarter, 724 m); Cleveland Town (quarter, 772 m)</td>
+</tr>
+<tr>
+<td>Prestige Bellandur</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>12.9278</td>
+<td>77.68036</td>
+<td>1</td>
+<td>Bellanduru (suburb, 392 m)</td>
+</tr>
+<tr>
+<td>Rashtriya Military School Metro Station</td>
+<td>Under construction</td>
+<td>Pink</td>
+<td>12.96528</td>
+<td>77.60695</td>
+<td>7</td>
+<td>Arab Lines (neighbourhood, 94 m); Ashok Nagar (quarter, 525 m); Xavier Layout (neighbourhood, 557 m); Richmond Town (suburb, 612 m); Yellagondanpalya (neighbourhood, 676 m); Anglo-Indian Quarters (neighbourhood, 788 m); Victoria Layout (quarter, 794 m)</td>
+</tr>
+<tr>
+<td>Saraswathi Nagar</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>12.99371</td>
+<td>77.6855</td>
+<td>7</td>
+<td>Kamdhenu Nagar (neighbourhood, 278 m); Saraswathi Nagar (neighbourhood, 458 m); B. Narayanapura (quarter, 488 m); Mahadevapura (suburb, 534 m); Maheshwari Nagar (neighbourhood, 608 m); B Chikkanna Layout (neighbourhood, 623 m); Shivaganga Layout (neighbourhood, 676 m)</td>
+</tr>
+<tr>
+<td>Shivajinagar</td>
+<td>Under construction</td>
+<td>Pink</td>
+<td>12.98385</td>
+<td>77.60204</td>
+<td>3</td>
+<td>Shivajinagar (suburb, 414 m); Tasker Town (neighbourhood, 580 m); Commercial Street Market (neighbourhood, 731 m)</td>
+</tr>
+<tr>
+<td>Tannery Road</td>
+<td>Under construction</td>
+<td>Pink</td>
+<td>13.00959</td>
+<td>77.61395</td>
+<td>6</td>
+<td>Periyar Nagar (neighbourhood, 204 m); Pillana Garden (neighbourhood, 381 m); Sagayapura (neighbourhood, 471 m); New Bagalur Layout (neighbourhood, 521 m); Postal and Telecom Colony (neighbourhood, 525 m); Richards Town (quarter, 684 m)</td>
+</tr>
+<tr>
+<td>Tavarekere</td>
+<td>Under construction</td>
+<td>Pink</td>
+<td>12.9295</td>
+<td>77.6005</td>
+<td>6</td>
+<td>Rajanna Layout (locality, 415 m); Bismillah Nagar (neighbourhood, 471 m); NAL Layout (neighbourhood, 489 m); Tilak Nagar (neighbourhood, 662 m); Balaji Layout (neighbourhood, 769 m); RBI Colony (locality, 778 m)</td>
+</tr>
+<tr>
+<td>Veerannapalya</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>13.041</td>
+<td>77.61805</td>
+<td>3</td>
+<td>Virannapalya (neighbourhood, 512 m); Nagavara (suburb, 719 m); Govindapura (neighbourhood, 789 m)</td>
+</tr>
+<tr>
+<td>Venkateshapura</td>
+<td>Under construction</td>
+<td>Pink</td>
+<td>13.01731</td>
+<td>77.61802</td>
+<td>5</td>
+<td>Kushal Nagar (neighbourhood, 355 m); Kadugondanahalli (quarter, 537 m); Postal and Telecom Colony (neighbourhood, 543 m); HRBR Layout 1st Block (quarter, 753 m); Pillana Garden (neighbourhood, 765 m)</td>
+</tr>
+<tr>
+<td>Yelahanka</td>
+<td>Under construction</td>
+<td>Blue</td>
+<td>13.10185</td>
+<td>77.60021</td>
+<td>2</td>
+<td>Yelahanka (suburb, 437 m); Gandhinagar (neighbourhood, 635 m)</td>
+</tr>
+</tbody>
+</table></div>
+        </div>
+        <section class="faq-section" aria-labelledby="frequently-asked-questions">
+          <h2 id="frequently-asked-questions" class="faq-title">Frequently asked questions</h2>
+          <div class="faq-accordion-group">
+            <div class="faq-item">
+              <button type="button" class="faq-trigger" aria-expanded="false">
+                <span>Is 800 m a walking distance?</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-body">
+                <p>It is a straight-line distance from the station node to the place node, on a sphere of radius 6,371,000 m. It is not the length of a footpath and not a time.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-trigger" aria-expanded="false">
+                <span>How many stations are on the map?</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-body">
+                <p>Eighty-two on Purple, Green or Yellow route relations, and 47 tagged under construction. Proposed Orange and Red nodes in the same OSM extract are not included.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-trigger" aria-expanded="false">
+                <span>Why does one station name appear twice?</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-body">
+                <p>Nagawara has a Pink under-construction node and a Blue under-construction node, 186 m apart, so both are listed. Jayadeva Hospital (Yellow, operating) and Jayadeva Interchange (Pink, under construction) are different nodes.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-trigger" aria-expanded="false">
+                <span>What if my area is not in the locality cell?</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-body">
+                <p>The cell only contains OSM place nodes inside 800 m. A real neighbourhood with no such node, or a node just beyond 800 m, will be missing. That is a gap in the extract, not a finding that the area is far from the station.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-trigger" aria-expanded="false">
+                <span>Which line is a station on?</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-body">
+                <p>For operating stations, the line is the route relation: Purple, Green, Yellow, or both where the station is on two. For under-construction stations, the line is the colour tag on the node.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-trigger" aria-expanded="false">
+                <span>Does a station inside 800 m change the guidance value?</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-body">
+                <p>This page does not calculate a price or a guidance value. The 2023 guidance-value notification does not have a station-distance column. Our <a href="../insights/metro-uplift-in-bengaluru-guidance-value-near-bmrcl-stations/">note on guidance value near metro roads</a> is about road rows in that gazette, not about this 800 m list.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="article-prose">
+          <div class="in-article-advisory-banner">
+            <span class="banner-kicker">acre&amp;key</span>
+            <h2 id="talk-it-through-with-acre-and-key">Talk it through with acre&amp;key</h2>
+            <p>If you are choosing between two stations, bring the locality names from this table and acre&amp;key will read them with the rest of the papers: the exit you would actually use, the line's status, and the approval file.</p>
+            <a href="https://acrenkey.com/" class="primary-cta-btn">
+              <span>Request Advisory Call</span>
+              <span class="cta-arrow-badge" aria-hidden="true"><svg class="cta-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span>
+            </a>
+          </div>
+          
+          <h2 id="sources">Sources</h2>
+<p>Checked 20 Oct 2026.</p>
+<ol>
+<li>OpenStreetMap contributors, station nodes, route relations and place nodes, extracted 20 Oct 2026. Copyright: <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a></li>
+<li>Open Database Licence for that database: <a href="https://opendatacommons.org/licenses/odbl/1-0/">https://opendatacommons.org/licenses/odbl/1-0/</a></li>
+<li>The operating route relations used are the OSM relations named Purple, Green and Yellow with <code>network=Namma Metro</code>. Under-construction nodes are those with <code>construction=station</code> and "(u/c)" in the name.</li>
+<li>For government status of lines still being built, see our metro lines guide and the sources on that page: <a href="../bengaluru-metro-lines-2026-status-of-every-line-for-homebuyers/">https://acrenkey.com/blogs/bengaluru-metro-lines-2026-status-of-every-line-for-homebuyers/</a></li>
+</ol>
+        </div>
+        <div class="author-bio-card">
+          <div class="author-bio-avatar" aria-hidden="true">a&amp;k</div>
+          <div>
+            <p class="author-bio-title">Written by Arvind</p>
+            <span class="author-bio-role">Acrenkey Realty LLP</span>
+            <p class="author-bio-desc">Published by Acrenkey Realty LLP, a property advisory for people buying a home in Bengaluru.</p>
+          </div>
+        </div>
+        <section class="related-section" aria-label="More guides">
+          <div class="related-grid">
+            <a href="../bengaluru-lake-buffer-and-rajakaluve-map-2026/" class="nav-article-card">
+              <img src="../assets/img/bengaluru-lake-buffer-and-rajakaluve-map-2026.webp" width="1200" height="675" alt="Map of Bengaluru tanks and stormwater drains with buffer bands along primary and secondary drains" class="nav-card-img" loading="lazy" decoding="async">
+              <span class="nav-kicker">&larr; Previous</span>
+              <p class="nav-card-heading">Bengaluru lake buffer and rajakaluve map for homebuyers (2026)</p>
+            </a>
+          </div>
+        </section>
+      </article>
+      <aside class="blog-sidebar">
+        <div class="sidebar-widget">
+          <span class="widget-kicker">Advisory</span>
+          <h3>Buying a home in Bengaluru?</h3>
+          <p>Acrenkey Realty LLP reads the price, the papers and the area with you.</p>
+          <a href="https://acrenkey.com/" class="primary-cta-btn sidebar-btn-full">
+              <span>Request Advisory Call</span>
+              <span class="cta-arrow-badge" aria-hidden="true"><svg class="cta-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span>
+            </a>
+        </div>
+        <div class="sidebar-widget" style="background: rgba(128, 69, 38, 0.04); border-color: rgba(128, 69, 38, 0.2);">
+          <span class="widget-kicker">Calculators</span>
+          <h3>Work out the numbers</h3>
+          <p>Stamp duty, registration and EMI calculators stay on acrenkey.com.</p>
+          <a href="https://acrenkey.com/calculators/" class="primary-cta-btn sidebar-btn-full" style="background: var(--obsidian-black);">
+            <span>Open calculators</span>
+          </a>
+        </div>
+        <div class="sidebar-widget">
+          <span class="widget-kicker">Related guides</span>
+          <h3>Keep reading</h3>
+          <ul class="widget-links">
+            <li>
+              <a href="../bengaluru-lake-buffer-and-rajakaluve-map-2026/" class="widget-link-thumb">
+                <img src="../assets/img/bengaluru-lake-buffer-and-rajakaluve-map-2026.webp" width="1200" height="675" alt="Map of Bengaluru tanks and stormwater drains with buffer bands along primary and secondary drains" class="widget-thumb" loading="lazy" decoding="async">
+                <span>Bengaluru lake buffer and rajakaluve map for homebuyers (2026)</span>
+              </a>
+            </li>
+            <li>
+              <a href="../consumer-court-vs-rera-vs-civil-court-for-builder-disputes/" class="widget-link-thumb">
+                <img src="../assets/img/consumer-court-vs-rera-vs-civil-court-for-builder-disputes.webp" width="1200" height="675" alt="Lawyer&#x27;s desk with tied case files and an advocate&#x27;s black coat" class="widget-thumb" loading="lazy" decoding="async">
+                <span>Consumer court vs RERA vs civil court for builder disputes</span>
+              </a>
+            </li>
+            <li>
+              <a href="../commercial-vs-residential-property-for-individuals-what-changes/" class="widget-link-thumb">
+                <img src="../assets/img/commercial-vs-residential-property-for-individuals-what-changes.webp" width="1200" height="675" alt="Mixed-use building with shop shutters below and flats above" class="widget-thumb" loading="lazy" decoding="async">
+                <span>Commercial vs residential property for individuals: what changes</span>
+              </a>
+            </li>
+            <li>
+              <a href="../gated-community-vs-standalone-building-what-changes-for-buyers/" class="widget-link-thumb">
+                <img src="../assets/img/gated-community-vs-standalone-building-what-changes-for-buyers.webp" width="1200" height="675" alt="Gated community entrance with a boom barrier and security cabin" class="widget-thumb" loading="lazy" decoding="async">
+                <span>Gated community vs standalone building: what changes for buyers</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer ak-footer" id="footer">
+  <div class="container ak-footer-inner">
+    <div class="ak-footer-row ak-footer-top">
+      <div class="ak-footer-brand">
+        <a href="https://acrenkey.com/" class="footer-logo-wordmark ak-footer-logo" aria-label="acre&amp;key home">acre&amp;key</a>
+        <a href="https://share.google/GuvhJWg5a66VuIaUT" class="ak-footer-address" target="_blank" rel="noopener noreferrer">Acrenkey Realty LLP, 8th floor, Summit A, Brigade Metropolis, Brigade Metro Rd, Garudachar Palya, Mahadevapura, Bengaluru, Karnataka 560048</a>
+      </div>
+      <nav class="ak-footer-links" aria-label="Footer">
+        <a href="https://acrenkey.com/calculators/">Calculators</a>
+        <a href="https://acrenkey.com/blogs/">Blog</a>
+        <a href="https://answers.acrenkey.com/">Answers</a>
+        <a href="https://acrenkey.com/blogs/full-cost-bengaluru-flat-stamp-duty-registration-gst/">Cost of Buying Guide</a>
+        <a href="https://acrenkey.com/calculators/stamp-duty-registration-calculator/">Stamp Duty</a>
+        <a href="https://acrenkey.com/contact/">Contact</a>
+      </nav>
+      <div class="footer-social-cluster ak-footer-social">
+            <a href="https://www.facebook.com/profile.php?id=61589792184848" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.668 4.533-4.668 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="https://www.instagram.com/acrenkey/" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.681 4.919 4.919.058 1.265.068 1.645.068 4.849 0 3.205-.012 3.584-.068 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.689-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.068 4.849-.068zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.68-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+            <a href="https://x.com/acreNkey" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 23.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="https://www.linkedin.com/company/acrenkey/" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.68-1.68-1.68a1.68 1.68 0 0 0-1.68 1.68c0 .93.76 1.68 1.68 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
+          </div>
+    </div>
+    <p class="ak-footer-row ak-footer-rera">Karnataka RERA registered real estate agent · Reg. No. PRM/KA/RERA/1251/446/AG/260814/007659</p>
+    <div class="ak-footer-row ak-footer-bottom">
+      <span>&copy; 2026 acre&amp;key</span>
+      <a href="https://acrenkey.com/privacy-policy/">Privacy Policy</a>
+      <a href="https://acrenkey.com/terms-of-service/">Terms of Service</a>
+      <a href="https://acrenkey.com/rera-disclaimer/">RERA Disclaimer</a>
+      <a href="https://acrenkey.com/careers/">Careers</a>
+    </div>
+  </div>
+</footer>
+  <script src="../site.js?v=8734c616be"></script>
+  <script src="../assets/ak-lead-form.js?v=846b834997" defer></script><div class="lf-modal-overlay" id="lfModalOverlay" style="display: none;"><div class=lf-cc-backdrop id=lfCcBackdrop></div><div class=lf-wrap id=lfWrap role=dialog aria-modal=true aria-labelledby=lfMainHeading aria-describedby=lfSubHeading><div class=lf-drag-handle></div><button type=button class="lf-modal-close-icon lf-focusable" id=lfModalClose aria-label="Close modal window" tabindex=0><svg aria-hidden="true" viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></button><div id=lfModalFormContent><div class="lf-header">  <h2 class="lf-main-heading" id="lfMainHeading">Schedule Your Consultation</h2>  <p class="lf-sub-heading" id="lfSubHeading"></p></div><form class=lf-form id=lfForm novalidate><input class=lf-hp type=text name=website value tabindex=-1 autocomplete=off aria-hidden=true><input type=hidden id=lfGclid name=gclid><input type=hidden id=lfFclid name=fclid><input type=hidden id=lfUtmSource name=utm_source><input type=hidden id=lfUtmMedium name=utm_medium><input type=hidden id=lfUtmCampaign name=utm_campaign><input type=hidden id=lfUtmTerm name=utm_term><input type=hidden id=lfUtmContent name=utm_content><input type=hidden id=lfSourceUrl name=source_url><input type=hidden id=lfSubmittedAt name=submitted_at><div class=lf-field id=lfNameField><div class=lf-input-box><label class=lf-label for=lfName>Full name<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=text id=lfName name=name autocomplete=name enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=60 aria-describedby=lfNameErr><span class=lf-valid-icon aria-hidden=true><svg aria-hidden="true" viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear name field" tabindex=-1><svg aria-hidden="true" viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfNameErr role=alert></div></div><div class="lf-field lf-field-phone" id=lfPhoneField><div class=lf-input-box><label class=lf-label id=lfPhoneLbl for=lfPhone>Mobile<span class=lf-req aria-hidden=true>*</span></label><div class=lf-phone-row><button type=button class="lf-cc-trigger lf-focusable" id=lfCcTrigger aria-haspopup=listbox aria-expanded=false aria-controls=lfCcPanel aria-label="Select country dial code" tabindex=0><span id=lfCcDisplay>+91</span><svg aria-hidden="true" class=lf-cc-arrow viewbox="0 0 8 5" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l3 3 3-3"/></svg></button><div class=lf-cc-panel id=lfCcPanel role=listbox aria-labelledby=lfPhoneLbl><input class="lf-cc-search lf-focusable" type=text id=lfCcSearch role=combobox aria-expanded=true aria-autocomplete=list aria-controls=lfCcList placeholder="Search country…" autocomplete=off aria-label="Search countries by name or code" tabindex=-1><div class=lf-cc-list id=lfCcList></div></div><input type=hidden id=lfCcVal name=country_code value=+91><div class=lf-divider></div><input class="lf-input lf-focusable" type=tel id=lfPhone name=phone inputmode=numeric autocomplete=tel enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=15 aria-describedby=lfPhoneErr><span class=lf-valid-icon aria-hidden=true><svg aria-hidden="true" viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" id=lfPhoneClearBtn aria-label="Clear mobile number field" tabindex=-1><svg aria-hidden="true" viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div></div><div class=lf-err id=lfPhoneErr role=alert></div></div><div class=lf-field id=lfEmailField><div class=lf-input-box><label class=lf-label for=lfEmail>Email<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=email id=lfEmail name=email autocomplete=email enterkeyhint=done aria-required=true tabindex=0 aria-invalid=false maxlength=120 aria-describedby=lfEmailErr><span class=lf-valid-icon aria-hidden=true><svg aria-hidden="true" viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear email field" tabindex=-1><svg aria-hidden="true" viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfEmailErr role=alert></div></div><div class=lf-submit-wrap><button type=submit class="lf-btn lf-focusable primary-cta-btn" id=lfSubmitBtn tabindex=0><div class=lf-spinner></div><span id=lfBtnText>Request Advisory Call</span><span class="cta-arrow-badge" aria-hidden="true"><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></button><p class=lf-privacy-consent style="font-size: 0.75rem; color: var(--muted-slate); margin-top: 12px; text-align: center; line-height: 1.4;"> By submitting your details, you agree to our <a href="https://acrenkey.com/privacy-policy/" style="text-decoration: underline; color: inherit;">Privacy Policy</a>. </p><p class=lf-global-err id=lfGlobalErr role=alert aria-live=assertive aria-atomic=true>Connection issue. Your details are safely held. Please click Submit once more to retry or reach out to support.</p></div></form></div></div></div>
+</body>
+</html>
