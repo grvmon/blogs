@@ -1,6 +1,6 @@
 ---
 title: "Stamp Duty and Registration Charges in Bangalore 2026"
-meta_description: "Stamp duty and registration charges in Bangalore 2026: 2% registration, cess, GST and builder extras on a flat, with worked rupee examples and cash needed."
+meta_description: "Stamp duty and registration charges in Bangalore 2026: 2% registration, cess, GST and builder extras for a flat, with worked examples and cash needed."
 slug: "full-cost-bengaluru-flat-stamp-duty-registration-gst"
 canonical: "https://acrenkey.com/blogs/full-cost-bengaluru-flat-stamp-duty-registration-gst/"
 primary_keyword: "stamp duty and registration charges in bangalore 2026"

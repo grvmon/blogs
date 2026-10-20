@@ -1052,7 +1052,7 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
       <div class="author-byline-card">
         <div class="author-byline-main">
           <a href="https://acrenkey.com/#about-us" class="author-avatar-link" aria-label="{esc(profile['name'])}">
-            <img src="{esc(profile['avatar'])}" alt="{esc(profile['name'])}" class="author-avatar-img" width="46" height="46" loading="lazy" decoding="async">
+            <img src="{esc(profile['avatar'].replace('.webp','-96.webp'))}" alt="{esc(profile['name'])}" class="author-avatar-img" width="46" height="46" loading="lazy" decoding="async">
           </a>
           <div class="author-meta-wrap">
             <div class="author-name-row">
