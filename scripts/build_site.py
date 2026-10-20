@@ -984,8 +984,6 @@ def render_index(config: dict, posts: list[dict], excerpts: dict[str, str]) -> s
             <span>By {esc(post['author'])}</span>
             <span class="meta-sep" aria-hidden="true">&bull;</span>
             <time datetime="{esc(post.get('published') or config['datePublished'])}">{esc(format_date(post.get('published') or config['datePublished']))}</time>
-            <span class="meta-sep" aria-hidden="true">&bull;</span>
-            <span>{esc(SECTION_LABEL[post['section']])}</span>
           </div>
           <h2 class="blog-card-title">
             <a href="{esc(post['path'])}">{esc(post['h1'])}</a>

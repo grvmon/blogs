@@ -45,7 +45,7 @@
 /* ── MODAL OVERLAY ── */
 .lf-modal-overlay {
   position: fixed; inset: 0;
-  background: var(--obsidian-black-84, rgba(13, 27, 36, 0.84));
+  background: rgba(10, 10, 10, 0.85) !important;
   backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
   z-index: 99999999 !important;
   display: none; align-items: center; justify-content: center;
@@ -57,10 +57,10 @@
 .lf-wrap {
   --lf-font-sans: 'Manrope', sans-serif;
   --lf-font-serif: 'Cormorant Garamond', serif;
-  --lf-ink:   var(--obsidian-black, var(--neutral-grey));
-  --lf-muted: var(--obsidian-black-50, rgba(13, 27, 36, 0.5));
-  --lf-line:  var(--divider, rgba(213, 209, 200, 1));
-  --lf-line-focus: var(--primary-copper);
+  --lf-ink:   var(--obsidian-black, #2B2D31);
+  --lf-muted: var(--neutral-grey, #55555A);
+  --lf-line:  var(--divider, rgba(85, 85, 90, 0.2));
+  --lf-line-focus: var(--text-copper-aaa, #804526);
   --lf-err:   #c0392b;
   --lf-ok:    #2e7d52;
   --lf-bg-surface: #FFFFFF;
@@ -205,7 +205,7 @@
   top: 0 !important; transform: translateY(-50%) !important;
   font-size: 12px !important; font-weight: 600 !important;
   text-transform: uppercase !important; letter-spacing: 0.05em !important;
-  color: var(--primary-copper) !important;
+  color: var(--text-copper-aaa, #804526) !important;
   background-color: var(--lf-bg-surface) !important; left: 12px !important;
 }
 .lf-field-phone .lf-label { left: 87px !important; }
@@ -362,7 +362,7 @@ input:-webkit-autofill { animation-name: lfAutofillDetected; animation-duration:
 }
 .lf-cc-opt:hover, .lf-cc-opt.lf-keyboard-active { background: #FAFAFA; outline: none; }
 .lf-cc-trigger, .lf-cc-opt, .lf-page-cta-btn, .lf-btn, .lf-modal-close-icon { touch-action: manipulation; }
-.lf-cc-opt-dial { font-family: var(--lf-font-sans) !important; font-weight: 600; color: var(--primary-copper); min-width: 44px; }
+.lf-cc-opt-dial { font-family: var(--lf-font-sans) !important; font-weight: 600; color: var(--text-copper-aaa, #804526); min-width: 44px; }
 
 @media (max-width: 768px) {
   .lf-cc-opt { padding: 14px 16px; font-size: 15px; }
@@ -600,8 +600,8 @@ input:-webkit-autofill { animation-name: lfAutofillDetected; animation-duration:
     text-decoration-color: #804526 !important;
 }
 .lf-privacy-consent a:hover, .lf-privacy-text a:hover {
-    color: #9f5334 !important;
-    text-decoration-color: #9f5334 !important;
+    color: #804526 !important;
+    text-decoration-color: #804526 !important;
 }
 
 /* =========================================
