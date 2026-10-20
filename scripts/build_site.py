@@ -814,6 +814,8 @@ def head_tags(title: str, description: str, canonical: str, root: str, og_type: 
         f'<meta name="description" content="{esc(description)}">',
         f'<meta name="author" content="{esc(author or "Acrenkey Realty LLP")}">',
         f'<link rel="canonical" href="{esc(canonical)}">',
+        f'<link rel="preload" href="{root}assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>',
+        f'<link rel="preload" href="{root}assets/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>',
         f'<link rel="icon" type="image/svg+xml" href="{root}{asset("favicon.svg")}">',
         f'<link rel="icon" type="image/png" sizes="32x32" href="{root}{asset("favicon-32x32.png")}">',
         f'<link rel="icon" type="image/png" sizes="16x16" href="{root}{asset("favicon-16x16.png")}">',
