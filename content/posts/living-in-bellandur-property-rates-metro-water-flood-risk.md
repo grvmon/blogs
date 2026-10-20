@@ -1,6 +1,6 @@
 ---
 title: "Bellandur Property Rates 2026: Metro, Water and Flood Risk"
-meta_description: "Living in Bellandur, Bangalore: guidance values by line, consultant data gaps, the Blue Line and suburban rail status, Cauvery water and lake flooding."
+meta_description: "Bellandur property rates: guidance values by line, consultant data gaps, the Blue Line and suburban rail status, Cauvery water and lake flooding."
 slug: "living-in-bellandur-property-rates-metro-water-flood-risk"
 canonical: "https://acrenkey.com/blogs/living-in-bellandur-property-rates-metro-water-flood-risk/"
 lives: "blog /areas/"
@@ -14,7 +14,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Living in Bellandur: property rates, metro, water and flood risk
+# Bellandur property rates (2026): metro, water and flood risk
 
 **Short answer:** Bellandur property rates aren't tracked separately by the big consultants, so the firmest numbers are official. The village site guidance value is ₹93,285 per sq m (₹8,666 per sq ft), one of the highest in East Bengaluru, and most apartment lines are ₹63,690. The Blue Line through Bellandur is targeted for mid-2027.
 

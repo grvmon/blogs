@@ -1,6 +1,6 @@
 ---
 title: "Whitefield Property Rates 2026: Metro, Water and Flood Risk"
-meta_description: "Living in Whitefield, Bangalore: official guidance values, market price ranges, rent, the Purple Line, Cauvery Stage 5 water and flood checks, with maths."
+meta_description: "Whitefield property rates: official guidance values, market price ranges, rent, the Purple Line, Cauvery Stage 5 water and flood checks, with maths."
 slug: "living-in-whitefield-property-rates-metro-water-flood-risk"
 canonical: "https://acrenkey.com/blogs/living-in-whitefield-property-rates-metro-water-flood-risk/"
 lives: "blog /areas/"
@@ -15,7 +15,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Living in Whitefield: property rates, metro, water and flood risk
+# Whitefield property rates (2026): metro, water and flood risk
 
 **Short answer:** Whitefield property rates run ₹7,100 to ₹15,200 per sq ft for flats (Knight Frank, H1 2026), up 14% in a year. The official guidance value is far lower: ₹60,000 per sq m (₹5,574 per sq ft) for the village site line. The Purple Line metro runs here, Cauvery water is still reaching buildings, and flooding is street by street.
 

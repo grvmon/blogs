@@ -1,6 +1,6 @@
 ---
 title: "Flood Prone Areas in Bangalore (2026): Map, List and Checks"
-meta_description: "Which Bengaluru areas flood, from 2026 GBA and KSNDMC data, the new lake buffer law, drain buffers, and a 4-layer check to run on any flat before you book."
+meta_description: "Flood prone areas in Bangalore from 2026 GBA and KSNDMC data, the new lake buffer law, drain buffers, and a 4-layer check to run on a flat before booking."
 slug: "bengaluru-flood-prone-areas-map-from-ksndmc-data"
 canonical: "https://acrenkey.com/blogs/bengaluru-flood-prone-areas-map-from-ksndmc-data/"
 primary_keyword: "flood prone areas in bangalore"
@@ -17,7 +17,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish. Interactive map still pending official point data."
 ---
 
-# Flood-prone areas in Bengaluru (2026): what the official data shows and how to check a flat
+# Flood-prone areas in Bengaluru (2026): what official data shows and how to check a flat
 
 **Short answer:** Flood-prone areas in Bengaluru are tracked as points, not neighbourhoods. In April 2026, the five city corporations had 101 flood-prone locations (48 West, 24 South, 20 East, 6 North, 3 Central), and 52 were still unfixed. Before buying, check the street, the nearest lake and drain buffers, and the site after heavy rain.
 

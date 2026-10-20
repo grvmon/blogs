@@ -1,6 +1,6 @@
 ---
-title: "Property Legal Verification Bangalore: 8 Checks, Title to OC"
-meta_description: "Property legal checks in Bengaluru in the order to run them: title and EC, conversion, khata, plan, OC, RERA, litigation and the lawyer's title opinion."
+title: "Property Legal Verification Bangalore: 8 Checks to OC"
+meta_description: "Property legal verification in Bangalore, in order: title and EC, conversion, khata, plan, OC, RERA, litigation and the lawyer's title opinion."
 slug: "bengaluru-property-legal-checks-from-title-to-oc"
 canonical: "https://acrenkey.com/blogs/bengaluru-property-legal-checks-from-title-to-oc/"
 lives: "blog"
@@ -16,7 +16,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# How do you legally verify a property in Bengaluru before buying?
+# Property legal verification in Bengaluru: how to check a property before buying
 
 **Short answer:** Property legal verification in Bengaluru goes most smoothly in a fixed order: title chain and EC, land records and conversion, khata and tax, sanctioned plan and lake or drain buffers, OC, RERA, then a litigation search. Much of it is online through Kaveri, e-Aasthi 2.0, Bhoomi, K-RERA and eCourts. A lawyer's written title opinion closes it.
 

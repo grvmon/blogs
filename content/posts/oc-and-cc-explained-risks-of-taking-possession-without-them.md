@@ -1,6 +1,6 @@
 ---
-title: "Occupancy Certificate vs Completion Certificate in Bengaluru"
-meta_description: "Occupancy vs completion certificate in Bangalore: what each means under RERA, where to check them, the OC exemption and the risks of possession without OC."
+title: "Occupancy Certificate vs Completion Certificate Bangalore"
+meta_description: "Occupancy certificate vs completion certificate in Bangalore: what each means under RERA, where to check them, the OC exemption and possession risks."
 slug: "oc-and-cc-explained-risks-of-taking-possession-without-them"
 canonical: "https://acrenkey.com/blogs/oc-and-cc-explained-risks-of-taking-possession-without-them/"
 lives: "blog"
@@ -16,7 +16,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Occupancy certificate vs completion certificate: is it safe to take possession without them?
+# Occupancy certificate vs completion certificate in Bengaluru: is possession safe without them?
 
 **Short answer:** In occupancy certificate vs completion certificate, the OC says a building is fit to live in, with water, sanitation and power; the CC says the project was built to the sanctioned plan. Since a December 2024 Supreme Court ruling, utilities connect only buildings with one, so taking possession of a Bengaluru flat without an OC is a real risk.
 

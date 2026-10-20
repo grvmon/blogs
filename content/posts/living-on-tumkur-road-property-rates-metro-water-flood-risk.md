@@ -14,7 +14,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Living on Tumkur Road: rates, metro, water and flood risk
+# Tumkur Road property rates (2026): metro, water and flood risk
 
 **Short answer:** Tumkur Road property rates were ₹5,300 to ₹10,200 per sq ft in H1 2026, up 16% in a year, according to Knight Frank. ANAROCK put the average launch value at ₹9,200. Guidance values run from ₹2,00,000 per sq m on the highway frontage to ₹40,000 in Chikkabidarakallu. The Green Line runs along the road.
 

@@ -14,7 +14,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Living in Rajajinagar: rates, metro, water and flood risk
+# Rajajinagar property rates (2026): metro, water and flood risk
 
 **Short answer:** Rajajinagar property rates were ₹11,500 to ₹23,200 per sq ft in H1 2026, up 9% in a year, according to Knight Frank. That's the highest range of the West locations it tracks. Guidance values run from ₹1,75,000 per sq m around Bashyam Circle to ₹77,500 in 4th M and N Block. The Green Line runs along its eastern edge.
 

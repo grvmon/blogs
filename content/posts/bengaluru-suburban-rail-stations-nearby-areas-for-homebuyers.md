@@ -1,5 +1,5 @@
 ---
-title: "Bengaluru Suburban Rail Stations: Areas and Dates for Buyers"
+title: "Bengaluru Suburban Rail Stations: Areas and Dates"
 meta_description: "Bangalore suburban rail stations by corridor: the 30 station names K-RIDE has published, nearby zones, official status and target dates, and buyer maths."
 slug: "bengaluru-suburban-rail-stations-nearby-areas-for-homebuyers"
 canonical: "https://acrenkey.com/blogs/bengaluru-suburban-rail-stations-nearby-areas-for-homebuyers/"

@@ -1,5 +1,5 @@
 ---
-title: "Capital Gains Exemption on Sale of House: 2026 Upgrade Rules"
+title: "Capital Gains Exemption on Sale of House: 2026 Rules"
 meta_description: "Selling your flat to buy a bigger one? How the capital gains exemption on sale of house works in 2026: s.82 windows, CGAS deposits and worked maths."
 slug: "selling-home-to-upgrade-capital-gains-exemptions-2026"
 canonical: "https://acrenkey.com/insights/selling-home-to-upgrade-capital-gains-exemptions-2026/"
@@ -14,7 +14,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Selling a home to upgrade: capital gains exemptions in 2026
+# Capital gains exemption on sale of house to upgrade: 2026 rules
 
 **Short answer:** The capital gains exemption on sale of house property sits in s.82 of the Income-tax Act, 2025. If you held the flat over 24 months, you can avoid tax on the gain by buying a home within one year before or two years after the sale, or building within three. You reinvest the gain, not the full price.
 

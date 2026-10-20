@@ -14,7 +14,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Living in Malleshwaram: rates, metro, water and flood risk
+# Malleshwaram property rates (2026): metro, water and flood risk
 
 **Short answer:** Malleshwaram property rates were ₹9,200 to ₹17,500 per sq ft in H1 2026, up 13% in a year, according to Knight Frank. Guidance values run from ₹1,95,000 per sq m on the Margosa Road and 3rd Main row to ₹70,400 on the Pipeline cross roads. Most numbered cross roads sit at ₹1,04,800 to ₹1,44,000. The Green Line serves Sampige Road.
 

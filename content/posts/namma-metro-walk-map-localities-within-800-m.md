@@ -1,5 +1,5 @@
 ---
-title: "Namma Metro Walk Map: Localities Within 800 m of Each Station"
+title: "Namma Metro Walk Map: Localities Within 800 m"
 meta_description: "Open and under-construction Namma Metro stations in Bengaluru, with every OSM locality node inside 800 m of the station."
 slug: "namma-metro-walk-map-localities-within-800-m"
 date_modified: "2026-10-20"

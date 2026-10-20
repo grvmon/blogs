@@ -1,6 +1,6 @@
 ---
-title: "Devanahalli Property Rates 2026: Metro, Water and Flood Risk"
-meta_description: "Living in Devanahalli near Bangalore airport: official guidance values, who approves what, the airport metro timeline, town water supply and flood checks."
+title: "Devanahalli Property Rates 2026: Metro, Water, Flood Risk"
+meta_description: "Devanahalli property rates: official guidance values, who approves what, the airport metro timeline, town water supply and flood checks."
 slug: "living-in-devanahalli-property-rates-metro-water-flood-risk"
 canonical: "https://acrenkey.com/blogs/living-in-devanahalli-property-rates-metro-water-flood-risk/"
 lives: "blog /areas/"
@@ -15,7 +15,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Living in Devanahalli: property rates, metro, water and flood risk
+# Devanahalli property rates (2026): metro, water and flood risk
 
 **Short answer:** Official Devanahalli property rates (guidance values) for town sites run ₹4,500 to ₹44,000 per sq m, or about ₹418 to ₹4,088 per sq ft. No major consultant publishes a Devanahalli price series. The airport metro is targeted for 2027 but won't reach the town itself, and the town's water still depends heavily on groundwater.
 

@@ -14,7 +14,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# B-khata plots and revenue sites: what the rules allow in 2026
+# B khata to A khata conversion: what the rules allow for plots and revenue sites in 2026
 
 **Short answer:** B khata to A khata conversion is open to plots, including revenue sites, of up to 2,000 sq m inside GBA. Flats aren't eligible. You need a final B-khata, and you pay 5% of guidance value plus land conversion charges. In panchayats, an 11B record only taxes the plot. It gives no title or approval.
 

@@ -14,7 +14,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Living in Banashankari: rates, metro, water and flood risk
+# Banashankari property rates (2026): metro, water and flood risk
 
 **Short answer:** Banashankari property rates depend heavily on the stage. Guidance values run from ₹1,55,500 per sq m on KR Road in 2nd Stage to ₹81,000 in 3rd Stage and ₹38,000 to ₹56,000 in most 6th Stage blocks. Knight Frank and ANAROCK don't track Banashankari separately. The Green Line stops at Banashankari.
 

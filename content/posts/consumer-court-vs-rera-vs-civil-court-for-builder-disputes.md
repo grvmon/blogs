@@ -1,5 +1,5 @@
 ---
-title: "Consumer Court or RERA for Builder Delay: Choosing the Forum"
+title: "Consumer Court or RERA for Builder Delay: Pick a Forum"
 meta_description: "Consumer court or RERA for builder delay? Compare RERA, consumer commissions and civil courts: reliefs, limits, timelines and the one-forum rule."
 slug: "consumer-court-vs-rera-vs-civil-court-for-builder-disputes"
 canonical: "https://acrenkey.com/blogs/consumer-court-vs-rera-vs-civil-court-for-builder-disputes/"
@@ -14,7 +14,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Consumer court vs RERA vs civil court for builder disputes
+# Consumer court or RERA for builder delay? RERA vs consumer vs civil court
 
 **Short answer:** Consumer court or RERA for builder delay? For a registered project, K-RERA is usually the simpler route to delay interest or a refund. A consumer commission suits wider compensation claims or unregistered projects. Civil courts can't hear matters RERA can decide, so they're mainly for title and third-party disputes. Pick one forum per claim.
 

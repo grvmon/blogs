@@ -1,6 +1,6 @@
 ---
 title: "Bengaluru Apartment Water Problems: 15 Questions to Ask"
-meta_description: "Water questions to ask before buying a Bangalore flat: BWSSB or Cauvery connection, borewell permission, tanker costs, STP and rainwater rules, sourced."
+meta_description: "Bangalore apartment water problems to ask about before buying: BWSSB or Cauvery connection, borewell permission, tanker costs, STP and rainwater rules."
 slug: "water-bengaluru-bwssb-borewell-tanker-questions-to-ask"
 canonical: "https://acrenkey.com/blogs/water-bengaluru-bwssb-borewell-tanker-questions-to-ask/"
 lives: "blog"
@@ -16,7 +16,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# What water questions should you ask before buying a flat in Bengaluru?
+# Bengaluru apartment water problems: questions to ask before buying a flat
 
 **Short answer:** Most Bengaluru apartment water problems come down to three things: where the water comes from, what fills the gap in summer, and what happens to used water. Ask whether the building has a live BWSSB connection, whether its borewells are permitted and still working, what residents spent on tankers last summer, and whether the STP and rainwater harvesting actually run.
 

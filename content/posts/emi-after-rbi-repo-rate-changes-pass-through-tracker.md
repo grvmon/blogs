@@ -13,7 +13,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish. Update after each MPC meeting (next: 2–4 Dec 2026)."
 ---
 
-# Your EMI after every RBI repo move: how much does each change pass through?
+# Repo rate hike EMI impact: how much each RBI move passes through to your loan
 
 **Short answer:** To work out the repo rate hike EMI impact, start from the RBI's 7 Oct 2026 move: repo up 25 bps to 5.50%. A repo-linked home loan must reset at least every three months, so expect it within one quarter. On an illustrative ₹80 lakh, 20-year loan, 25 bps adds about ₹1,260 a month to a new EMI.
 

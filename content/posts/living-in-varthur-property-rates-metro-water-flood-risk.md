@@ -1,6 +1,6 @@
 ---
 title: "Varthur Property Rates 2026: Metro, Water and Flood Risk"
-meta_description: "Living in Varthur, Bangalore: guidance values by road, consultant data gaps, the nearest metro, Cauvery water, Varthur lake flooding and buyer checks."
+meta_description: "Varthur property rates, Bangalore: guidance values by road, consultant data gaps, the nearest metro, Cauvery water, Varthur lake flooding and buyer checks."
 slug: "living-in-varthur-property-rates-metro-water-flood-risk"
 canonical: "https://acrenkey.com/blogs/living-in-varthur-property-rates-metro-water-flood-risk/"
 lives: "blog /areas/"
@@ -14,7 +14,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Living in Varthur: property rates, metro, water and flood risk
+# Varthur property rates (2026): metro, water and flood risk
 
 **Short answer:** Varthur property rates aren't tracked separately by the big consultants, so the firmest numbers are official. The village site guidance value is ₹55,000 per sq m (₹5,110 per sq ft), and most apartment lines are ₹44,880. No metro or suburban line is planned through Varthur in the sources we checked.
 

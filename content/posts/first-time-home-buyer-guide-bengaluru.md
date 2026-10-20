@@ -1,6 +1,6 @@
 ---
 title: "First-Time Home Buyer Bangalore Guide (2026): Costs, Loans"
-meta_description: "Buying your first home in Bengaluru? The real cash you need, loan limits, PMAY subsidy, 2026 tax rules, ready vs under-construction maths and token checks."
+meta_description: "First time home buyer in Bangalore? The real cash you need, loan limits, PMAY subsidy, 2026 tax rules, ready vs under-construction maths and token checks."
 slug: "first-time-home-buyer-guide-bengaluru"
 canonical: "https://acrenkey.com/blogs/first-time-home-buyer-guide-bengaluru/"
 primary_keyword: "first time home buyer bangalore"
@@ -19,7 +19,7 @@ rates_verified_on: "2026-10-18 (Karnataka rates, RBI LTV); 2026-10-19 (PMAY-U 2.
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# First-time home buyer guide to Bengaluru (2026)
+# First time home buyer in Bengaluru: the 2026 guide
 
 **Short answer:** As a first-time home buyer in Bengaluru, plan on paying about a third of the price from your own savings: the down payment, about 7.6% in stamp duty and registration (less on first-sale flats up to ₹45 lakh), GST on under-construction flats, and extras. Banks lend 75% to 90%. Check RERA, title and e-Khata before any token.
 

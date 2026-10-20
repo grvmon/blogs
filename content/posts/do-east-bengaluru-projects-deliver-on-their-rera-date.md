@@ -1,6 +1,6 @@
 ---
 title: "East Bangalore RERA Delays: Do Projects Keep Their Dates?"
-meta_description: "We read 2,342 K-RERA registrations in Bengaluru East, Anekal and Hosakote taluks: 68.1% keep their original completion date. What extensions mean for you."
+meta_description: "East Bangalore RERA project delays: we read 2,342 K-RERA registrations; 68.1% keep their original completion date. What extensions mean for you."
 slug: "do-east-bengaluru-projects-deliver-on-their-rera-date"
 canonical: "https://acrenkey.com/insights/do-east-bengaluru-projects-deliver-on-their-rera-date/"
 lives: "/insights/"
@@ -16,7 +16,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Do East Bengaluru projects deliver on their RERA date?
+# East Bengaluru RERA project delays: do projects deliver on their RERA date?
 
 **Short answer:** On East Bengaluru RERA project delays, the register is mixed. Of 2,342 approved housing and plotted projects in the Bengaluru East, Anekal and Hosakote taluks, 68.1% still carry the completion date they registered with. Where a date moved, the median shift was 9 months. But an unchanged date doesn't prove delivery: the register doesn't show occupancy certificates.
 

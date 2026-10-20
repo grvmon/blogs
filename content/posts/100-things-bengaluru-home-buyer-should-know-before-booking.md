@@ -1,6 +1,6 @@
 ---
-title: "Things to Know Before Buying a Flat in Bangalore: 100 Checks"
-meta_description: "100 things to know before booking a home in Bengaluru, by stage: costs, RERA, khata, legal checks, water, flood, registration and tax, each with a source."
+title: "Things to Know Before Buying a Flat in Bangalore: 100 Tips"
+meta_description: "100 things to know before buying a flat in Bangalore, by stage: costs, RERA, khata, legal checks, water, flood, registration and tax, each with a source."
 slug: "100-things-bengaluru-home-buyer-should-know-before-booking"
 canonical: "https://acrenkey.com/blogs/100-things-bengaluru-home-buyer-should-know-before-booking/"
 lives: "blog"

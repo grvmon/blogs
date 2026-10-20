@@ -1,6 +1,6 @@
 ---
 title: "Bangalore Property Rates per Sq Ft Area Wise: 2026 GV Table"
-meta_description: "Official guidance values for 25 Bengaluru localities, per sq m and per sq ft, from the gazette in force since 1 Oct 2023, and how they compare with prices."
+meta_description: "Bangalore property rates per sq ft area wise: official guidance values for 25 localities, per sq m and sq ft, from the 2023 gazette, compared with prices."
 slug: "bengaluru-property-rates-by-area-guidance-value-table-2026"
 canonical: "https://acrenkey.com/insights/bengaluru-property-rates-by-area-guidance-value-table-2026/"
 lives: "/insights/"
@@ -16,7 +16,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish (/insights/ waits for review)."
 ---
 
-# Bengaluru property rates by area (2026): the guidance value table
+# Bengaluru property rates per sq ft, area wise (2026): the guidance value table
 
 **Short answer:** Bengaluru property rates per sq ft, area wise, start with the official guidance value: the floor for stamp duty. The rates in force since 1 Oct 2023 range from about ₹1,858 per sq ft for a site in Sarjapura village to ₹16,351 in Jayanagar 3rd Block. In the Whitefield belt, flat prices run about twice the guidance value.
 
@@ -178,7 +178,7 @@ Price sense-checks belong before you pay anything; see our [before-token checkli
 
 ## Method
 
-We downloaded the guidance value circulars for six Bengaluru registration districts (OpenCity copies of the IGR documents), extracted the text, and read 25 locality lines from the residential site column, checking each against the table header for that sub-registrar office. For the apartment spread, we parsed numbers in the apartment column for gazette pages 130 to 186 (Mahadevapura sub-registrar). The parse is approximate; we've checked a sample by hand. Data: [bengaluru-property-rates-by-area-guidance-value-table-2026.csv](/insights/data/bengaluru-property-rates-by-area-guidance-value-table-2026.csv). We'll update this page when a new notification is issued.
+We downloaded the guidance value circulars for six Bengaluru registration districts (OpenCity copies of the IGR documents), extracted the text, and read 25 locality lines from the residential site column, checking each against the table header for that sub-registrar office. For the apartment spread, we parsed numbers in the apartment column for gazette pages 130 to 186 (Mahadevapura sub-registrar). The parse is approximate; we've checked a sample by hand. Data: [bengaluru-property-rates-by-area-guidance-value-table-2026.csv](https://acrenkey.com/blogs/assets/data/bengaluru-property-rates-by-area-guidance-value-table-2026.csv). We'll update this page when a new notification is issued.
 
 ## Frequently asked questions
 

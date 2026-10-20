@@ -14,7 +14,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Living in Koramangala: rates, metro, water and flood risk
+# Koramangala property rates (2026): metro, water and flood risk
 
 **Short answer:** Koramangala property rates aren't published by Knight Frank or ANAROCK, so official guidance values are the firmest guide. Most blocks are ₹1,14,000 per sq m (about ₹10,590 per sq ft), the 3rd Block is ₹1,40,000, and the Hosur–Sarjapur road and inner ring road frontage is ₹1,69,000. No metro line runs through Koramangala yet.
 

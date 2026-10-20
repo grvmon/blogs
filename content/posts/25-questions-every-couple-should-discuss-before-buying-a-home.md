@@ -12,7 +12,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# 25 questions every couple should discuss before buying a home
+# 25 questions for couples before buying a home
 
 **Short answer:** The key questions for couples before buying a home are whose names go on the deed and in what shares, who pays the down payment and EMI, whether you can manage on one income, which tax regime each of you uses, and what happens if one of you dies, stops working or you separate. Agree these in writing before booking.
 

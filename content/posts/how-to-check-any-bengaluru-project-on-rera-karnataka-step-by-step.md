@@ -15,7 +15,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# How do you check a Bengaluru project on the RERA Karnataka website?
+# RERA Karnataka project search: how to check a Bengaluru project
 
 **Short answer:** For a RERA Karnataka project search, open rera.karnataka.gov.in, go to Services, then Project Status, and paste the full registration number. Then check four things: the promoter and phase match your papers, the completion dates and extensions, the quarterly updates, and any complaints or orders. It's free, and it takes about ten minutes.
 

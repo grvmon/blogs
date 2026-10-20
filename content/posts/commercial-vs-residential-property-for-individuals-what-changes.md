@@ -14,7 +14,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Commercial vs residential property for individuals: what changes
+# Commercial vs residential property investment for individuals: what changes
 
 **Short answer:** Commercial vs residential property investment changes more than the rent. A shop or office usually yields more, but loans are smaller and costlier, rent can attract 18% GST, and vacancies last longer. A flat yields less but gets home-loan terms, RBI's loan caps and, if it's your home, reinvestment relief when you sell.
 

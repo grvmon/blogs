@@ -1,6 +1,6 @@
 ---
-title: "Thanisandra Property Rates 2026: Metro, Water and Flood Risk"
-meta_description: "Living in Thanisandra, Bangalore: official guidance values, market ranges, rent, the Pink and Blue Line metro timelines, water supply and flood checks."
+title: "Thanisandra Property Rates 2026: Metro, Water, Flood Risk"
+meta_description: "Thanisandra property rates: official guidance values, market ranges, rent, the Pink and Blue Line metro timelines, water supply and flood checks."
 slug: "living-in-thanisandra-property-rates-metro-water-flood-risk"
 canonical: "https://acrenkey.com/blogs/living-in-thanisandra-property-rates-metro-water-flood-risk/"
 lives: "blog /areas/"
@@ -15,7 +15,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Living in Thanisandra: property rates, metro, water and flood risk
+# Thanisandra property rates (2026): metro, water and flood risk
 
 **Short answer:** Thanisandra property rates for flats run ₹5,700 to ₹13,500 per sq ft (Knight Frank, H1 2026), up 6% in a year. Official guidance values for sites range from ₹33,000 per sq m in Hegde Nagar to ₹78,000 on Thanisandra Main Road. No metro runs here yet; reports put the Blue Line at nearby Nagawara in late 2027 or early 2028.
 

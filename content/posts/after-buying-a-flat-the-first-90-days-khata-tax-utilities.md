@@ -13,7 +13,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# After buying a flat: the first 90 days (khata, tax, utilities)
+# What to do after buying a flat: the first 90 days (khata, tax, utilities)
 
 **Short answer:** What to do after buying a flat, in order: collect the registered deed, apply for khata mutation, then move electricity and water into your name. Next, pull a fresh encumbrance certificate, pay property tax in your name and sort out any tenant paperwork. Inside GBA, mutation costs 2% of the stamp duty you paid, minimum ₹500.
 

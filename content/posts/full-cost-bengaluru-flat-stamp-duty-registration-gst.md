@@ -1,6 +1,6 @@
 ---
 title: "Stamp Duty and Registration Charges in Bangalore 2026"
-meta_description: "Stamp duty, 2% registration, cess, GST and builder extras on a Bengaluru flat in 2026, with worked rupee examples and the real cash you need at booking."
+meta_description: "Stamp duty and registration charges in Bangalore 2026: 2% registration, cess, GST and builder extras on a flat, with worked rupee examples and cash needed."
 slug: "full-cost-bengaluru-flat-stamp-duty-registration-gst"
 canonical: "https://acrenkey.com/blogs/full-cost-bengaluru-flat-stamp-duty-registration-gst/"
 primary_keyword: "stamp duty and registration charges in bangalore 2026"
@@ -20,7 +20,7 @@ rates_verified_on: "2026-10-18"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Total cost of a flat in Bengaluru (2026): stamp duty, registration, GST and extras
+# Stamp duty and registration charges in Bengaluru 2026: the total cost of a flat
 
 **Short answer:** Stamp duty and registration charges in Bengaluru total 7.6% of market value for most flats: 5% stamp duty, a 10% cess and 2% surcharge on that duty, and a 2% registration fee. First-sale flats up to ₹45 lakh pay 4.24% or 5.36%. Under-construction flats also carry GST. Checked on official sources, 18 Oct 2026.
 

@@ -1,6 +1,6 @@
 ---
-title: "Cauvery Water Stage 5 Areas: Which Bangalore Areas Get Water"
-meta_description: "Cauvery Stage 5 covers 110 villages in eight old zones, but being in the zone doesn't mean water reaches your tap. How to check a flat and what it costs."
+title: "Cauvery Water Stage 5 Areas: Who Gets BWSSB Water"
+meta_description: "Cauvery water Stage 5 areas: 110 villages in eight old zones, but being in the zone does not mean water reaches your tap. How to check a flat and the cost."
 slug: "cauvery-stage-5-coverage-which-areas-get-bwssb-water"
 canonical: "https://acrenkey.com/blogs/cauvery-stage-5-coverage-which-areas-get-bwssb-water/"
 lives: "blog"
@@ -16,7 +16,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Cauvery Stage 5 coverage: which areas get BWSSB water?
+# Cauvery water Stage 5 areas: which localities get BWSSB water?
 
 **Short answer:** Cauvery water Stage 5 areas are the 110 villages added to Bengaluru's civic limits in 2007, across eight old zones: Yelahanka, Yeshwantpura, Bengaluru South, Byatarayanapura, Dasarahalli, Mahadevapura, RR Nagar and Bommanahalli. Being in the zone isn't the same as having water at the tap. By May 2026, about 1.15 lakh of 1.8 lakh buildings were connected.
 

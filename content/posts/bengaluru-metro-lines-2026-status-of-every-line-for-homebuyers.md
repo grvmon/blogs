@@ -1,6 +1,6 @@
 ---
 title: "Bangalore Metro New Lines 2026: Status of Every Line"
-meta_description: "Every Bengaluru metro line in October 2026: what runs, what's under construction, what awaits approval, and how to judge a station before you buy a home."
+meta_description: "Bangalore metro new lines 2026: what runs, what is under construction, what awaits approval, and how to judge a station before you buy a home."
 slug: "bengaluru-metro-lines-2026-status-of-every-line-for-homebuyers"
 canonical: "https://acrenkey.com/blogs/bengaluru-metro-lines-2026-status-of-every-line-for-homebuyers/"
 lives: "blog"
@@ -14,7 +14,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Bengaluru metro lines in 2026: the status of every line for homebuyers
+# Bengaluru metro new lines 2026: the status of every line for homebuyers
 
 **Short answer:** Of the Bengaluru metro new lines in 2026, only the Yellow Line (opened August 2025) is running, alongside the Purple and Green Lines, for about 96 km in all. The Pink Line's 7.5 km elevated stretch awaits a safety clearance. The Blue Line to the airport is 72.5% built. The Orange and Red Lines are years away.
 

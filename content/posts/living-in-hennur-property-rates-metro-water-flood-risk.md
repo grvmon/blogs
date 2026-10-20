@@ -1,6 +1,6 @@
 ---
 title: "Hennur Property Rates 2026: Metro, Water and Flood Risk"
-meta_description: "Living in Hennur, Bangalore: guidance values by road, Knight Frank price ranges, the Blue Line and suburban rail timelines, Cauvery water and flood checks."
+meta_description: "Hennur property rates: guidance values by road, Knight Frank price ranges, the Blue Line and suburban rail timelines, Cauvery water and flood checks."
 slug: "living-in-hennur-property-rates-metro-water-flood-risk"
 canonical: "https://acrenkey.com/blogs/living-in-hennur-property-rates-metro-water-flood-risk/"
 lives: "blog /areas/"
@@ -14,7 +14,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Living in Hennur: property rates, metro, water and flood risk
+# Hennur property rates (2026): metro, water and flood risk
 
 **Short answer:** Hennur property rates for flats run ₹7,000 to ₹14,000 per sq ft (Knight Frank, H1 2026), up 10% in a year. Official site guidance values range from ₹25,000 per sq m off the main road to ₹80,000 on Hennur–Bagalur Main Road. No metro or suburban train runs here yet. Both are under construction nearby.
 

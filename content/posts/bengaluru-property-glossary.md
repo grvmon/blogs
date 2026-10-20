@@ -14,7 +14,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Bengaluru homebuyer glossary: 150 real estate terms from A-Khata to UDS
+# Real estate terms India: a Bengaluru homebuyer glossary of 150 terms from A-Khata to UDS
 
 **Short answer:** This glossary explains 150 real estate terms India's homebuyers meet, with a Bengaluru focus. It's grouped by topic: area, documents, approvals and land records, khata and tax, RERA and disputes, money and charges, loans, and the building. Each term gets a plain definition and, where it matters, what to check.
 

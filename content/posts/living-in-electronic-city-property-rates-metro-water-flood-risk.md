@@ -1,6 +1,6 @@
 ---
 title: "Electronic City Property Rates 2026: Metro, Water, Floods"
-meta_description: "Living in Electronic City, Bangalore: guidance values, market ranges, rent, the Yellow Line metro, ELCITA vs GBA, water and flood checks, with maths."
+meta_description: "Electronic City property rates, Bangalore: guidance values, market ranges, rent, the Yellow Line metro, ELCITA vs GBA, water and flood checks, with maths."
 slug: "living-in-electronic-city-property-rates-metro-water-flood-risk"
 canonical: "https://acrenkey.com/blogs/living-in-electronic-city-property-rates-metro-water-flood-risk/"
 lives: "blog /areas/"
@@ -15,7 +15,7 @@ date_modified: "2026-10-19"
 status: "DRAFT FOR REVIEW. Do not publish."
 ---
 
-# Living in Electronic City: property rates, metro, water and flood risk
+# Electronic City property rates (2026): metro, water and flood risk
 
 **Short answer:** Electronic City property rates for flats run ₹5,700 to ₹8,600 per sq ft (Knight Frank, H1 2026), up 10% in a year. Official site guidance values run ₹37,200 to ₹52,800 per sq m. The Yellow Line metro has run here since August 2025. Whether ELCITA, GBA or a panchayat runs your building decides the rest.
 
