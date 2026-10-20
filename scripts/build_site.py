@@ -124,8 +124,12 @@ IMAGE_W, IMAGE_H = 1200, 675
 
 def img_tag(root: str, post: dict, cls: str, hero: bool = False) -> str:
     loading = 'loading="eager" fetchpriority="high"' if hero else 'loading="lazy"'
+    src = f'{root}{esc(post["image"])}'
+    small = src[:-5] + "-800.webp" if src.endswith(".webp") else ""
+    sizes = "(max-width: 767px) calc(100vw - 32px), 1232px" if hero else "(max-width: 767px) calc(100vw - 32px), 400px"
+    srcset = f' srcset="{small} 800w, {src} {IMAGE_W}w" sizes="{sizes}"' if small and (ROOT / post["image"].replace(".webp", "-800.webp")).exists() else ""
     return (
-        f'<img src="{root}{esc(post["image"])}" width="{IMAGE_W}" height="{IMAGE_H}" '
+        f'<img src="{src}"{srcset} width="{IMAGE_W}" height="{IMAGE_H}" '
         f'alt="{esc(post["image_alt"])}" class="{cls}" {loading} decoding="async">'
     )
 
@@ -1101,7 +1105,7 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
           {sources_html}
         </div>
         <div class="author-bio-card">
-          <div class="author-bio-avatar" aria-hidden="true">a&amp;k</div>
+          <img class="author-bio-avatar" src="{esc(profile['avatar'].replace('.webp','-144.webp'))}" srcset="{esc(profile['avatar'].replace('.webp','-96.webp'))} 1x, {esc(profile['avatar'].replace('.webp','-144.webp'))} 2x" alt="{esc(profile['name'])}" width="72" height="72" loading="lazy" decoding="async">
           <div>
             <p class="author-bio-title">Written by {esc(profile['name'])}</p>
             <span class="author-bio-role">Acrenkey Realty LLP</span>
