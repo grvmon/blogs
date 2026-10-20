@@ -93,6 +93,26 @@ MD = markdown.Markdown(extensions=["tables", "sane_lists", "fenced_code"], outpu
 
 
 AUTHORS = ("Gaurav", "Nitin", "Arvind")
+AUTHOR_PROFILES = {
+    "Gaurav": {
+        "name": "Gaurav Mongia",
+        "role": "Market Strategy · Product · Tech",
+        "avatar": "https://acrenkey.com/style-guide/assets/gaurav-mongia-founder-acre-key.webp",
+        "linkedin": "https://www.linkedin.com/in/gaurav-a-mongia/",
+    },
+    "Nitin": {
+        "name": "Nitin Kochhar",
+        "role": "Investments · Decision Framework",
+        "avatar": "https://acrenkey.com/style-guide/assets/Nitin_Kocchar.webp",
+        "linkedin": "https://www.linkedin.com/in/nitin-kochhar/",
+    },
+    "Arvind": {
+        "name": "Arvind Patidar",
+        "role": "Advisory · Execution",
+        "avatar": "https://acrenkey.com/style-guide/assets/arvind-patidar-founder-acre-key.webp",
+        "linkedin": "https://www.linkedin.com/in/arvind-patidar/",
+    },
+}
 IMAGE_W, IMAGE_H = 1200, 675
 
 
@@ -558,27 +578,45 @@ def json_ld(config: dict, post: dict, canonical: str, faqs: list[tuple[str, str]
         },
         {
             "@type": "BreadcrumbList",
-            "itemListElement": [
-                {"@type": "ListItem", "position": 1, "name": "Home", "item": org["url"]},
-                {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "Articles",
-                    "item": abs_url(config["baseUrl"]),
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 3,
-                    "name": section_label,
-                    "item": abs_url(config["baseUrl"], f"#{post['section']}"),
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 4,
-                    "name": post["h1"],
-                    "item": canonical,
-                },
-            ],
+            "itemListElement": (
+                [
+                    {"@type": "ListItem", "position": 1, "name": "Home", "item": org["url"]},
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Blog",
+                        "item": abs_url(config["baseUrl"]),
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": post["h1"],
+                        "item": canonical,
+                    },
+                ]
+                if post["section"] == "blog"
+                else [
+                    {"@type": "ListItem", "position": 1, "name": "Home", "item": org["url"]},
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Blog",
+                        "item": abs_url(config["baseUrl"]),
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": section_label,
+                        "item": abs_url(config["baseUrl"], f"#{post['section']}"),
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": post["h1"],
+                        "item": canonical,
+                    },
+                ]
+            ),
         },
     ]
     if post.get("dataset_name"):
@@ -841,6 +879,23 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
     tweet_url = quote(canonical, safe="")
     ld = json_ld(config, post, canonical, prepared["faqs"], answer_html, prepared.get("howto"))
     talk_rest = wrap_tables(render_markdown(prepared["talk_rest"])) if prepared["talk_rest"] else ""
+    profile = AUTHOR_PROFILES.get(
+        post["author"],
+        {
+            "name": post["author"],
+            "role": "Market Strategy · Product · Tech",
+            "avatar": "https://acrenkey.com/style-guide/assets/gaurav-mongia-founder-acre-key.webp",
+            "linkedin": "https://www.linkedin.com/in/gaurav-a-mongia/",
+        },
+    )
+    if post["section"] == "blog":
+        bc_section_html = ""
+    else:
+        bc_section_html = (
+            f'\n        <li class="meta-sep" aria-hidden="true">/</li>'
+            f'\n        <li><a href="{esc(config["baseUrl"])}#{esc(post["section"])}">{esc(section_label)}</a></li>'
+        )
+
     page = f"""<!DOCTYPE html>
 <html lang="en-IN">
 <head>
@@ -854,25 +909,30 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
       <ol class="breadcrumb">
         <li><a href="https://acrenkey.com/">Home</a></li>
         <li class="meta-sep" aria-hidden="true">/</li>
-        <li><a href="{esc(config['baseUrl'])}">Articles</a></li>
+        <li><a href="{esc(config['baseUrl'])}">Blog</a></li>{bc_section_html}
         <li class="meta-sep" aria-hidden="true">/</li>
-        <li><a href="{esc(config['baseUrl'])}#{esc(post['section'])}">{esc(section_label)}</a></li>
-        <li class="meta-sep" aria-hidden="true">/</li>
-        <li class="bc-current" aria-current="page">{esc(post['h1'])}</li>
+        <li class="bc-current" aria-current="page" title="{esc(post['h1'])}">{esc(post['seo_title'])}</li>
       </ol>
     </nav>
     <header class="article-header">
-      <div class="kicker-badge">{esc(section_label)}</div>
       <h1 class="article-title">{esc(post['h1'])}</h1>
-      <div class="article-meta-row">
-        <div class="author-meta">
-          <div class="author-avatar" aria-hidden="true">{esc(post['author'][0])}</div>
-          <div>
-            <div class="author-details-sub byline">
-              <span>By <span class="author-details-name">{esc(post['author'])}</span></span>
-              <span class="meta-sep" aria-hidden="true">&bull;</span>
-              <time datetime="{esc(published)}">{esc(shown_date)}</time>
-              <span class="meta-sep" aria-hidden="true">&bull;</span>
+      <div class="author-byline-card">
+        <div class="author-byline-main">
+          <a href="https://acrenkey.com/#about-us" class="author-avatar-link" aria-label="{esc(profile['name'])}">
+            <img src="{esc(profile['avatar'])}" alt="{esc(profile['name'])}" class="author-avatar-img" width="46" height="46" loading="lazy" decoding="async">
+          </a>
+          <div class="author-meta-wrap">
+            <div class="author-name-row">
+              <a href="https://acrenkey.com/#about-us" class="author-name-link"><span class="author-details-name">{esc(profile['name'])}</span></a>
+              <a href="{esc(profile['linkedin'])}" class="author-linkedin-badge" target="_blank" rel="noopener noreferrer" aria-label="{esc(profile['name'])} on LinkedIn">
+                <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              </a>
+            </div>
+            <div class="author-subline author-details-sub byline">
+              <span>{esc(profile['role'])}</span>
+              <span class="author-subline-dot" aria-hidden="true">&bull;</span>
+              <span>Published: <time datetime="{esc(published)}">{esc(shown_date)}</time></span>
+              <span class="author-subline-dot" aria-hidden="true">&bull;</span>
               <span>{minutes} min read</span>
             </div>
           </div>
@@ -1159,8 +1219,6 @@ def validate(config: dict, posts: list[dict], unlinked: list[dict], pages: dict[
         published = (post_for_date or {}).get("published") or config["datePublished"]
         if published not in page:
             problems.append(f"{rel} missing datePublished")
-        if "Mongia" in page:
-            problems.append(f"{rel} carries a surname")
         post = by_path.get(path)
         if post:
             blocks = re.findall(r'<script type="application/ld\+json">(.*?)</script>', page, re.S)
@@ -1181,7 +1239,7 @@ def validate(config: dict, posts: list[dict], unlinked: list[dict], pages: dict[
             for prop in ('property="og:image"', 'name="twitter:image"'):
                 if f'{prop} content="{want_img}"' not in page:
                     problems.append(f"{rel} missing {prop}")
-            if not re.search(r'class="author-details-sub byline">\s*<span>By <span class="author-details-name">' + re.escape(post["author"]) + "<", page):
+            if not re.search(r'class="author-details-name">' + re.escape(post["author"]), page):
                 problems.append(f"{rel} byline does not show {post['author']}")
             if 'fetchpriority="high"' not in page or 'class="article-hero-img" loading="eager"' not in page:
                 problems.append(f"{rel} hero image missing eager/fetchpriority")

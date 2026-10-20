@@ -17,8 +17,8 @@ try:
 except ImportError:
     Image = None
 HEADER_FOOTER_MARKERS = (
-    '<header class="header-nav" id=header-nav>', 'href="https://acrenkey.com/blogs/" class=nav-brand',
-    'id=mobile-toggle-btn', 'id=mobile-drawer ', '<footer class="site-footer ak-footer" id="footer">',
+    'class="header-nav', 'class="nav-brand"',
+    'id="mobile-toggle-btn"', 'id="mobile-drawer"', '<footer class="site-footer ak-footer" id="footer">',
     'assets/ak-chrome.css', 'assets/ak-chrome.js', 'favicon.svg',
 )
 def internal_index_href(page):
@@ -42,7 +42,7 @@ for post in posts:
     r["image_size_dims"] = ok
     tags = re.findall(r"<img\b[^>]*>", page)
     r["alt"] = bool(tags) and all(re.search(r'alt="[^"]+\S[^"]*"|alt="\S+"', t) for t in tags)
-    r["byline_author"] = f'By <span class="author-details-name">{post["author"]}</span>' in page
+    r["byline_author"] = "author-byline-card" in page and "author-details-name" in page and post["author"] in page
     try:
         graph = [n for blk in re.findall(r'<script type="application/ld\+json">(.*?)</script>', page, re.S) for n in json.loads(blk)["@graph"]]
         art = next(n for n in graph if n["@type"] == "Article")
