@@ -1,0 +1,208 @@
+sl_no,name,zone,source_name,lat,lon
+1,Ulsoor,Central,Ulsoor / Bangalore Central,12.982806,77.619306
+2,Kelagina kere / Byrasnadra,,Kelagina kere / Byrasnadra,12.978444,77.662056
+3,Kaggadasapura Lake,,Kaggadasapura Lake,12.9815,77.670472
+4,Melina kere byrasandra (DRDO),,Melina kere byrasandra (DRDO),12.97925,77.655389
+5,B. Channasandra Lake,,B. Channasandra Lake,13.006389,77.661722
+6,Channasandra Lake,,Channasandra Lake,13.012111,77.65325
+7,Malagala (Balaiahna Lake),North,Malagala (Balaiahna Lake) Bangalore North,12.978167,77.527917
+8,Nayadahalli Lake,South,Nayadahalli Lake Bangalore South,12.940139,77.521083
+9,Sankey tank,Central,Sankey tank / Bangalore Central,13.0105,77.573917
+10,Gowdana Palya Lake,,Gowdana Palya Lake,12.907639,77.556278
+11,Yediyur Lake,South,Yediyur Lake Bangalore south,12.933361,77.576694
+12,Deepanjali lake,South,Deepanjali lake Bangalore South,12.949942,77.531292
+13,Kempambudhi Lake,North,Kempambudhi Lake Bangalore North,12.952306,77.559889
+14,Mesthripalya lake,,Mesthripalya lake,12.931611,77.625139
+15,Byrasandra lake / Chikkapete lake,,Byrasandra lake / Chikkapete lake,12.930083,77.595639
+16,Dasarahalli (Chokkasandra) Lake,North,Dasarahalli (Chokkasandra) Lake Bangalore North,13.040667,77.511417
+17,Kamgondanahalli Kere,North,Kamgondanahalli Kere Bangalore North,13.067583,77.524778
+18,Bagalgunte Lake,,Bagalgunte Lake,13.058222,77.500083
+19,Narasappanahalli Kere,,Narasappanahalli Kere,13.020778,77.494
+20,Abbigere Kere,,Abbigere Kere,13.082139,77.529861
+21,Nelagedaranahalli lake,,Nelagedaranahalli lake,13.0215,77.495778
+22,Mallasandra gudde lake,,Mallasandra gudde lake,13.014786,77.785331
+23,Halage vaderahalli Lake,South,Halage vaderahalli Lake Bangalore South,12.924167,77.514806
+24,J.P Park,North,J.P Park / Bangalore North,13.035083,77.550306
+25,Mallathahalli lake,North,Mallathahalli lake / Bangalore North,12.965056,77.494083
+27,Srigandadakaval,,Srigandadakaval,12.984,77.500944
+28,Nagarabhavi Lake,,Nagarabhavi Lake,12.96519,77.508471
+29,Hosakerehalli lake,,Hosakerehalli lake,12.927444,77.532861
+30,Herohalli Lake,North,Herohalli Lake Bangalore North,12.988583,77.489694
+31,Lingadeeranahalli (handrahalli) Lake,North,Lingadeeranahalli (handrahalli) Lake Bangalore North,13.002806,77.483528
+32,Handrahalli kere,North,Handrahalli kere Bangalore North,13.171389,77.538611
+33,Kodigehalli lake,North,Kodigehalli lake / Bangalore North,13.153889,77.491389
+34,Jogi kere,South,Jogi kere / Bangalore South,12.863111,77.538389
+35,Ullala lake,North,Ullala lake / Bangalore North,12.960972,77.480361
+36,H Gollahalli kere,South,H Gollahalli kere/ Bangalore South,13.016389,77.743333
+37,Bayyapanapalya Kunte,South,Bayyapanapalya Kunte/ Bangalore South,12.890833,77.710278
+38,Vishwaneedum Lake,,Vishwaneedum Lake,13.238889,77.619444
+39,Talghatapura Lake,,Talghatapura Lake,12.8825,77.7725
+40,Doddabidarakallu /Nagasandra kere,,Doddabidarakallu /Nagasandra kere,13.043722,77.494778
+41,Gubbalalu Lake,,Gubbalalu Lake,12.876111,77.540556
+42,Varahasandra Lake,,Varahasandra Lake,12.879556,77.492972
+43,Mangammanahalli lake,,Mangammanahalli lake,,
+44,Lingadeeranahalli,,Lingadeeranahalli,12.872139,77.514028
+45,Konasandra Lake,,Konasandra Lake,13.019722,77.7375
+46,Chikkagowdanapaly lake,,Chikkagowdanapaly lake,13.11,77.524167
+47,Dubasipalay lake (Valagerahalli),,Dubasipalay lake (Valagerahalli),13.163333,77.654722
+48,Mylasandra (Sunnakallu palya) lake,,Mylasandra (Sunnakallu palya) lake,12.852167,77.616111
+49,Busegowdana lake,,Busegowdana lake,12.906417,77.495833
+50,Kengeri Lake,,Kengeri Lake,12.916361,77.486778
+51,Dorekere,,Dorekere,12.902833,77.550139
+52,Uttarahalli Lake / Bandgalore South,,Uttarahalli Lake / Bandgalore South,12.907833,77.541167
+53,Singasandra,South,Singasandra / Bangalore South,12.882389,77.645278
+54,Parappana Agrahara,South,Parappana Agrahara / Bangalore south,12.879028,77.660833
+55,Kudlu Chikka kere / Anekal taluk,,Kudlu Chikka kere / Anekal taluk,13.039444,77.738333
+56,Kudlu doddakere / Anekal,,Kudlu doddakere / Anekal,13.300278,77.6725
+57,Kodige Singasandra Lake,,Kodige Singasandra Lake,13.076389,77.782778
+58,Basapura Lake-1,South,Basapura Lake-1/ Bangalore South,12.926389,77.891944
+59,Annappanakere / Yelchenahalli Lake,,Annappanakere / Yelchenahalli Lake,12.899167,77.565111
+60,Kalena Agrahara Lake,,Kalena Agrahara Lake,12.865417,77.589667
+61,Bheemana Katte,,Bheemana Katte,12.915167,77.528667
+62,Begur Lake,,Begur Lake,12.874722,77.629972
+63,Gottigere,,Gottigere,12.852722,77.589444
+64,Subramanyapura lake,,Subramanyapura lake,12.896222,77.542806
+65,Anjanapura Lake / Alahalli,,Anjanapura Lake / Alahalli,12.867083,77.565722
+66,Puttenahalli/ Byraweshwara nagara Chunchaghatta kere,,Puttenahalli/ Byraweshwara nagara Chunchaghatta kere,12.88775,77.575194
+67,Kothanuru lake,,Kothanuru lake,12.873556,77.57975
+68,Basapura Lake-2,South,Basapura Lake-2/ Bangalore South,12.868583,77.643889
+69,Basavanapura Lake,,Basavanapura Lake,12.844556,77.589167
+70,Chikka Begur Lake,,Chikka Begur Lake,12.884833,77.638778
+71,Hulimavu Lake,,Hulimavu Lake,12.870333,77.603361
+72,Konappana Agrahara lake,,Konappana Agrahara lake,12.878361,77.669167
+73,Kammanahalli Lake (Meenakshi Lake),,Kammanahalli Lake (Meenakshi Lake),12.854889,77.603528
+74,Vasanthapura kere,,Vasanthapura kere,12.89125,77.556778
+75,Devarakere,,Devarakere,12.897611,77.55425
+76,Yelenahalli Lake,,Yelenahalli Lake,12.866583,77.614111
+77,Doddakallasandra Lake,,Doddakallasandra Lake,12.891389,77.568417
+78,Chowdeshwari layout Lake,,Chowdeshwari layout Lake,12.866194,77.661111
+79,Nyanappanahalli Lake,,Nyanappanahalli Lake,12.87175,77.614639
+80,Subedaranakere,,Subedaranakere,12.52525,77.61325
+81,Chikkammanahalli Lake,,Chikkammanahalli Lake,12.849167,77.602611
+82,Konanakunte Lake,,Konanakunte Lake,12.882,77.560972
+83,Swarnakunte gudda kere,,Swarnakunte gudda kere,12.849167,77.602611
+84,Kembathahalli lake,,Kembathahalli lake,12.858056,77.57725
+85,Gattigerepalya (Sompura) lake,,Gattigerepalya (Sompura) lake,12.874417,77.498417
+86,Arekere lake,,Arekere lake,12.882722,77.598944
+87,Subbarayana lake,,Subbarayana lake,13.065278,77.613889
+88,Kalyanikunte (Near Saibaba Temple),,Kalyanikunte (Near Saibaba Temple),13.076111,77.621944
+89,Puttenahalli Lake (Next to Brigade Millenium),South,Puttenahalli Lake (Next to Brigade Millenium) Bangalore South,12.890222,77.587639
+90,Mangammana Palya Kaere,,Mangammana Palya Kaere,12.902083,77.639139
+91,Ibblur Lake,,Ibblur Lake,12.922111,77.666583
+92,Sarakki/Jaraganahalli/Puttenahalli Lake,,Sarakki/Jaraganahalli/Puttenahalli Lake,12.898833,77.579444
+93,Haralakunte Lake (Somasandrakere),,Haralakunte Lake (Somasandrakere),13.149444,77.883611
+94,Venkogirao kere,,Venkogirao kere,12.922611,77.641806
+95,Garveybhavipalya Lake,,Garveybhavipalya Lake,12.89625,77.637056
+96,Madivala lake,,Madivala lake,12.908167,77.617861
+97,Ambalipura Kelagina kere,,Ambalipura Kelagina kere,12.916944,77.664972
+98,Amblipura melina kere,East,Amblipura melina kere / Bangalore East,12.913306,77.663
+99,Kaigondanahalli Lake,East,Kaigondanahalli Lake / Bangalore East,12.912611,77.6725
+100,Doddakanenahalli kere,East,Doddakanenahalli kere / Bangalore East,12.911722,77.693139
+101,Kasavanahalli lake,East,Kasavanahalli lake / Bangalore East,12.904444,77.667778
+102,Haraluru kere,East,Haraluru kere / Bangalore East,12.895972,77.662611
+103,Sowl kere,East,Sowl kere / Bangalore East,12.918333,77.679417
+104,Devarabeesanahalli Lake,,Devarabeesanahalli Lake,12.923,77.686889
+105,Junnasandra lake,,Junnasandra lake,12.901944,77.680472
+106,Bhoganahalli Lake,,Bhoganahalli Lake,12.922778,77.699167
+107,Gunjur Palya kere,,Gunjur Palya kere,12.920083,77.723028
+108,Gunjur mouji kere,,Gunjur mouji kere,12.916806,77.739889
+109,Panathur lake,,Panathur lake,12.931306,77.707028
+110,Chikkabelandur Lake,,Chikkabelandur Lake,12.912389,77.719111
+111,Gunjuru Karmelaram lake,,Gunjuru Karmelaram lake,12.91775,77.710778
+112,Panthur lake,,Panthur lake,12.9325,77.717139
+113,Munnekolalu kere,East,Munnekolalu kere / Bangalore East,12.960667,77.708333
+114,Chinnappanahalli,East,Chinnappanahalli/ Bangalore East,12.965556,77.7075
+115,Kundalahalli Lake,,Kundalahalli Lake,12.970444,77.719694
+116,Doddanekundi lake,,Doddanekundi lake,12.976083,77.685889
+117,Shilavanthana kere,East,Shilavanthana kere / Bangalore East,12.964389,77.742278
+118,Siddapura Lake,,Siddapura Lake,12.958417,77.725389
+119,Nalluralli tank,,Nalluralli tank,12.974472,77.73525
+120,Pattandur agrahara lake,,Pattandur agrahara lake,12.976028,77.745444
+121,Pattandur agrahara,,Pattandur agrahara,12.980139,77.73825
+122,Mahadevapura Lake,,Mahadevapura Lake,12.98675,77.692611
+123,Mahadevapura Lake /East taluk,,Mahadevapura Lake /East taluk,12.987472,77.6925
+124,Vibhuthipura kere,,Vibhuthipura kere,12.967444,77.676639
+125,Sitaram Palya,,Sitaram Palya,12.981889,77.71275
+126,Garudachar Palya (Goshala),,Garudachar Palya (Goshala),12.986778,77.697917
+127,Garudachar Palya Lake,,Garudachar Palya Lake,12.982361,77.713167
+128,Sadaramangala Lake,,Sadaramangala Lake,12.999417,77.727528
+129,Hoodi kere,,Hoodi kere,12.999694,77.716556
+130,Hoodi Giddanakere,,Hoodi Giddanakere,12.986778,77.722278
+131,Jimkenahalli Lake,,Jimkenahalli Lake,13.026889,77.687
+132,Vijanapura kere,East,Vijanapura kere / Bangalore East,13.009139,77.676556
+133,Sigehalli,East,Sigehalli / Bangalore East,13.017361,77.713306
+134,Devsandra kere,East,Devsandra kere / Bangalore East,13.004861,77.694139
+135,Kowdenhalli lake,East,Kowdenhalli lake / Bangalore East,13.012056,77.685194
+136,Challakere Lake /East taluk,,Challakere Lake /East taluk,13.026361,77.644806
+137,Kalkere,East taluk,Kalkere / Bangalore East taluk,13.047,77.6615
+138,Horamavu Lake,,Horamavu Lake,13.023611,77.666583
+139,Hormavu Agara Lake,,Hormavu Agara Lake,13.036194,77.657833
+140,Nagareshwara-Nagenahalli Lake,,Nagareshwara-Nagenahalli Lake,13.074889,77.642444
+141,Rampura kere,,Rampura kere,13.047083,77.684889
+143,Bhattarahalli Lake,,Bhattarahalli Lake,13.024806,77.709056
+144,Vengaihna kere /K.R.Puram Tank,,Vengaihna kere /K.R.Puram Tank,13.243611,77.949722
+145,Gangashetty Lake,,Gangashetty Lake,13.004556,77.695389
+146,B. Narayanapura Lake,,B. Narayanapura Lake,12.996167,77.682556
+147,Cikkabasavana pura Lake,,Cikkabasavana pura Lake,13.009556,77.71175
+148,Kattigenahalli Kere-31,North Additional,Kattigenahalli Kere-31 Bangalore North Addl,13.114639,77.628472
+149,Thirumenahalli,North Additional,Thirumenahalli Bangalore North Addl,13.092861,77.628444
+150,Agrahara Lake,North Additional,Agrahara Lake / Bangalore North Addl,13.089528,77.625194
+151,Kogilu lake,North Additional,Kogilu lake Bangalore North Addl,13.109639,77.6185
+152,Narasipura-20,North Additional,Narasipura-20 Bangalore North Addl,13.153056,77.686111
+153,Chokkanahalli lake,,Chokkanahalli lake,13.084556,77.629333
+154,Jakkur lake (Sampigehalli Lake),,Jakkur lake (Sampigehalli Lake),13.085528,77.61125
+155,Narasipura-26,North Additional,Narasipura-26 Bangalore North Addl,13.234444,77.618333
+156,Doddabommasandra lake,North Additional,Doddabommasandra lake / Bangalore North Additional,13.064694,77.564028
+157,Kattigenahalli Kere-136 (Palanahalli lake),North Additional,Kattigenahalli Kere-136 (Palanahalli lake) /Bangalore North Addl,13.115861,77.616472
+158,Rachenahalli lake,North Additional,Rachenahalli lake/ Bangalore North Additional,13.061694,77.614861
+159,Singapura Lake,,Singapura Lake,13.085222,77.538583
+160,Srinivasapura Kere,,Srinivasapura Kere,13.105056,77.6265
+161,Venkatehpura Lake,,Venkatehpura Lake,13.077694,77.623583
+162,Amruthahalli lake,,Amruthahalli lake,13.062028,77.599111
+163,Hebbala lake,,Hebbala lake,13.046778,77.586278
+164,Nagavara,,Nagavara,13.04525,77.609278
+165,Yelahanka kere,North Additional,Yelahanka kere / Bangalore North Additional,13.112917,77.594694
+166,Veerasagara lake,North Additional,Veerasagara lake Bangalore North Addl,13.102139,77.556361
+167,Attur Lake,North Additional,Attur Lake / Bangalore North Additional,13.11125,77.561972
+168,Ramagondanahalli,North Additional,Ramagondanahalli Bangalore North Addl,13.116389,77.555167
+169,Allasandra lake,North Additional,Allasandra lake / Bangalore North Additional,13.091611,77.586222
+170,Avalahalli,North Additional,Avalahalli / Bangalore North Addi,12.8655,77.566222
+171,Harohalli lake,North Additional,Harohalli lake Bangalore North Addl,12.989139,77.489722
+172,Bettahalli lake,,Bettahalli lake,13.012444,77.454556
+173,Vaderahalli,,Vaderahalli,13.094111,77.5405
+174,Shivanahalli Lake,,Shivanahalli Lake,13.09125,77.594722
+175,Puttenahalli lake,,Puttenahalli lake,13.111528,77.576972
+176,Bellahalli,,Bellahalli,13.103944,77.643778
+177,Lakshmipura lake,,Lakshmipura lake,13.086222,77.530722
+178,Soolikere,,Soolikere,12.9515,77.459611
+179,Kannali lake,,Kannali lake,12.966444,77.460389
+180,Kenchanapura lake,,Kenchanapura lake,,
+181,Sompura Lake,,Sompura Lake,12.874611,77.498
+182,Gandhinagar Hosakerehalli,,Gandhinagar Hosakerehalli,12.923278,77.480556
+183,Medi agrahara lake,,Medi agrahara lake,13.100028,77.5275
+184,Bhimana kuppe,,Bhimana kuppe,13.069722,77.455278
+185,Madavara lake,,Madavara lake,13.051778,77.479361
+186,Chikkabasthi lake ( ramsandra lake),,Chikkabasthi lake ( ramsandra lake),12.946786,77.47171
+187,Kannur,,Kannur,13.099778,77.651444
+188,Chikkagubbi,,Chikkagubbi,13.087389,77.664611
+189,Doddagubbi,,Doddagubbi,13.075417,77.674611
+190,Yarappanahalli,,Yarappanahalli,13.087917,77.683222
+191,Kadusonnappanahalli,,Kadusonnappanahalli,13.102806,77.669222
+192,Vijanapura Lake,,Vijanapura Lake,13.02125,77.685222
+193,Konena Agrahara lake,,Konena Agrahara lake,12.959,77.658611
+194,Byatagunte Playa,,Byatagunte Playa,13.006778,77.637361
+195,Lingarajapura Lake,,Lingarajapura Lake,13.007361,77.632111
+196,Geddalahalli,,Geddalahalli,13.12,77.345028
+197,Belakahalli,,Belakahalli,12.907222,77.602472
+198,Arehalli 2 & 3 (Small tanks),,Arehalli 2 & 3 (Small tanks),12.913957,77.534073
+199,Doresani palya,,Doresani palya,12.903361,77.596972
+200,Chikkalsandra Lake,,Chikkalsandra Lake,12.9155,77.9155
+201,Ittmadu,,Ittmadu,12.919972,77.547056
+202,Thavarekare,,Thavarekare,12.929083,77.612417
+204,Karisandra lake,,Karisandra lake,12.919083,77.571861
+205,Bovimaranahalli,,Bovimaranahalli,13.165556,77.627222
+206,Gundopanth lake,,Gundopanth lake,12.991944,77.733333
+207,Kamakshi palya,,Kamakshi palya,12.995278,77.731667
+208,Anche ramana kere (Gangondanahalli),,Anche ramana kere (Gangondanahalli),13.082778,77.652222
+209,Sanigoruvahalli,,Sanigoruvahalli,13.111389,77.703889
+210,Shivanahalli (Agrahara Dasarahalli),,Shivanahalli (Agrahara Dasarahalli),13.241389,77.703333

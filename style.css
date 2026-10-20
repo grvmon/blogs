@@ -1367,3 +1367,39 @@ body {
 
 /* Mobile tap target (QC 2026-10-20) */
 .blog-card-readmore{display:inline-flex;align-items:center;gap:6px;min-height:44px}
+
+.ak-map-wrap {
+  max-width: 100%;
+  margin: var(--space-lg) 0;
+}
+
+.ak-map {
+  height: 440px;
+  width: 100%;
+  max-width: 100%;
+  border: 0.5px solid var(--divider);
+  border-radius: var(--radius-strict);
+  background: #e7eef2;
+}
+
+.ak-map .leaflet-container,
+.leaflet-container img {
+  max-width: none;
+}
+
+.ak-map-note {
+  margin-top: 0.6rem;
+  font-size: 0.82rem;
+  color: var(--neutral-grey);
+}
+
+.data-matrix-table td {
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+  .ak-map {
+    height: 320px;
+  }
+}

@@ -150,6 +150,11 @@ def quoted_field(front_matter: str, key: str) -> str:
     return match.group(1)
 
 
+def optional_field(front_matter: str, key: str) -> str:
+    match = re.search(rf'^{re.escape(key)}:\s*"(.*)"\s*$', front_matter, re.M)
+    return match.group(1) if match else ""
+
+
 def render_markdown(text: str) -> str:
     MD.reset()
     return MD.convert(text.strip()) if text.strip() else ""
@@ -321,6 +326,13 @@ def load_posts(config: dict) -> tuple[list[dict], list[dict]]:
             "meta": quoted_field(front, "meta_description"),
             "slug": quoted_field(front, "slug"),
             "date_modified": quoted_field(front, "date_modified"),
+            "date_published": optional_field(front, "date_published"),
+            "dataset_name": optional_field(front, "dataset_name"),
+            "dataset_description": optional_field(front, "dataset_description"),
+            "dataset_distribution": optional_field(front, "dataset_distribution"),
+            "dataset_csv": optional_field(front, "dataset_csv"),
+            "dataset_csv_2": optional_field(front, "dataset_csv_2"),
+            "include_howto": optional_field(front, "include_howto"),
             "body": body,
         }
 
@@ -351,6 +363,7 @@ def load_posts(config: dict) -> tuple[list[dict], list[dict]]:
                 "author": (row.get("author") or "").strip(),
                 "image_alt": (row.get("image_alt") or "").strip(),
                 "image": f"assets/img/{slug}.webp",
+                "published": (item.get("date_published") or "").strip() or config["datePublished"],
             }
         )
 
@@ -451,6 +464,21 @@ def prepare_body(post: dict, slug_section: dict[str, str], unlinked: list[dict],
             continue
         content_parts.append(f"## {title}\n\n{rest}".strip())
 
+    howto = None
+    if (post.get("include_howto") or "").lower() == "yes":
+        for title, rest in sections:
+            if not title.lower().startswith("how to"):
+                continue
+            parts = re.split(r"^### (.+)$", rest, flags=re.M)
+            chunks = parts[1:]
+            steps = []
+            if chunks and len(chunks) % 2 == 0:
+                for index in range(0, len(chunks), 2):
+                    steps.append((chunks[index].strip(), chunks[index + 1].strip()))
+            if len(steps) >= 2:
+                howto = {"name": title, "steps": steps}
+            break
+
     faqs = []
     faq_parts = re.split(r"^### (.+)$", named["Frequently asked questions"], flags=re.M)
     # [preamble, q1, a1, q2, a2, ...]
@@ -486,10 +514,11 @@ def prepare_body(post: dict, slug_section: dict[str, str], unlinked: list[dict],
         "sources_md": "## Sources\n\n" + named["Sources"].strip(),
         "dropped_images": dropped_images["count"],
         "words": published_text,
+        "howto": howto,
     }
 
 
-def json_ld(config: dict, post: dict, canonical: str, faqs: list[tuple[str, str]], answer_html: list[str]) -> str:
+def json_ld(config: dict, post: dict, canonical: str, faqs: list[tuple[str, str]], answer_html: list[str], howto: dict | None = None) -> str:
     org = config["organization"]
     organization = {
         "@type": "Organization",
@@ -503,8 +532,8 @@ def json_ld(config: dict, post: dict, canonical: str, faqs: list[tuple[str, str]
             "@type": "Article",
             "headline": post["h1"],
             "description": post["meta"],
-            "datePublished": config["datePublished"],
-            "dateModified": post["date_modified"] or config["datePublished"],
+            "datePublished": post.get("published") or config["datePublished"],
+            "dateModified": post["date_modified"] or post.get("published") or config["datePublished"],
             "inLanguage": "en-IN",
             "mainEntityOfPage": {"@type": "WebPage", "@id": canonical},
             "url": canonical,
@@ -552,6 +581,50 @@ def json_ld(config: dict, post: dict, canonical: str, faqs: list[tuple[str, str]
             ],
         },
     ]
+    if post.get("dataset_name"):
+        distribution = []
+        for rel in (
+            post.get("dataset_distribution") or "",
+            post.get("dataset_csv") or "",
+            post.get("dataset_csv_2") or "",
+        ):
+            rel = rel.strip()
+            if not rel:
+                continue
+            distribution.append(
+                {
+                    "@type": "DataDownload",
+                    "encodingFormat": "application/geo+json" if rel.endswith(".geojson") else "text/csv",
+                    "contentUrl": abs_url(config["baseUrl"], rel),
+                }
+            )
+        graph.append(
+            {
+                "@type": "Dataset",
+                "name": post["dataset_name"],
+                "description": post.get("dataset_description") or post["meta"],
+                "url": canonical,
+                "creator": organization,
+                "spatialCoverage": {"@type": "Place", "name": "Bengaluru"},
+                "distribution": distribution,
+            }
+        )
+    if howto and howto.get("steps"):
+        graph.append(
+            {
+                "@type": "HowTo",
+                "name": howto["name"],
+                "step": [
+                    {
+                        "@type": "HowToStep",
+                        "position": index,
+                        "name": plain_markdown(name),
+                        "text": plain_markdown(body),
+                    }
+                    for index, (name, body) in enumerate(howto["steps"], start=1)
+                ],
+            }
+        )
     payload = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False)
     return payload.replace("<", "\\u003c")
 
@@ -753,7 +826,7 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
     toc_entries.append(("frequently-asked-questions", "Frequently asked questions"))
     toc_entries.append((talk_id, "Talk it through with acre&key"))
     toc_entries.extend(heading_entries(sources_html))
-    published = config["datePublished"]
+    published = post.get("published") or config["datePublished"]
     minutes = read_time(prepared["words"])
     shown_date = format_date(published)
     section_label = SECTION_LABEL[post["section"]]
@@ -766,7 +839,7 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
     linkedin = quote(canonical, safe="")
     tweet = quote(post["h1"])
     tweet_url = quote(canonical, safe="")
-    ld = json_ld(config, post, canonical, prepared["faqs"], answer_html)
+    ld = json_ld(config, post, canonical, prepared["faqs"], answer_html, prepared.get("howto"))
     talk_rest = wrap_tables(render_markdown(prepared["talk_rest"])) if prepared["talk_rest"] else ""
     page = f"""<!DOCTYPE html>
 <html lang="en-IN">
@@ -910,7 +983,7 @@ def render_index(config: dict, posts: list[dict], excerpts: dict[str, str]) -> s
           <div class="blog-card-meta">
             <span>By {esc(post['author'])}</span>
             <span class="meta-sep" aria-hidden="true">&bull;</span>
-            <time datetime="{esc(config['datePublished'])}">{esc(format_date(config['datePublished']))}</time>
+            <time datetime="{esc(post.get('published') or config['datePublished'])}">{esc(format_date(post.get('published') or config['datePublished']))}</time>
             <span class="meta-sep" aria-hidden="true">&bull;</span>
             <span>{esc(SECTION_LABEL[post['section']])}</span>
           </div>
@@ -974,14 +1047,17 @@ def render_index(config: dict, posts: list[dict], excerpts: dict[str, str]) -> s
 
 
 def render_sitemap(config: dict, posts: list[dict]) -> str:
-    urls = [abs_url(config["baseUrl"])]
-    urls.extend(abs_url(config["baseUrl"], post["path"]) for post in posts)
+    dated = [(abs_url(config["baseUrl"]), config["datePublished"])]
+    dated.extend(
+        (abs_url(config["baseUrl"], post["path"]), post.get("published") or config["datePublished"])
+        for post in posts
+    )
     body = []
-    for url in urls:
+    for url, lastmod in dated:
         body.append(
             "  <url>\n"
             f"    <loc>{esc(url)}</loc>\n"
-            f"    <lastmod>{esc(config['datePublished'])}</lastmod>\n"
+            f"    <lastmod>{esc(lastmod)}</lastmod>\n"
             "  </url>"
         )
     return (
@@ -1081,7 +1157,9 @@ def validate(config: dict, posts: list[dict], unlinked: list[dict], pages: dict[
         for token in ("Article", "FAQPage", "BreadcrumbList"):
             if token not in page:
                 problems.append(f"{rel} missing {token}")
-        if config["datePublished"] not in page:
+        post_for_date = by_path.get(path)
+        published = (post_for_date or {}).get("published") or config["datePublished"]
+        if published not in page:
             problems.append(f"{rel} missing datePublished")
         if "Mongia" in page:
             problems.append(f"{rel} carries a surname")
