@@ -41,8 +41,13 @@
     return { color: "#333", weight: 1 };
   }
 
+  var depthColor = { "gw-a": "#9ecae1", "gw-b": "#4292c6", "gw-c": "#2166ac", "gw-d": "#08306b" };
+
   function markerFor(feature, latlng) {
     var props = feature.properties || {};
+    if (depthColor[props.layer]) {
+      return L.circleMarker(latlng, { radius: 7, color: "#ffffff", weight: 1, fillColor: depthColor[props.layer], fillOpacity: 0.95 });
+    }
     var line = (props.line || "").split(",")[0].trim();
     var color = lineColor[line] || "#333";
     if (props.layer === "bbmp-lake") {
