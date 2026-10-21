@@ -1,0 +1,8 @@
+from_date,to_date,conveyance_stamp_duty_pct,additional_duty_cess_pct_of_duty,bengaluru_surcharge_pct_of_duty,registration_fee_pct,total_pct_of_value_bengaluru,legal_basis,notes
+,2003-03-31,10,,,2,,"Karnataka Budget Speech 2003-04","Rate within BMRDA limits before the 2003 cut, as stated in the budget speech; 9% in other city and town areas"
+2003-04-01,2004-01-31,8,,2,1,,"Karnataka Act 8 of 2003 (Article 20(1), 20(2)); KMC Act 1976 s.140 as substituted in 2003; Budget Speech 2003-04 for registration fee","Cess rate for this window not confirmed in the sources used, so no total is given"
+2004-02-01,2006-03-31,8,10,2,1,9.96,"Karnataka Act 2 of 2004 (section 3B)",
+2006-04-01,2009-03-31,7.5,10,2,1,9.40,"Karnataka Act 7 of 2006 (Article 20(1), 20(2))",
+2009-04-01,2012-03-31,6,10,2,1,7.72,"Karnataka Act 9 of 2009 (Article 20(1)); Act 20 of 2009 (Article 20(2), from 4 Jun 2009)","Article 20(2) first sale of flats stayed at 7.5% until 3 Jun 2009, then matched Article 20(1)"
+2012-04-01,2025-08-30,5,10,2,1,6.60,"Karnataka Act 15 of 2012 (Article 20(1))","From 2020 first sale of a flat up to Rs 35 lakh: 2% up to Rs 20 lakh, 3% above Rs 20 lakh (Article 20(2A)); from 2021 also 3% above Rs 35 lakh up to Rs 45 lakh"
+2025-08-31,,5,10,2,2,7.60,"Notification RD/46/MNMU/2025 dated 29 Aug 2025 (registration fee)","Surcharge 2% under BBMP Act 2020 s.175 within corporation limits"
