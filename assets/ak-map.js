@@ -41,7 +41,7 @@
     return { color: "#333", weight: 1 };
   }
 
-  var depthColor = { "gw-a": "#9ecae1", "gw-b": "#4292c6", "gw-c": "#2166ac", "gw-d": "#08306b" };
+  var depthColor = { "gw-a": "#9ecae1", "gw-b": "#4292c6", "gw-c": "#2166ac", "gw-d": "#08306b", "aq-a": "#4c9a2a", "aq-b": "#a3c853", "aq-c": "#e0a526", "aq-d": "#c0392b" };
 
   function markerFor(feature, latlng) {
     var props = feature.properties || {};

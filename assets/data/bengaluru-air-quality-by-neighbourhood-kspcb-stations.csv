@@ -1,0 +1,12 @@
+station_kspcb,map_lat_osm,map_lon_osm,days_with_data,mean_daily_aqi,median_daily_aqi,good_days_0_50,satisfactory_days_51_100,moderate_days_101_200,poor_or_worse_days_201_plus,highest_daily_aqi,worst_month,worst_month_mean_aqi,cleanest_month,cleanest_month_mean_aqi,period,source
+Saneguruvanahalli (Nisarga Bhavan),12.99043,77.54224,365,49,51,171,193,1,0,101,Mar 2026,59,Jul 2025,40,2025-06-01 to 2026-05-31,KSPCB monthly CAAQMS AQI reports via data.opencity.in
+NIMHANS,12.93749,77.59414,365,59,51,179,140,46,0,174,Mar 2026,111,Jul 2025,23,2025-06-01 to 2026-05-31,KSPCB monthly CAAQMS AQI reports via data.opencity.in
+Hebbal (Veterinary College),13.03269,77.58761,359,65,63,160,123,76,0,189,Mar 2026,104,Aug 2025,25,2025-06-01 to 2026-05-31,KSPCB monthly CAAQMS AQI reports via data.opencity.in
+Kasturinagar (RTO),13.00153,77.65124,365,71,72,3,360,2,0,109,Mar 2026,87,Sep 2025,53,2025-06-01 to 2026-05-31,KSPCB monthly CAAQMS AQI reports via data.opencity.in
+Jayanagar (Shalini Ground),12.92056,77.58532,363,72,69,144,114,105,0,180,Mar 2026,120,Jul 2025,31,2025-06-01 to 2026-05-31,KSPCB monthly CAAQMS AQI reports via data.opencity.in
+Jigani Industrial Area,12.77663,77.63532,365,77,75,59,226,80,0,140,Mar 2026,108,Jul 2025,49,2025-06-01 to 2026-05-31,KSPCB monthly CAAQMS AQI reports via data.opencity.in
+Peenya Industrial Area (NTTF),13.02487,77.51111,365,79,72,4,292,69,0,189,Dec 2025,106,May 2026,62,2025-06-01 to 2026-05-31,KSPCB monthly CAAQMS AQI reports via data.opencity.in
+Mysore Road (KAVIKA),12.95216,77.53986,323,81,81,94,101,128,0,164,Dec 2025,122,Jul 2025,44,2025-06-01 to 2026-05-31,KSPCB monthly CAAQMS AQI reports via data.opencity.in
+Kengeri (RV College of Engineering),12.92322,77.50066,365,92,93,15,203,147,0,137,Feb 2026,111,Jun 2025,61,2025-06-01 to 2026-05-31,KSPCB monthly CAAQMS AQI reports via data.opencity.in
+Majestic (City Railway Station),12.97586,77.56538,365,97,94,0,243,122,0,118,Apr 2026,108,Sep 2025,89,2025-06-01 to 2026-05-31,KSPCB monthly CAAQMS AQI reports via data.opencity.in
+Silk Board (HSR Layout),12.9159,77.62399,360,111,112,23,83,254,0,199,Mar 2026,134,Oct 2025,77,2025-06-01 to 2026-05-31,KSPCB monthly CAAQMS AQI reports via data.opencity.in
