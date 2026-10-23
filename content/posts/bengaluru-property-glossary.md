@@ -48,7 +48,7 @@ Most terms below are tagged O, M or P so you can see which bucket they fall in.
 3. **Carpet area, RERA (M).** The net usable floor area of a flat, excluding external walls, service shafts and exclusive balconies, but including internal partition walls (RERA Act s.2(k)). It must be stated in the agreement.
 4. **Common areas (O).** Lobbies, lifts, staircases, terraces, grounds and amenities shared by all owners. They're handed to the association.
 5. **Floor area ratio, FAR or FSI (P).** The total floor area allowed on a plot divided by the plot area. It sets how much can be built.
-6. **Loading (M).** The gap between super built-up and carpet area, as a percentage of carpet area. Higher loading means you pay for more space you can't use (use our [carpet area and loading calculator](/blogs/carpet-area-and-loading-calculator-bengaluru/) to verify your numbers).
+6. **Loading (M).** The gap between super built-up and carpet area, as a percentage of carpet area. Higher loading means you pay for more space you can't use (use our [carpet area and loading calculator](https://acrenkey.com/blogs/carpet-area-and-loading-calculator-bengaluru/) to verify your numbers).
 7. **Plinth area (M).** The covered area at floor level including walls, used in construction estimates.
 8. **Plot area (O).** The area of the land parcel, usually in sq ft or sq m; in rural records, in acres and guntas.
 9. **Saleable area (M).** A market term, usually meaning super built-up area.

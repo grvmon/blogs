@@ -113,7 +113,7 @@ You're 45 and buy a unit for your parents, aged 70 and 66. Under the guidelines,
 
 ## Legal and tax note
 
-This is general information. A property lawyer should read the sale and service agreements, especially for deposit or right-to-occupy models, and advise on title if a family member is buying for parents; our [legal checks guide](https://acrenkey.com/blogs/bengaluru-property-legal-checks-from-title-to-oc/) lists the documents. For joint decision-making and priorities before booking, review the [25 questions every couple should discuss before buying a home](/blogs/25-questions-every-couple-should-discuss-before-buying-a-home/). If you're moving property within the family, our [gift deed page](https://answers.acrenkey.com/gift-deed-flat-family-karnataka/) explains the basics. Ask a CA about tax on deposits, refunds and any sale.
+This is general information. A property lawyer should read the sale and service agreements, especially for deposit or right-to-occupy models, and advise on title if a family member is buying for parents; our [legal checks guide](https://acrenkey.com/blogs/bengaluru-property-legal-checks-from-title-to-oc/) lists the documents. For joint decision-making and priorities before booking, review the [25 questions every couple should discuss before buying a home](https://acrenkey.com/blogs/25-questions-every-couple-should-discuss-before-buying-a-home/). If you're moving property within the family, our [gift deed page](https://answers.acrenkey.com/gift-deed-flat-family-karnataka/) explains the basics. Ask a CA about tax on deposits, refunds and any sale.
 
 ## Frequently asked questions
 

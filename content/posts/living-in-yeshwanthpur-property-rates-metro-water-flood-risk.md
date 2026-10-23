@@ -37,7 +37,7 @@ The West City Corporation. All of PIN 560022 is in the West corporation, coverin
 
 ### Market prices
 
-Knight Frank's H1 2026 report put Yeshwanthpur at ₹7,700 to ₹14,500 per sq ft, up 9% in 12 months and 6% in six ([Knight Frank](https://content.knightfrank.com/research/3116/documents/en/india-real-estate-office-and-residential-market-h1-2026-12927.pdf)). That's below Malleswaram (₹9,200 to ₹17,500) and Rajajinagar (₹11,500 to ₹23,200) in the same report.
+Knight Frank's H1 2026 report put Yeshwanthpur at ₹7,700 to ₹14,500 per sq ft, up 9% in 12 months and 6% in six ([Knight Frank](https://content.knightfrank.com/research/3116/documents/en/india-real-estate-office-and-residential-market-h1-2026-12927.pdf)). That's below Malleswaram (₹9,200 to ₹17,500; see our guide on [living in Malleshwaram](https://acrenkey.com/blogs/living-in-malleshwaram-property-rates-metro-water-flood-risk/)) and Rajajinagar (₹11,500 to ₹23,200) in the same report.
 
 ### Official guidance values
 

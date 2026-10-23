@@ -54,7 +54,7 @@ Flats are listed building by building, and Kaveri can add floor, amenity and par
 
 ### Market prices
 
-We didn't find a consultant price for HSR Layout. Knight Frank's H1 2026 report names it in the South zone but leaves it out of the price table. For comparison with its northern neighbour, see our guide on [living in Koramangala](/blogs/areas/living-in-koramangala-property-rates-metro-water-flood-risk/). The nearest consultant benchmark is ANAROCK's Q1 2026 base rate for Sarjapur Road, ₹11,400 per sq ft, with 2BHK rents of ₹33,000 to ₹46,000 a month. Treat that as context only. Our [Sarjapur Road guide](https://acrenkey.com/blogs/living-on-sarjapur-road-property-rates-metro-water-flood-risk/) covers it.
+We didn't find a consultant price for HSR Layout. Knight Frank's H1 2026 report names it in the South zone but leaves it out of the price table. For comparison with its northern neighbour, see our guide on [living in Koramangala](https://acrenkey.com/blogs/living-in-koramangala-property-rates-metro-water-flood-risk/). The nearest consultant benchmark is ANAROCK's Q1 2026 base rate for Sarjapur Road, ₹11,400 per sq ft, with 2BHK rents of ₹33,000 to ₹46,000 a month. Treat that as context only. Our [Sarjapur Road guide](https://acrenkey.com/blogs/living-on-sarjapur-road-property-rates-metro-water-flood-risk/) covers it.
 
 ### What's being built
 

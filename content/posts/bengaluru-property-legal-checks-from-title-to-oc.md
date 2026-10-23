@@ -144,7 +144,7 @@ The common mistake is moving a Stop into Fix because you like the flat. Don't.
 
 ## What mistakes do buyers make with legal checks?
 
-- **Paying first, checking later.** The token is the hardest money to recover. Run the [before-token checklist](https://acrenkey.com/blogs/before-you-pay-the-token-or-booking-amount-the-complete-checklist/) first, and keep standard [letter templates for Bengaluru buyers](/blogs/free-letter-templates-bengaluru-buyers-documents-to-rera/) handy if demanding corrections.
+- **Paying first, checking later.** The token is the hardest money to recover. Run the [before-token checklist](https://acrenkey.com/blogs/before-you-pay-the-token-or-booking-amount-the-complete-checklist/) first, and keep standard [letter templates for Bengaluru buyers](https://acrenkey.com/blogs/free-letter-templates-bengaluru-buyers-documents-to-rera/) handy if demanding corrections.
 - **Taking the bank's approval as a title check.** The bank protects its loan, not you.
 - **A 12-year EC by habit.** Cover the chain back to conversion.
 - **Using the old 30 m lake rule.** The 2026 law is size-based.

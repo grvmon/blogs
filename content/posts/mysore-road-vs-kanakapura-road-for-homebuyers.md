@@ -24,7 +24,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **Both leave GBA:** Kengeri's PIN is about 29% inside GBA, and Kanakapura Road's PIN 560082 is wholly outside.
 > - **Our TERM test:** terminus, edge, rent evidence, main road or interior.
 
-Neither road is waiting on a promise, so the questions change. How far are you from a station? Which side of the GBA boundary are you on? And does the rent stack up? This page draws on our [Mysore Road guide](https://acrenkey.com/blogs/living-on-mysore-road-property-rates-metro-water-flood-risk/) and [Kanakapura Road guide](https://acrenkey.com/blogs/living-on-kanakapura-road-property-rates-metro-water-flood-risk/).
+Neither road is waiting on a promise, so the questions change. How far are you from a station? Which side of the GBA boundary are you on? And does the rent stack up? This page draws on our [Mysore Road guide](https://acrenkey.com/blogs/living-on-mysore-road-property-rates-metro-water-flood-risk/), our overview of [living in Rajarajeshwari Nagar](https://acrenkey.com/blogs/living-in-rajarajeshwari-nagar-property-rates-metro-water-flood-risk/), and our [Kanakapura Road guide](https://acrenkey.com/blogs/living-on-kanakapura-road-property-rates-metro-water-flood-risk/).
 
 ![Side-by-side chart of Mysore Road and Kanakapura Road with Purple and Green Line stations, benchmarks and the GBA boundary](/img/blog/mysore-vs-kanakapura-chart.png)
 

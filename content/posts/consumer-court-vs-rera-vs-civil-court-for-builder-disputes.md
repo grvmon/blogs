@@ -102,7 +102,7 @@ A consumer complaint must generally be filed within two years of the cause of ac
 
 ## Is there a quicker route than a hearing?
 
-Often, yes. Start with a written notice to the builder setting out the delay, the amount you've paid and the interest you're claiming, with a deadline to respond (you can use our [free letter templates for Bengaluru homebuyers](/blogs/free-letter-templates-bengaluru-buyers-documents-to-rera/)). Many disputes settle at this stage. The Consumer Protection Act 2019 also provides for mediation (Chapter V), and a commission can refer a case to it if both sides agree. A settlement should state exactly what you're giving up, and nothing more.
+Often, yes. Start with a written notice to the builder setting out the delay, the amount you've paid and the interest you're claiming, with a deadline to respond (you can use our [free letter templates for Bengaluru homebuyers](https://acrenkey.com/blogs/free-letter-templates-bengaluru-buyers-documents-to-rera/)). Many disputes settle at this stage. The Consumer Protection Act 2019 also provides for mediation (Chapter V), and a commission can refer a case to it if both sides agree. A settlement should state exactly what you're giving up, and nothing more.
 
 ## The FORUM check (our framework)
 

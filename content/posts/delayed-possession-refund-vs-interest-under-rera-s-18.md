@@ -124,7 +124,7 @@ Under Section 31 you can complain to the Authority or the Adjudicating Officer, 
 - [ ] RERA registration page, extension orders and quarterly reports
 - [ ] Every letter and email about the delay
 - [ ] Home loan sanction and disbursement letters
-- [ ] Your written demand to the builder (see [free letter templates for Bengaluru homebuyers](/blogs/free-letter-templates-bengaluru-buyers-documents-to-rera/)) and any reply
+- [ ] Your written demand to the builder (see [free letter templates for Bengaluru homebuyers](https://acrenkey.com/blogs/free-letter-templates-bengaluru-buyers-documents-to-rera/)) and any reply
 - [ ] Your own interest calculation, payment by payment
 
 The Authority is meant to decide within 60 days of filing, or record why it couldn't (Section 29). In practice it often takes longer. The portal's Search Orders, Project Wise Complaint Report and Default Project List show whether other buyers in your project have filed ([K-RERA](https://rera.karnataka.gov.in/home?language=en)).
