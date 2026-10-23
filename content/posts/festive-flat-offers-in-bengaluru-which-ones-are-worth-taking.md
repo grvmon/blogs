@@ -325,7 +325,7 @@ If a festive offer has you close to booking, we can help you price it against th
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Blogs",
+     "name": "Blog",
      "item": "https://acrenkey.com/blogs/"
     },
     {

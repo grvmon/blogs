@@ -486,7 +486,7 @@ All official sources checked 18 Oct 2026 unless marked.
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Blogs",
+     "name": "Blog",
      "item": "https://acrenkey.com/blogs/"
     },
     {

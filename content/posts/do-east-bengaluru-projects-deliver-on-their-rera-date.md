@@ -354,7 +354,7 @@ If you'd like help reading a project's RERA dates and orders before you book, bo
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Blogs",
+     "name": "Blog",
      "item": "https://acrenkey.com/blogs/"
     },
     {

@@ -324,7 +324,7 @@ If you're weighing a gated project against a standalone building, we can help yo
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Blogs",
+     "name": "Blog",
      "item": "https://acrenkey.com/blogs/"
     },
     {

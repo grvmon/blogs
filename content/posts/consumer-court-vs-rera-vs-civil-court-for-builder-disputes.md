@@ -326,7 +326,7 @@ If a builder dispute is brewing, we can help you pull together the paperwork and
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Blogs",
+     "name": "Blog",
      "item": "https://acrenkey.com/blogs/"
     },
     {

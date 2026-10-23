@@ -422,7 +422,7 @@ If you'd like a second pair of eyes on the answers you've collected, we can go t
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Blogs",
+     "name": "Blog",
      "item": "https://acrenkey.com/blogs/"
     },
     {

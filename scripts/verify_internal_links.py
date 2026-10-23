@@ -26,11 +26,13 @@ SKIP_CLASSES = {
     "blog-card",
     "toc-box",
     "breadcrumb",
+    "crumbs",
     "blog-sidebar",
     "browse-row",
     "blog-subnav",
     "share-strip",
     "author-byline",
+    "author-byline-card",
     "in-article-advisory-banner",
     "primary-cta-btn",
 }

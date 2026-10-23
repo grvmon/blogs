@@ -321,7 +321,7 @@ If Devanahalli is on your list, we can help you check the zone, papers and real 
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Blogs",
+     "name": "Blog",
      "item": "https://acrenkey.com/blogs/"
     },
     {

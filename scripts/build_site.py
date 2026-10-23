@@ -118,6 +118,7 @@ AUTHOR_PROFILES = {
     "Gaurav": {
         "name": "Gaurav Mongia",
         "role": "Market Strategy · Product · Tech",
+        "badge": "Co-founder",
         "jobTitle": "Co-founder & Head of Product & Strategy",
         "avatar": "https://acrenkey.com/style-guide/assets/gaurav-mongia-founder-acre-key.webp",
         "thumb": "https://acrenkey.com/style-guide/assets/gaurav-mongia-founder-acre-key-96.webp",
@@ -127,6 +128,7 @@ AUTHOR_PROFILES = {
     "Nitin": {
         "name": "Nitin Gupta",
         "role": "Investments · Decision Framework",
+        "badge": "Co-founder",
         "jobTitle": "Co-founder & Head of Investments",
         "avatar": "https://acrenkey.com/style-guide/assets/nitin-gupta-founder-acre-key.webp",
         "thumb": "https://acrenkey.com/style-guide/assets/nitin-gupta-founder-acre-key-96.webp",
@@ -136,11 +138,22 @@ AUTHOR_PROFILES = {
     "Arvind": {
         "name": "Arvind Patidar",
         "role": "Advisory · Execution",
+        "badge": "Co-founder",
         "jobTitle": "Co-founder & Head of Operations",
         "avatar": "https://acrenkey.com/style-guide/assets/arvind-patidar-founder-acre-key.webp",
         "thumb": "https://acrenkey.com/style-guide/assets/arvind-patidar-founder-acre-key-96.webp",
         "linkedin": "https://www.linkedin.com/in/arvind-patidar/",
         "description": "Operations and engineering leader ensuring flawless execution, civic compliance, and zero-compromise due diligence.",
+    },
+    "Piyush": {
+        "name": "Piyush Mittal",
+        "role": "Partner & CBO",
+        "badge": "Partner & CBO",
+        "jobTitle": "Partner & Chief Business Officer",
+        "avatar": "https://acrenkey.com/style-guide/assets/piyush-mittal-cbo-partner-acre-key.webp",
+        "thumb": "https://acrenkey.com/style-guide/assets/piyush-mittal-cbo-partner-acre-key-96.webp",
+        "linkedin": "https://www.linkedin.com/in/piyushmittal97/",
+        "description": "Leading developer vetting, contract risk management, deal structuring, and strict fiduciary governance for buyers.",
     },
 }
 IMAGE_W, IMAGE_H = 1200, 675
@@ -1157,8 +1170,9 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
     toc_entries.append((talk_id, "Talk it through with acre&key"))
     toc_entries.extend(heading_entries(sources_html))
     published = post.get("published") or config["datePublished"]
+    mod_date = post.get("date_modified") or published
     minutes = read_time(prepared["words"])
-    shown_date = format_date(published)
+    shown_date = format_date(mod_date)
     share_text = esc(post["h1"])
     share_url = esc(canonical)
     # quote for share endpoints separately
@@ -1175,16 +1189,14 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
         {
             "name": post["author"],
             "role": "Market Strategy · Product · Tech",
+            "badge": "Co-founder",
             "avatar": "https://acrenkey.com/style-guide/assets/gaurav-mongia-founder-acre-key.webp",
             "linkedin": "https://www.linkedin.com/in/gaurav-a-mongia/",
         },
     )
     crumb = section_crumb(post, config["baseUrl"])
     if crumb:
-        bc_section_html = (
-            f'\n        <li class="meta-sep" aria-hidden="true">›</li>'
-            f'\n        <li><a href="{esc(crumb[1])}">{esc(crumb[0])}</a></li>'
-        )
+        bc_section_html = f'\n        <li><a href="{esc(crumb[1])}">{esc(crumb[0])}</a></li>'
     else:
         bc_section_html = ""
 
@@ -1200,36 +1212,31 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
   <div id="scroll-progress-bar" aria-hidden="true"></div>
   {header(root, nav_current(post), config['baseUrl'])}
   <main id="main-content" class="container blog-detail-container">
-    <nav aria-label="Breadcrumb">
-      <ol class="breadcrumb">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
         <li><a href="https://acrenkey.com/">acre&amp;key</a></li>
-        <li class="meta-sep" aria-hidden="true">›</li>
         <li><a href="{esc(config['baseUrl'])}">Blog</a></li>{bc_section_html}
-        <li class="meta-sep" aria-hidden="true">›</li>
-        <li class="bc-current" aria-current="page" title="{esc(post['h1'])}">{esc(post['seo_title'])}</li>
+        <li aria-current="page"><a href="{canonical}" aria-current="page">{esc(post['seo_title'])}</a></li>
       </ol>
     </nav>
     <header class="article-header">
       <h1 class="article-title">{esc(post['h1'])}</h1>
       <div class="author-byline-card">
-        <div class="author-byline-main">
-          <a href="https://acrenkey.com/#about-us" class="author-avatar-link" aria-label="{esc(profile['name'])}">
-            <img src="{esc(profile['avatar'].replace('.webp','-96.webp'))}" alt="{esc(profile['name'])}" class="author-avatar-img" width="46" height="46" loading="lazy" decoding="async">
-          </a>
-          <div class="author-meta-wrap">
-            <div class="author-name-row">
-              <a href="https://acrenkey.com/#about-us" class="author-name-link"><span class="author-details-name">{esc(profile['name'])}</span></a>
-              <a href="{esc(profile['linkedin'])}" class="author-linkedin-badge" target="_blank" rel="noopener noreferrer" aria-label="{esc(profile['name'])} on LinkedIn">
-                <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-              </a>
-            </div>
-            <div class="author-subline author-details-sub byline">
-              <span>{esc(profile['role'])}</span>
-              <span class="author-subline-dot" aria-hidden="true">&bull;</span>
-              <span>Published: <time datetime="{esc(published)}">{esc(shown_date)}</time></span>
-              <span class="author-subline-dot" aria-hidden="true">&bull;</span>
-              <span>{minutes} min read</span>
-            </div>
+        <a href="https://acrenkey.com/#about-us" class="author-avatar-link" aria-label="{esc(profile['name'])}">
+          <img src="{esc(profile['avatar'].replace('.webp','-96.webp'))}" alt="{esc(profile['name'])}" class="author-avatar-img" width="40" height="40" loading="lazy" decoding="async">
+        </a>
+        <div class="author-meta-wrap">
+          <div class="author-name-row">
+            <a href="https://acrenkey.com/#about-us" class="author-name-link"><span class="author-details-name">{esc(profile['name'])}</span></a>
+            <a href="{esc(profile['linkedin'])}" class="author-linkedin-badge" target="_blank" rel="noopener noreferrer" aria-label="{esc(profile['name'])} on LinkedIn">
+              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </a>
+            <span class="author-title-badge">{esc(profile.get('badge', 'Co-founder'))}</span>
+          </div>
+          <div class="author-subline">
+            <span>Last modified: <time datetime="{esc(mod_date)}">{esc(shown_date)}</time></span>
+            <span class="author-subline-dot">•</span>
+            <span>{minutes} min read</span>
           </div>
         </div>
         <div class="share-strip">
@@ -1502,13 +1509,11 @@ def render_hub(config: dict, hub: dict, children: list[dict], excerpts: dict[str
 <body>
   {header(root, hub['key'], base)}
   <main id="main-content" class="container">
-    <nav aria-label="Breadcrumb">
-      <ol class="breadcrumb">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
         <li><a href="https://acrenkey.com/">acre&amp;key</a></li>
-        <li class="meta-sep" aria-hidden="true">›</li>
         <li><a href="{esc(abs_url(base))}">Blog</a></li>
-        <li class="meta-sep" aria-hidden="true">›</li>
-        <li class="bc-current" aria-current="page">{esc(hub['h1'])}</li>
+        <li aria-current="page"><a href="{canonical}" aria-current="page">{esc(hub['h1'])}</a></li>
       </ol>
     </nav>
     <header class="hub-header">
@@ -1813,25 +1818,60 @@ def patch_static_page(page: str, item: dict, links: list[dict], base: str, sente
             if json_count != 1:
                 raise SystemExit(f"Could not patch breadcrumb JSON-LD in {item['slug']}")
             page = head + sep + tail
-        crumb = re.search(r'(<ol class="breadcrumb">)(.*?)(</ol>)', page, re.S)
-        if not crumb:
-            raise SystemExit(f"No breadcrumb in {item['slug']}")
-        inner = crumb.group(2)
-        if topic_url not in inner:
-            insertion = (
-                f'<li><a href="{esc(topic_url)}">{esc(topic)}</a></li>\n'
-                '        <li class="meta-sep" aria-hidden="true">›</li>\n'
-                "        "
-            )
-            inner, crumb_count = re.subn(
-                r'<li class="bc-current"',
-                insertion + '<li class="bc-current"',
-                inner,
-                count=1,
-            )
-            if crumb_count != 1:
-                raise SystemExit(f"Could not patch visible breadcrumb in {item['slug']}")
-            page = page[: crumb.start(2)] + inner + page[crumb.end(2) :]
+        crumb_items = [
+            '<li><a href="https://acrenkey.com/">acre&amp;key</a></li>',
+            f'<li><a href="{esc(base)}">Blog</a></li>',
+        ]
+        if topic_slug:
+            crumb_items.append(f'<li><a href="{esc(topic_url)}">{esc(topic)}</a></li>')
+        canonical = abs_url(base, item["path"])
+        crumb_items.append(f'<li aria-current="page"><a href="{canonical}" aria-current="page">{esc(item["seo_title"])}</a></li>')
+        new_crumbs = '<nav class="crumbs" aria-label="Breadcrumb">\n      <ol>\n        ' + "\n        ".join(crumb_items) + '\n      </ol>\n    </nav>'
+        page = re.sub(r'<nav\b[^>]*aria-label="Breadcrumb"[\s\S]*?</nav>', new_crumbs, page, count=1)
+
+        rt_match = re.search(r'(\d+)\s+min read', page)
+        minutes = int(rt_match.group(1)) if rt_match else 8
+        author_key = item.get("author", "Gaurav")
+        profile = AUTHOR_PROFILES.get(author_key, AUTHOR_PROFILES["Gaurav"])
+        mod_date = item.get("date_modified") or item.get("published", "2026-10-22")
+        try:
+            dt = datetime.strptime(mod_date, "%Y-%m-%d")
+            shown_date = dt.strftime("%d %b %Y")
+        except Exception:
+            shown_date = mod_date
+        from urllib.parse import quote
+        wa = quote(f"{item['h1']} {canonical}")
+        linkedin_url = quote(canonical, safe="")
+        tweet_text = quote(item["h1"])
+        tweet_url = quote(canonical, safe="")
+
+        new_author_card = f"""<div class="author-byline-card">
+        <a href="https://acrenkey.com/#about-us" class="author-avatar-link" aria-label="{esc(profile['name'])}">
+          <img src="{esc(profile['avatar'].replace('.webp', '-96.webp'))}" alt="{esc(profile['name'])}" class="author-avatar-img" width="40" height="40" loading="lazy" decoding="async">
+        </a>
+        <div class="author-meta-wrap">
+          <div class="author-name-row">
+            <a href="https://acrenkey.com/#about-us" class="author-name-link"><span class="author-details-name">{esc(profile['name'])}</span></a>
+            <a href="{esc(profile['linkedin'])}" class="author-linkedin-badge" target="_blank" rel="noopener noreferrer" aria-label="{esc(profile['name'])} on LinkedIn">
+              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </a>
+            <span class="author-title-badge">{esc(profile.get('badge', 'Co-founder'))}</span>
+          </div>
+          <div class="author-subline">
+            <span>Last modified: <time datetime="{esc(mod_date)}">{esc(shown_date)}</time></span>
+            <span class="author-subline-dot">•</span>
+            <span>{minutes} min read</span>
+          </div>
+        </div>
+        <div class="share-strip">
+          <span class="share-label">Share:</span>
+          <a href="https://api.whatsapp.com/send?text={wa}" target="_blank" rel="noopener noreferrer" class="share-btn" aria-label="Share on WhatsApp" title="Share on WhatsApp">{SHARE_WA}</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url={linkedin_url}" target="_blank" rel="noopener noreferrer" class="share-btn" aria-label="Share on LinkedIn" title="Share on LinkedIn">{SHARE_LI}</a>
+          <a href="https://twitter.com/intent/tweet?text={tweet_text}&amp;url={tweet_url}" target="_blank" rel="noopener noreferrer" class="share-btn" aria-label="Share on X" title="Share on X">{SHARE_X}</a>
+          <button type="button" class="share-btn" data-copy-link aria-label="Copy link to clipboard" title="Copy article link">{SHARE_COPY}</button>
+        </div>
+      </div>"""
+        page = re.sub(r'<div class="author-byline-card">[\s\S]*?</header>', f'{new_author_card}\n    </header>', page, count=1)
     page = page.replace('<li><a href="https://acrenkey.com/">Home</a></li>', '<li><a href="https://acrenkey.com/">acre&amp;key</a></li>')
     page = page.replace('<li class="meta-sep" aria-hidden="true">/</li>', '<li class="meta-sep" aria-hidden="true">›</li>')
     page = page.replace('{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://acrenkey.com/"}', '{"@type": "ListItem", "position": 1, "name": "acre&key", "item": "https://acrenkey.com/"}')

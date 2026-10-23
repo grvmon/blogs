@@ -466,7 +466,7 @@ If a document is full of terms you can't pin down, we can walk through it with y
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Blogs",
+     "name": "Blog",
      "item": "https://acrenkey.com/blogs/"
     },
     {

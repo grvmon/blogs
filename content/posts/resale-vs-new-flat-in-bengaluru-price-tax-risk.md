@@ -328,7 +328,7 @@ If you're torn between a resale flat and a new one, we can help you run the numb
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Blogs",
+     "name": "Blog",
      "item": "https://acrenkey.com/blogs/"
     },
     {
