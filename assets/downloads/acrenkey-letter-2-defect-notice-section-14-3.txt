@@ -1,0 +1,49 @@
+LETTER 2: NOTICE OF DEFECTS TO THE PROMOTER (SECTION 14(3), RERA ACT 2016)
+Template from acre&key (acrenkey.com/blogs). Not legal advice. Have a lawyer review it before you send it.
+Fill in every [bracket]. Delete lines that do not apply to you.
+
+[Your full name]
+[Your postal address]
+[Your email and mobile number]
+
+Date: [DD Month YYYY]
+
+To,
+[Name of the promoter company]
+[Registered office address of the promoter]
+[Customer care or CRM email address]
+
+Subject: Notice of defects under section 14(3) of the RERA Act, 2016 for [Apartment/Plot No.], [Tower/Block], [Project name], Karnataka RERA Registration No. [number]
+
+Dear Sir/Madam,
+
+I am the allottee of [Apartment/Plot No.] in [Project name], [locality], Bengaluru. Possession was handed over to me on [date of handing over possession], under the agreement for sale dated [date].
+
+I am bringing the following defects to your notice:
+
+| No. | Location (room/area) | Defect | First noticed on | Photo/video reference |
+| 1 | [e.g. Master bedroom, north wall] | [e.g. Damp patch and peeling paint] | [date] | [Photo 1] |
+| 2 | [ ] | [ ] | [ ] | [ ] |
+| 3 | [ ] | [ ] | [ ] | [ ] |
+
+Section 14(3) of the Real Estate (Regulation and Development) Act, 2016 says that if any structural defect, or any other defect in workmanship, quality or provision of services, or any other obligation of the promoter under the agreement for sale, is brought to the promoter's notice by the allottee within five years of the date of handing over possession, the promoter has to rectify it without further charge within thirty days. If the promoter fails to do so, the allottee is entitled to appropriate compensation under the Act.
+
+This notice is given within five years of the date of handing over possession. Please:
+
+1. Acknowledge this notice in writing.
+2. Inspect the defects on a date you confirm with me in advance.
+3. Rectify all the defects listed above, without charge, within thirty days of receiving this notice.
+
+If the defects are not rectified within that time, I reserve my right to approach the Karnataka Real Estate Regulatory Authority and its adjudicating officer under the Act.
+
+Yours faithfully,
+
+[Signature]
+[Your full name]
+
+Enclosures:
+1. Possession letter / handover note dated [date]
+2. Photos and videos of each defect, numbered as in the table, with the date taken
+3. [Copies of earlier complaints or tickets raised with customer care, with dates and ticket numbers]
+
+Send it in a way you can prove: email to the address in the agreement, and registered post or courier with proof of delivery. Keep copies and note the date the promoter received it. The thirty days run from then.

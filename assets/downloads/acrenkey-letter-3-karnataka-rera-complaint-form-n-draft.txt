@@ -1,0 +1,74 @@
+LETTER 3: DRAFT COMPLAINT TO KARNATAKA RERA (FORM 'N', RULE 29)
+Template from acre&key (acrenkey.com/blogs). Not legal advice. Have a lawyer review it before you file.
+This draft follows the headings of Form 'N' in the Karnataka Real Estate (Regulation and Development) Rules, 2017, notified on 10 July 2017. Prepare your text in this layout, then enter it in the complaint form on rera.karnataka.gov.in or file it as the Authority directs. Check the portal for the current filing and fee process before you file.
+If you are only claiming compensation under sections 12, 14, 18 or 19, the Rules provide a separate application to the adjudicating officer in Form 'O' (rule 30). Ask your lawyer which one fits your case.
+
+FORM 'N'
+[See sub-rule (1) of rule 29]
+COMPLAINT TO REGULATORY AUTHORITY
+Complaint under section 31 of the Act
+
+IN THE KARNATAKA REAL ESTATE REGULATORY AUTHORITY, BENGALURU
+
+Between
+[Your full name] ........ Complainant(s)
+And
+[Name of the promoter company] ........ Respondent(s)
+
+Details of claim:
+
+1. Particulars of the complainant(s):
+   (i) Name of the complainant: [Your full name]
+   (ii) Address of the existing office/residence of the complainant: [Address]
+   (iii) Address for service of all notices: [Address, email]
+
+2. Particulars of the respondent(s):
+   (i) Name(s) of respondent: [Promoter company name, as on the RERA project page]
+   (ii) Office address of the respondent: [Registered office address]
+   (iii) Address for service of all notices: [Address, email]
+   Project: [Project name], Karnataka RERA Registration No. [number]
+
+3. Jurisdiction of the Regulatory Authority:
+   The complainant declares that the subject matter of the claim falls within the jurisdiction of the Regulatory Authority. The project is registered with the Karnataka Real Estate Regulatory Authority under No. [number] and is located at [locality], Bengaluru.
+
+4. Facts of the case:
+   [Write short numbered paragraphs, in date order. For example:]
+   4.1 On [date], I booked [Apartment No.] and paid [amount] as booking amount (receipt no. [ ]).
+   4.2 On [date], the respondent and I signed the agreement for sale, registered as document no. [ ] at the [ ] Sub-Registrar's office. Clause [ ] gives the date of possession as [date].
+   4.3 I have paid a total of [amount] up to [date], as shown in the payment schedule enclosed.
+   4.4 [What went wrong, with dates: e.g. possession not given by the agreed date; documents requested by letter dated [date] not provided; defects notified on [date] not rectified within thirty days.]
+   4.5 [Your letters to the respondent and their replies, with dates.]
+
+5. Relief(s) sought:
+   In view of the facts in paragraph 4, the complainant prays for the following relief(s):
+   [Choose and adapt with your lawyer. Examples of provisions often relied on:]
+   (a) [Delay in possession, section 18(1): either refund of the amount paid with interest, if you wish to withdraw, or interest for every month of delay till possession, if you do not.]
+   (b) [Documents, section 19(1) and 19(2): a direction to provide the sanctioned plans, layout plans, specifications and stage-wise schedule.]
+   (c) [Defects, section 14(3): a direction to rectify the defects listed in the notice dated [date].]
+   (d) [Any other relief, with the section relied on.]
+
+6. Interim order, if prayed for:
+   Pending final decision on the complaint, the complainant seeks the following interim order: [nature of the interim order, with reasons, or write "None"].
+
+7. Complaint not pending with any other court, etc.:
+   The complainant further declares that the matter regarding which this complaint has been made is not pending before any court of law or any other authority or any other tribunal(s).
+
+8. Particulars of the fee:
+   (i) Amount: Rs. 1,000 [Rule 29(1) fee as notified; check the current amount and payment mode on the portal]
+   (ii) Mode and reference: [demand draft number and bank, or online payment reference]
+
+9. List of enclosures:
+   1. Allotment letter dated [date]
+   2. Agreement for sale dated [date]
+   3. Payment receipts / statement of account
+   4. Correspondence with the respondent (letters dated [ ])
+   5. [Photos, possession letter, or other documents relied on]
+
+Verification
+
+I, [NAME IN FULL BLOCK LETTERS], son/daughter of [father's/mother's name], the complainant, do hereby verify that the contents of paragraphs 1 to 9 are true to my personal knowledge and belief and that I have not suppressed any material fact(s).
+
+Place: Bengaluru
+Date: [DD Month YYYY]
+
+[Signature of the complainant(s)]
