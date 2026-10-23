@@ -50,7 +50,7 @@ CONTENT = ROOT / "content"
 POSTS_DIR = CONTENT / "posts"
 CONFIG_PATH = ROOT / "site.config.json"
 SECTIONS = ("blog", "insights", "areas")
-SECTION_LABEL = {"blog": "Blog", "insights": "Insights", "areas": "Areas"}
+SECTION_LABEL = {"blog": "Blogs", "insights": "Insights", "areas": "Areas"}
 UNPUBLISHED_RE = re.compile(
     r"^https://acrenkey\.com/(?:blogs|insights)/([a-z0-9-]+)/?$"
 )
@@ -725,7 +725,7 @@ def json_ld(config: dict, post: dict, canonical: str, faqs: list[tuple[str, str]
     crumb = section_crumb(post, config["baseUrl"])
     breadcrumb_items = [
         {"@type": "ListItem", "position": 1, "name": "acre&key", "item": org["url"]},
-        {"@type": "ListItem", "position": 2, "name": "Blog", "item": abs_url(config["baseUrl"])},
+        {"@type": "ListItem", "position": 2, "name": "Blogs", "item": abs_url(config["baseUrl"])},
     ]
     if crumb:
         breadcrumb_items.append(
@@ -897,7 +897,7 @@ def json_ld_index(config: dict, posts: list[dict]) -> str:
             "@type": "BreadcrumbList",
             "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": "acre&key", "item": org["url"]},
-                {"@type": "ListItem", "position": 2, "name": "Blog", "item": canonical},
+                {"@type": "ListItem", "position": 2, "name": "Blogs", "item": canonical},
             ],
         },
     ]
@@ -1204,7 +1204,7 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
         bc_section_html = ""
 
     blocks = post.get("_related_blocks") or ([post["_related_block"]] if post.get("_related_block") and post["_related_block"].get("title") else [])
-    related_blocks_markup = "\n        ".join(related_block_html(b["title"], b["items"]) for b in blocks)
+    related_blocks_markup = ("\n        " + "\n        ".join(related_block_html(b["title"], b["items"]) for b in blocks)) if blocks else ""
 
     page = f"""<!DOCTYPE html>
 <html lang="en-IN">
@@ -1285,8 +1285,7 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
             </div>
           </div>
           <p class="author-bio-text">{esc(profile.get('description', ''))}</p>
-        </aside>
-        {related_blocks_markup}
+        </aside>{related_blocks_markup}
         <section class="related-section" aria-label="More guides">
           <div class="related-grid">
             {prev_next(post, posts)}
@@ -1909,6 +1908,8 @@ def patch_static_page(page: str, item: dict, links: list[dict], base: str, sente
     page = page.replace('<li class="meta-sep" aria-hidden="true">/</li>', '<li class="meta-sep" aria-hidden="true">›</li>')
     page = page.replace('{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://acrenkey.com/"}', '{"@type": "ListItem", "position": 1, "name": "acre&key", "item": "https://acrenkey.com/"}')
     page = page.replace('{"@type": "ListItem", "position": 2, "name": "Blogs", "item": "https://acrenkey.com/blogs/"}', '{"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://acrenkey.com/blogs/"}')
+    page = page.replace('<a href="https://acrenkey.com/blogs/">Blogs</a>', '<a href="https://acrenkey.com/blogs/">Blog</a>')
+    page = page.replace('<span class="mobile-nav-label">Blogs</span>', '<span class="mobile-nav-label">Blog</span>')
     digest = asset("style.css").split("?v=", 1)[1]
     page = re.sub(r"style\.css\?v=[A-Za-z0-9]+", f"style.css?v={digest}", page)
     fav_lines = [

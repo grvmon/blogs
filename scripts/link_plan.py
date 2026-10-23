@@ -578,83 +578,12 @@ def apply_link_plan(body: str, links: list[dict], post: dict) -> str:
 
 
 def build_blocks(short_rest: list[dict], post: dict) -> tuple[list[dict], list[dict]]:
-    """Build multi-pillar blocks (Projects, Tools & Answers, Related Reading) with 3-6 items each."""
-    decisions = []
-    placed_blocks = []
-    chosen_ids = set()
-
-    props = [link for link in short_rest if _kind(link) == "property"]
-    if len(props) >= 3:
-        p_chosen = sorted(props, key=_priority)[:6]
-        placed_blocks.append({
-            "title": "Projects in this area",
-            "items": [(link["anchor"], link["target"]) for link in p_chosen]
-        })
-        for link in p_chosen:
-            chosen_ids.add(id(link))
-            decisions.append(_decide(link, "placed-block", "Item in the Projects in this area block"))
-        remaining = [link for link in short_rest if id(link) not in chosen_ids]
-    else:
-        remaining = short_rest
-
-    tools = [link for link in remaining if _kind(link) in {"calculator", "answer"}]
-    reading = [link for link in remaining if _kind(link) not in {"calculator", "answer"}]
-
-    if len(tools) >= 3 and len(reading) >= 3:
-        t_chosen = sorted(tools, key=_priority)[:6]
-        placed_blocks.append({
-            "title": "Calculators & homebuyer answers",
-            "items": [(link["anchor"], link["target"]) for link in t_chosen]
-        })
-        for link in t_chosen:
-            chosen_ids.add(id(link))
-            decisions.append(_decide(link, "placed-block", "Item in the Calculators & homebuyer answers block"))
-
-        g_chosen = sorted(reading, key=_priority)[:6]
-        placed_blocks.append({
-            "title": "Related guides",
-            "items": [(link["anchor"], link["target"]) for link in g_chosen]
-        })
-        for link in g_chosen:
-            chosen_ids.add(id(link))
-            decisions.append(_decide(link, "placed-block", "Item in the Related guides block"))
-    elif len(tools) >= 3 and len(remaining) >= 6:
-        t_chosen = sorted(tools, key=_priority)[:6]
-        placed_blocks.append({
-            "title": "Calculators & homebuyer answers",
-            "items": [(link["anchor"], link["target"]) for link in t_chosen]
-        })
-        for link in t_chosen:
-            chosen_ids.add(id(link))
-            decisions.append(_decide(link, "placed-block", "Item in the Calculators & homebuyer answers block"))
-
-        rem2 = [link for link in remaining if id(link) not in chosen_ids]
-        if len(rem2) >= 3:
-            r_chosen = sorted(rem2, key=_priority)[:6]
-            placed_blocks.append({
-                "title": "Related guides",
-                "items": [(link["anchor"], link["target"]) for link in r_chosen]
-            })
-            for link in r_chosen:
-                chosen_ids.add(id(link))
-                decisions.append(_decide(link, "placed-block", "Item in the Related guides block"))
-    elif len(remaining) >= 3:
-        r_chosen = sorted(remaining, key=_priority)[:6]
-        r_title = "Related reading & tools" if any(_kind(l) in {"calculator", "answer"} for l in r_chosen) else "Related reading"
-        placed_blocks.append({
-            "title": r_title,
-            "items": [(link["anchor"], link["target"]) for link in r_chosen]
-        })
-        for link in r_chosen:
-            chosen_ids.add(id(link))
-            decisions.append(_decide(link, "placed-block", f"Item in the {r_title} block"))
-
-    for link in short_rest:
-        if id(link) in chosen_ids:
-            continue
-        decisions.append(_decide(link, "skipped", "block capacity reached or fewer than 3 items for a separate block"))
-
-    return placed_blocks, decisions
+    """Bottom link blocks (Calculators, Answers, Guides, Projects) disabled per design guidelines."""
+    decisions = [
+        _decide(link, "skipped", "bottom link blocks disabled per design guidelines")
+        for link in short_rest
+    ]
+    return [], decisions
 
 
 def sibling_hubs(key: str) -> list[dict]:
