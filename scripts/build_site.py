@@ -50,7 +50,7 @@ CONTENT = ROOT / "content"
 POSTS_DIR = CONTENT / "posts"
 CONFIG_PATH = ROOT / "site.config.json"
 SECTIONS = ("blog", "insights", "areas")
-SECTION_LABEL = {"blog": "Blogs", "insights": "Insights", "areas": "Areas"}
+SECTION_LABEL = {"blog": "Blog", "insights": "Insights", "areas": "Areas"}
 UNPUBLISHED_RE = re.compile(
     r"^https://acrenkey\.com/(?:blogs|insights)/([a-z0-9-]+)/?$"
 )
@@ -725,7 +725,7 @@ def json_ld(config: dict, post: dict, canonical: str, faqs: list[tuple[str, str]
     crumb = section_crumb(post, config["baseUrl"])
     breadcrumb_items = [
         {"@type": "ListItem", "position": 1, "name": "acre&key", "item": org["url"]},
-        {"@type": "ListItem", "position": 2, "name": "Blogs", "item": abs_url(config["baseUrl"])},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": abs_url(config["baseUrl"])},
     ]
     if crumb:
         breadcrumb_items.append(
@@ -897,7 +897,7 @@ def json_ld_index(config: dict, posts: list[dict]) -> str:
             "@type": "BreadcrumbList",
             "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": "acre&key", "item": org["url"]},
-                {"@type": "ListItem", "position": 2, "name": "Blogs", "item": canonical},
+                {"@type": "ListItem", "position": 2, "name": "Blog", "item": canonical},
             ],
         },
     ]
@@ -973,7 +973,7 @@ def blog_subnav(current: str = "", base: str = "https://acrenkey.com/blogs/") ->
     items = [
         ("properties", "Properties", "https://acrenkey.com/property/"),
         ("calculators", "Calculators", "https://acrenkey.com/calculators/"),
-        ("index", "Blogs", abs_url(base)),
+        ("index", "Blog", abs_url(base)),
     ]
     for hub in HUBS:
         items.append((hub["key"], hub["name"], abs_url(base, hub["path"])))
@@ -983,7 +983,7 @@ def blog_subnav(current: str = "", base: str = "https://acrenkey.com/blogs/") ->
         current_attr = ' aria-current="page"' if key == current else ""
         links.append(f'<a href="{esc(href)}"{current_attr}>{esc(label)}</a>')
     return (
-        '<nav class="blog-subnav" aria-label="Blogs">'
+        '<nav class="blog-subnav" aria-label="Blog">'
         f'<div class="blog-subnav-inner">{"".join(links)}</div></nav>'
     )
 
@@ -1218,7 +1218,7 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
     <nav class="crumbs" aria-label="Breadcrumb">
       <ol>
         <li><a href="https://acrenkey.com/">acre&amp;key</a></li>
-        <li><a href="{esc(config['baseUrl'])}">Blogs</a></li>{bc_section_html}
+        <li><a href="{esc(config['baseUrl'])}">Blog</a></li>{bc_section_html}
         <li aria-current="page"><a href="{canonical}" aria-current="page">{esc(post['seo_title'])}</a></li>
       </ol>
     </nav>
@@ -1506,7 +1506,7 @@ def render_hub(config: dict, hub: dict, children: list[dict], excerpts: dict[str
             "@type": "BreadcrumbList",
             "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": "acre&key", "item": "https://acrenkey.com/"},
-                {"@type": "ListItem", "position": 2, "name": "Blogs", "item": abs_url(base)},
+                {"@type": "ListItem", "position": 2, "name": "Blog", "item": abs_url(base)},
                 {"@type": "ListItem", "position": 3, "name": hub["h1"], "item": canonical},
             ],
         },
@@ -1525,7 +1525,7 @@ def render_hub(config: dict, hub: dict, children: list[dict], excerpts: dict[str
     <nav class="crumbs" aria-label="Breadcrumb">
       <ol>
         <li><a href="https://acrenkey.com/">acre&amp;key</a></li>
-        <li><a href="{esc(abs_url(base))}">Blogs</a></li>
+        <li><a href="{esc(abs_url(base))}">Blog</a></li>
         <li aria-current="page"><a href="{canonical}" aria-current="page">{esc(hub['h1'])}</a></li>
       </ol>
     </nav>
@@ -1822,7 +1822,7 @@ def patch_static_page(page: str, item: dict, links: list[dict], base: str, sente
             )
             head, json_count = re.subn(
                 r'\{"@type": "ListItem", "position": 2, "name": "(?:Blog|Blogs)", "item": "https://acrenkey.com/blogs/"\}, \{"@type": "ListItem", "position": 3,',
-                '{"@type": "ListItem", "position": 2, "name": "Blogs", "item": "https://acrenkey.com/blogs/"}, '
+                '{"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://acrenkey.com/blogs/"}, '
                 + topic_json
                 + ', {"@type": "ListItem", "position": 4,',
                 head,
@@ -1833,7 +1833,7 @@ def patch_static_page(page: str, item: dict, links: list[dict], base: str, sente
             page = head + sep + tail
         crumb_items = [
             '<li><a href="https://acrenkey.com/">acre&amp;key</a></li>',
-            f'<li><a href="{esc(base)}">Blogs</a></li>',
+            f'<li><a href="{esc(base)}">Blog</a></li>',
         ]
         if topic_slug:
             crumb_items.append(f'<li><a href="{esc(topic_url)}">{esc(topic)}</a></li>')
