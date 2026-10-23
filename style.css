@@ -1001,6 +1001,7 @@ p, blockquote, li {
 /* Data Matrix Table */
 .data-matrix-table-wrap {
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   margin-block: var(--space-lg);
   border: 0.5px solid var(--divider);
   border-radius: var(--radius-strict);

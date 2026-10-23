@@ -26,7 +26,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **One road, two floors:** the main road line is more than twice the Hegde Nagar line behind it.
 > - **Our 4R check:** road, rail, reservoir, register.
 
-Thanisandra sits north of the outer ring road, between Hebbal, Hennur and the Manyata tech park belt. Its growth came from offices nearby and newer apartment stock along Thanisandra Main Road. This guide sticks to what official records and named sources say.
+Thanisandra sits north of the outer ring road, between Hebbal, Hennur and the Manyata tech park belt. Its growth came from offices nearby and newer apartment stock along Thanisandra Main Road. For verified project-level diligence along the corridor, see our reviews of [Purva Atmosphere](https://acrenkey.com/property/purva-atmosphere-thanisandra/) and [Sumadhura Epitome](https://acrenkey.com/property/sumadhura-epitome-thanisandra/). You can also estimate buy-to-let returns using our [rental yield calculator](https://acrenkey.com/calculators/rental-yield/). This guide sticks to what official records and named sources say.
 
 ![Map of Thanisandra showing Thanisandra Main Road, the outer ring road, Rachenahalli lake and the planned Nagawara metro interchange](/img/blog/thanisandra-map.png)
 

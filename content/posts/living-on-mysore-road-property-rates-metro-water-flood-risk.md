@@ -25,7 +25,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **The city edge is close:** Kengeri's PIN 560060 is only about 29% inside GBA.
 > - **Our VALE check:** valley, authority, line, exit.
 
-Mysore Road runs south-west from the city market area past Goripalya, Nayandahalli, [Rajarajeshwari Nagar](https://acrenkey.com/blogs/living-in-rajarajeshwari-nagar-property-rates-metro-water-flood-risk/) and Kengeri towards Kumbalgodu and Bidadi. It's an older corridor with industry, layouts and newer apartment pockets, and one of the cheaper ways to live on a running metro line. This guide uses official records and named sources, and says where data runs out.
+Mysore Road runs south-west from the city market area past Goripalya, Nayandahalli, [Rajarajeshwari Nagar](https://acrenkey.com/blogs/living-in-rajarajeshwari-nagar-property-rates-metro-water-flood-risk/) and Kengeri towards Kumbalgodu and Bidadi. It's an older corridor with industry, layouts and newer apartment pockets, and one of the cheaper ways to live on a running metro line. For project diligence along the Purple Line highway stretch, check our reviews of [Casagrand Moondance](https://acrenkey.com/property/casagrand-moondance-mysore-road/) and [Provident Sunworth City](https://acrenkey.com/property/provident-sunworth-city-kengeri/). This guide uses official records and named sources, and says where data runs out.
 
 ![Map of Mysore Road from Goripalya to Kumbalgodu showing the Purple Line stations, the Vrishabhavathi valley and the GBA boundary](/img/blog/mysore-road-map.png)
 

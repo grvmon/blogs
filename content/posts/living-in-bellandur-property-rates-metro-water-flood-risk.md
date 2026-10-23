@@ -25,7 +25,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **The lake matters:** in September 2022, the civic body blamed overflowing Bellandur and Varthur lakes for flooding nearby (news).
 > - **Our LAKE check:** line, access, known flooding, entitlement.
 
-Bellandur sits on the outer ring road between Marathahalli and Sarjapur Road, around the city's largest lake. Buyers come for the tech parks along the ring road. This guide sticks to official records and named sources, and says plainly where data runs out.
+Bellandur sits on the outer ring road between Marathahalli and Sarjapur Road, around the city's largest lake. Buyers come for the tech parks along the ring road. To calculate expected gross and net returns on ring road rental properties, use our [rental yield calculator](https://acrenkey.com/calculators/rental-yield/). This guide sticks to official records and named sources, and says plainly where data runs out.
 
 ![Map of Bellandur showing the lake, the outer ring road, the Blue Line and Corridor-4 stations under construction, and the main drains](/img/blog/bellandur-map.png)
 

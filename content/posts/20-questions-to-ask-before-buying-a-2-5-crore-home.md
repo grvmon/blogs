@@ -23,7 +23,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **The cash bill is large:** on ₹3 crore under construction, charges and GST alone come to ₹37.8 lakh.
 > - **Our VALUE test** covers what matters most at this price.
 
-At this price, small percentages are big rupees. A 5% loading difference or a missed clause can be worth more than a car. These questions build on our [25 questions before house hunting](https://acrenkey.com/blogs/25-questions-to-answer-before-house-hunting-in-bengaluru/), with the checks that matter most in this band.
+At this price, small percentages are big rupees. A 5% loading difference or a missed clause can be worth more than a car. Before committing, test your EMI scenarios and borrowing thresholds with our [home loan affordability calculator](https://acrenkey.com/calculators/home-loan-affordability/). These questions build on our [25 questions before house hunting](https://acrenkey.com/blogs/25-questions-to-answer-before-house-hunting-in-bengaluru/), with the checks that matter most in this band.
 
 ![Comparison of carpet area and super built-up area on a Bengaluru apartment floor plan with loading shaded](/img/blog/carpet-vs-super-built-up.png)
 

@@ -24,7 +24,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **New flats can wait:** bulk khatas for apartment buildings weren't live when e-Aasthi 2.0 launched on 21 Sep 2026.
 > - **Our 3-30-90 plan:** what to finish by day 3, day 30 and day 90.
 
-Most guides stop at registration. This one starts there. It's written for a resale flat inside GBA, with notes for panchayat areas and new flats. For the buying process itself, see our [legal checks from title to OC](https://acrenkey.com/blogs/bengaluru-property-legal-checks-from-title-to-oc/).
+Most guides stop at registration. This one starts there. It's written for a resale flat inside GBA, with notes for panchayat areas and new flats. For step-by-step utility transfer paperwork, see our answer on [BESCOM and BWSSB name transfer for resale flats](https://answers.acrenkey.com/bescom-bwssb-name-transfer-resale/). For the buying process itself, see our [legal checks from title to OC](https://acrenkey.com/blogs/bengaluru-property-legal-checks-from-title-to-oc/).
 
 ![Timeline of the first 90 days after buying a flat: deed, khata mutation, utility transfers, EC, property tax and tax claims](/img/blog/first-90-days-timeline.png)
 

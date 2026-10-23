@@ -25,7 +25,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **Two sets of rules:** PIN 560068 is fully in GBA; PIN 560099, further out, is wholly outside it.
 > - **Our BAND check:** boundary, access, noise, drains.
 
-Hosur Road runs south-east from the city centre past Madiwala and Silk Board, through Bommanahalli, Hongasandra, Singasandra and Electronic City, towards Bommasandra, Chandapura and Attibele. It's an office and industrial corridor as much as a residential one. This guide uses official records and named sources, and says where data runs out.
+Hosur Road runs south-east from the city centre past Madiwala and Silk Board, through Bommanahalli, Hongasandra, Singasandra and Electronic City, towards Bommasandra, Chandapura and Attibele. It's an office and industrial corridor as much as a residential one. For project due diligence off the elevated expressway, read our review of [Ramky Lumina](https://acrenkey.com/property/ramky-lumina-hosa-road/). You can calculate your government registration fees using our [stamp duty and registration calculator](https://acrenkey.com/calculators/stamp-duty-and-registration-karnataka/). This guide uses official records and named sources, and says where data runs out.
 
 ![Map of Hosur Road from Madiwala to Attibele showing the Yellow Line stations, Silk Board junction, the elevated expressway and the GBA boundary](/img/blog/hosur-road-map.png)
 

@@ -24,7 +24,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **Rules change on the way:** the inner stretch was in the former BBMP; the outer villages are under panchayats; Hoskote has a municipal council.
 > - **Our EAST test:** entity, access, slope, travel time.
 
-This page reads the corridor from the inner end. For the Hoskote end in detail, see our [Hoskote guide](https://acrenkey.com/blogs/living-in-hoskote-property-rates-metro-water-flood-risk/). For the midpoint junction, see [Hoskote vs Budigere Cross](https://acrenkey.com/blogs/hoskote-vs-budigere-cross-for-homebuyers/).
+This page reads the corridor from the inner end. For the Hoskote end in detail, see our [Hoskote guide](https://acrenkey.com/blogs/living-in-hoskote-property-rates-metro-water-flood-risk/). For the midpoint junction, see [Hoskote vs Budigere Cross](https://acrenkey.com/blogs/hoskote-vs-budigere-cross-for-homebuyers/). For project diligence along the Old Madras Road corridor, see our review of [Sattva Courtyard](https://acrenkey.com/property/sattva-courtyard-old-madras-road/).
 
 ![Chart of official guidance values along Old Madras Road from Bhattarahalli to Hoskote, by planned metro station](/img/blog/old-madras-road-guidance-gradient.png)
 

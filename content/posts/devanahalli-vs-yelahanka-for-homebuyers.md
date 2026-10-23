@@ -24,7 +24,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **Metro:** the Hebbal–airport line, targeted for September 2027, has a Yelahanka station but doesn't reach Devanahalli town.
 > - **Our TOWN test:** timeline, official records, water source, number of plotted projects.
 
-Both sit on the airport side of north Bengaluru, but under different rules. Yelahanka is inside GBA; Devanahalli town has its own municipal council and the airport area its own planning authority. This comparison reuses the figures in our [Devanahalli guide](https://acrenkey.com/blogs/living-in-devanahalli-property-rates-metro-water-flood-risk/) and [Yelahanka guide](https://acrenkey.com/blogs/living-in-yelahanka-property-rates-metro-water-flood-risk/), and says where data runs out.
+Both sit on the airport side of north Bengaluru, but under different rules. Yelahanka is inside GBA; Devanahalli town has its own municipal council and the airport area its own planning authority. This comparison reuses the figures in our [Devanahalli guide](https://acrenkey.com/blogs/living-in-devanahalli-property-rates-metro-water-flood-risk/) and [Yelahanka guide](https://acrenkey.com/blogs/living-in-yelahanka-property-rates-metro-water-flood-risk/), and says where data runs out. For project-level due diligence, check our reviews of [Arvind Sylva](https://acrenkey.com/property/arvind-sylva-devanahalli/), [Godrej Woods](https://acrenkey.com/property/godrej-woods-devanahalli/), and [Prestige Parklane](https://acrenkey.com/property/prestige-parklane-devanahalli/).
 
 ![Side-by-side chart comparing Devanahalli and Yelahanka on guidance values, RERA project mix, metro date and water source](/img/blog/devanahalli-vs-yelahanka-chart.png)
 

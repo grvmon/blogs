@@ -25,7 +25,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **Flood points nearby:** the East corporation had 20 of the city's 101 listed flood-prone locations in April 2026 (news).
 > - **Our RING check:** rail, inundation, notified line, gridlock.
 
-Marathahalli grew up around the outer ring road bridge and the tech parks that line the ring road on both sides. It sits between Whitefield, KR Puram, Bellandur and the old airport road. Buyers come for a short commute to ring road offices. This guide sticks to official records and named sources.
+Marathahalli grew up around the outer ring road bridge and the tech parks that line the ring road on both sides. It sits between Whitefield, KR Puram, Bellandur and the old airport road. If you are evaluating buy-to-let properties near ring road tech campuses, test cashflows with our [rental yield calculator](https://acrenkey.com/calculators/rental-yield/). This guide sticks to official records and named sources.
 
 ![Map of Marathahalli showing the outer ring road, the Blue Line and suburban Corridor-4 stations under construction, and nearby lakes and drains](/img/blog/marathahalli-map.png)
 

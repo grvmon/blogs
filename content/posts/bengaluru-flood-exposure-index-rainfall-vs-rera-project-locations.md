@@ -24,7 +24,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **Small rain can be enough:** KSNDMC's 2023 report listed road points that flood at 1 cm to 4 cm of rain.
 > - **Our exposure index** sets hazard share against approved projects, taluk by taluk.
 
-This is a data study, not a map of individual projects. We haven't geocoded each K-RERA project, and we don't name any. What we can do is line up three public datasets that rarely appear together.
+This is a data study, not a map of individual projects. We haven't geocoded each K-RERA project, and we don't name any. What we can do is line up three public datasets that rarely appear together. To evaluate the rainfall, water-logging and flood risk profile of a specific survey number, use our [property risk assessment calculator](https://acrenkey.com/calculators/property-risk-assessment-calculator/).
 
 ![Bar chart of K-RERA registered projects by taluk with share of land rated high or very high flood hazard](/img/insights/bengaluru-flood-exposure-index.png)
 

@@ -25,7 +25,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **Inside the city:** PIN 560098 is 98% in the West City Corporation.
 > - **Our HOME check:** housing society title, outflow, metro walk, edge.
 
-Rajarajeshwari Nagar, usually called RR Nagar, is a residential area in south-west Bengaluru between Mysore Road and the Kengeri–Uttarahalli road. Much of it grew from house-building co-operative society layouts, with apartment blocks added since. This guide uses official records and named sources, and says where data runs out.
+Rajarajeshwari Nagar, usually called RR Nagar, is a residential area in south-west Bengaluru between Mysore Road and the Kengeri–Uttarahalli road. Much of it grew from house-building co-operative society layouts, with apartment blocks added since. For gated project reviews in the area and adjacent Kengeri, see our evaluations of [Sumadhura Pramoda](https://acrenkey.com/property/sumadhura-pramoda-rajarajeshwari-nagar/) and [Casagrand Aquene](https://acrenkey.com/property/casagrand-aquene-kengeri/). You can calculate exact registration expenses with our [stamp duty and registration calculator](https://acrenkey.com/calculators/stamp-duty-and-registration-karnataka/). This guide uses official records and named sources, and says where data runs out.
 
 ![Map of Rajarajeshwari Nagar showing the society layouts, Mysore Road, the Purple Line stations and the Kengeri–Uttarahalli road](/img/blog/rr-nagar-map.png)
 

@@ -25,7 +25,7 @@ date_modified: "2026-10-19"
 > - **Zoning decides value:** BIAAPA's master plan zone, conversion and layout approval matter more than distance to the airport.
 > - **Our RUNWAY check:** records, use permitted, news vs notification, water, access, years to payoff.
 
-Devanahalli gets sold as the next big thing almost every year. Some of it is grounded: the airport next door is one of India's busiest and still growing. Some of it isn't: plans get announced, renamed or dropped. This piece separates the drivers you can verify from the ones you can't, and shows how to test a plot or flat against them. For today's prices and water, see our [Devanahalli area guide](https://acrenkey.com/blogs/living-in-devanahalli-property-rates-metro-water-flood-risk/).
+Devanahalli gets sold as the next big thing almost every year. Some of it is grounded: the airport next door is one of India's busiest and still growing. Some of it isn't: plans get announced, renamed or dropped. This piece separates the drivers you can verify from the ones you can't, and shows how to test a plot or flat against them. For vetted community reviews across the Bagalur and airport belt, inspect our evaluations of [Brigade El Dorado](https://acrenkey.com/property/brigade-el-dorado-bagalur/), [Purva Celestial](https://acrenkey.com/property/purva-celestial-airport-road/), and [Puravankara Northern Lights](https://acrenkey.com/property/purvankara-northern-lights-bagalur/). For today's prices and water, see our [Devanahalli area guide](https://acrenkey.com/blogs/living-in-devanahalli-property-rates-metro-water-flood-risk/).
 
 ## How big is the airport, and is it still growing?
 

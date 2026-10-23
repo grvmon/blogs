@@ -126,7 +126,7 @@ Search [eCourts services](https://services.ecourts.gov.in/ecourtindia_v6/) and t
 
 ## Step 8: What does a lawyer's title opinion cover?
 
-A title opinion is a property lawyer's written view on whether the seller has clear and marketable title and can transfer it to you. It's based on the deeds, the EC, land and conversion records, the khata, the approvals and any litigation found. A good one lists every document reviewed and any conditions, such as a release to be obtained before registration.
+A title opinion is a property lawyer's written view on whether the seller has clear and marketable title and can transfer it to you. For choosing between legal advocates and property brokers, see our answer on [property consultant vs property lawyer for title verification](https://answers.acrenkey.com/consultant-vs-property-lawyer-title-check/). It's based on the deeds, the EC, land and conversion records, the khata, the approvals and any litigation found. A good one lists every document reviewed and any conditions, such as a release to be obtained before registration.
 
 Read the conditions, not just the conclusion. Our answer on [when to use a consultant and when to use a property lawyer for the title check](https://answers.acrenkey.com/consultant-vs-property-lawyer-title-check/) explains the split.
 

@@ -35,7 +35,7 @@ If you're looking at a flat in Whitefield, Mahadevapura, Yelahanka, the outer so
 
 Cauvery Stage 5 is BWSSB's water supply project for Bengaluru's outer areas. It's also called the Bengaluru Water Supply and Sewerage Project (Phase 3), funded by a JICA loan of JPY 81,060 million, around ₹4,336 crore. It was unveiled on 16 Oct 2024 at T.K. Halli. The aim is 50 lakh new beneficiaries through 4 lakh new connections in 110 villages ([JICA, 16 Oct 2024](https://www.jica.go.jp/english/overseas/india/information/press/2024/1553733_53431.html)).
 
-The 110 villages were added to the city's civic limits in 2007. They got piped Cauvery water only from 2024 ([The Hindu, 14 May 2026](https://www.thehindu.com/news/national/karnataka/bengalurus-water-woes-piped-connections-sanchari-cauvery-reduce-tanker-demand/article70978412.ece)).
+The 110 villages were added to the city's civic limits in 2007. They got piped Cauvery water only from 2024 ([The Hindu, 14 May 2026](https://www.thehindu.com/news/national/karnataka/bengalurus-water-woes-piped-connections-sanchari-cauvery-reduce-tanker-demand/article70978412.ece)). For apartment connection procedures and pro-rata charges, see our answer on [BWSSB connection for new apartments](https://answers.acrenkey.com/bwssb-connection-new-apartment/).
 
 ## Which areas does Cauvery Stage 5 cover?
 

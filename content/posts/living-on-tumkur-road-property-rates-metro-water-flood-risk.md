@@ -25,7 +25,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **Metro running:** the Green Line runs from Yeshwanthpur to Madavara along the road.
 > - **Our LANE check:** lorry noise, access to the metro, notified use, edge of the city.
 
-Tumkur Road (Tumakuru Road, NH-48) runs north-west from Yeshwanthpur past Peenya, Jalahalli Cross, Dasarahalli and Nagasandra towards Nelamangala. It mixes industrial estates, older layouts and newer apartment projects. This guide uses official records and named sources, and says where data runs out.
+Tumkur Road (Tumakuru Road, NH-48) runs north-west from Yeshwanthpur past Peenya, Jalahalli Cross, Dasarahalli and Nagasandra towards Nelamangala. It mixes industrial estates, older layouts and newer apartment projects. For ground checks on communities along the highway, see our review of [Brigade Lumina](https://acrenkey.com/property/brigade-lumina-tumkur-road/). To calculate registration and municipal cess across GBA boundaries, use our [stamp duty and registration calculator](https://acrenkey.com/calculators/stamp-duty-and-registration-karnataka/). This guide uses official records and named sources, and says where data runs out.
 
 ![Map of Tumkur Road from Yeshwanthpur to Madavara showing Peenya, Dasarahalli, Nagasandra and the Green Line stations](/img/blog/tumkur-road-map.png)
 
