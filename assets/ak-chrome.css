@@ -108,14 +108,14 @@
   display: flex !important;
   align-items: center !important;
   text-decoration: none !important;
-  margin-right: 10px !important;
+  margin-right: 32px !important;
 }
 
 .brand-logo-text,
 .brand-inline-text {
   font-family: var(--font-brand), 'Josefin Sans', sans-serif !important;
   font-weight: 400 !important;
-  font-size: 2.05rem !important;
+  font-size: 2.2rem !important;
   letter-spacing: -0.02em !important;
   text-transform: lowercase !important;
   line-height: 1 !important;
@@ -130,22 +130,23 @@
 .nav-links {
   display: flex !important;
   align-items: center !important;
-  gap: 1rem !important;
+  gap: 28px !important;
   list-style: none !important;
   margin: 0 !important;
   padding: 0 !important;
 }
 
 .nav-links a {
-  font-family: var(--font-heading), 'Cormorant Garamond', serif !important;
-  font-size: 1rem !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.12em !important;
+  font-family: var(--font-body), 'Manrope', sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.2em !important;
   text-transform: uppercase !important;
+  white-space: nowrap !important;
   color: #FFFFFF !important;
-  opacity: 0.95 !important;
+  opacity: 0.9 !important;
   text-decoration: none !important;
-  padding: 6px 18px !important;
+  padding: 6px 0 !important;
   background: transparent !important;
   transition: color 0.4s ease, opacity 0.4s ease !important;
 }
@@ -259,6 +260,15 @@
 .nav-cta-btn:hover .cta-arrow-badge svg,
 .mobile-drawer-cta:hover .cta-arrow-badge svg {
   transform: translate(1.5px, -1.5px) !important;
+}
+
+@media (max-width: 1200px) {
+  .nav-links {
+    gap: 16px !important;
+  }
+  .nav-brand {
+    margin-right: 16px !important;
+  }
 }
 
 @media (max-width: 991px) {
@@ -423,15 +433,15 @@ body.drawer-open {
 .mobile-nav-item {
   height: 52px;
   min-height: 52px;
-  font-family: var(--font-heading), 'Cormorant Garamond', serif !important;
-  letter-spacing: 0.02em;
+  font-family: var(--font-sans), 'Manrope', sans-serif !important;
+  letter-spacing: 0.01em;
   color: #2B2D31 !important;
   border-radius: 4px;
   justify-content: space-between;
   align-items: center;
   padding: 0 16px;
-  font-size: 1.25rem !important;
-  font-weight: 600 !important;
+  font-size: 1.05rem;
+  font-weight: 600;
   text-decoration: none;
   transition: background-color 0.4s, color 0.4s;
   display: flex;
