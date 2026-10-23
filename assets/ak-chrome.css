@@ -130,22 +130,22 @@
 .nav-links {
   display: flex !important;
   align-items: center !important;
-  gap: 28px !important;
+  gap: 1rem !important;
   list-style: none !important;
   margin: 0 !important;
   padding: 0 !important;
 }
 
 .nav-links a {
-  font-family: 'Manrope', sans-serif !important;
-  font-size: 11px !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.2em !important;
+  font-family: var(--font-heading), 'Cormorant Garamond', serif !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
   text-transform: uppercase !important;
   color: #FFFFFF !important;
-  opacity: 1 !important;
+  opacity: 0.95 !important;
   text-decoration: none !important;
-  padding: 6px 0 !important;
+  padding: 6px 18px !important;
   background: transparent !important;
   transition: color 0.4s ease, opacity 0.4s ease !important;
 }
@@ -423,15 +423,15 @@ body.drawer-open {
 .mobile-nav-item {
   height: 52px;
   min-height: 52px;
-  font-family: var(--font-sans), 'Manrope', sans-serif !important;
-  letter-spacing: 0.01em;
+  font-family: var(--font-heading), 'Cormorant Garamond', serif !important;
+  letter-spacing: 0.02em;
   color: #2B2D31 !important;
   border-radius: 4px;
   justify-content: space-between;
   align-items: center;
   padding: 0 16px;
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
   text-decoration: none;
   transition: background-color 0.4s, color 0.4s;
   display: flex;
