@@ -26,8 +26,6 @@ SKIP_CLASSES = {
     "blog-card",
     "toc-box",
     "breadcrumb",
-    "related-section",
-    "related-reading",
     "blog-sidebar",
     "browse-row",
     "blog-subnav",
@@ -284,9 +282,12 @@ def main() -> int:
             if count < 3 or count > 6:
                 block_errors.append(f"{path.relative_to(ROOT)} related block has {count} items")
 
+    hub_urls = {f"{BASE}{hub['path']}" for hub in b.HUBS} | {BASE}
     thin = []
     for path in pages:
         url = page_url(path)
+        if url in hub_urls:
+            continue
         count = len(incoming.get(url, ()))
         if count < 3:
             thin.append(f"{url} ({count})")
