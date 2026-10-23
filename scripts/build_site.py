@@ -24,6 +24,27 @@ except ImportError:
     sys.stderr.write("Missing dependency. Install it with: pip install markdown\n")
     raise
 
+from link_plan import (  # noqa: E402
+    HUBS,
+    STATIC_POSTS,
+    TOPIC_SLUG,
+    ZONE_LINKS,
+    apply_link_plan,
+    classify_index_links,
+    context_sentences,
+    inject_static_html,
+    related_block_html,
+    short_anchor,
+    sibling_sentence,
+    weave_sentences,
+    load_plan,
+    load_topic_map,
+    plan_by_source,
+    sibling_hubs,
+    static_by_slug,
+    write_decisions,
+)
+
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content"
 POSTS_DIR = CONTENT / "posts"
@@ -171,6 +192,69 @@ def relative_href(from_public: str, to_public: str) -> str:
     if not rel.endswith("/"):
         rel += "/"
     return rel
+
+
+def section_crumb(post: dict, base: str) -> tuple[str, str] | None:
+    """Middle breadcrumb: Area guides, Data insights, or the post's topic hub."""
+    if post.get("section") == "areas":
+        return "Area guides", abs_url(base, "areas/")
+    if post.get("section") == "insights":
+        return "Data insights", abs_url(base, "insights/")
+    slug = TOPIC_SLUG.get(post.get("topic") or "")
+    if slug:
+        return post["topic"], abs_url(base, f"topic/{slug}/")
+    return None
+
+
+def nav_current(post: dict) -> str:
+    if post.get("section") in {"areas", "insights"}:
+        return post["section"]
+    return TOPIC_SLUG.get(post.get("topic") or "", "")
+
+
+def static_posts() -> list[dict]:
+    rows = []
+    for item in STATIC_POSTS:
+        rows.append({**item, "image": f"assets/img/{item['slug']}.webp"})
+    return rows
+
+
+def section_siblings(post: dict, ordered: list[dict]) -> list[dict]:
+    """The next guides in the same section that have a 2–5 word name."""
+    group = sorted(
+        [item for item in ordered if item.get("section") == post.get("section")],
+        key=lambda item: (item["rank"], item["slug"]),
+    )
+    if len(group) < 2:
+        return []
+    index = next(i for i, item in enumerate(group) if item["slug"] == post["slug"])
+    picked = []
+    step = 1
+    while len(picked) < 3 and step < len(group):
+        candidate = group[(index + step) % len(group)]
+        if candidate["slug"] != post["slug"] and short_anchor(candidate["h1"]):
+            picked.append(candidate)
+        step += 1
+    return picked
+
+
+def html_oxford(pairs: list[tuple[str, str]]) -> str:
+    bits = [f'<a href="{esc(href)}">{esc(label)}</a>' for label, href in pairs]
+    if not bits:
+        return ""
+    if len(bits) == 1:
+        return bits[0]
+    if len(bits) == 2:
+        return f"{bits[0]} and {bits[1]}"
+    return ", ".join(bits[:-1]) + " and " + bits[-1]
+
+
+def is_hub_page(path: Path) -> bool:
+    if path.name != "index.html":
+        return False
+    if path.parent in {ROOT / "areas", ROOT / "insights"}:
+        return True
+    return path.parent.parent == ROOT / "topic"
 
 
 def quoted_field(front_matter: str, key: str) -> str:
@@ -409,8 +493,24 @@ def load_posts(config: dict) -> tuple[list[dict], list[dict]]:
     return posts, []
 
 
-def prepare_body(post: dict, slug_section: dict[str, str], unlinked: list[dict], base_url: str) -> dict:
+def prepare_body(
+    post: dict,
+    slug_section: dict[str, str],
+    unlinked: list[dict],
+    base_url: str,
+    links: list | None = None,
+    sentences: list[str] | None = None,
+) -> dict:
     body = post["body"].split("\n## Suggested images", 1)[0].rstrip() + "\n"
+    if links:
+        body = apply_link_plan(body, links, post)
+    elif "_decisions" not in post:
+        post["_decisions"] = []
+        post["_related_block"] = {"title": "", "items": []}
+    extra = list(context_sentences(post))
+    extra.extend(sentences or [])
+    if extra:
+        body = weave_sentences(body, extra)
     dropped_images = {"count": 0}
 
     def on_image_or_later(label: str, url: str, is_image: bool):
@@ -440,6 +540,17 @@ def prepare_body(post: dict, slug_section: dict[str, str], unlinked: list[dict],
         match = UNPUBLISHED_RE.match(target)
         if match:
             slug = match.group(1)
+            if slug in {"areas", "insights"} and re.fullmatch(
+                r"https://acrenkey\.com/blogs/(?:areas|insights)/?", target
+            ):
+                href = relative_href(post["path"], f"{slug}/") + fragment
+                return f"[{label}]({href})"
+            if static_by_slug(slug):
+                href = relative_href(post["path"], f"{slug}/") + fragment
+                visible = label
+                if label.strip().rstrip("/") == target.rstrip("/"):
+                    visible = abs_url(base_url, f"{slug}/")
+                return f"[{visible}]({href})"
             section = slug_section.get(slug)
             if section:
                 href = relative_href(post["path"], public_path(section, slug)) + fragment
@@ -599,7 +710,23 @@ def json_ld(config: dict, post: dict, canonical: str, faqs: list[tuple[str, str]
         "url": "https://acrenkey.com/",
         "sameAs": [profile["linkedin"]],
     }
-    section_label = SECTION_LABEL[post["section"]]
+    crumb = section_crumb(post, config["baseUrl"])
+    breadcrumb_items = [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": org["url"]},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": abs_url(config["baseUrl"])},
+    ]
+    if crumb:
+        breadcrumb_items.append(
+            {"@type": "ListItem", "position": 3, "name": crumb[0], "item": crumb[1]}
+        )
+    breadcrumb_items.append(
+        {
+            "@type": "ListItem",
+            "position": len(breadcrumb_items) + 1,
+            "name": post["h1"],
+            "item": canonical,
+        }
+    )
     graph = [
         {
             "@type": "BlogPosting",
@@ -631,45 +758,7 @@ def json_ld(config: dict, post: dict, canonical: str, faqs: list[tuple[str, str]
         },
         {
             "@type": "BreadcrumbList",
-            "itemListElement": (
-                [
-                    {"@type": "ListItem", "position": 1, "name": "Home", "item": org["url"]},
-                    {
-                        "@type": "ListItem",
-                        "position": 2,
-                        "name": "Blog",
-                        "item": abs_url(config["baseUrl"]),
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 3,
-                        "name": post["h1"],
-                        "item": canonical,
-                    },
-                ]
-                if post["section"] == "blog"
-                else [
-                    {"@type": "ListItem", "position": 1, "name": "Home", "item": org["url"]},
-                    {
-                        "@type": "ListItem",
-                        "position": 2,
-                        "name": "Blog",
-                        "item": abs_url(config["baseUrl"]),
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 3,
-                        "name": section_label,
-                        "item": abs_url(config["baseUrl"], f"#{post['section']}"),
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 4,
-                        "name": post["h1"],
-                        "item": canonical,
-                    },
-                ]
-            ),
+            "itemListElement": breadcrumb_items,
         },
     ]
     if post.get("dataset_name"):
@@ -865,9 +954,72 @@ def consult_modal(root: str) -> str:
     return f'<script src="{root}{asset("assets/ak-lead-form.js")}" defer></script>{markup}'
 
 
-def header(root: str) -> str:
+def blog_subnav(current: str = "", base: str = "https://acrenkey.com/blogs/") -> str:
+    """Blog section nav. Sits in normal flow under the fixed site header."""
+    items = [
+        ("properties", "Properties", "https://acrenkey.com/property/"),
+        ("calculators", "Calculators", "https://acrenkey.com/calculators/"),
+        ("index", "Blog", abs_url(base)),
+    ]
+    for hub in HUBS:
+        items.append((hub["key"], hub["name"], abs_url(base, hub["path"])))
+    items.append(("answers", "Answers", "https://answers.acrenkey.com/"))
+    links = []
+    for key, label, href in items:
+        current_attr = ' aria-current="page"' if key == current else ""
+        links.append(f'<a href="{esc(href)}"{current_attr}>{esc(label)}</a>')
+    return (
+        '<nav class="blog-subnav" aria-label="Blog">'
+        f'<div class="blog-subnav-inner">{"".join(links)}</div></nav>'
+    )
+
+
+def header(root: str, current: str = "", base: str = "https://acrenkey.com/blogs/") -> str:
     """acrenkey.com header, copied from grvmon/a-K index.html (scripts/partials/header.html)."""
-    return '<a href="#main-content" class="skip-link">Skip to main content</a>\n  ' + (PARTIALS / "header.html").read_text().strip()
+    return (
+        '<a href="#main-content" class="skip-link">Skip to main content</a>\n  '
+        + (PARTIALS / "header.html").read_text().strip()
+        + "\n  "
+        + blog_subnav(current, base)
+    )
+
+
+def browse_row(base: str, current: str = "") -> str:
+    links = []
+    for hub in HUBS:
+        current_attr = ' aria-current="page"' if hub["key"] == current else ""
+        href = abs_url(base, hub["path"])
+        links.append(
+            f'<a class="browse-link" href="{esc(href)}"{current_attr}>{esc(hub["name"])}</a>'
+        )
+    return '<nav class="browse-row" aria-label="Browse by">' + "".join(links) + "</nav>"
+
+
+def hub_prose(hub: dict) -> str:
+    """In-sentence name. Nav chips keep the short hub label."""
+    return hub.get("prose") or hub["name"]
+
+
+def hub_intro(hub: dict, base: str) -> str:
+    """One link per sentence. Each hub points at the full guide index and two neighbours."""
+    first, second = sibling_hubs(hub["key"])[:2]
+    paragraphs = [
+        f'<p class="hub-intro">These notes are part of the <a href="{esc(abs_url(base))}">full set of guides</a>.</p>',
+        (
+            f'<p class="hub-intro">The collection beside this one is '
+            f'<a href="{esc(abs_url(base, first["path"]))}">{esc(hub_prose(first))}</a>.</p>'
+        ),
+        (
+            f'<p class="hub-intro">Another grouping is '
+            f'<a href="{esc(abs_url(base, second["path"]))}">{esc(hub_prose(second))}</a>.</p>'
+        ),
+    ]
+    if hub["key"] == "areas":
+        paragraphs.append(
+            '<p class="hub-intro">Reviewed projects are listed on the '
+            '<a href="https://acrenkey.com/property/">Properties page</a>.</p>'
+        )
+    return "\n    ".join(paragraphs)
 
 
 def footer(root: str) -> str:
@@ -1010,7 +1162,6 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
     published = post.get("published") or config["datePublished"]
     minutes = read_time(prepared["words"])
     shown_date = format_date(published)
-    section_label = SECTION_LABEL[post["section"]]
     share_text = esc(post["h1"])
     share_url = esc(canonical)
     # quote for share endpoints separately
@@ -1031,13 +1182,14 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
             "linkedin": "https://www.linkedin.com/in/gaurav-a-mongia/",
         },
     )
-    if post["section"] == "blog":
-        bc_section_html = ""
-    else:
+    crumb = section_crumb(post, config["baseUrl"])
+    if crumb:
         bc_section_html = (
             f'\n        <li class="meta-sep" aria-hidden="true">/</li>'
-            f'\n        <li><a href="{esc(config["baseUrl"])}#{esc(post["section"])}">{esc(section_label)}</a></li>'
+            f'\n        <li><a href="{esc(crumb[1])}">{esc(crumb[0])}</a></li>'
         )
+    else:
+        bc_section_html = ""
 
     page = f"""<!DOCTYPE html>
 <html lang="en-IN">
@@ -1046,7 +1198,7 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
 </head>
 <body>
   <div id="scroll-progress-bar" aria-hidden="true"></div>
-  {header(root)}
+  {header(root, nav_current(post), config['baseUrl'])}
   <main id="main-content" class="container blog-detail-container">
     <nav aria-label="Breadcrumb">
       <ol class="breadcrumb">
@@ -1114,6 +1266,7 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
             <p class="author-bio-desc">Published by Acrenkey Realty LLP, a property advisory for people buying a home in Bengaluru.</p>
           </div>
         </div>
+        {related_block_html((post.get('_related_block') or {}).get('title') or '', (post.get('_related_block') or {}).get('items') or [])}
         <section class="related-section" aria-label="More guides">
           <div class="related-grid">
             {prev_next(post, posts)}
@@ -1193,7 +1346,7 @@ def render_index(config: dict, posts: list[dict], excerpts: dict[str, str]) -> s
           </h2>
           <p class="blog-card-excerpt">{esc(excerpts[post['slug']])}</p>
           <a href="{esc(post['path'])}" class="blog-card-readmore">
-            <span>Read guide</span>
+            <span>{esc(post.get('readmore') or 'Read guide')}</span>
             <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
@@ -1207,7 +1360,7 @@ def render_index(config: dict, posts: list[dict], excerpts: dict[str, str]) -> s
   {head_tags(title, description, canonical, '', 'website', None, ld, abs_url(config['baseUrl'], 'assets/img/first-time-home-buyer-guide-bengaluru.webp'))}
 </head>
 <body>
-  {header('')}
+  {header('', 'index', config['baseUrl'])}
   <section class="blog-home-hero">
     <div class="hero-wrap">
       <div class="kicker-badge">Bengaluru home buying</div>
@@ -1225,6 +1378,8 @@ def render_index(config: dict, posts: list[dict], excerpts: dict[str, str]) -> s
     </div>
   </section>
   <main id="main-content" class="container">
+    <p class="hub-intro">To talk through one flat, <a href="https://acrenkey.com/contact/">ask acre&amp;key about a project</a>.</p>
+    {browse_row(config['baseUrl'])}
     <div class="category-filter-strip" role="group" aria-label="Filter guides by section">
       <button type="button" class="cat-btn active" data-section="all" aria-pressed="true">All ({len(posts)})</button>
       <button type="button" class="cat-btn" data-section="blog" aria-pressed="false">Blog ({counts['blog']})</button>
@@ -1248,11 +1403,144 @@ def render_index(config: dict, posts: list[dict], excerpts: dict[str, str]) -> s
     return page
 
 
-def render_sitemap(config: dict, posts: list[dict]) -> str:
+def render_hub(config: dict, hub: dict, children: list[dict], excerpts: dict[str, str]) -> str:
+    base = config["baseUrl"]
+    canonical = abs_url(base, hub["path"])
+    root = site_prefix(hub["path"])
+    published = config["datePublished"]
+    cards = []
+    for post in children:
+        href = relative_href(hub["path"], post["path"])
+        search = " ".join(
+            [
+                post["h1"],
+                excerpts.get(post["slug"], ""),
+                post.get("meta") or "",
+                post.get("seo_title") or "",
+                SECTION_LABEL[post["section"]],
+                post["section"],
+            ]
+        ).lower()
+        shown = post.get("published") or published
+        cards.append(
+            f"""<article class="blog-card" data-section="{esc(post['section'])}" data-rank="{post['rank']}" data-search="{esc(search)}">
+        <a href="{esc(href)}" class="blog-card-media tone-{esc(post['section'])}" aria-label="Read {esc(post['h1'])}">
+          {img_tag(root, post, 'blog-card-img')}
+          <span class="cat-badge">{esc(SECTION_LABEL[post['section']])}</span>
+        </a>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span>By {esc(AUTHOR_PROFILES[post['author']]['name'])}</span>
+            <span class="meta-sep" aria-hidden="true">&bull;</span>
+            <time datetime="{esc(shown)}">{esc(format_date(shown))}</time>
+          </div>
+          <h2 class="blog-card-title">
+            <a href="{esc(href)}">{esc(post['h1'])}</a>
+          </h2>
+          <p class="blog-card-excerpt">{esc(excerpts.get(post['slug'], ''))}</p>
+          <a href="{esc(href)}" class="blog-card-readmore">
+            <span>{esc(post.get('readmore') or 'Read guide')}</span>
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </article>"""
+        )
+    image = abs_url(base, children[0]["image"]) if children else None
+    items = []
+    for index, post in enumerate(children, start=1):
+        items.append(
+            {
+                "@type": "ListItem",
+                "position": index,
+                "url": abs_url(base, post["path"]),
+                "name": post["h1"],
+            }
+        )
+    graph = [
+        {
+            "@type": "Organization",
+            "@id": "https://acrenkey.com/#organization",
+            "name": config["organization"]["brand"],
+            "url": config["organization"]["url"],
+        },
+        {
+            "@type": "CollectionPage",
+            "@id": canonical,
+            "url": canonical,
+            "name": hub["h1"],
+            "description": hub["description"],
+            "isPartOf": {"@id": abs_url(base) + "#blog"},
+            "inLanguage": "en-IN",
+        },
+        {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://acrenkey.com/"},
+                {"@type": "ListItem", "position": 2, "name": "Blog", "item": abs_url(base)},
+                {"@type": "ListItem", "position": 3, "name": hub["h1"], "item": canonical},
+            ],
+        },
+        {"@type": "ItemList", "itemListElement": items},
+    ]
+    ld = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False).replace("<", "\\u003c")
+    grid = "\n\n      ".join(cards)
+    return f"""<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  {head_tags(hub['title'], hub['description'], canonical, root, 'website', published, ld, image)}
+</head>
+<body>
+  {header(root, hub['key'], base)}
+  <main id="main-content" class="container">
+    <nav aria-label="Breadcrumb">
+      <ol class="breadcrumb">
+        <li><a href="https://acrenkey.com/">Home</a></li>
+        <li class="meta-sep" aria-hidden="true">/</li>
+        <li><a href="{esc(abs_url(base))}">Blog</a></li>
+        <li class="meta-sep" aria-hidden="true">/</li>
+        <li class="bc-current" aria-current="page">{esc(hub['h1'])}</li>
+      </ol>
+    </nav>
+    <header class="hub-header">
+      <h1>{esc(hub['h1'])}</h1>
+      <p class="hub-lead">{esc(hub['lead'])}</p>
+    </header>
+    {hub_intro(hub, base)}
+    {browse_row(base, hub['key'])}
+    <div class="search-container">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" id="blogSearchInput" class="search-input" placeholder="Search these guides" aria-label="Search these guides">
+    </div>
+    <div class="blog-grid" id="blogGrid">
+      {grid}
+    </div>
+    {related_block_html("Related reading", [(label, url) for url, label in ZONE_LINKS]) if hub["key"] == "areas" else ""}
+    <div id="noResults" style="display:none; text-align:center; padding: 4rem 1rem; color: var(--neutral-grey);">
+      <p style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--obsidian-black); margin-bottom: 0.5rem;">No matching guides.</p>
+      <p>Try another word.</p>
+    </div>
+  </main>
+  {footer(root)}
+  <script src="{root}{asset("site.js")}"></script>
+  {consult_modal(root)}
+</body>
+</html>
+"""
+
+
+def render_sitemap(config: dict, posts: list[dict], extras: list[dict] | None = None) -> str:
     dated = [(abs_url(config["baseUrl"]), config["datePublished"])]
+    dated.extend((abs_url(config["baseUrl"], hub["path"]), config["datePublished"]) for hub in HUBS)
     dated.extend(
         (abs_url(config["baseUrl"], post["path"]), post.get("published") or config["datePublished"])
         for post in posts
+    )
+    dated.extend(
+        (abs_url(config["baseUrl"], post["path"]), post.get("published") or config["datePublished"])
+        for post in (extras or [])
     )
     body = []
     for url, lastmod in dated:
@@ -1280,7 +1568,7 @@ def render_robots(config: dict) -> str:
     )
 
 
-def render_llms(config: dict, posts: list[dict], excerpts: dict[str, str]) -> str:
+def render_llms(config: dict, posts: list[dict], excerpts: dict[str, str], extras: list[dict] | None = None) -> str:
     lines = [
         "# acre&key",
         "",
@@ -1297,7 +1585,16 @@ def render_llms(config: dict, posts: list[dict], excerpts: dict[str, str]) -> st
                 continue
             url = abs_url(config["baseUrl"], post["path"])
             lines.append(f"- [{post['h1']}]({url}) (by {post['author']}): {excerpts[post['slug']]}")
+        if section == "blog":
+            for post in extras or []:
+                url = abs_url(config["baseUrl"], post["path"])
+                lines.append(f"- [{post['h1']}]({url}) (by {post['author']}): {excerpts[post['slug']]}")
         lines.append("")
+    lines.append("## Hubs")
+    lines.append("")
+    for hub in HUBS:
+        lines.append(f"- [{hub['h1']}]({abs_url(config['baseUrl'], hub['path'])}): {hub['description']}")
+    lines.append("")
     return "\n".join(lines).rstrip() + "\n"
 
 
@@ -1358,40 +1655,53 @@ def validate(config: dict, posts: list[dict], unlinked: list[dict], pages: dict[
             if "Blog" not in page or "WebSite" not in page or "RealEstateAgent" not in page:
                 problems.append("index.html missing JSON-LD schemas")
             continue
-        for token in ("BlogPosting", "FAQPage", "BreadcrumbList"):
-            if token not in page:
-                problems.append(f"{rel} missing {token}")
-        post_for_date = by_path.get(path)
-        published = (post_for_date or {}).get("published") or config["datePublished"]
-        if published not in page:
-            problems.append(f"{rel} missing datePublished")
-        post = by_path.get(path)
-        if post:
+        if is_hub_page(path):
+            if "CollectionPage" not in page or "BreadcrumbList" not in page:
+                problems.append(f"{rel} missing hub schema")
             blocks = re.findall(r'<script type="application/ld\+json">(.*?)</script>', page, re.S)
-            try:
-                graph = [node for block in blocks for node in json.loads(block)["@graph"]]
-            except (ValueError, KeyError) as exc:
-                problems.append(f"{rel} JSON-LD does not parse: {exc}")
-                graph = []
-            article = next((node for node in graph if node.get("@type") == "BlogPosting"), {})
-            author = article.get("author", {})
-            prof = AUTHOR_PROFILES[post["author"]]
-            if author.get("@type") != "Person" or author.get("name") != prof["name"]:
-                problems.append(f"{rel} JSON-LD author is not {prof['name']}")
-            if article.get("publisher", {}).get("@type") != "Organization":
-                problems.append(f"{rel} publisher is not the Organization")
-            if article.get("speakable", {}).get("@type") != "SpeakableSpecification":
-                problems.append(f"{rel} missing speakable schema")
-            want_img = abs_url(config["baseUrl"], post["image"])
-            if article.get("image") != want_img:
-                problems.append(f"{rel} Article image mismatch")
-            for prop in ('property="og:image"', 'name="twitter:image"'):
-                if f'{prop} content="{want_img}"' not in page:
-                    problems.append(f"{rel} missing {prop}")
-            if not re.search(r'class="author-details-name">' + re.escape(post["author"]), page):
-                problems.append(f"{rel} byline does not show {post['author']}")
-            if 'fetchpriority="high"' not in page or 'class="article-hero-img" loading="eager"' not in page:
-                problems.append(f"{rel} hero image missing eager/fetchpriority")
+            if not blocks:
+                problems.append(f"{rel} missing JSON-LD")
+            for block in blocks:
+                try:
+                    json.loads(block)
+                except ValueError as exc:
+                    problems.append(f"{rel} JSON-LD does not parse: {exc}")
+        else:
+            for token in ("BlogPosting", "FAQPage", "BreadcrumbList"):
+                if token not in page:
+                    problems.append(f"{rel} missing {token}")
+            post_for_date = by_path.get(path)
+            static_meta = static_by_slug(path.parent.name) if path.name == "index.html" else None
+            published = (post_for_date or {}).get("published") or (static_meta or {}).get("published") or config["datePublished"]
+            if published not in page:
+                problems.append(f"{rel} missing datePublished")
+            post = by_path.get(path)
+            if post:
+                blocks = re.findall(r'<script type="application/ld\+json">(.*?)</script>', page, re.S)
+                try:
+                    graph = [node for block in blocks for node in json.loads(block)["@graph"]]
+                except (ValueError, KeyError) as exc:
+                    problems.append(f"{rel} JSON-LD does not parse: {exc}")
+                    graph = []
+                article = next((node for node in graph if node.get("@type") == "BlogPosting"), {})
+                author = article.get("author", {})
+                prof = AUTHOR_PROFILES[post["author"]]
+                if author.get("@type") != "Person" or author.get("name") != prof["name"]:
+                    problems.append(f"{rel} JSON-LD author is not {prof['name']}")
+                if article.get("publisher", {}).get("@type") != "Organization":
+                    problems.append(f"{rel} publisher is not the Organization")
+                if article.get("speakable", {}).get("@type") != "SpeakableSpecification":
+                    problems.append(f"{rel} missing speakable schema")
+                want_img = abs_url(config["baseUrl"], post["image"])
+                if article.get("image") != want_img:
+                    problems.append(f"{rel} Article image mismatch")
+                for prop in ('property="og:image"', 'name="twitter:image"'):
+                    if f'{prop} content="{want_img}"' not in page:
+                        problems.append(f"{rel} missing {prop}")
+                if not re.search(r'class="author-details-name">' + re.escape(post["author"]), page):
+                    problems.append(f"{rel} byline does not show {post['author']}")
+                if 'fetchpriority="high"' not in page or 'class="article-hero-img" loading="eager"' not in page:
+                    problems.append(f"{rel} hero image missing eager/fetchpriority")
         old_hrefs = [
             href
             for href in re.findall(r'href="([^"]+)"', page)
@@ -1457,28 +1767,120 @@ def validate(config: dict, posts: list[dict], unlinked: list[dict], pages: dict[
     }
 
 
+def patch_static_page(page: str, item: dict, links: list[dict], base: str, sentences: list[str] | None = None) -> str:
+    """Refresh the shared header and add planned links on an HTML-only guide."""
+    page = re.sub(r"\s*<nav class=\"blog-subnav\"[\s\S]*?</nav>", "", page, count=1)
+    current = TOPIC_SLUG.get(item.get("topic") or "", "")
+    updated, count = re.subn(
+        r'<a href="#main-content" class="skip-link">Skip to main content</a>\s*<header\b[\s\S]*?</header>',
+        header("../", current, base),
+        page,
+        count=1,
+    )
+    if count != 1:
+        raise SystemExit(f"Could not replace header in {item['slug']}")
+    page = inject_static_html(updated, links, item, sentences)
+    topic = item.get("topic") or ""
+    topic_slug = TOPIC_SLUG.get(topic)
+    if topic_slug:
+        topic_url = abs_url(base, f"topic/{topic_slug}/")
+        head, sep, tail = page.partition("</head>")
+        if not sep:
+            raise SystemExit(f"No head in {item['slug']}")
+        if f'"item": "{topic_url}"' not in head:
+            topic_json = json.dumps(
+                {"@type": "ListItem", "position": 3, "name": topic, "item": topic_url},
+                ensure_ascii=False,
+            )
+            head, json_count = re.subn(
+                r'\{"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://acrenkey.com/blogs/"\}, \{"@type": "ListItem", "position": 3,',
+                '{"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://acrenkey.com/blogs/"}, '
+                + topic_json
+                + ', {"@type": "ListItem", "position": 4,',
+                head,
+                count=1,
+            )
+            if json_count != 1:
+                raise SystemExit(f"Could not patch breadcrumb JSON-LD in {item['slug']}")
+            page = head + sep + tail
+        crumb = re.search(r'(<ol class="breadcrumb">)(.*?)(</ol>)', page, re.S)
+        if not crumb:
+            raise SystemExit(f"No breadcrumb in {item['slug']}")
+        inner = crumb.group(2)
+        if topic_url not in inner:
+            insertion = (
+                f'<li><a href="{esc(topic_url)}">{esc(topic)}</a></li>\n'
+                '        <li class="meta-sep" aria-hidden="true">/</li>\n'
+                "        "
+            )
+            inner, crumb_count = re.subn(
+                r'<li class="bc-current"',
+                insertion + '<li class="bc-current"',
+                inner,
+                count=1,
+            )
+            if crumb_count != 1:
+                raise SystemExit(f"Could not patch visible breadcrumb in {item['slug']}")
+            page = page[: crumb.start(2)] + inner + page[crumb.end(2) :]
+    digest = asset("style.css").split("?v=", 1)[1]
+    page = re.sub(r"style\.css\?v=[A-Za-z0-9]+", f"style.css?v={digest}", page)
+    return page
+
+
+def hub_children(hub: dict, posts: list[dict], extras: list[dict]) -> list[dict]:
+    if hub.get("section") == "areas":
+        return [post for post in posts if post["section"] == "areas"]
+    if hub.get("section") == "insights":
+        return [post for post in posts if post["section"] == "insights"]
+    topic = hub.get("topic")
+    chosen = [post for post in posts if post.get("topic") == topic]
+    chosen.extend(post for post in extras if post.get("topic") == topic)
+    chosen.sort(key=lambda post: post["rank"])
+    return chosen
+
+
 def main() -> None:
     config = load_config()
     posts, _ = load_posts(config)
+    topics = load_topic_map()
+    for post in posts:
+        post["topic"] = topics.get(post["slug"], "")
+    plan = plan_by_source(load_plan())
+    extras = static_posts()
+    ordered = sorted([*posts, *extras], key=lambda item: (item["rank"], item["slug"]))
     slug_section = {post["slug"]: post["section"] for post in posts}
     unlinked: list[dict] = []
     prepared = {}
     dropped = 0
     for post in posts:
-        prepared[post["slug"]] = prepare_body(post, slug_section, unlinked, config["baseUrl"])
+        source = abs_url(config["baseUrl"], post["path"])
+        prepared[post["slug"]] = prepare_body(
+            post,
+            slug_section,
+            unlinked,
+            config["baseUrl"],
+            plan.get(source, []),
+            [
+                sibling_sentence(post["section"], short_anchor(item["h1"]) or "", abs_url(config["baseUrl"], item["path"]))
+                for item in section_siblings(post, ordered)
+            ],
+        )
         dropped += prepared[post["slug"]]["dropped_images"]
 
     legacy_blog = ROOT / "blog"
     if legacy_blog.is_dir():
         shutil.rmtree(legacy_blog)
-    for section in ("insights", "areas"):
+    for section in ("insights", "areas", "topic"):
         destination = ROOT / section
         if destination.exists():
             shutil.rmtree(destination)
-        destination.mkdir()
+        if section != "topic":
+            destination.mkdir()
 
     pages: dict[Path, str] = {}
     excerpts = {slug: item["short_plain"] for slug, item in prepared.items()}
+    for item in extras:
+        excerpts[item["slug"]] = item["excerpt"]
     for post in posts:
         ids = IdFactory()
         html_page = render_post(config, post, prepared[post["slug"]], posts, ids)
@@ -1487,13 +1889,48 @@ def main() -> None:
         path.write_text(html_page)
         pages[path] = html_page
 
-    index_html = render_index(config, posts, excerpts)
+    display = list(posts) + extras
+    display.sort(key=lambda post: post["rank"])
+    index_html = render_index(config, display, excerpts)
     index_path = ROOT / "index.html"
     index_path.write_text(index_html)
     pages[index_path] = index_html
-    (ROOT / "sitemap.xml").write_text(render_sitemap(config, posts))
+
+    for hub in HUBS:
+        children = hub_children(hub, posts, extras)
+        html_page = render_hub(config, hub, children, excerpts)
+        path = ROOT / hub["path"] / "index.html"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(html_page)
+        pages[path] = html_page
+
+    for item in extras:
+        path = ROOT / item["path"] / "index.html"
+        source = abs_url(config["baseUrl"], item["path"])
+        page = patch_static_page(
+            path.read_text(),
+            item,
+            plan.get(source, []),
+            config["baseUrl"],
+            [
+                sibling_sentence(item["section"], short_anchor(other["h1"]) or "", abs_url(config["baseUrl"], other["path"]))
+                for other in section_siblings(item, ordered)
+            ],
+        )
+        path.write_text(page)
+        pages[path] = page
+
+    (ROOT / "sitemap.xml").write_text(render_sitemap(config, posts, extras))
     (ROOT / "robots.txt").write_text(render_robots(config))
-    (ROOT / "llms.txt").write_text(render_llms(config, posts, excerpts))
+    (ROOT / "llms.txt").write_text(render_llms(config, posts, excerpts, extras))
+
+    decisions = []
+    for post in posts:
+        decisions.extend(post.get("_decisions") or [])
+    for item in extras:
+        decisions.extend(item.get("_decisions") or [])
+    decisions.extend(classify_index_links(plan.get(abs_url(config["baseUrl"]), [])))
+    write_decisions(decisions, CONTENT / "link_decisions.csv")
 
     report = validate(config, posts, unlinked, pages)
     report["dropped_images"] = dropped
@@ -1514,6 +1951,14 @@ def main() -> None:
             "head_banned": dict(Counter(name for _, name, _ in report["head_hits"])),
             "bangalore_body": len(report["bangalore_body"]),
             "baseUrl": config["baseUrl"],
+            "hubs": len(HUBS),
+            "link_decisions": dict(Counter(row["status"] for row in decisions)),
+            "link_skips": dict(Counter(row["reason"] for row in decisions if row["status"] == "skipped")),
+            "unmatched_sections": {
+                post["slug"]: post.get("_unmatched_sections")
+                for post in posts
+                if post.get("_unmatched_sections")
+            },
         },
         indent=2,
     ))
