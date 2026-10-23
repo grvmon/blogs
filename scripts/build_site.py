@@ -1908,7 +1908,7 @@ def patch_static_page(page: str, item: dict, links: list[dict], base: str, sente
     page = page.replace('<li><a href="https://acrenkey.com/">Home</a></li>', '<li><a href="https://acrenkey.com/">acre&amp;key</a></li>')
     page = page.replace('<li class="meta-sep" aria-hidden="true">/</li>', '<li class="meta-sep" aria-hidden="true">›</li>')
     page = page.replace('{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://acrenkey.com/"}', '{"@type": "ListItem", "position": 1, "name": "acre&key", "item": "https://acrenkey.com/"}')
-    page = page.replace('{"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://acrenkey.com/blogs/"}', '{"@type": "ListItem", "position": 2, "name": "Blogs", "item": "https://acrenkey.com/blogs/"}')
+    page = page.replace('{"@type": "ListItem", "position": 2, "name": "Blogs", "item": "https://acrenkey.com/blogs/"}', '{"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://acrenkey.com/blogs/"}')
     digest = asset("style.css").split("?v=", 1)[1]
     page = re.sub(r"style\.css\?v=[A-Za-z0-9]+", f"style.css?v={digest}", page)
     fav_lines = [
