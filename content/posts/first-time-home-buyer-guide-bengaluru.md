@@ -65,7 +65,7 @@ So "20% down" on this flat is really 33% from your own pocket, before parking, c
 
 No. We found no concession for first-time buyers in the Karnataka Stamp Act or on the IGR site as of 18 Oct 2026.
 
-What exists is a lower rate for the **first sale of a flat**: 2% up to ₹20 lakh and 3% above ₹20 lakh up to ₹45 lakh (Art. 20(2A), [Karnataka Stamp Act](https://dpal.karnataka.gov.in/storage/pdf-files/34%20of%201957%28E%29.pdf)). It depends on the flat, not on you. A first-time buyer picking up a ₹40 lakh resale flat pays 5%. Someone on their fourth home buying a new ₹40 lakh flat from the builder pays 3%.
+What exists is a lower rate for the **first sale of a flat**: 2% up to ₹20 lakh and 3% above ₹20 lakh up to ₹45 lakh (Art. 20(2A), [Karnataka Stamp Act](https://dpal.karnataka.gov.in/storage/pdf-files/34%20of%201957%28E%29.pdf)). It depends on the flat, not on you. A first-time buyer picking up a ₹40 lakh resale flat pays 5%. Someone on their fourth home buying a new ₹40 lakh flat from the builder pays 3%. For a full price and risk comparison between both routes, see our guide on [resale vs new flats in Bengaluru](/blogs/resale-vs-new-flat-in-bengaluru-price-tax-risk/).
 
 We also found no notified women-buyer concession on official sources. If someone promises one, ask to see the notification.
 
@@ -427,7 +427,7 @@ Checked 18–19 Oct 2026 unless marked.
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Blog",
+     "name": "Blogs",
      "item": "https://acrenkey.com/blogs/"
     },
     {

@@ -76,7 +76,7 @@ Yes. The Purple Line runs along Mysore Road. Its full 43.49 km, 37-station route
 |---|---|---|
 | Purple Line | Mysuru Road, Nayandahalli, Rajarajeshwari Nagar, Jnanabharathi, Pattanagere, Kengeri Bus Terminal, Kengeri, Challaghatta | Running |
 
-That gives a direct run through the city centre to the east. Our [metro lines guide](https://acrenkey.com/blogs/bengaluru-metro-lines-2026-status-of-every-line-for-homebuyers/) covers the rest.
+That gives a direct run through the city centre to the east. For nearby residential enclaves off the corridor, see our guide on [living in Rajarajeshwari Nagar](/blogs/areas/living-in-rajarajeshwari-nagar-property-rates-metro-water-flood-risk/). Our [metro lines guide](https://acrenkey.com/blogs/bengaluru-metro-lines-2026-status-of-every-line-for-homebuyers/) covers the rest.
 
 ## Where does Mysore Road get its water?
 
@@ -319,7 +319,7 @@ Checked 19 Oct 2026.
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Blog",
+     "name": "Blogs",
      "item": "https://acrenkey.com/blogs/"
     },
     {

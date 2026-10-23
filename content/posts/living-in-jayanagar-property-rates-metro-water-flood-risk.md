@@ -60,7 +60,7 @@ Flats are valued differently, and Kaveri can add floor, amenity and parking amou
 
 ### Market prices
 
-We didn't find a consultant price for Jayanagar. Knight Frank's H1 2026 report names it in the South zone but leaves it out of the price table, and ANAROCK's Q1 2026 report doesn't list it. Portal averages are asking prices, and in an area of one-off houses they vary a lot. Ask for registered sale deeds on the same street.
+We didn't find a consultant price for Jayanagar. Knight Frank's H1 2026 report names it in the South zone but leaves it out of the price table, and ANAROCK's Q1 2026 report doesn't list it. Like [living in Indiranagar](/blogs/areas/living-in-indiranagar-property-rates-metro-water-flood-risk/), mature core neighbourhoods have higher plot values and fewer large-scale launches. Portal averages are asking prices, and in an area of one-off houses they vary a lot. Ask for registered sale deeds on the same street.
 
 ### Rents
 
@@ -323,7 +323,7 @@ Checked 19 Oct 2026.
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Blog",
+     "name": "Blogs",
      "item": "https://acrenkey.com/blogs/"
     },
     {

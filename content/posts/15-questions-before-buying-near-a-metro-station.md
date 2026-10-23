@@ -119,7 +119,7 @@ The line's real stage, the walk to the entrance, noise from the viaduct, years o
 
 ### Which Bengaluru metro lines are running in 2026?
 
-The Purple, Green and Yellow Lines, about 96 km in all, according to news reports in October 2026. The Pink Line's elevated stretch awaits safety clearance.
+The Purple, Green and Yellow Lines, about 96 km in all, according to news reports in October 2026. The Pink Line's elevated stretch awaits safety clearance. Beyond metro lines, check [Bengaluru suburban rail stations](/blogs/bengaluru-suburban-rail-stations-nearby-areas-for-homebuyers/) for upcoming regional transit corridors.
 
 ### When will the airport metro open?
 
@@ -216,7 +216,7 @@ Checked 19 Oct 2026.
      "name": "Which Bengaluru metro lines are running in 2026?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "The Purple, Green and Yellow Lines, about 96 km in all, according to news reports in October 2026. The Pink Line's elevated stretch awaits safety clearance."
+      "text": "The Purple, Green and Yellow Lines, about 96 km in all, according to news reports in October 2026. The Pink Line's elevated stretch awaits safety clearance. Beyond metro lines, check [Bengaluru suburban rail stations](/blogs/bengaluru-suburban-rail-stations-nearby-areas-for-homebuyers/) for upcoming regional transit corridors."
      }
     },
     {
@@ -281,7 +281,7 @@ Checked 19 Oct 2026.
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Blog",
+     "name": "Blogs",
      "item": "https://acrenkey.com/blogs/"
     },
     {

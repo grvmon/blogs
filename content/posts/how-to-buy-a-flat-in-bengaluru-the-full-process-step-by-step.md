@@ -74,7 +74,7 @@ Builder extras (parking, corpus, maintenance, connections), interiors and moving
 
 ## Step 2: How do you shortlist areas and projects?
 
-Start with the commute and work outwards. Then check four things for every area:
+Start with the commute and work outwards. Then check four things for every area (see our detailed guide on [questions to ask before buying a flat](/blogs/insights/questions-to-ask-before-buying-flat-bengaluru/)):
 
 - **Metro:** is the line running or still being built? Check the line's status with BMRCL.
 - **Flooding:** is it near a flood-prone point, lake or drain? See our [flood-prone areas guide](https://acrenkey.com/blogs/bengaluru-flood-prone-areas-map-from-ksndmc-data/).
@@ -394,7 +394,7 @@ Checked 19 Oct 2026.
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Blog",
+     "name": "Blogs",
      "item": "https://acrenkey.com/blogs/"
     },
     {

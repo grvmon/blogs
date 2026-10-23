@@ -325,7 +325,7 @@ If a project's "bank-approved" line is doing a lot of work in the pitch, we can 
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Blog",
+     "name": "Blogs",
      "item": "https://acrenkey.com/blogs/"
     },
     {

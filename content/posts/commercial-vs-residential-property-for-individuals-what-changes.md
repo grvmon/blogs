@@ -322,7 +322,7 @@ If you're weighing a flat against a shop or office, we can help you check the nu
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Blog",
+     "name": "Blogs",
      "item": "https://acrenkey.com/blogs/"
     },
     {

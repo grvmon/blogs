@@ -341,7 +341,7 @@ If a planned station is part of why you're looking at a flat, we can help you we
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Blog",
+     "name": "Blogs",
      "item": "https://acrenkey.com/blogs/"
     },
     {

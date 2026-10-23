@@ -64,7 +64,7 @@ East, by location. Knight Frank's 12-month changes:
 | North | Hennur | 7,000–14,000 | 10% | 18% |
 | North | Thanisandra | 5,700–13,500 | 6% | 3% |
 
-North's six-month figures are stronger in three of four locations, so its prices may be catching up. Our area pages go deeper: [Hebbal vs Thanisandra](https://acrenkey.com/blogs/hebbal-vs-thanisandra-for-homebuyers/), [KR Puram vs Whitefield](https://acrenkey.com/blogs/kr-puram-vs-whitefield-for-homebuyers/) and [Devanahalli vs Yelahanka](https://acrenkey.com/blogs/devanahalli-vs-yelahanka-for-homebuyers/).
+North's six-month figures are stronger in three of four locations, so its prices may be catching up. For a complete corridor overview from the Outer Ring Road to the airport, read our [North Bengaluru property guide](/blogs/north-bengaluru-property-guide-2026-hebbal-to-devanahalli/). Our area pages go deeper: [Hebbal vs Thanisandra](https://acrenkey.com/blogs/hebbal-vs-thanisandra-for-homebuyers/), [KR Puram vs Whitefield](https://acrenkey.com/blogs/kr-puram-vs-whitefield-for-homebuyers/) and [Devanahalli vs Yelahanka](https://acrenkey.com/blogs/devanahalli-vs-yelahanka-for-homebuyers/).
 
 ## Which zone has more unsold homes?
 
@@ -300,7 +300,7 @@ Checked 19 Oct 2026.
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Blog",
+     "name": "Blogs",
      "item": "https://acrenkey.com/blogs/"
     },
     {

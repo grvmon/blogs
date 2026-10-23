@@ -973,7 +973,7 @@ def blog_subnav(current: str = "", base: str = "https://acrenkey.com/blogs/") ->
     items = [
         ("properties", "Properties", "https://acrenkey.com/property/"),
         ("calculators", "Calculators", "https://acrenkey.com/calculators/"),
-        ("index", "Blog", abs_url(base)),
+        ("index", "Blogs", abs_url(base)),
     ]
     for hub in HUBS:
         items.append((hub["key"], hub["name"], abs_url(base, hub["path"])))
@@ -983,7 +983,7 @@ def blog_subnav(current: str = "", base: str = "https://acrenkey.com/blogs/") ->
         current_attr = ' aria-current="page"' if key == current else ""
         links.append(f'<a href="{esc(href)}"{current_attr}>{esc(label)}</a>')
     return (
-        '<nav class="blog-subnav" aria-label="Blog">'
+        '<nav class="blog-subnav" aria-label="Blogs">'
         f'<div class="blog-subnav-inner">{"".join(links)}</div></nav>'
     )
 
@@ -1218,7 +1218,7 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
     <nav class="crumbs" aria-label="Breadcrumb">
       <ol>
         <li><a href="https://acrenkey.com/">acre&amp;key</a></li>
-        <li><a href="{esc(config['baseUrl'])}">Blog</a></li>{bc_section_html}
+        <li><a href="{esc(config['baseUrl'])}">Blogs</a></li>{bc_section_html}
         <li aria-current="page"><a href="{canonical}" aria-current="page">{esc(post['seo_title'])}</a></li>
       </ol>
     </nav>
@@ -1505,7 +1505,7 @@ def render_hub(config: dict, hub: dict, children: list[dict], excerpts: dict[str
             "@type": "BreadcrumbList",
             "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": "acre&key", "item": "https://acrenkey.com/"},
-                {"@type": "ListItem", "position": 2, "name": "Blog", "item": abs_url(base)},
+                {"@type": "ListItem", "position": 2, "name": "Blogs", "item": abs_url(base)},
                 {"@type": "ListItem", "position": 3, "name": hub["h1"], "item": canonical},
             ],
         },
@@ -1524,7 +1524,7 @@ def render_hub(config: dict, hub: dict, children: list[dict], excerpts: dict[str
     <nav class="crumbs" aria-label="Breadcrumb">
       <ol>
         <li><a href="https://acrenkey.com/">acre&amp;key</a></li>
-        <li><a href="{esc(abs_url(base))}">Blog</a></li>
+        <li><a href="{esc(abs_url(base))}">Blogs</a></li>
         <li aria-current="page"><a href="{canonical}" aria-current="page">{esc(hub['h1'])}</a></li>
       </ol>
     </nav>
@@ -1821,7 +1821,7 @@ def patch_static_page(page: str, item: dict, links: list[dict], base: str, sente
             )
             head, json_count = re.subn(
                 r'\{"@type": "ListItem", "position": 2, "name": "(?:Blog|Blogs)", "item": "https://acrenkey.com/blogs/"\}, \{"@type": "ListItem", "position": 3,',
-                '{"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://acrenkey.com/blogs/"}, '
+                '{"@type": "ListItem", "position": 2, "name": "Blogs", "item": "https://acrenkey.com/blogs/"}, '
                 + topic_json
                 + ', {"@type": "ListItem", "position": 4,',
                 head,
@@ -1832,7 +1832,7 @@ def patch_static_page(page: str, item: dict, links: list[dict], base: str, sente
             page = head + sep + tail
         crumb_items = [
             '<li><a href="https://acrenkey.com/">acre&amp;key</a></li>',
-            f'<li><a href="{esc(base)}">Blog</a></li>',
+            f'<li><a href="{esc(base)}">Blogs</a></li>',
         ]
         if topic_slug:
             crumb_items.append(f'<li><a href="{esc(topic_url)}">{esc(topic)}</a></li>')
@@ -1907,9 +1907,11 @@ def patch_static_page(page: str, item: dict, links: list[dict], base: str, sente
     page = page.replace('<li><a href="https://acrenkey.com/">Home</a></li>', '<li><a href="https://acrenkey.com/">acre&amp;key</a></li>')
     page = page.replace('<li class="meta-sep" aria-hidden="true">/</li>', '<li class="meta-sep" aria-hidden="true">›</li>')
     page = page.replace('{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://acrenkey.com/"}', '{"@type": "ListItem", "position": 1, "name": "acre&key", "item": "https://acrenkey.com/"}')
-    page = page.replace('{"@type": "ListItem", "position": 2, "name": "Blogs", "item": "https://acrenkey.com/blogs/"}', '{"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://acrenkey.com/blogs/"}')
-    page = page.replace('<a href="https://acrenkey.com/blogs/">Blogs</a>', '<a href="https://acrenkey.com/blogs/">Blog</a>')
-    page = page.replace('<span class="mobile-nav-label">Blogs</span>', '<span class="mobile-nav-label">Blog</span>')
+    page = page.replace('{"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://acrenkey.com/blogs/"}', '{"@type": "ListItem", "position": 2, "name": "Blogs", "item": "https://acrenkey.com/blogs/"}')
+    page = page.replace('<a href="https://acrenkey.com/blogs/">Blog</a>', '<a href="https://acrenkey.com/blogs/">Blogs</a>')
+    page = page.replace('<span class="mobile-nav-label">Blog</span>', '<span class="mobile-nav-label">Blogs</span>')
+    page = page.replace('<li><a href="https://acrenkey.com/blogs/">Blog</a></li>', '<li><a href="https://acrenkey.com/blogs/">Blogs</a></li>')
+    page = page.replace('<li><a href="../index.html">Blog</a></li>', '<li><a href="../index.html">Blogs</a></li>')
     digest = asset("style.css").split("?v=", 1)[1]
     page = re.sub(r"style\.css\?v=[A-Za-z0-9]+", f"style.css?v={digest}", page)
     fav_lines = [

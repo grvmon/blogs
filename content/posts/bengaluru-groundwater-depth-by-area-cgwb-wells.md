@@ -161,7 +161,7 @@ The pre-monsoon round: 25 May 2014, 27 May 2019, 10 May 2024 and 30 May 2025 in 
 
 ### Can I use this to choose between two areas?
 
-Use it as one input. If both areas get BWSSB Cauvery water, the well readings matter less. If a building runs mostly on borewells and tankers, a deep, falling reading nearby is a reason to ask harder questions about summer supply.
+Use it as one input. If both areas get BWSSB Cauvery water, the well readings matter less. If a building runs mostly on borewells and tankers, a deep, falling reading nearby is a reason to ask harder questions about summer supply. You can also evaluate [Bengaluru air quality by neighbourhood](/blogs/bengaluru-air-quality-by-neighbourhood-kspcb-stations/) for a complete environmental comparison.
 
 ## Talk it through with acre&key
 

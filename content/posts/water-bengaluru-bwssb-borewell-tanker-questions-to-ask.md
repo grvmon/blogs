@@ -174,7 +174,7 @@ A quick check: ask for a recent BWSSB bill. An RWH penalty line tells you the sy
 - [ ] Who pays BWSSB charges written into the agreement
 - [ ] OC in place for a permanent connection
 
-Water sits alongside flood risk: see the [Bengaluru flood-prone areas map](https://acrenkey.com/blogs/bengaluru-flood-prone-areas-map-from-ksndmc-data/). For the full list of checks before you buy, see [100 things to know before buying](https://acrenkey.com/blogs/100-things-bengaluru-home-buyer-should-know-before-booking/), and add any BWSSB charges to your [full cost of buying](https://acrenkey.com/blogs/full-cost-bengaluru-flat-stamp-duty-registration-gst/). If you're not sure which corporation or ward the flat is in, use our [ward and corporation lookup](https://acrenkey.com/blogs/which-ward-and-city-corporation-is-my-flat-in-gba-pin-code-lookup/).
+Water sits alongside flood risk: see the [Bengaluru flood-prone areas map](https://acrenkey.com/blogs/bengaluru-flood-prone-areas-map-from-ksndmc-data/), and check [Bengaluru air quality by neighbourhood](/blogs/bengaluru-air-quality-by-neighbourhood-kspcb-stations/) for ambient pollution data. For the full list of checks before you buy, see [100 things to know before buying](https://acrenkey.com/blogs/100-things-bengaluru-home-buyer-should-know-before-booking/), and add any BWSSB charges to your [full cost of buying](https://acrenkey.com/blogs/full-cost-bengaluru-flat-stamp-duty-registration-gst/). If you're not sure which corporation or ward the flat is in, use our [ward and corporation lookup](https://acrenkey.com/blogs/which-ward-and-city-corporation-is-my-flat-in-gba-pin-code-lookup/).
 
 ## Frequently asked questions
 
@@ -352,7 +352,7 @@ Checked 17–19 Oct 2026.
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Blog",
+     "name": "Blogs",
      "item": "https://acrenkey.com/blogs/"
     },
     {

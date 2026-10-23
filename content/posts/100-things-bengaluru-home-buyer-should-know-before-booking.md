@@ -449,7 +449,7 @@ Checked 18–19 Oct 2026 unless marked.
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Blog",
+     "name": "Blogs",
      "item": "https://acrenkey.com/blogs/"
     },
     {

@@ -37,7 +37,7 @@ The West City Corporation. All of PIN 560010 is in the West corporation, with Ke
 
 ### Market prices
 
-Knight Frank's H1 2026 report put Rajajinagar at ₹11,500 to ₹23,200 per sq ft, up 9% in 12 months and 5% in six ([Knight Frank](https://content.knightfrank.com/research/3116/documents/en/india-real-estate-office-and-residential-market-h1-2026-12927.pdf)). That's above Malleswaram (₹9,200 to ₹17,500) and Yeshwanthpur (₹7,700 to ₹14,500) in the same report. The top of the range reflects a few new towers; older flats sit lower.
+Knight Frank's H1 2026 report put Rajajinagar at ₹11,500 to ₹23,200 per sq ft, up 9% in 12 months and 5% in six ([Knight Frank](https://content.knightfrank.com/research/3116/documents/en/india-real-estate-office-and-residential-market-h1-2026-12927.pdf)). That's above Malleswaram (₹9,200 to ₹17,500; see our guide on [living in Malleshwaram](/blogs/areas/living-in-malleshwaram-property-rates-metro-water-flood-risk/)) and Yeshwanthpur (₹7,700 to ₹14,500) in the same report. The top of the range reflects a few new towers; older flats sit lower.
 
 ### Official guidance values
 
@@ -316,7 +316,7 @@ Checked 19 Oct 2026.
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Blog",
+     "name": "Blogs",
      "item": "https://acrenkey.com/blogs/"
     },
     {

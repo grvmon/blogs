@@ -356,7 +356,7 @@ If you're selling to upgrade, we can help you line up the new purchase, the date
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Blog",
+     "name": "Blogs",
      "item": "https://acrenkey.com/blogs/"
     },
     {
