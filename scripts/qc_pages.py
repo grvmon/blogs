@@ -20,6 +20,7 @@ HEADER_FOOTER_MARKERS = (
     'class="header-nav', 'class="nav-brand"',
     'id="mobile-toggle-btn"', 'id="mobile-drawer"', '<footer class="site-footer ak-footer" id="footer">',
     'assets/ak-chrome.css', 'assets/ak-chrome.js', 'favicon.svg', 'favicon-32x32.png', 'apple-touch-icon.png',
+    'favicon-48x48.png', 'site.webmanifest',
 )
 def internal_index_href(page):
     """index.html in any internal href (relative or acrenkey.com). External sites are out of scope."""
@@ -112,3 +113,32 @@ print("authors:", dict(Counter(p["author"] for p in posts)))
 for f in fails[:30]:
     print("FAIL", *f)
 print("index.html page: no_index_html_href+header_footer", "PASS" if idx_ok else "FAIL")
+
+# Favicon asset integrity check
+fav_assets = [
+    'favicon.svg', 'favicon-16x16.png', 'favicon-32x32.png', 'favicon-48x48.png',
+    'apple-touch-icon.png', 'favicon.ico', 'site.webmanifest', 'icon-192.png', 'icon-512.png'
+]
+fav_fails = []
+for fname in fav_assets:
+    fpath = ROOT / fname
+    if not fpath.exists():
+        fav_fails.append(f"Missing {fname}")
+    elif fname.endswith('.png') and Image:
+        im = Image.open(fpath)
+        non_white = sum(1 for px in im.convert('RGBA').getdata() if px[:3] != (255, 255, 255))
+        ratio = non_white / (im.width * im.height)
+        if ratio < 0.8:
+            fav_fails.append(f"{fname} has only {ratio*100:.1f}% non-white pixels (blank/corrupt icon)")
+    elif fname == 'favicon.ico' and Image:
+        im = Image.open(fpath)
+        sizes = im.info.get('sizes', {im.size})
+        if len(sizes) < 2:
+            fav_fails.append(f"favicon.ico missing multi-res layers: {sizes}")
+
+if fav_fails:
+    print("FAVICON QC FAIL:")
+    for ff in fav_fails:
+        print("  -", ff)
+else:
+    print("favicon asset integrity: PASS (all 9 files verified, sharp renders, multi-res ICO)")

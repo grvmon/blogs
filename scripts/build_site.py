@@ -906,10 +906,12 @@ def head_tags(title: str, description: str, canonical: str, root: str, og_type: 
         f'<link rel="preload" href="{root}assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>',
         f'<link rel="preload" href="{root}assets/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>',
         f'<link rel="icon" type="image/svg+xml" sizes="any" href="{root}{asset("favicon.svg")}">',
+        f'<link rel="icon" type="image/png" sizes="48x48" href="{root}{asset("favicon-48x48.png")}">',
         f'<link rel="icon" type="image/png" sizes="32x32" href="{root}{asset("favicon-32x32.png")}">',
         f'<link rel="icon" type="image/png" sizes="16x16" href="{root}{asset("favicon-16x16.png")}">',
         f'<link rel="apple-touch-icon" sizes="180x180" href="{root}{asset("apple-touch-icon.png")}">',
         f'<link rel="shortcut icon" href="{root}{asset("favicon.ico")}">',
+        f'<link rel="manifest" href="{root}{asset("site.webmanifest")}">',
         f'<link rel="stylesheet" href="{root}{asset("style.css")}">',
         f'<link rel="stylesheet" href="{root}{asset("assets/ak-chrome.css")}">',
         f'<link rel="stylesheet" href="{root}{asset("assets/ak-lead-form.css")}">',
@@ -1843,6 +1845,24 @@ def patch_static_page(page: str, item: dict, links: list[dict], base: str, sente
             page = page[: crumb.start(2)] + inner + page[crumb.end(2) :]
     digest = asset("style.css").split("?v=", 1)[1]
     page = re.sub(r"style\.css\?v=[A-Za-z0-9]+", f"style.css?v={digest}", page)
+    fav_lines = [
+        f'<link rel="icon" type="image/svg+xml" sizes="any" href="../{asset("favicon.svg")}">',
+        f'<link rel="icon" type="image/png" sizes="48x48" href="../{asset("favicon-48x48.png")}">',
+        f'<link rel="icon" type="image/png" sizes="32x32" href="../{asset("favicon-32x32.png")}">',
+        f'<link rel="icon" type="image/png" sizes="16x16" href="../{asset("favicon-16x16.png")}">',
+        f'<link rel="apple-touch-icon" sizes="180x180" href="../{asset("apple-touch-icon.png")}">',
+        f'<link rel="shortcut icon" href="../{asset("favicon.ico")}">',
+        f'<link rel="manifest" href="../{asset("site.webmanifest")}">',
+    ]
+    fav_block = "\n  ".join(fav_lines)
+    page = re.sub(
+        r'  <link rel="(?:icon|apple-touch-icon|shortcut icon|manifest)"[^\n]*\n?', "", page
+    )
+    page = re.sub(
+        r'(<link rel="preload"[^\n]*cormorant-garamond-latin\.woff2"[^\n]*\n)',
+        r"\1  " + fav_block + "\n",
+        page,
+    )
     return page
 
 

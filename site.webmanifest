@@ -1,0 +1,22 @@
+{
+  "name": "acre&key Bengaluru Home Buying Guides",
+  "short_name": "acre&key",
+  "description": "Plain-language guides for people buying a home in Bengaluru: costs, loans, legal checks, and how neighbourhoods differ.",
+  "start_url": "/blogs/",
+  "scope": "/blogs/",
+  "display": "standalone",
+  "background_color": "#1F2B38",
+  "theme_color": "#2B2D31",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
