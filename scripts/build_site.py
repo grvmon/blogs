@@ -979,8 +979,6 @@ def header(root: str, current: str = "", base: str = "https://acrenkey.com/blogs
     return (
         '<a href="#main-content" class="skip-link">Skip to main content</a>\n  '
         + (PARTIALS / "header.html").read_text().strip()
-        + "\n  "
-        + blog_subnav(current, base)
     )
 
 
