@@ -120,6 +120,7 @@ AUTHOR_PROFILES = {
         "role": "Market Strategy · Product · Tech",
         "jobTitle": "Co-founder & Head of Product & Strategy",
         "avatar": "https://acrenkey.com/style-guide/assets/gaurav-mongia-founder-acre-key.webp",
+        "thumb": "https://acrenkey.com/style-guide/assets/gaurav-mongia-founder-acre-key-96.webp",
         "linkedin": "https://www.linkedin.com/in/gaurav-a-mongia/",
         "description": "Building data-driven evaluation models and micro-market frameworks to give buyers absolute clarity.",
     },
@@ -128,6 +129,7 @@ AUTHOR_PROFILES = {
         "role": "Investments · Decision Framework",
         "jobTitle": "Co-founder & Head of Investments",
         "avatar": "https://acrenkey.com/style-guide/assets/nitin-gupta-founder-acre-key.webp",
+        "thumb": "https://acrenkey.com/style-guide/assets/nitin-gupta-founder-acre-key-96.webp",
         "linkedin": "https://www.linkedin.com/in/nitin-gupta-7446864/",
         "description": "Former corporate finance leader applying institutional diligence and quantitative risk models to home buying in Bengaluru.",
     },
@@ -136,6 +138,7 @@ AUTHOR_PROFILES = {
         "role": "Advisory · Execution",
         "jobTitle": "Co-founder & Head of Operations",
         "avatar": "https://acrenkey.com/style-guide/assets/arvind-patidar-founder-acre-key.webp",
+        "thumb": "https://acrenkey.com/style-guide/assets/arvind-patidar-founder-acre-key-96.webp",
         "linkedin": "https://www.linkedin.com/in/arvind-patidar/",
         "description": "Operations and engineering leader ensuring flawless execution, civic compliance, and zero-compromise due diligence.",
     },
@@ -1339,6 +1342,9 @@ def render_index(config: dict, posts: list[dict], excerpts: dict[str, str]) -> s
                 post["section"],
             ]
         ).lower()
+        author_prof = AUTHOR_PROFILES[post["author"]]
+        author_thumb = author_prof.get("thumb") or author_prof["avatar"]
+        author_name = author_prof["name"]
         cards.append(
             f"""<article class="blog-card" data-section="{esc(post['section'])}" data-pillar="{esc(pillar_slug)}" data-rank="{post['rank']}" data-search="{esc(search)}">
         <a href="{esc(post['path'])}" class="blog-card-media tone-{esc(post['section'])}" aria-label="Read {esc(post['h1'])}">
@@ -1346,15 +1352,13 @@ def render_index(config: dict, posts: list[dict], excerpts: dict[str, str]) -> s
           <span class="cat-badge">{esc(badge_text)}</span>
         </a>
         <div class="blog-card-body">
-          <div class="blog-card-meta">
-            <span>By {esc(AUTHOR_PROFILES[post['author']]['name'])}</span>
-            <span class="meta-sep" aria-hidden="true">&bull;</span>
-            <time datetime="{esc(post.get('published') or config['datePublished'])}">{esc(format_date(post.get('published') or config['datePublished']))}</time>
+          <div class="blog-card-author">
+            <img src="{esc(author_thumb)}" alt="{esc(author_name)}" class="card-author-img" width="28" height="28" loading="lazy">
+            <span class="card-author-name">{esc(author_name)}</span>
           </div>
           <h2 class="blog-card-title">
             <a href="{esc(post['path'])}">{esc(post['h1'])}</a>
           </h2>
-          <p class="blog-card-excerpt">{esc(excerpts[post['slug']])}</p>
           <a href="{esc(post['path'])}" class="blog-card-readmore">
             <span>{esc(post.get('readmore') or 'Read guide')}</span>
             <span aria-hidden="true">&rarr;</span>
@@ -1443,6 +1447,9 @@ def render_hub(config: dict, hub: dict, children: list[dict], excerpts: dict[str
             ]
         ).lower()
         shown = post.get("published") or published
+        author_prof = AUTHOR_PROFILES[post["author"]]
+        author_thumb = author_prof.get("thumb") or author_prof["avatar"]
+        author_name = author_prof["name"]
         cards.append(
             f"""<article class="blog-card" data-section="{esc(post['section'])}" data-pillar="{esc(pillar_slug)}" data-rank="{post['rank']}" data-search="{esc(search)}">
         <a href="{esc(href)}" class="blog-card-media tone-{esc(post['section'])}" aria-label="Read {esc(post['h1'])}">
@@ -1450,15 +1457,13 @@ def render_hub(config: dict, hub: dict, children: list[dict], excerpts: dict[str
           <span class="cat-badge">{esc(badge_text)}</span>
         </a>
         <div class="blog-card-body">
-          <div class="blog-card-meta">
-            <span>By {esc(AUTHOR_PROFILES[post['author']]['name'])}</span>
-            <span class="meta-sep" aria-hidden="true">&bull;</span>
-            <time datetime="{esc(shown)}">{esc(format_date(shown))}</time>
+          <div class="blog-card-author">
+            <img src="{esc(author_thumb)}" alt="{esc(author_name)}" class="card-author-img" width="28" height="28" loading="lazy">
+            <span class="card-author-name">{esc(author_name)}</span>
           </div>
           <h2 class="blog-card-title">
             <a href="{esc(href)}">{esc(post['h1'])}</a>
           </h2>
-          <p class="blog-card-excerpt">{esc(excerpts.get(post['slug'], ''))}</p>
           <a href="{esc(href)}" class="blog-card-readmore">
             <span>{esc(post.get('readmore') or 'Read guide')}</span>
             <span aria-hidden="true">&rarr;</span>

@@ -548,6 +548,31 @@ p, blockquote, li {
   flex: 1;
 }
 
+.blog-card-author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.65rem;
+}
+
+.card-author-img {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid rgba(20, 29, 36, 0.08);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.card-author-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--obsidian-black);
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
 .blog-card-meta {
   font-size: 0.78rem;
   color: var(--neutral-grey);
@@ -566,8 +591,8 @@ p, blockquote, li {
 .blog-card-title {
   font-family: var(--font-serif);
   font-size: clamp(1.1rem, 0.98rem + 0.25vw, 1.25rem);
-  line-height: 1.22;
-  margin-bottom: 6px;
+  line-height: 1.25;
+  margin-bottom: 0.85rem;
   color: var(--obsidian-black);
 }
 
