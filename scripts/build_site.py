@@ -1378,7 +1378,6 @@ def render_index(config: dict, posts: list[dict], excerpts: dict[str, str]) -> s
     </div>
   </section>
   <main id="main-content" class="container">
-    <p class="hub-intro">To talk through one flat, <a href="https://acrenkey.com/contact/">ask acre&amp;key about a project</a>.</p>
     {browse_row(config['baseUrl'])}
     <div class="category-filter-strip" role="group" aria-label="Filter guides by section">
       <button type="button" class="cat-btn active" data-section="all" aria-pressed="true">All ({len(posts)})</button>
