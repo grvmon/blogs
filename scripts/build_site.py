@@ -985,6 +985,8 @@ def header(root: str, current: str = "", base: str = "https://acrenkey.com/blogs
 def browse_row(base: str, current: str = "") -> str:
     links = []
     for hub in HUBS:
+        if hub.get("section"):
+            continue
         current_attr = ' aria-current="page"' if hub["key"] == current else ""
         href = abs_url(base, hub["path"])
         links.append(
@@ -1317,24 +1319,29 @@ def render_index(config: dict, posts: list[dict], excerpts: dict[str, str]) -> s
         "legal checks, and how neighbourhoods differ."
     )
     title = "Bengaluru home buying guides: costs, loans, legal checks"
-    counts = {section: sum(1 for post in posts if post["section"] == section) for section in SECTIONS}
+    topic_counts = {topic: sum(1 for post in posts if post.get("topic") == topic) for topic in TOPIC_SLUG}
     cards = []
     for post in posts:
+        topic = post.get("topic") or ""
+        pillar_slug = TOPIC_SLUG.get(topic, "")
+        badge_text = topic or SECTION_LABEL.get(post["section"], "Guide")
         search = " ".join(
             [
                 post["h1"],
                 excerpts[post["slug"]],
                 post["meta"],
                 post["seo_title"],
+                topic,
+                pillar_slug,
                 SECTION_LABEL[post["section"]],
                 post["section"],
             ]
         ).lower()
         cards.append(
-            f"""<article class="blog-card" data-section="{esc(post['section'])}" data-rank="{post['rank']}" data-search="{esc(search)}">
+            f"""<article class="blog-card" data-section="{esc(post['section'])}" data-pillar="{esc(pillar_slug)}" data-rank="{post['rank']}" data-search="{esc(search)}">
         <a href="{esc(post['path'])}" class="blog-card-media tone-{esc(post['section'])}" aria-label="Read {esc(post['h1'])}">
           {img_tag('', post, 'blog-card-img')}
-          <span class="cat-badge">{esc(SECTION_LABEL[post['section']])}</span>
+          <span class="cat-badge">{esc(badge_text)}</span>
         </a>
         <div class="blog-card-body">
           <div class="blog-card-meta">
@@ -1385,13 +1392,14 @@ def render_index(config: dict, posts: list[dict], excerpts: dict[str, str]) -> s
     </div>
   </section>
   <main id="main-content" class="container">
-    <div class="category-filter-strip" role="group" aria-label="Filter guides by section">
-      <button type="button" class="cat-btn active" data-section="all" aria-pressed="true">All <span class="cat-count">({len(posts)})</span></button>
-      <button type="button" class="cat-btn" data-section="blog" aria-pressed="false">Blog <span class="cat-count">({counts['blog']})</span></button>
-      <button type="button" class="cat-btn" data-section="insights" aria-pressed="false">Insights <span class="cat-count">({counts['insights']})</span></button>
-      <button type="button" class="cat-btn" data-section="areas" aria-pressed="false">Areas <span class="cat-count">({counts['areas']})</span></button>
+    <div class="category-filter-strip" role="tablist" aria-label="Filter guides by topic">
+      <a href="{esc(abs_url(config['baseUrl']))}" class="cat-btn active" data-pillar="all" data-count="{len(posts)}" role="tab" aria-selected="true">All Guides</a>
+      <a href="{esc(abs_url(config['baseUrl'], 'topic/localities-corridors/'))}" class="cat-btn" data-pillar="localities-corridors" data-count="{topic_counts.get('Localities & Corridors', 0)}" role="tab" aria-selected="false">Localities &amp; Corridors</a>
+      <a href="{esc(abs_url(config['baseUrl'], 'topic/buying-checklists/'))}" class="cat-btn" data-pillar="buying-checklists" data-count="{topic_counts.get('Buyer Checklists & Process', 0)}" role="tab" aria-selected="false">Buyer Checklists &amp; Process</a>
+      <a href="{esc(abs_url(config['baseUrl'], 'topic/legal-rera/'))}" class="cat-btn" data-pillar="legal-rera" data-count="{topic_counts.get('Legal, Title & RERA', 0)}" role="tab" aria-selected="false">Legal, Title &amp; RERA</a>
+      <a href="{esc(abs_url(config['baseUrl'], 'topic/loans-costs-tax/'))}" class="cat-btn" data-pillar="loans-costs-tax" data-count="{topic_counts.get('Loans, Taxes & Total Costs', 0)}" role="tab" aria-selected="false">Loans, Taxes &amp; Total Costs</a>
+      <a href="{esc(abs_url(config['baseUrl'], 'topic/water-environment/'))}" class="cat-btn" data-pillar="water-environment" data-count="{topic_counts.get('Environment & Water Checks', 0)}" role="tab" aria-selected="false">Environment &amp; Water Checks</a>
     </div>
-    {browse_row(config['baseUrl'])}
     <div class="blog-grid" id="blogGrid">
       {grid}
     </div>
@@ -1417,22 +1425,27 @@ def render_hub(config: dict, hub: dict, children: list[dict], excerpts: dict[str
     cards = []
     for post in children:
         href = relative_href(hub["path"], post["path"])
+        topic = post.get("topic") or ""
+        pillar_slug = TOPIC_SLUG.get(topic, "")
+        badge_text = topic or SECTION_LABEL.get(post["section"], "Guide")
         search = " ".join(
             [
                 post["h1"],
                 excerpts.get(post["slug"], ""),
                 post.get("meta") or "",
                 post.get("seo_title") or "",
+                topic,
+                pillar_slug,
                 SECTION_LABEL[post["section"]],
                 post["section"],
             ]
         ).lower()
         shown = post.get("published") or published
         cards.append(
-            f"""<article class="blog-card" data-section="{esc(post['section'])}" data-rank="{post['rank']}" data-search="{esc(search)}">
+            f"""<article class="blog-card" data-section="{esc(post['section'])}" data-pillar="{esc(pillar_slug)}" data-rank="{post['rank']}" data-search="{esc(search)}">
         <a href="{esc(href)}" class="blog-card-media tone-{esc(post['section'])}" aria-label="Read {esc(post['h1'])}">
           {img_tag(root, post, 'blog-card-img')}
-          <span class="cat-badge">{esc(SECTION_LABEL[post['section']])}</span>
+          <span class="cat-badge">{esc(badge_text)}</span>
         </a>
         <div class="blog-card-body">
           <div class="blog-card-meta">

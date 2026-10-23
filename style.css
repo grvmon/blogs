@@ -409,6 +409,7 @@ p, blockquote, li {
 
 .cat-btn {
   appearance: none;
+  text-decoration: none;
   background: rgba(10, 10, 11, 0.04);
   color: #334155;
   border: 0.5px solid rgba(85, 85, 90, 0.2);
@@ -443,6 +444,20 @@ p, blockquote, li {
   color: #FFFFFF;
   border-color: #172129;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.cat-btn[data-count]::after {
+  content: " (" attr(data-count) ")";
+  font-size: 0.76rem;
+  color: #64748B;
+  font-weight: 500;
+  pointer-events: none;
+  transition: color 0.2s ease;
+}
+
+.cat-btn.active[data-count]::after {
+  color: var(--highlight-peach);
+  opacity: 0.95;
 }
 
 .cat-btn .cat-count {

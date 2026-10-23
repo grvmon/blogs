@@ -138,16 +138,8 @@ Published by the organization Acrenkey Realty LLP. Each guide carries a byline f
 
 - [Area guides](https://acrenkey.com/blogs/areas/): Neighbourhood notes for people buying a home in Bengaluru: property rates, metro access, water and flood checks by area.
 - [Data insights](https://acrenkey.com/blogs/insights/): Data notes for people buying a home in Bengaluru: prices, loans, RERA filings and infrastructure, with the source named.
-- [Buying process & checklists](https://acrenkey.com/blogs/topic/buying-process-checklists/): Guides on the buying process and the checklists acre&key uses before a Bengaluru booking.
-- [General](https://acrenkey.com/blogs/topic/general/): General guides for people buying a home in Bengaluru.
-- [Home loans & EMI](https://acrenkey.com/blogs/topic/home-loans-emi/): Guides on home loans and EMIs for people buying a home in Bengaluru.
-- [Interiors & construction](https://acrenkey.com/blogs/topic/interiors-construction/): Notes on interiors and construction for people buying a home in Bengaluru.
-- [Investment & rental](https://acrenkey.com/blogs/topic/investment-rental/): Guides on rental yield and holding a home in Bengaluru.
-- [Legal, khata & title](https://acrenkey.com/blogs/topic/legal-khata-title/): Guides on title, khata and the legal checks before a Bengaluru purchase.
-- [Metro & infrastructure](https://acrenkey.com/blogs/topic/metro-infrastructure/): Guides on Namma Metro and other infrastructure for people buying a home in Bengaluru.
-- [Plots, villas & special formats](https://acrenkey.com/blogs/topic/plots-villas-special-formats/): Guides on plots, villas and other formats for people buying in Bengaluru.
-- [Possession & after-purchase](https://acrenkey.com/blogs/topic/possession-after-purchase/): Guides on possession, khata transfer and the months after a Bengaluru purchase.
-- [RERA & builder disputes](https://acrenkey.com/blogs/topic/rera-builder-disputes/): Guides on RERA filings and builder disputes for people buying a home in Bengaluru.
-- [Stamp duty & registration](https://acrenkey.com/blogs/topic/stamp-duty-registration/): Guides on stamp duty and registration for people buying a home in Bengaluru.
-- [Tax & TDS](https://acrenkey.com/blogs/topic/tax-tds/): Guides on tax and TDS for people buying or selling a home in Bengaluru.
-- [Water, flood & environment](https://acrenkey.com/blogs/topic/water-flood-environment/): Guides on water supply, flood records and air quality for people buying a home in Bengaluru.
+- [Localities & Corridors](https://acrenkey.com/blogs/topic/localities-corridors/): Hyperlocal notes on property rates, metro access, civic infrastructure, and corridor comparisons across Bengaluru.
+- [Buyer Checklists & Process](https://acrenkey.com/blogs/topic/buying-checklists/): Stage-by-stage checklists, token verification, negotiation points, and handover steps for Bengaluru home buyers.
+- [Legal, Title & RERA](https://acrenkey.com/blogs/topic/legal-rera/): Title search, A-Khata vs B-Khata, RERA complaint filing, builder delay interest, and legal verification for Bengaluru homes.
+- [Loans, Taxes & Total Costs](https://acrenkey.com/blogs/topic/loans-costs-tax/): Loan eligibility, Kaveri 2.0 e-stamps, total flat cost breakdowns, 1% TDS, and stamp duty calculators for Bengaluru homebuyers.
+- [Environment & Water Checks](https://acrenkey.com/blogs/topic/water-environment/): Official KSNDMC flood spots, lake buffer zones, rajakaluve maps, CGWB groundwater levels, Cauvery Stage V water, and AQI data.

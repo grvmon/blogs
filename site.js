@@ -41,7 +41,7 @@
   var grid = document.getElementById("blogGrid");
   if (!grid) return;
 
-  var activeSection = "all";
+  var activePillar = "all";
   var buttons = document.querySelectorAll(".cat-btn");
   var cards = Array.prototype.slice.call(grid.querySelectorAll(".blog-card"));
   var noResults = document.getElementById("noResults");
@@ -52,11 +52,11 @@
     var query = (searchInput && searchInput.value ? searchInput.value : "").trim().toLowerCase();
     var visible = 0;
     cards.forEach(function (card) {
-      var section = card.getAttribute("data-section") || "";
+      var pillar = card.getAttribute("data-pillar") || card.getAttribute("data-section") || "";
       var haystack = card.getAttribute("data-search") || "";
-      var matchesSection = activeSection === "all" || section === activeSection;
+      var matchesPillar = activePillar === "all" || pillar === activePillar;
       var matchesQuery = !query || haystack.indexOf(query) !== -1;
-      var show = matchesSection && matchesQuery;
+      var show = matchesPillar && matchesQuery;
       card.style.display = show ? "flex" : "none";
       if (show) visible += 1;
     });
@@ -67,33 +67,40 @@
     }
   }
 
-  function setSection(section, button) {
-    activeSection = section;
+  function setPillar(pillar, button) {
+    activePillar = pillar;
     buttons.forEach(function (btn) {
       var on = btn === button;
       btn.classList.toggle("active", on);
-      btn.setAttribute("aria-pressed", on ? "true" : "false");
+      btn.setAttribute("aria-selected", on ? "true" : "false");
     });
     applyFilter();
   }
 
   buttons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      var section = button.getAttribute("data-section") || "all";
-      setSection(section, button);
-      var next = section === "all" ? " " : "#" + section;
+    button.addEventListener("click", function (event) {
+      if (button.tagName === "A" && !event.ctrlKey && !event.metaKey && !event.shiftKey) {
+        event.preventDefault();
+      }
+      var pillar = button.getAttribute("data-pillar") || button.getAttribute("data-section") || "all";
+      setPillar(pillar, button);
+      var next = pillar === "all" ? "" : "#" + pillar;
       if (history.replaceState) {
-        history.replaceState(null, "", section === "all" ? location.pathname + location.search : "#" + section);
-      } else if (section !== "all") {
+        history.replaceState(null, "", pillar === "all" ? location.pathname + location.search : next);
+      } else if (pillar !== "all") {
         location.hash = next;
       }
     });
   });
 
   var initial = (location.hash || "").replace("#", "");
-  if (initial === "blog" || initial === "insights" || initial === "areas") {
-    var match = document.querySelector('.cat-btn[data-section="' + initial + '"]');
-    if (match) setSection(initial, match);
+  if (initial) {
+    var match = document.querySelector('.cat-btn[data-pillar="' + initial + '"], .cat-btn[data-section="' + initial + '"]');
+    if (match) {
+      setPillar(initial, match);
+    } else {
+      applyFilter();
+    }
   } else {
     applyFilter();
   }
