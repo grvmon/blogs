@@ -50,7 +50,7 @@ CONTENT = ROOT / "content"
 POSTS_DIR = CONTENT / "posts"
 CONFIG_PATH = ROOT / "site.config.json"
 SECTIONS = ("blog", "insights", "areas")
-SECTION_LABEL = {"blog": "Blog", "insights": "Insights", "areas": "Areas"}
+SECTION_LABEL = {"blog": "Blogs", "insights": "Insights", "areas": "Areas"}
 UNPUBLISHED_RE = re.compile(
     r"^https://acrenkey\.com/(?:blogs|insights)/([a-z0-9-]+)/?$"
 )
@@ -725,7 +725,7 @@ def json_ld(config: dict, post: dict, canonical: str, faqs: list[tuple[str, str]
     crumb = section_crumb(post, config["baseUrl"])
     breadcrumb_items = [
         {"@type": "ListItem", "position": 1, "name": "acre&key", "item": org["url"]},
-        {"@type": "ListItem", "position": 2, "name": "Blog", "item": abs_url(config["baseUrl"])},
+        {"@type": "ListItem", "position": 2, "name": "Blogs", "item": abs_url(config["baseUrl"])},
     ]
     if crumb:
         breadcrumb_items.append(
@@ -897,7 +897,7 @@ def json_ld_index(config: dict, posts: list[dict]) -> str:
             "@type": "BreadcrumbList",
             "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": "acre&key", "item": org["url"]},
-                {"@type": "ListItem", "position": 2, "name": "Blog", "item": canonical},
+                {"@type": "ListItem", "position": 2, "name": "Blogs", "item": canonical},
             ],
         },
     ]
@@ -973,7 +973,7 @@ def blog_subnav(current: str = "", base: str = "https://acrenkey.com/blogs/") ->
     items = [
         ("properties", "Properties", "https://acrenkey.com/property/"),
         ("calculators", "Calculators", "https://acrenkey.com/calculators/"),
-        ("index", "Blog", abs_url(base)),
+        ("index", "Blogs", abs_url(base)),
     ]
     for hub in HUBS:
         items.append((hub["key"], hub["name"], abs_url(base, hub["path"])))
@@ -983,7 +983,7 @@ def blog_subnav(current: str = "", base: str = "https://acrenkey.com/blogs/") ->
         current_attr = ' aria-current="page"' if key == current else ""
         links.append(f'<a href="{esc(href)}"{current_attr}>{esc(label)}</a>')
     return (
-        '<nav class="blog-subnav" aria-label="Blog">'
+        '<nav class="blog-subnav" aria-label="Blogs">'
         f'<div class="blog-subnav-inner">{"".join(links)}</div></nav>'
     )
 
@@ -1190,10 +1190,13 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
             "name": post["author"],
             "role": "Market Strategy · Product · Tech",
             "badge": "Co-founder",
+            "jobTitle": "Co-founder & Head of Product & Strategy",
             "avatar": "https://acrenkey.com/style-guide/assets/gaurav-mongia-founder-acre-key.webp",
             "linkedin": "https://www.linkedin.com/in/gaurav-a-mongia/",
+            "description": "Building data-driven evaluation models and micro-market frameworks to give buyers absolute clarity.",
         },
     )
+    bio_role = f"{profile['jobTitle']} · {profile['role']}" if profile.get("jobTitle") and profile["jobTitle"] != profile.get("role") else profile.get("role", "")
     crumb = section_crumb(post, config["baseUrl"])
     if crumb:
         bc_section_html = f'\n        <li><a href="{esc(crumb[1])}">{esc(crumb[0])}</a></li>'
@@ -1215,7 +1218,7 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
     <nav class="crumbs" aria-label="Breadcrumb">
       <ol>
         <li><a href="https://acrenkey.com/">acre&amp;key</a></li>
-        <li><a href="{esc(config['baseUrl'])}">Blog</a></li>{bc_section_html}
+        <li><a href="{esc(config['baseUrl'])}">Blogs</a></li>{bc_section_html}
         <li aria-current="page"><a href="{canonical}" aria-current="page">{esc(post['seo_title'])}</a></li>
       </ol>
     </nav>
@@ -1265,14 +1268,24 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
           {talk_rest}
           {sources_html}
         </div>
-        <div class="author-bio-card">
-          <img class="author-bio-avatar" src="{esc(profile['avatar'].replace('.webp','-144.webp'))}" srcset="{esc(profile['avatar'].replace('.webp','-96.webp'))} 1x, {esc(profile['avatar'].replace('.webp','-144.webp'))} 2x" alt="{esc(profile['name'])}" width="72" height="72" loading="lazy" decoding="async">
-          <div>
-            <p class="author-bio-title">Written by {esc(profile['name'])}</p>
-            <span class="author-bio-role">Acrenkey Realty LLP</span>
-            <p class="author-bio-desc">Published by Acrenkey Realty LLP, a property advisory for people buying a home in Bengaluru.</p>
+        <aside class="author-bio-card" aria-label="About the author">
+          <div class="author-bio-top">
+            <div class="author-bio-avatar-wrap">
+              <img src="{esc(profile['avatar'].replace('.webp','-96.webp'))}" srcset="{esc(profile['avatar'].replace('.webp','-96.webp'))} 1x, {esc(profile['avatar'].replace('.webp','-144.webp'))} 2x" alt="{esc(profile['name'])}" class="author-bio-avatar" width="52" height="52" loading="lazy" decoding="async">
+            </div>
+            <div class="author-bio-meta">
+              <div class="author-bio-kicker">About the author</div>
+              <div class="author-bio-header">
+                <a href="https://acrenkey.com/#about-us" class="author-bio-name">{esc(profile['name'])}</a>
+                <a href="{esc(profile['linkedin'])}" class="author-linkedin-badge" target="_blank" rel="noopener noreferrer" aria-label="{esc(profile['name'])} on LinkedIn">
+                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                </a>
+              </div>
+              <div class="author-bio-role">{esc(bio_role)}</div>
+            </div>
           </div>
-        </div>
+          <p class="author-bio-text">{esc(profile.get('description', ''))}</p>
+        </aside>
         {related_blocks_markup}
         <section class="related-section" aria-label="More guides">
           <div class="related-grid">
@@ -1493,7 +1506,7 @@ def render_hub(config: dict, hub: dict, children: list[dict], excerpts: dict[str
             "@type": "BreadcrumbList",
             "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": "acre&key", "item": "https://acrenkey.com/"},
-                {"@type": "ListItem", "position": 2, "name": "Blog", "item": abs_url(base)},
+                {"@type": "ListItem", "position": 2, "name": "Blogs", "item": abs_url(base)},
                 {"@type": "ListItem", "position": 3, "name": hub["h1"], "item": canonical},
             ],
         },
@@ -1512,7 +1525,7 @@ def render_hub(config: dict, hub: dict, children: list[dict], excerpts: dict[str
     <nav class="crumbs" aria-label="Breadcrumb">
       <ol>
         <li><a href="https://acrenkey.com/">acre&amp;key</a></li>
-        <li><a href="{esc(abs_url(base))}">Blog</a></li>
+        <li><a href="{esc(abs_url(base))}">Blogs</a></li>
         <li aria-current="page"><a href="{canonical}" aria-current="page">{esc(hub['h1'])}</a></li>
       </ol>
     </nav>
@@ -1808,8 +1821,8 @@ def patch_static_page(page: str, item: dict, links: list[dict], base: str, sente
                 ensure_ascii=False,
             )
             head, json_count = re.subn(
-                r'\{"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://acrenkey.com/blogs/"\}, \{"@type": "ListItem", "position": 3,',
-                '{"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://acrenkey.com/blogs/"}, '
+                r'\{"@type": "ListItem", "position": 2, "name": "(?:Blog|Blogs)", "item": "https://acrenkey.com/blogs/"\}, \{"@type": "ListItem", "position": 3,',
+                '{"@type": "ListItem", "position": 2, "name": "Blogs", "item": "https://acrenkey.com/blogs/"}, '
                 + topic_json
                 + ', {"@type": "ListItem", "position": 4,',
                 head,
@@ -1820,7 +1833,7 @@ def patch_static_page(page: str, item: dict, links: list[dict], base: str, sente
             page = head + sep + tail
         crumb_items = [
             '<li><a href="https://acrenkey.com/">acre&amp;key</a></li>',
-            f'<li><a href="{esc(base)}">Blog</a></li>',
+            f'<li><a href="{esc(base)}">Blogs</a></li>',
         ]
         if topic_slug:
             crumb_items.append(f'<li><a href="{esc(topic_url)}">{esc(topic)}</a></li>')
@@ -1835,8 +1848,7 @@ def patch_static_page(page: str, item: dict, links: list[dict], base: str, sente
         profile = AUTHOR_PROFILES.get(author_key, AUTHOR_PROFILES["Gaurav"])
         mod_date = item.get("date_modified") or item.get("published", "2026-10-22")
         try:
-            dt = datetime.strptime(mod_date, "%Y-%m-%d")
-            shown_date = dt.strftime("%d %b %Y")
+            shown_date = format_date(mod_date)
         except Exception:
             shown_date = mod_date
         from urllib.parse import quote
@@ -1872,9 +1884,31 @@ def patch_static_page(page: str, item: dict, links: list[dict], base: str, sente
         </div>
       </div>"""
         page = re.sub(r'<div class="author-byline-card">[\s\S]*?</header>', f'{new_author_card}\n    </header>', page, count=1)
+
+        bio_role = f"{profile['jobTitle']} · {profile['role']}" if profile.get("jobTitle") and profile["jobTitle"] != profile.get("role") else profile.get("role", "")
+        new_bio_card = f"""<aside class="author-bio-card" aria-label="About the author">
+          <div class="author-bio-top">
+            <div class="author-bio-avatar-wrap">
+              <img src="{esc(profile['avatar'].replace('.webp', '-96.webp'))}" srcset="{esc(profile['avatar'].replace('.webp', '-96.webp'))} 1x, {esc(profile['avatar'].replace('.webp', '-144.webp'))} 2x" alt="{esc(profile['name'])}" class="author-bio-avatar" width="52" height="52" loading="lazy" decoding="async">
+            </div>
+            <div class="author-bio-meta">
+              <div class="author-bio-kicker">About the author</div>
+              <div class="author-bio-header">
+                <a href="https://acrenkey.com/#about-us" class="author-bio-name">{esc(profile['name'])}</a>
+                <a href="{esc(profile['linkedin'])}" class="author-linkedin-badge" target="_blank" rel="noopener noreferrer" aria-label="{esc(profile['name'])} on LinkedIn">
+                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                </a>
+              </div>
+              <div class="author-bio-role">{esc(bio_role)}</div>
+            </div>
+          </div>
+          <p class="author-bio-text">{esc(profile.get('description', ''))}</p>
+        </aside>"""
+        page = re.sub(r'<div class="author-bio-card">[\s\S]*?</div>\s*</div>|<aside class="author-bio-card"[\s\S]*?</aside>', new_bio_card, page, count=1)
     page = page.replace('<li><a href="https://acrenkey.com/">Home</a></li>', '<li><a href="https://acrenkey.com/">acre&amp;key</a></li>')
     page = page.replace('<li class="meta-sep" aria-hidden="true">/</li>', '<li class="meta-sep" aria-hidden="true">›</li>')
     page = page.replace('{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://acrenkey.com/"}', '{"@type": "ListItem", "position": 1, "name": "acre&key", "item": "https://acrenkey.com/"}')
+    page = page.replace('{"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://acrenkey.com/blogs/"}', '{"@type": "ListItem", "position": 2, "name": "Blogs", "item": "https://acrenkey.com/blogs/"}')
     digest = asset("style.css").split("?v=", 1)[1]
     page = re.sub(r"style\.css\?v=[A-Za-z0-9]+", f"style.css?v={digest}", page)
     fav_lines = [
