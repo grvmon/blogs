@@ -1375,17 +1375,23 @@ def render_index(config: dict, posts: list[dict], excerpts: dict[str, str]) -> s
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
         <input type="text" id="blogSearchInput" class="search-input" placeholder="Search guides, for example Whitefield, khata, stamp duty" aria-label="Search guides">
+        <button type="button" class="search-clear-btn" id="searchClearBtn" aria-label="Clear search query" hidden>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
       </div>
     </div>
   </section>
   <main id="main-content" class="container">
-    {browse_row(config['baseUrl'])}
     <div class="category-filter-strip" role="group" aria-label="Filter guides by section">
-      <button type="button" class="cat-btn active" data-section="all" aria-pressed="true">All ({len(posts)})</button>
-      <button type="button" class="cat-btn" data-section="blog" aria-pressed="false">Blog ({counts['blog']})</button>
-      <button type="button" class="cat-btn" data-section="insights" aria-pressed="false">Insights ({counts['insights']})</button>
-      <button type="button" class="cat-btn" data-section="areas" aria-pressed="false">Areas ({counts['areas']})</button>
+      <button type="button" class="cat-btn active" data-section="all" aria-pressed="true">All <span class="cat-count">({len(posts)})</span></button>
+      <button type="button" class="cat-btn" data-section="blog" aria-pressed="false">Blog <span class="cat-count">({counts['blog']})</span></button>
+      <button type="button" class="cat-btn" data-section="insights" aria-pressed="false">Insights <span class="cat-count">({counts['insights']})</span></button>
+      <button type="button" class="cat-btn" data-section="areas" aria-pressed="false">Areas <span class="cat-count">({counts['areas']})</span></button>
     </div>
+    {browse_row(config['baseUrl'])}
     <div class="blog-grid" id="blogGrid">
       {grid}
     </div>

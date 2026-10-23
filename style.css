@@ -295,10 +295,10 @@ p, blockquote, li {
    ========================================================================== */
 .blog-home-hero {
   /* body already clears the fixed 80px header; this is the visible gap above the eyebrow (homepage-style breathing room). */
-  padding: var(--space-2xl) var(--space-md) var(--space-xl);
+  padding: 44px var(--space-md) 28px;
   text-align: center;
   border-bottom: 0.5px solid var(--divider);
-  background: linear-gradient(180deg, rgba(128, 69, 38, 0.03) 0%, transparent 100%);
+  background: linear-gradient(180deg, rgba(128, 69, 38, 0.02) 0%, transparent 100%);
 }
 
 .hero-wrap {
@@ -323,9 +323,11 @@ p, blockquote, li {
 
 /* Search Bar (Strict 4px & 0.5px Hairline) */
 .search-container {
-  max-width: 580px;
+  max-width: 560px;
   margin: 0 auto;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .search-icon {
@@ -343,20 +345,25 @@ p, blockquote, li {
   width: 100%;
   height: 48px;
   border-radius: var(--radius-strict);
-  border: 0.5px solid rgba(85, 85, 90, 0.25);
+  border: 0.5px solid rgba(85, 85, 90, 0.22);
   background: var(--white);
-  padding: 0 1.25rem 0 3rem;
+  padding: 0 42px 0 3rem;
   font-family: var(--font-sans);
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--obsidian-black);
   outline: none;
-  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.search-input:hover {
+  border-color: rgba(85, 85, 90, 0.38);
 }
 
 .search-input:focus,
 .search-input:focus-visible {
   outline: none !important;
-  box-shadow: none !important;
+  box-shadow: 0 0 0 3px rgba(128, 69, 38, 0.1) !important;
   border-color: var(--text-copper-aaa) !important;
 }
 
@@ -364,44 +371,91 @@ p, blockquote, li {
   color: rgba(85, 85, 90, 0.6);
 }
 
-/* Category Filter Strip */
+.search-clear-btn {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  color: var(--neutral-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  z-index: 2;
+  transition: color 0.2s ease, transform 0.12s ease;
+}
+
+.search-clear-btn:hover {
+  color: var(--obsidian-black);
+  transform: scale(1.1);
+}
+
+.search-clear-btn[hidden] {
+  display: none !important;
+}
+
+/* Category Filter Strip - acre&key Blueprint Geometry (Strict 4px) */
 .category-filter-strip {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: var(--space-sm);
-  margin: var(--space-lg) 0 var(--space-xl);
+  gap: 8px;
+  margin: var(--space-lg) auto 14px;
+  padding: 0;
 }
 
 .cat-btn {
-  background: var(--white);
-  border: 0.5px solid var(--divider);
+  appearance: none;
+  background: rgba(10, 10, 11, 0.04);
+  color: #334155;
+  border: 0.5px solid rgba(85, 85, 90, 0.2);
   border-radius: var(--radius-strict);
-  padding: 0.5rem 1.1rem;
+  padding: 6px 14px;
   font-family: var(--font-sans);
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 600;
-  color: var(--neutral-grey);
   cursor: pointer;
-  min-height: 44px;
-  min-width: 44px;
+  min-height: 38px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-  letter-spacing: 0.02em;
+  gap: 5px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.12s ease;
 }
 
 .cat-btn:hover {
-  border-color: var(--text-copper-aaa);
-  color: var(--text-copper-aaa);
+  color: #0F172A;
+  background: rgba(10, 10, 11, 0.08);
+  border-color: rgba(85, 85, 90, 0.35);
+}
+
+.cat-btn:active {
+  transform: scale(0.975);
 }
 
 .cat-btn.active {
-  background: var(--text-copper-aaa);
+  background: #172129;
   color: #FFFFFF;
-  border-color: var(--text-copper-aaa);
+  border-color: #172129;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.cat-btn .cat-count {
+  font-size: 0.76rem;
+  color: #64748B;
+  font-weight: 500;
+  pointer-events: none;
+  transition: color 0.2s ease;
+}
+
+.cat-btn.active .cat-count {
+  color: var(--highlight-peach);
+  opacity: 0.95;
 }
 
 /* ==========================================================================
@@ -455,20 +509,21 @@ p, blockquote, li {
 
 .cat-badge {
   position: absolute;
-  top: var(--space-md);
-  left: var(--space-md);
-  background: rgba(10, 10, 11, 0.85);
+  top: 10px;
+  left: 10px;
+  background: rgba(43, 45, 49, 0.72);
   color: #FFFFFF;
   font-family: var(--font-sans);
-  font-size: 0.7rem;
-  font-weight: 600;
-  padding: 0.25rem 0.65rem;
-  border-radius: var(--radius-strict);
-  letter-spacing: 0.1em;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 3px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   z-index: 2;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 0.5px solid rgba(255, 255, 255, 0.2);
 }
 
 .blog-card-body {
@@ -1407,7 +1462,7 @@ p, blockquote, li {
   }
 
   .blog-home-hero {
-    padding: 72px var(--space-md) var(--space-lg);
+    padding: 36px var(--space-md) var(--space-md);
   }
 
   .article-title {
@@ -1597,29 +1652,35 @@ img.author-bio-avatar { object-fit: cover; padding: 0; }
 .browse-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 6px;
   justify-content: center;
-  margin: 0 0 1.5rem;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto var(--space-xl);
+  padding: 0 var(--space-xs);
 }
 .browse-link {
-  background: var(--white);
-  border: 0.5px solid var(--divider);
+  background: rgba(255, 255, 255, 0.7);
+  border: 0.5px solid rgba(85, 85, 90, 0.18);
   border-radius: var(--radius-strict);
-  padding: 0.5rem 1.1rem;
+  padding: 4px 10px;
   font-family: var(--font-sans);
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--neutral-grey);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #55555A;
   text-decoration: none;
-  min-height: 44px;
+  line-height: 1.3;
+  letter-spacing: -0.005em;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 .browse-link:hover,
 .browse-link[aria-current="page"] {
   border-color: var(--text-copper-aaa);
   color: var(--text-copper-aaa);
+  background: rgba(128, 69, 38, 0.05);
 }
 .hub-header {
   margin: var(--space-lg) 0 var(--space-md);

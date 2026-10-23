@@ -98,7 +98,19 @@
     applyFilter();
   }
 
+  var clearBtn = document.getElementById("searchClearBtn");
   if (searchInput) {
-    searchInput.addEventListener("input", applyFilter);
+    searchInput.addEventListener("input", function () {
+      if (clearBtn) clearBtn.hidden = !searchInput.value;
+      applyFilter();
+    });
+    if (clearBtn) {
+      clearBtn.addEventListener("click", function () {
+        searchInput.value = "";
+        clearBtn.hidden = true;
+        searchInput.focus();
+        applyFilter();
+      });
+    }
   }
 })();
