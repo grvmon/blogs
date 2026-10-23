@@ -542,7 +542,7 @@ p, blockquote, li {
 }
 
 .blog-card-body {
-  padding: 1rem 1.15rem;
+  padding: 1.1rem 1.25rem 1.25rem;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -573,26 +573,11 @@ p, blockquote, li {
   line-height: 1;
 }
 
-.blog-card-meta {
-  font-size: 0.78rem;
-  color: var(--neutral-grey);
-  margin-bottom: var(--space-xs);
-  display: flex;
-  align-items: center;
-  gap: var(--space-xs);
-  font-variant-numeric: tabular-nums;
-}
-
-.meta-sep {
-  opacity: 0.4;
-  margin-inline: 0.25rem;
-}
-
 .blog-card-title {
   font-family: var(--font-serif);
   font-size: clamp(1.1rem, 0.98rem + 0.25vw, 1.25rem);
-  line-height: 1.25;
-  margin-bottom: 0.85rem;
+  line-height: 1.28;
+  margin-bottom: 0;
   color: var(--obsidian-black);
 }
 

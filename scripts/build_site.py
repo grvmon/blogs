@@ -1359,10 +1359,6 @@ def render_index(config: dict, posts: list[dict], excerpts: dict[str, str]) -> s
           <h2 class="blog-card-title">
             <a href="{esc(post['path'])}">{esc(post['h1'])}</a>
           </h2>
-          <a href="{esc(post['path'])}" class="blog-card-readmore">
-            <span>{esc(post.get('readmore') or 'Read guide')}</span>
-            <span aria-hidden="true">&rarr;</span>
-          </a>
         </div>
       </article>"""
         )
@@ -1464,10 +1460,6 @@ def render_hub(config: dict, hub: dict, children: list[dict], excerpts: dict[str
           <h2 class="blog-card-title">
             <a href="{esc(href)}">{esc(post['h1'])}</a>
           </h2>
-          <a href="{esc(href)}" class="blog-card-readmore">
-            <span>{esc(post.get('readmore') or 'Read guide')}</span>
-            <span aria-hidden="true">&rarr;</span>
-          </a>
         </div>
       </article>"""
         )
