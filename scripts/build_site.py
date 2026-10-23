@@ -1189,6 +1189,9 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
     else:
         bc_section_html = ""
 
+    blocks = post.get("_related_blocks") or ([post["_related_block"]] if post.get("_related_block") and post["_related_block"].get("title") else [])
+    related_blocks_markup = "\n        ".join(related_block_html(b["title"], b["items"]) for b in blocks)
+
     page = f"""<!DOCTYPE html>
 <html lang="en-IN">
 <head>
@@ -1264,7 +1267,7 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
             <p class="author-bio-desc">Published by Acrenkey Realty LLP, a property advisory for people buying a home in Bengaluru.</p>
           </div>
         </div>
-        {related_block_html((post.get('_related_block') or {}).get('title') or '', (post.get('_related_block') or {}).get('items') or [])}
+        {related_blocks_markup}
         <section class="related-section" aria-label="More guides">
           <div class="related-grid">
             {prev_next(post, posts)}

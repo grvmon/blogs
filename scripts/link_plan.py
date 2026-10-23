@@ -657,41 +657,93 @@ def apply_link_plan(body: str, links: list[dict], post: dict) -> str:
             continue
         short_rest.append(link)
 
-    property_rest = [link for link in short_rest if _kind(link) == "property"]
-    if post.get("section") == "areas" and len(property_rest) >= 3:
-        chosen = sorted(property_rest, key=_priority)[:6]
-        title = "Projects in this area"
-        chosen_ids = {id(link) for link in chosen}
-        held_reason = "this page's one block is Projects in this area"
-    elif len(short_rest) >= 3:
-        chosen = sorted(short_rest, key=_priority)[:6]
-        title = "Related reading"
-        chosen_ids = {id(link) for link in chosen}
-        held_reason = "the one related block already has its 3–6 items"
-    else:
-        chosen = []
-        chosen_ids = set()
-        title = ""
-        held_reason = "fewer than 3 suitable links for one related block"
+    placed_blocks, block_decisions = build_blocks(short_rest, post)
+    decisions.extend(block_decisions)
 
-    for link in chosen:
-        decisions.append(_decide(link, "placed-block", f"Item in the {title} block"))
+    post["_decisions"] = decisions
+    post["_related_blocks"] = placed_blocks
+    post["_related_block"] = placed_blocks[0] if placed_blocks else {"title": "", "items": []}
+    return _join_blocks(blocks)
+
+
+def build_blocks(short_rest: list[dict], post: dict) -> tuple[list[dict], list[dict]]:
+    """Build multi-pillar blocks (Projects, Tools & Answers, Related Reading) with 3-6 items each."""
+    decisions = []
+    placed_blocks = []
+    chosen_ids = set()
+
+    props = [link for link in short_rest if _kind(link) == "property"]
+    if len(props) >= 3:
+        p_chosen = sorted(props, key=_priority)[:6]
+        placed_blocks.append({
+            "title": "Projects in this area",
+            "items": [(link["anchor"], link["target"]) for link in p_chosen]
+        })
+        for link in p_chosen:
+            chosen_ids.add(id(link))
+            decisions.append(_decide(link, "placed-block", "Item in the Projects in this area block"))
+        remaining = [link for link in short_rest if id(link) not in chosen_ids]
+    else:
+        remaining = short_rest
+
+    tools = [link for link in remaining if _kind(link) in {"calculator", "answer"}]
+    reading = [link for link in remaining if _kind(link) not in {"calculator", "answer"}]
+
+    if len(tools) >= 3 and len(reading) >= 3:
+        t_chosen = sorted(tools, key=_priority)[:6]
+        placed_blocks.append({
+            "title": "Calculators & homebuyer answers",
+            "items": [(link["anchor"], link["target"]) for link in t_chosen]
+        })
+        for link in t_chosen:
+            chosen_ids.add(id(link))
+            decisions.append(_decide(link, "placed-block", "Item in the Calculators & homebuyer answers block"))
+
+        g_chosen = sorted(reading, key=_priority)[:6]
+        placed_blocks.append({
+            "title": "Related guides",
+            "items": [(link["anchor"], link["target"]) for link in g_chosen]
+        })
+        for link in g_chosen:
+            chosen_ids.add(id(link))
+            decisions.append(_decide(link, "placed-block", "Item in the Related guides block"))
+    elif len(tools) >= 3 and len(remaining) >= 6:
+        t_chosen = sorted(tools, key=_priority)[:6]
+        placed_blocks.append({
+            "title": "Calculators & homebuyer answers",
+            "items": [(link["anchor"], link["target"]) for link in t_chosen]
+        })
+        for link in t_chosen:
+            chosen_ids.add(id(link))
+            decisions.append(_decide(link, "placed-block", "Item in the Calculators & homebuyer answers block"))
+
+        rem2 = [link for link in remaining if id(link) not in chosen_ids]
+        if len(rem2) >= 3:
+            r_chosen = sorted(rem2, key=_priority)[:6]
+            placed_blocks.append({
+                "title": "Related guides",
+                "items": [(link["anchor"], link["target"]) for link in r_chosen]
+            })
+            for link in r_chosen:
+                chosen_ids.add(id(link))
+                decisions.append(_decide(link, "placed-block", "Item in the Related guides block"))
+    elif len(remaining) >= 3:
+        r_chosen = sorted(remaining, key=_priority)[:6]
+        r_title = "Related reading & tools" if any(_kind(l) in {"calculator", "answer"} for l in r_chosen) else "Related reading"
+        placed_blocks.append({
+            "title": r_title,
+            "items": [(link["anchor"], link["target"]) for link in r_chosen]
+        })
+        for link in r_chosen:
+            chosen_ids.add(id(link))
+            decisions.append(_decide(link, "placed-block", f"Item in the {r_title} block"))
+
     for link in short_rest:
         if id(link) in chosen_ids:
             continue
-        if chosen and len(chosen) >= 6 and (
-            (title == "Projects in this area" and _kind(link) == "property") or title == "Related reading"
-        ):
-            reason = "the one related block already has 6 items"
-        elif title == "Projects in this area" and _kind(link) != "property":
-            reason = held_reason
-        else:
-            reason = held_reason
-        decisions.append(_decide(link, "skipped", reason))
+        decisions.append(_decide(link, "skipped", "block capacity reached or fewer than 3 items for a separate block"))
 
-    post["_decisions"] = decisions
-    post["_related_block"] = {"title": title, "items": [(link["anchor"], link["target"]) for link in chosen]}
-    return _join_blocks(blocks)
+    return placed_blocks, decisions
 
 
 def sibling_hubs(key: str) -> list[dict]:
@@ -835,47 +887,28 @@ def inject_static_html(page: str, links: list[dict], post: dict, sentences: list
             decisions.append(_decide(link, "placed-inline", "Existing phrase linked in a paragraph"))
         else:
             short_rest.append(link)
-    property_rest = [link for link in short_rest if _kind(link) == "property"]
-    if post.get("section") == "areas" and len(property_rest) >= 3:
-        chosen = sorted(property_rest, key=_priority)[:6]
-        title = "Projects in this area"
-    elif len(short_rest) >= 3:
-        chosen = sorted(short_rest, key=_priority)[:6]
-        title = "Related reading"
-    else:
-        chosen = []
-        title = ""
-    chosen_ids = {id(link) for link in chosen}
-    for link in chosen:
-        decisions.append(_decide(link, "placed-block", f"Item in the {title} block"))
-    for link in short_rest:
-        if id(link) in chosen_ids:
-            continue
-        if chosen and len(chosen) >= 6:
-            reason = "the one related block already has 6 items"
-        elif title == "Projects in this area" and _kind(link) != "property":
-            reason = "this page's one block is Projects in this area"
-        else:
-            reason = "fewer than 3 suitable links for one related block"
-        decisions.append(_decide(link, "skipped", reason))
+    placed_blocks, block_decisions = build_blocks(short_rest, post)
+    decisions.extend(block_decisions)
+
     post["_decisions"] = decisions
-    post["_related_block"] = {"title": title, "items": [(link["anchor"], link["target"]) for link in chosen]}
+    post["_related_blocks"] = placed_blocks
+    post["_related_block"] = placed_blocks[0] if placed_blocks else {"title": "", "items": []}
     sentences_html = "".join(
         _html_paragraph(sentence) for sentence in (context_sentences(post) + list(sentences or []))
     )
-    block_html = related_block_html(title, post["_related_block"]["items"])
+    blocks_html = "\n".join(related_block_html(b["title"], b["items"]) for b in placed_blocks)
     if sentences_html:
         marker = page.find('<section class="faq-section"')
         if marker < 0:
             marker = page.find('<section class="related-section"')
         if marker >= 0:
             page = page[:marker] + sentences_html + page[marker:]
-    if block_html:
+    if blocks_html:
         marker = page.find('<section class="related-section"')
         if marker < 0:
             marker = page.find("</article>")
         if marker >= 0:
-            page = page[:marker] + block_html + page[marker:]
+            page = page[:marker] + blocks_html + page[marker:]
     return page
 
 
@@ -888,8 +921,8 @@ def classify_index_links(links: list[dict]) -> list[dict]:
         if kind in {"chips", "nav", "breadcrumb"}:
             decisions.append(_decide(link, "placed-nav", "Rendered in the nav, breadcrumb or hub chrome"))
             continue
-        if kind == "hub-sidebar" and 2 <= count <= 5:
-            decisions.append(_decide(link, "placed-inline", "Contact sentence under the guide index"))
+        if kind == "hub-sidebar":
+            decisions.append(_decide(link, "skipped", "Removed per user request"))
             continue
         if count < 2 or count > 5:
             decisions.append(
