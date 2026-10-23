@@ -23,7 +23,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **A near-tie on money means decide on risk and fit.**
 > - **Our PAIRS scorecard:** price, approvals, interior, running costs, surroundings.
 
-Two shortlisted flats rarely come with figures you can compare directly. One quotes super built-up area, the other includes parking, one is ready and one is three years away. Here's how to put them on one sheet in Bengaluru.
+Two shortlisted flats rarely come with figures you can compare directly. One quotes super built-up area, the other includes parking, one is ready and one is three years away. Here's how to put them on one sheet in Bengaluru. Before relying on builder ratings and online testimonials, see our guide on [20 questions before trusting online property reviews](https://acrenkey.com/blogs/20-questions-before-trusting-online-property-reviews/).
 
 ![Two apartment floor plans side by side with price per carpet square foot worked out under each](/img/blog/compare-two-apartments.png)
 

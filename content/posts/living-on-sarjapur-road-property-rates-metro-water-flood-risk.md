@@ -71,7 +71,7 @@ ANAROCK quotes **₹33,000 to ₹46,000 a month** for a 1,000 sq ft 2BHK in Q1 2
 
 ### What's being built
 
-Much of the outer road falls in Anekal taluk on Karnataka RERA. In our [East RERA study](https://acrenkey.com/insights/do-east-bengaluru-projects-deliver-on-their-rera-date/), Anekal had 874 approved housing and plotted projects, and 72.2% still carried their original completion date. But Anekal also covers Electronic City and Chandapura, so it isn't a Sarjapur-only figure.
+Much of the outer road falls in Anekal taluk on Karnataka RERA. In our [East RERA study](https://acrenkey.com/insights/do-east-bengaluru-projects-deliver-on-their-rera-date/), Anekal had 874 approved housing and plotted projects, and 72.2% still carried their original completion date. But Anekal also covers Electronic City and Chandapura, so it isn't a Sarjapur-only figure. If you are weighing connectivity and rental yield against the tech corridor, read our [Electronic City vs Sarjapur Road comparison](https://acrenkey.com/blogs/electronic-city-vs-sarjapur-road-for-homebuyers/). For verified project checks along Sarjapur Road, see our reviews of [Birla Evara](https://acrenkey.com/property/birla-evara-sarjapur-road/) and [Eaton Park at The Prestige City](https://acrenkey.com/property/eaton-park-at-the-prestige-city-sarjapur-road/).
 
 ## Is there a metro on Sarjapur Road?
 

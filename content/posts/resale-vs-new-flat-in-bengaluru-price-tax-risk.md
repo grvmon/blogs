@@ -26,7 +26,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **Protection differs:** RERA covers the builder's promises and defects for five years from possession; a resale seller gives you the title and little else.
 > - **Our KEYS check:** khata and title, effective carpet cost, years to move in, safety net.
 
-Most Bengaluru buyers end up weighing the same two options: a new flat in a project still being built, or a resale flat they can walk into. The headline price is the least useful number in that comparison. This guide puts the real costs side by side, shows how to compare carpet area, and sets out which risks you take on with each.
+Most Bengaluru buyers end up weighing the same two options: a new flat in a project still being built, or a resale flat they can walk into. The headline price is the least useful number in that comparison. This guide puts the real costs side by side, shows how to compare carpet area, and sets out which risks you take on with each. To model full acquisition costs including renovation and GST, run our [resale vs new flat calculator](https://acrenkey.com/calculators/resale-vs-new-flat/).
 
 ## How do the costs compare?
 

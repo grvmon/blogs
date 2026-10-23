@@ -63,7 +63,7 @@ This is the honest gap. Knight Frank's Bengaluru price table doesn't include Hos
 
 ### What's being built
 
-We pulled every Karnataka RERA registration in Hosakote taluk on 15 Oct 2026 ([K-RERA project search](https://rera.karnataka.gov.in/viewAllProjects?language=en)).
+We pulled every Karnataka RERA registration in Hosakote taluk on 15 Oct 2026 ([K-RERA project search](https://rera.karnataka.gov.in/viewAllProjects?language=en)). For a ground check of which developers delivered on their original RERA filings, read our study on [Hoskote RERA approved projects: paper vs ground](https://acrenkey.com/blogs/hoskote-old-madras-road-approvals-paper-vs-ground/). If you are comparing highway access into East Bengaluru, see our [Old Madras Road vs Hoskote comparison](https://acrenkey.com/blogs/old-madras-road-vs-hoskote-for-homebuyers/).
 
 | Hosakote taluk, approved projects | Count | Share |
 |---|---|---|

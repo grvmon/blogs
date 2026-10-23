@@ -23,7 +23,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **A rate cut is easily cancelled:** a 3.75% price rise wipes out the EMI saving from a 0.5-point cut.
 > - **Our READY test** tells you whether you're ready, whatever the market does.
 
-Nobody can time a property market reliably, including us. What you can do is read the current signals honestly and check whether your own situation says buy or wait.
+Nobody can time a property market reliably, including us. What you can do is read the current signals honestly and check whether your own situation says buy or wait. If you are buying jointly, work through our [25 questions for couples before buying a home](https://acrenkey.com/blogs/25-questions-every-couple-should-discuss-before-buying-a-home/).
 
 ![Dashboard of Bengaluru housing signals in October 2026: repo rate, prices, unsold stock and approvals](/img/blog/buy-now-or-wait-signals.png)
 

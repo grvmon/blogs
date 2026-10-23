@@ -24,7 +24,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **Outside the city:** both sit mostly outside GBA, so stamp charges are 7.65% and water depends on borewells and tankers unless a project proves otherwise.
 > - **Our EDGE test:** entity, drainage, guidance gap, expected transit.
 
-Both sit on Old Madras Road (NH-75) east of Whitefield. Budigere Cross is the junction about halfway to Hoskote, surrounded by panchayat villages in Bengaluru East taluk; Hoskote is a town with its own municipal council. This comparison reuses our [Hoskote guide](https://acrenkey.com/blogs/living-in-hoskote-property-rates-metro-water-flood-risk/) and adds gazette data for the villages around Budigere Cross.
+Both sit on Old Madras Road (NH-75) east of Whitefield. Budigere Cross is the junction about halfway to Hoskote, surrounded by panchayat villages in Bengaluru East taluk; Hoskote is a town with its own municipal council. This comparison reuses our [Hoskote guide](https://acrenkey.com/blogs/living-in-hoskote-property-rates-metro-water-flood-risk/) and adds gazette data for the villages around Budigere Cross. For project reviews along Budigere road, see [Brigade Calista](https://acrenkey.com/property/brigade-calista-budigere-cross/) and [Sattva Songbird](https://acrenkey.com/property/sattva-songbird-budigere-road/).
 
 ![Side-by-side chart comparing Hoskote and Budigere Cross on guidance values, governing body, metro plan and water source](/img/blog/hoskote-vs-budigere-cross-chart.png)
 

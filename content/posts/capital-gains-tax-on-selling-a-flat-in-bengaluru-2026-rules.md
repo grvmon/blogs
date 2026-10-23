@@ -23,7 +23,7 @@ date_modified: "2026-10-19"
 > - **Reinvest to save tax:** a new home (s.82) or specified bonds up to ₹50 lakh (s.85).
 > - **Our HOLD test:** holding period, option, low-price check, deploy.
 
-The Income-tax Act 2025 took effect on 1 April 2026 ([PIB](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2248005&lang=1&reg=3)), so section numbers have changed even where the rules look familiar. This guide uses the new numbers. It's general information; your CA should run your actual numbers.
+The Income-tax Act 2025 took effect on 1 April 2026 ([PIB](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2248005&lang=1&reg=3)), so section numbers have changed even where the rules look familiar. This guide uses the new numbers. You can calculate your exact net liability using our [capital gains tax calculator](https://acrenkey.com/calculators/capital-gains-tax-property/). It's general information; your CA should run your actual numbers.
 
 ![Flowchart of capital gains tax on a flat sale: holding period, tax option, stamp value check and reinvestment](/img/blog/capital-gains-flat-flowchart.png)
 

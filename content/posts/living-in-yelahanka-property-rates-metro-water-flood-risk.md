@@ -63,7 +63,7 @@ We haven't found a consultant rent figure for Yelahanka, and listing-portal rent
 
 ### What's being built
 
-Karnataka RERA approved 133 residential, plotted and mixed projects in Yelahanka taluk from 2020 to 15 Oct 2026, peaking at 36 in 2025. About 24% were plotted developments. In January–September 2026 there were 18 approvals, against 26 a year earlier. 22 approved projects have current completion dates in 2027 ([our RERA supply study](https://acrenkey.com/insights/new-rera-registered-projects-bengaluru-by-taluk-2020-2026/)). Note that the taluk is bigger than the town.
+Karnataka RERA approved 133 residential, plotted and mixed projects in Yelahanka taluk from 2020 to 15 Oct 2026, peaking at 36 in 2025. About 24% were plotted developments. In January–September 2026 there were 18 approvals, against 26 a year earlier. 22 approved projects have current completion dates in 2027 ([our RERA supply study](https://acrenkey.com/insights/new-rera-registered-projects-bengaluru-by-taluk-2020-2026/)). Note that the taluk is bigger than the town. If you are deciding whether to stay in Yelahanka or buy further out towards the airport, see our [Devanahalli vs Yelahanka guide](https://acrenkey.com/blogs/devanahalli-vs-yelahanka-for-homebuyers/). For gated enclave diligence, check our review of [Brigade Insignia](https://acrenkey.com/property/brigade-insignia-yelahanka/).
 
 ## Is there a metro in Yelahanka?
 

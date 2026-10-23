@@ -28,7 +28,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **Rental yield:** about 4% gross in the areas we checked, below home loan rates. Buy to live, not as a pure investment play.
 > - **Our test:** if you'll hold 7+ years, have your cash-to-keys ready, and can carry the EMI at +2 pp, the market timing matters less than the property.
 
-Everyone asking "is now a good time?" is really asking two questions: what's the market doing, and is it a good time for me? This page answers both with current data, and we update it every quarter.
+Everyone asking "is now a good time?" is really asking two questions: what's the market doing, and is it a good time for me? Before committing capital across price bands, read our analysis on [cheap vs expensive homes and when each becomes a bad investment](https://acrenkey.com/blogs/cheap-vs-expensive-homes-when-each-becomes-a-bad-investment/). This page answers both with current data, and we update it every quarter.
 
 ![Dashboard of Bengaluru housing indicators for Q3 2026: sales, unsold stock, price growth, repo rate and rental yield](/img/blog/bengaluru-good-time-to-buy-dashboard-q3-2026.png)
 

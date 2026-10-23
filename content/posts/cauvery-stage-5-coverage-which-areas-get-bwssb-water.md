@@ -27,7 +27,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **What you pay:** a pro-rata charge reported at ₹400 per sq m of built-up area, plus a one-time beneficiary charge of ₹5,000 to ₹30,000 per flat in the 110 villages.
 > - **The check that matters:** a recent BWSSB bill or connection record for the building, not a brochure line saying "Cauvery water".
 
-If you're looking at a flat in Whitefield, Mahadevapura, Yelahanka, the outer south or RR Nagar, you've probably heard "Cauvery Stage 5 is coming" or "it's already here". Both can be true in the same ward. This guide shows what Stage 5 covers, what it doesn't, and how to check one building.
+If you're looking at a flat in Whitefield, Mahadevapura, Yelahanka, the outer south or RR Nagar, you've probably heard "Cauvery Stage 5 is coming" or "it's already here". Both can be true in the same ward. For peripheral areas waiting on piped supply or relying on private borewells, see our data study on [Bengaluru groundwater depth by area from CGWB monitoring wells](https://acrenkey.com/insights/bengaluru-groundwater-depth-by-area-cgwb-wells/). This guide shows what Stage 5 covers, what it doesn't, and how to check one building.
 
 ![Map of the eight erstwhile BBMP zones served by Cauvery Stage 5, with the 110 villages added in 2007 shaded](/img/blog/cauvery-stage-5-zones-map.png)
 

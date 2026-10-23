@@ -26,7 +26,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **Encroachments are still being removed.** Of 4,106 drain encroachments identified, 2,395 had been cleared by October 2025.
 > - Use the distance, document, date test below on any property near water.
 
-Our [flood-prone areas map](https://acrenkey.com/blogs/bengaluru-flood-prone-areas-map-from-ksndmc-data/) tells you which parts of the city flood. This page is narrower and more practical: you've found a flat or plot near a lake or a big drain, and you want to know whether it's legally and physically safe to buy.
+Our [flood-prone areas map](https://acrenkey.com/blogs/bengaluru-flood-prone-areas-map-from-ksndmc-data/) tells you which parts of the city flood. For specific buffer zones and drain classifications, consult our [Bengaluru lake buffer and rajakaluve map](https://acrenkey.com/blogs/bengaluru-lake-buffer-and-rajakaluve-map-2026/). This page is narrower and more practical: you've found a flat or plot near a lake or a big drain, and you want to know whether it's legally and physically safe to buy.
 
 ![Checking a Bengaluru property's distance from a lake's revenue boundary and a rajakaluve before buying](/img/blog/lake-rajakaluve-check.png)
 

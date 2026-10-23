@@ -24,7 +24,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **Floods:** the Panathur railway underbridge flooded for the fourth time in four months on 16 October 2026 (news). Varthur lake overflowed in 2022 (news).
 > - **Our GRID test:** gazette line, route in, inundation, distance to work.
 
-Panathur sits between the outer ring road and Varthur, with the railway line running through it. Varthur is further east around its lake. This page builds on our [Varthur guide](https://acrenkey.com/blogs/living-in-varthur-property-rates-metro-water-flood-risk/) and adds gazette data for Panathur.
+Panathur sits between the outer ring road and Varthur, with the railway line running through it. Varthur is further east around its lake. This page builds on our [Varthur guide](https://acrenkey.com/blogs/living-in-varthur-property-rates-metro-water-flood-risk/) and adds gazette data for Panathur. For project-specific diligence along Panathur Road, review our evaluation of [Sobha Neopolis](https://acrenkey.com/property/sobha-neopolis-panathur/).
 
 ![Side-by-side chart comparing Varthur and Panathur on guidance values, metro distance and flood records](/img/blog/varthur-vs-panathur-chart.png)
 

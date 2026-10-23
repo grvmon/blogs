@@ -26,7 +26,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **Water:** a shallow-aquifer plant meets about 10% of the town's demand; a ₹44.87 crore AMRUT 2.0 water scheme is at the project-report stage.
 > - **Our 4A check:** authority, approval, aquifer, access.
 
-Devanahalli is the old fort town next to Kempegowda International Airport, about where the city's northern growth meets farmland. Many people look here because of the airport and the aerospace and IT parks planned around it. This guide sticks to what official records and named sources say, and flags what nobody has published.
+Devanahalli is the old fort town next to Kempegowda International Airport, about where the city's northern growth meets farmland. Many people look here because of the airport and the aerospace and IT parks planned around it. For an in-depth breakdown of master plans, SEZs and infrastructure horizons, see our guide to [Devanahalli real estate future, airport and aerospace park zoning](https://acrenkey.com/blogs/devanahalli-real-estate-future-airport-aerospace-park-zoning/). Compare suburban plots against developed North Bengaluru in our [Devanahalli vs Yelahanka guide](https://acrenkey.com/blogs/devanahalli-vs-yelahanka-for-homebuyers/). For project diligence in the aerospace belt, read our reviews of [Godrej Ananda](https://acrenkey.com/property/godrej-ananda-bagalur/) and [Brigade Oasis](https://acrenkey.com/property/brigade-oasis-devanahalli/).
 
 ![Map of Devanahalli showing the town, the airport, NH-44 and the planned Blue Line stations](/img/blog/devanahalli-map.png)
 

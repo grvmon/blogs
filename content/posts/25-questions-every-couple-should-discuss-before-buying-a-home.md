@@ -23,7 +23,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **No stamp duty discount for women** in Karnataka, so adding a name doesn't cut the 7.6%.
 > - **Our SPLIT test:** shares, payments, loan, insurance, tomorrow.
 
-Couples usually agree on the flat long before they've agreed on the money. These questions are for the two of you, at a table, before the first site visit. For the general pre-search questions, see our [25 questions before house hunting](https://acrenkey.com/blogs/25-questions-to-answer-before-house-hunting-in-bengaluru/).
+Couples usually agree on the flat long before they've agreed on the money. These questions are for the two of you, at a table, before the first site visit. Once you're aligned on budget, evaluate prospective locations using our [neighbourhood checklist for families](https://acrenkey.com/blogs/20-things-families-should-check-before-choosing-a-neighbourhood/). For general pre-search questions, see our [25 questions before house hunting](https://acrenkey.com/blogs/25-questions-to-answer-before-house-hunting-in-bengaluru/).
 
 ![Two partners at a table filling in a shared home-buying worksheet with shares, EMI split and insurance columns](/img/blog/couple-home-buying-worksheet.png)
 

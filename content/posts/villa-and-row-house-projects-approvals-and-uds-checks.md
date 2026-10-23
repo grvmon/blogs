@@ -24,7 +24,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **Approvals stack:** conversion, layout, building plan, commencement, then an occupancy certificate.
 > - **Our DEED test:** division, entitlement, exit, dues.
 
-A villa feels like owning a house, but the paperwork can look like owning a flat. This guide covers what to ask for and how to read it. It builds on our [plot approval checks](https://acrenkey.com/blogs/buying-a-plot-in-bengaluru-bda-bmrda-dtcp-approved-layout-checks/) and [building approval guide](https://acrenkey.com/blogs/bda-bmrda-gba-or-panchayat-checking-approvals-before-you-buy/).
+A villa feels like owning a house, but the paperwork can look like owning a flat. This guide covers what to ask for and how to read it. If you are comparing horizontal developments against high-rise living, see our guide on [gated community vs standalone apartment living](https://acrenkey.com/blogs/gated-community-vs-standalone-building-what-changes-for-buyers/). It builds on our [plot approval checks](https://acrenkey.com/blogs/buying-a-plot-in-bengaluru-bda-bmrda-dtcp-approved-layout-checks/) and [building approval guide](https://acrenkey.com/blogs/bda-bmrda-gba-or-panchayat-checking-approvals-before-you-buy/).
 
 ![Diagram contrasting a villa sold on a marked plot with a villa sold with an undivided share of the whole site](/img/blog/villa-plot-vs-uds.png)
 

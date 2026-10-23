@@ -24,7 +24,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **Yields have shrunk:** on ANAROCK figures, Sarjapur Road fell from about 4.5% at end-2024 to 4.16%, as prices rose faster than rents.
 > - **Our RENT ladder:** rate, entry costs, no-tenant months, running costs.
 
-Most "yield by area" lists mix a portal's rent with another source's price. We've used only figures where the same consultant measured both, and we say where there's no figure at all.
+Most "yield by area" lists mix a portal's rent with another source's price. We've used only figures where the same consultant measured both, and we say where there's no figure at all. If you are debating whether residential buy-to-let yields compare favourably against commercial assets, read our comparison on [commercial vs residential property for individual investors](https://acrenkey.com/blogs/commercial-vs-residential-property-for-individuals-what-changes/). You can also model net cashflows with our [rental yield calculator](https://acrenkey.com/calculators/rental-yield/).
 
 ![Bar chart of gross and net rental yields in five Bengaluru areas from ANAROCK Q1 2026 data](/img/insights/bengaluru-rental-yield-by-area.png)
 

@@ -25,7 +25,7 @@ date_modified: "2026-10-19"
 > - **Which date counts is the real fight.** K-RERA's Aug 2026 order added four months to many registered dates.
 > - **Write first, keep everything, then file.** A refund is due within 60 days once ordered or agreed.
 
-A delayed flat hurts in a specific way. You're paying rent and an EMI at the same time, the updates get vaguer, and everyone has an opinion on whether to fight or wait. The law gives you two clear options. Picking between them is the hard part, and that's about your situation more than the law.
+A delayed flat hurts in a specific way. You're paying rent and an EMI at the same time, the updates get vaguer, and everyone has an opinion on whether to fight or wait. The law gives you two clear options. If you are evaluating which legal forum delivers faster enforcement, compare forums in our guide on [Consumer Court vs RERA vs Civil Court for builder disputes](https://acrenkey.com/blogs/consumer-court-vs-rera-vs-civil-court-for-builder-disputes/). Picking between remedies is about your situation more than the law.
 
 If you're not sure what dates the project registered, start by [checking the project on RERA Karnataka](https://acrenkey.com/blogs/how-to-check-any-bengaluru-project-on-rera-karnataka-step-by-step/).
 

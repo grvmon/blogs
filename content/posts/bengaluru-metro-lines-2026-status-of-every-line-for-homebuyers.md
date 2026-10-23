@@ -101,7 +101,7 @@ Illustrative, at a walking speed of 5 km/h.
 | 800 m | 9.6 minutes | none |
 | 2 km | 24 minutes | about 10.6 hours |
 
-A station 2 km away costs you about 10 extra hours a month on foot. At that distance, many people take a bus or an auto to the station instead, which changes the maths again.
+A station 2 km away costs you about 10 extra hours a month on foot. At that distance, many people take a bus or an auto to the station instead, which changes the maths again. To see exact walking catchments across 82 operating stations, consult our [Namma Metro walk map of localities within 800 m](https://acrenkey.com/blogs/namma-metro-walk-map-localities-within-800-m/).
 
 ### Worked example 3: how targets have slipped
 

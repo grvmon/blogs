@@ -23,7 +23,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **Water and flooding affect daily life** more than a clubhouse does. Ask residents.
 > - **Our HOMES score:** health, open space, movement, essentials, safety, weighted for your family.
 
-Families don't buy a flat. You buy a daily routine: school drop, office commute, weekend park, the late-night pharmacy run. This neighbourhood checklist for families covers that routine in Bengaluru, area by area, before you get attached to a floor plan. For the building itself, use our [site visit checklist](https://acrenkey.com/blogs/site-visit-checklist-inside-the-flat-and-around-the-building/).
+Families don't buy a flat. You buy a daily routine: school drop, office commute, weekend park, the late-night pharmacy run. This neighbourhood checklist for families covers that routine in Bengaluru, area by area, before you get attached to a floor plan. If you are also planning for elder care or multi-generational living, see our guide on [senior living and retirement homes in Bengaluru](https://acrenkey.com/blogs/senior-living-and-retirement-homes-in-bengaluru-what-to-check/). For the building itself, use our [site visit checklist](https://acrenkey.com/blogs/site-visit-checklist-inside-the-flat-and-around-the-building/).
 
 ![Parent and child walking to a school gate on a tree-lined Bengaluru street in the morning](/img/blog/family-neighbourhood-checklist.png)
 

@@ -66,7 +66,7 @@ We didn't find a consultant rent figure for Kanakapura Road. ANAROCK lists the c
 
 ### What's being built
 
-Karnataka RERA approved 556 projects in Bengaluru South taluk between January 2020 and mid-October 2026, including 101 in 2025 ([acre&key analysis of the RERA register](https://acrenkey.com/insights/new-rera-registered-projects-bengaluru-by-taluk-2020-2026/)). The taluk covers far more than this road, and the register has no locality field, so there's no reliable count for Kanakapura Road alone. Before you book, use our [RERA project review guide](https://acrenkey.com/insights/rera-project-review-approvals-timeline-filings-checked/).
+Karnataka RERA approved 556 projects in Bengaluru South taluk between January 2020 and mid-October 2026, including 101 in 2025 ([acre&key analysis of the RERA register](https://acrenkey.com/insights/new-rera-registered-projects-bengaluru-by-taluk-2020-2026/)). The taluk covers far more than this road, and the register has no locality field, so there's no reliable count for Kanakapura Road alone. If you are comparing southern highway corridors, read our [Kanakapura Road vs Bannerghatta Road guide](https://acrenkey.com/blogs/kanakapura-road-vs-bannerghatta-road-for-homebuyers/) and [Mysore Road vs Kanakapura Road guide](https://acrenkey.com/blogs/mysore-road-vs-kanakapura-road-for-homebuyers/). For project diligence along the expressway corridor, see our review of [Casagrand Casablanca](https://acrenkey.com/property/casagrand-casablanca-kanakapura-road/). Before you book, use our [RERA project review guide](https://acrenkey.com/insights/rera-project-review-approvals-timeline-filings-checked/).
 
 ## Is there a metro on Kanakapura Road?
 

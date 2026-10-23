@@ -23,7 +23,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **Stamp duty and registration can't be financed** on homes above ₹10 lakh (RBI).
 > - **Our RATES check:** rate and reset, all-in costs, terms, eligibility, stages.
 
-A home loan lasts longer than most jobs. Twenty minutes of questions before you sign can save lakhs. Here's what to ask your lender in Bengaluru, and the mistakes we see most.
+A home loan lasts longer than most jobs. Twenty minutes of questions before you sign can save lakhs. If you qualify for central government credit-linked subsidies, review the income slabs and carpet area limits in our [PMAY-U 2.0 Bengaluru eligibility guide](https://acrenkey.com/blogs/pmay-u-2-bengaluru-who-qualifies/). To calculate your maximum borrowing capacity and EMI, use the [home loan affordability calculator](https://acrenkey.com/calculators/home-loan-affordability/). Here's what to ask your lender in Bengaluru, and the mistakes we see most.
 
 ![Home loan sanction letter with the spread, reset date and Key Facts Statement highlighted](/img/blog/home-loan-questions.png)
 

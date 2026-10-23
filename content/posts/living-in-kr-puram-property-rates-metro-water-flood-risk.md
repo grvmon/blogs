@@ -59,7 +59,7 @@ We didn't find a published KR Puram rent figure from a named consultant, so we d
 
 ### What's being built, and does it finish on time?
 
-KR Puram falls in Bengaluru East taluk on Karnataka RERA. In our [East RERA study](https://acrenkey.com/insights/do-east-bengaluru-projects-deliver-on-their-rera-date/), the taluk had 1,235 approved housing and plotted projects, and 63.1% still carried their original completion date. The taluk also covers Whitefield and Mahadevapura, so these aren't KR Puram-only figures.
+KR Puram falls in Bengaluru East taluk on Karnataka RERA. In our [East RERA study](https://acrenkey.com/insights/do-east-bengaluru-projects-deliver-on-their-rera-date/), the taluk had 1,235 approved housing and plotted projects (and compare commute corridors against ITPL in our [KR Puram vs Whitefield guide](https://acrenkey.com/blogs/kr-puram-vs-whitefield-for-homebuyers/); for lakeside project diligence, see our review of [Brigade Lakecrest](https://acrenkey.com/property/brigade-lakecrest-kr-puram/)), and 63.1% still carried their original completion date. The taluk also covers Whitefield and Mahadevapura, so these aren't KR Puram-only figures.
 
 ## Is there a metro in KR Puram?
 

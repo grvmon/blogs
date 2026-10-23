@@ -23,7 +23,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **A markup has a monthly cost:** ₹8 lakh financed is about ₹6,943 a month at 8.5% over 20 years.
 > - **Our TRAIN check:** timeline, route to the gate, annoyances, investment markup, next buyer.
 
-"Five minutes from the metro" is on half the hoardings in Bengaluru. Sometimes the metro exists. Sometimes it's a line on a plan. These 15 questions help you work out what you're getting.
+"Five minutes from the metro" is on half the hoardings in Bengaluru. Sometimes the metro exists. Sometimes it's a line on a plan. For projects directly adjoining metro corridors, check whether high-density zoning and commercial allowances apply under [Transit-Oriented Development (TOD) rules in Bengaluru](https://acrenkey.com/blogs/metro-tod-zones-bengaluru-extra-far-buyers/). These 15 questions help you work out what you're getting.
 
 ![Apartment block beside an elevated metro viaduct in Bengaluru, with the walking route to the station marked](/img/blog/buying-near-metro.png)
 

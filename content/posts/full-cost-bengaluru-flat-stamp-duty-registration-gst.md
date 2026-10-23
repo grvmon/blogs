@@ -31,7 +31,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **GST** is 5% (1% for affordable housing) on an under-construction flat, and nil only if you pay the **entire** price after the completion certificate or first occupation.
 > - Banks **can't** lend you the stamp duty and registration on a flat above ₹10 lakh (RBI rule). Plan on paying roughly **a third** of the price in cash, not a quarter.
 
-Most people walk into a site office with one number in their head: the price. The cheque book needs a different number. It's built in layers, and some of those layers can't be paid from your home loan at all. This page takes each layer in the order you'll meet it, puts real rupees against it, and ends with the cash you actually need on the day you get the keys.
+Most people walk into a site office with one number in their head: the price. The cheque book needs a different number. It's built in layers, and some of those layers can't be paid from your home loan at all. For a complete timeline of how Karnataka's registration and duty rates have shifted over the years, see our archive on [Karnataka stamp duty and registration fee history (2003–2026)](https://acrenkey.com/insights/karnataka-stamp-duty-and-registration-fee-history-2003-2026/). This page takes each layer in the order you'll meet it, puts real rupees against it, and ends with the cash you actually need on the day you get the keys.
 
 ![Stacked layers of the total cost of a Bengaluru flat: price, government charges, GST, builder extras, loan costs and post-registration bills](/img/blog/total-cost-layers-bengaluru-flat.png)
 

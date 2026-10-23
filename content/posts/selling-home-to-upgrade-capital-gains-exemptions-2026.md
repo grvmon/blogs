@@ -26,7 +26,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **Hold the new home three years:** sell it sooner and its cost is cut by the exempted gain.
 > - **Our STEP check:** size the gain, time the windows, exemption route, park in CGAS.
 
-Most Bengaluru upgrades follow the same path: a 2BHK bought some years ago, a growing family, and a bigger flat that costs more than the old one sells for. The tax question is whether the profit on the old flat gets taxed on the way. Usually it doesn't have to, if you get the timing right. This piece covers the upgrade case only. For how the gain itself is worked out, see our guide to [capital gains tax on selling a flat](https://acrenkey.com/blogs/capital-gains-tax-on-selling-a-flat-in-bengaluru-2026-rules/).
+Most Bengaluru upgrades follow the same path: a 2BHK bought some years ago, a growing family, and a bigger flat that costs more than the old one sells for. The tax question is whether the profit on the old flat gets taxed on the way. Usually it doesn't have to, if you get the timing right. This piece covers the upgrade case only. For how the gain itself is worked out, see our guide to [capital gains tax on selling a flat](https://acrenkey.com/blogs/capital-gains-tax-on-selling-a-flat-in-bengaluru-2026-rules/) or calculate net liability directly using our [capital gains tax calculator](https://acrenkey.com/calculators/capital-gains-tax-property/).
 
 ## Which law applies to a sale in 2026?
 

@@ -60,7 +60,7 @@ No Varthur rent is published by ANAROCK. Nearby, it quotes ₹30,000 to ₹45,00
 
 ### What's being built
 
-Varthur falls in Bengaluru East taluk on Karnataka RERA. In our [East RERA study](https://acrenkey.com/insights/do-east-bengaluru-projects-deliver-on-their-rera-date/), the taluk had 1,235 approved housing and plotted projects, and 63.1% still carried their original completion date. Many under-construction buyers in the east look at Varthur, so check each project's dates and extensions.
+Varthur falls in Bengaluru East taluk on Karnataka RERA. In our [East RERA study](https://acrenkey.com/insights/do-east-bengaluru-projects-deliver-on-their-rera-date/), the taluk had 1,235 approved housing and plotted projects, and 63.1% still carried their original completion date. Many under-construction buyers in the east look at Varthur, so check each project's dates and extensions. If you are choosing between the lake corridor and the ORR tech parks, compare options in our [Varthur vs Panathur guide](https://acrenkey.com/blogs/varthur-vs-panathur-for-homebuyers/). For project diligence along the corridor, read our evaluations of [Prestige Raintree Park](https://acrenkey.com/property/prestige-raintree-park-varthur/) and [Prestige Lavender Fields](https://acrenkey.com/property/prestige-lavender-fields-varthur/).
 
 ## Is there a metro in Varthur?
 

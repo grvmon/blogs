@@ -24,7 +24,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **October 2026 adds a little:** a 25 bps repo rise lifts a linked EMI by about 1.85%.
 > - **Don't splice old and new series:** the old series put Bengaluru at 27% for H1 2025; the revised one says 34% for 2025.
 
-Knight Frank's index measures the share of an average household's income needed to pay the EMI on an average home in the city. Above 50%, banks rarely lend. We've taken its decade of Bengaluru figures, checked what's changed since, and turned it into numbers you can use for your own budget.
+Knight Frank's index measures the share of an average household's income needed to pay the EMI on an average home in the city. Above 50%, banks rarely lend. We've taken its decade of Bengaluru figures, checked what's changed since, and turned it into numbers you can use for your own budget. To test your own household income and borrowing capacity, try our [home loan affordability calculator](https://acrenkey.com/calculators/home-loan-affordability/).
 
 ![Line chart of Bengaluru EMI-to-income ratio from 2016 to H1 2026 on Knight Frank's revised series](/img/insights/bengaluru-affordability-index-2016-2026.png)
 

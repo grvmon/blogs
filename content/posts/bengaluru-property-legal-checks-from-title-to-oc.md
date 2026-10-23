@@ -27,7 +27,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **A B-Khata costs 5% of guidance value to convert** for applications from 24 Aug 2026.
 > - **Triage every finding** as Stop, Fix before registration, or Note. Never "work around" a Stop.
 
-This page is about order: which documents to check first, and why. Order matters because the early checks can kill a deal, and there's no point paying for an approvals review on a property whose title is broken.
+This page is about order: which documents to check first, and why. Order matters because the early checks can kill a deal, and there's no point paying for an approvals review on a property whose title is broken. For definitions of statutory documents, revenue registers, and real estate jargon, see our [real estate terms and property glossary](https://acrenkey.com/blogs/bengaluru-property-glossary/).
 
 If you're earlier in the journey, the whole buying sequence is in [how to buy a flat in Bengaluru, step by step](https://acrenkey.com/blogs/how-to-buy-a-flat-in-bengaluru-the-full-process-step-by-step/).
 

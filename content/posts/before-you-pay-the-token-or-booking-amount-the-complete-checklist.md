@@ -25,7 +25,7 @@ status: "DRAFT FOR REVIEW. Do not publish. Rebuilt 19 Oct from the 18 Oct draft 
 > - **Red-flag clauses:** cancellation deductions, forfeiture, escalation, layout changes, vague possession dates.
 > - **Our 4P token gate:** pause, prove, paper, pay.
 
-The token is where buyers get rushed. "Only two units left, pay today." Losing a unit is better than losing your money, so run this list first. For most new launches it fits into a day; resale takes a little longer.
+The token is where buyers get rushed. "Only two units left, pay today." Losing a unit is better than losing your money, so run this list first. To see how we screen properties before recommending them, review [acre&key's pre-booking checklist](https://acrenkey.com/blogs/before-we-recommend-a-flat-acre-key-s-pre-booking-checklist/). Also check whether seasonal discounts in [festive flat offers](https://acrenkey.com/blogs/festive-flat-offers-in-bengaluru-which-ones-are-worth-taking/) are worth taking. For most new launches it fits into a day; resale takes a little longer.
 
 ![Checklist of documents, RERA checks and booking-form clauses to verify before paying a token amount on a Bengaluru flat](/img/blog/pre-token-checklist.png)
 

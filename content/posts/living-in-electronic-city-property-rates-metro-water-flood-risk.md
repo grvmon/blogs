@@ -69,7 +69,7 @@ ANAROCK quotes **₹20,000 to ₹31,000 a month** for a 1,000 sq ft 2BHK in Q1 2
 
 ### What's being built
 
-Electronic City falls in Anekal taluk on Karnataka RERA. In our [East RERA study](https://acrenkey.com/insights/do-east-bengaluru-projects-deliver-on-their-rera-date/), Anekal had 874 approved housing and plotted projects, and 72.2% still carried their original completion date. Anekal also covers the outer Sarjapur Road and Chandapura, so it isn't an Electronic City-only figure.
+Electronic City falls in Anekal taluk on Karnataka RERA. In our [East RERA study](https://acrenkey.com/insights/do-east-bengaluru-projects-deliver-on-their-rera-date/), Anekal had 874 approved housing and plotted projects, and 72.2% still carried their original completion date. Anekal also covers the outer Sarjapur Road and Chandapura, so it isn't an Electronic City-only figure. If you are comparing commute corridors to ORR and South Bengaluru tech hubs, see our side-by-side analysis in [Electronic City vs Sarjapur Road for homebuyers](https://acrenkey.com/blogs/electronic-city-vs-sarjapur-road-for-homebuyers/).
 
 ## Is there a metro in Electronic City?
 

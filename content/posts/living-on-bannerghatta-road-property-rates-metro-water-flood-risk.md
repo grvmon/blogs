@@ -68,7 +68,7 @@ We didn't find a consultant rent figure for Bannerghatta Road. Ask for three rec
 
 ### What's being built
 
-The road straddles two taluks. Karnataka RERA approved 556 projects in Bengaluru South taluk and 603 in Anekal taluk between January 2020 and mid-October 2026 ([acre&key analysis of the RERA register](https://acrenkey.com/insights/new-rera-registered-projects-bengaluru-by-taluk-2020-2026/)). Both taluks are far bigger than this road, and the register has no locality field, so there's no reliable count for Bannerghatta Road alone. Use our [RERA project review guide](https://acrenkey.com/insights/rera-project-review-approvals-timeline-filings-checked/) before you book.
+The road straddles two taluks. Karnataka RERA approved 556 projects in Bengaluru South taluk and 603 in Anekal taluk between January 2020 and mid-October 2026 ([acre&key analysis of the RERA register](https://acrenkey.com/insights/new-rera-registered-projects-bengaluru-by-taluk-2020-2026/)). Both taluks are far bigger than this road, and the register has no locality field, so there's no reliable count for Bannerghatta Road alone. If you are comparing South Bengaluru's two major arterial spines, see our data-backed [Kanakapura Road vs Bannerghatta Road comparison](https://acrenkey.com/blogs/kanakapura-road-vs-bannerghatta-road-for-homebuyers/). For verified project checks along Bannerghatta Road, see our reviews of [Prestige Southern Star](https://acrenkey.com/property/prestige-southern-star-bannerghatta-road/) and [Lodha Azur](https://acrenkey.com/property/lodha-azur-bannerghatta-road/). Use our [RERA project review guide](https://acrenkey.com/insights/rera-project-review-approvals-timeline-filings-checked/) before you book.
 
 ## Is there a metro on Bannerghatta Road?
 

@@ -25,7 +25,7 @@ status: "DRAFT FOR REVIEW. Do not publish."
 > - **The K-100 drain matters:** ST Bed Layout flooded in May 2025 (news), and an undersized inlet to Bellandur lake was flagged in April 2026 (news).
 > - **Our 4C check:** catchment, commercial creep, compliance, cost floor.
 
-Koramangala is a planned BDA area in south-east Bengaluru, laid out in numbered blocks between Hosur Road and the inner ring road. It mixes older houses, small apartment blocks and a busy commercial core. This guide uses official records and named sources, and says where data runs out.
+Koramangala is a planned BDA area in south-east Bengaluru, laid out in numbered blocks between Hosur Road and the inner ring road. If you are comparing established, high-value central neighbourhoods with vibrant commercial high streets, see our detailed guide to [Indiranagar property rates, metro access and flood risk](https://acrenkey.com/blogs/living-in-indiranagar-property-rates-metro-water-flood-risk/). It mixes older houses, small apartment blocks and a busy commercial core. This guide uses official records and named sources, and says where data runs out.
 
 ![Map of Koramangala's blocks showing the inner ring road, 80 ft roads, the Koramangala Valley (K-100) drain and planned metro lines](/img/blog/koramangala-map.png)
 
