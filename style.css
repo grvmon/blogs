@@ -636,44 +636,59 @@ p, blockquote, li {
   padding-block: var(--space-xl) var(--space-3xl);
 }
 
-/* Breadcrumbs - strict 1-line display with ellipsis */
+/* Breadcrumbs — matching Answers (.crumbs) architectural style */
 .breadcrumb {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: var(--space-xs);
   font-size: 0.82rem;
-  color: var(--neutral-grey);
+  font-weight: 600;
   list-style: none;
-  margin-bottom: var(--space-lg);
-  flex-wrap: nowrap;
-  overflow: hidden;
-  white-space: nowrap;
+  padding: 14px 0 0;
+  margin-bottom: 12px;
+  line-height: 1.45;
 }
 
 .breadcrumb li {
   display: inline-flex;
   align-items: center;
-  flex-shrink: 0;
 }
 
 .breadcrumb a {
-  color: var(--neutral-grey);
+  color: var(--text-copper-aaa);
   text-decoration: none;
-  transition: color 0.3s ease;
+  font-weight: 600;
+  transition: color 0.2s ease;
 }
 
 .breadcrumb a:hover {
-  color: var(--text-copper-aaa);
+  text-decoration: underline;
 }
 
-.breadcrumb li.bc-current {
-  flex-shrink: 1;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  min-width: 0;
+.breadcrumb .meta-sep {
+  color: var(--neutral-grey);
+  font-weight: 400;
+  margin: 0;
+  user-select: none;
+}
+
+.breadcrumb li.bc-current,
+.breadcrumb [aria-current] {
+  color: var(--neutral-grey);
+  font-weight: 500;
+}
+
+.breadcrumb li.bc-current a,
+.breadcrumb [aria-current] a {
+  color: var(--neutral-grey);
+  text-decoration: none;
+}
+
+.breadcrumb li.bc-current a:hover,
+.breadcrumb [aria-current] a:hover {
   color: var(--text-copper-aaa);
-  font-weight: 600;
+  text-decoration: underline;
 }
 
 /* Article Header */

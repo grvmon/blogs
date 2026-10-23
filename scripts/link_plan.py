@@ -549,12 +549,12 @@ def apply_link_plan(body: str, links: list[dict], post: dict) -> str:
             decisions.append(_decide(link, "placed-nav", "Rendered in the nav, breadcrumb or hub chrome"))
             continue
         count = word_count(link.get("anchor") or "")
-        if count < 2 or count > 5:
+        if count < 2 or count > 10:
             decisions.append(
                 _decide(
                     link,
                     "skipped",
-                    f"anchor is {count} words; in-sentence and block links use 2–5 words",
+                    f"anchor is {count} words; in-sentence and block links use 2–10 words",
                 )
             )
             continue
@@ -788,9 +788,9 @@ def inject_static_html(page: str, links: list[dict], post: dict, sentences: list
             decisions.append(_decide(link, "placed-nav", "Rendered in the nav, breadcrumb or hub chrome"))
             continue
         count = word_count(link.get("anchor") or "")
-        if count < 2 or count > 5:
+        if count < 2 or count > 10:
             decisions.append(
-                _decide(link, "skipped", f"anchor is {count} words; in-sentence and block links use 2–5 words")
+                _decide(link, "skipped", f"anchor is {count} words; in-sentence and block links use 2–10 words")
             )
             continue
         page, wrapped = _wrap_html_paragraphs(page, link["anchor"], link["target"])
@@ -804,9 +804,7 @@ def inject_static_html(page: str, links: list[dict], post: dict, sentences: list
     post["_decisions"] = decisions
     post["_related_blocks"] = placed_blocks
     post["_related_block"] = placed_blocks[0] if placed_blocks else {"title": "", "items": []}
-    sentences_html = "".join(
-        _html_paragraph(sentence) for sentence in (context_sentences(post) + list(sentences or []))
-    )
+    sentences_html = ""
     blocks_html = "\n".join(related_block_html(b["title"], b["items"]) for b in placed_blocks)
     if sentences_html:
         marker = page.find('<section class="faq-section"')
@@ -835,9 +833,9 @@ def classify_index_links(links: list[dict]) -> list[dict]:
         if kind == "hub-sidebar":
             decisions.append(_decide(link, "skipped", "Removed per user request"))
             continue
-        if count < 2 or count > 5:
+        if count < 2 or count > 10:
             decisions.append(
-                _decide(link, "skipped", f"anchor is {count} words; in-sentence and block links use 2–5 words")
+                _decide(link, "skipped", f"anchor is {count} words; in-sentence and block links use 2–10 words")
             )
             continue
         decisions.append(_decide(link, "skipped", "no natural sentence on this page for this anchor"))

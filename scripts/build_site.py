@@ -510,10 +510,6 @@ def prepare_body(
     elif "_decisions" not in post:
         post["_decisions"] = []
         post["_related_block"] = {"title": "", "items": []}
-    extra = list(context_sentences(post))
-    extra.extend(sentences or [])
-    if extra:
-        body = weave_sentences(body, extra)
     dropped_images = {"count": 0}
 
     def on_image_or_later(label: str, url: str, is_image: bool):
@@ -715,7 +711,7 @@ def json_ld(config: dict, post: dict, canonical: str, faqs: list[tuple[str, str]
     }
     crumb = section_crumb(post, config["baseUrl"])
     breadcrumb_items = [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": org["url"]},
+        {"@type": "ListItem", "position": 1, "name": "acre&key", "item": org["url"]},
         {"@type": "ListItem", "position": 2, "name": "Blog", "item": abs_url(config["baseUrl"])},
     ]
     if crumb:
@@ -887,7 +883,7 @@ def json_ld_index(config: dict, posts: list[dict]) -> str:
         {
             "@type": "BreadcrumbList",
             "itemListElement": [
-                {"@type": "ListItem", "position": 1, "name": "Home", "item": org["url"]},
+                {"@type": "ListItem", "position": 1, "name": "acre&key", "item": org["url"]},
                 {"@type": "ListItem", "position": 2, "name": "Blog", "item": canonical},
             ],
         },
@@ -1006,25 +1002,21 @@ def hub_prose(hub: dict) -> str:
 
 
 def hub_intro(hub: dict, base: str) -> str:
-    """One link per sentence. Each hub points at the full guide index and two neighbours."""
+    """Consolidated editorial intro with context links."""
     first, second = sibling_hubs(hub["key"])[:2]
-    paragraphs = [
-        f'<p class="hub-intro">These notes are part of the <a href="{esc(abs_url(base))}">full set of guides</a>.</p>',
-        (
-            f'<p class="hub-intro">The collection beside this one is '
-            f'<a href="{esc(abs_url(base, first["path"]))}">{esc(hub_prose(first))}</a>.</p>'
-        ),
-        (
-            f'<p class="hub-intro">Another grouping is '
-            f'<a href="{esc(abs_url(base, second["path"]))}">{esc(hub_prose(second))}</a>.</p>'
-        ),
-    ]
+    first_url = esc(abs_url(base, first["path"]))
+    second_url = esc(abs_url(base, second["path"]))
+    all_url = esc(abs_url(base))
     if hub["key"] == "areas":
-        paragraphs.append(
-            '<p class="hub-intro">Reviewed projects are listed on the '
-            '<a href="https://acrenkey.com/property/">Properties page</a>.</p>'
+        return (
+            f'<p class="hub-intro">These neighbourhood dossiers are part of our <a href="{all_url}">full set of guides</a>, '
+            f'alongside <a href="{first_url}">{esc(hub_prose(first))}</a> and <a href="{second_url}">{esc(hub_prose(second))}</a>. '
+            f'For verified builder developments across these micro-markets, explore our <a href="https://acrenkey.com/property/">Properties page</a>.</p>'
         )
-    return "\n    ".join(paragraphs)
+    return (
+        f'<p class="hub-intro">These notes are part of our <a href="{all_url}">full set of guides</a>, '
+        f'alongside <a href="{first_url}">{esc(hub_prose(first))}</a> and <a href="{second_url}">{esc(hub_prose(second))}</a>.</p>'
+    )
 
 
 def footer(root: str) -> str:
@@ -1190,7 +1182,7 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
     crumb = section_crumb(post, config["baseUrl"])
     if crumb:
         bc_section_html = (
-            f'\n        <li class="meta-sep" aria-hidden="true">/</li>'
+            f'\n        <li class="meta-sep" aria-hidden="true">›</li>'
             f'\n        <li><a href="{esc(crumb[1])}">{esc(crumb[0])}</a></li>'
         )
     else:
@@ -1210,10 +1202,10 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
   <main id="main-content" class="container blog-detail-container">
     <nav aria-label="Breadcrumb">
       <ol class="breadcrumb">
-        <li><a href="https://acrenkey.com/">Home</a></li>
-        <li class="meta-sep" aria-hidden="true">/</li>
+        <li><a href="https://acrenkey.com/">acre&amp;key</a></li>
+        <li class="meta-sep" aria-hidden="true">›</li>
         <li><a href="{esc(config['baseUrl'])}">Blog</a></li>{bc_section_html}
-        <li class="meta-sep" aria-hidden="true">/</li>
+        <li class="meta-sep" aria-hidden="true">›</li>
         <li class="bc-current" aria-current="page" title="{esc(post['h1'])}">{esc(post['seo_title'])}</li>
       </ol>
     </nav>
@@ -1493,7 +1485,7 @@ def render_hub(config: dict, hub: dict, children: list[dict], excerpts: dict[str
         {
             "@type": "BreadcrumbList",
             "itemListElement": [
-                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://acrenkey.com/"},
+                {"@type": "ListItem", "position": 1, "name": "acre&key", "item": "https://acrenkey.com/"},
                 {"@type": "ListItem", "position": 2, "name": "Blog", "item": abs_url(base)},
                 {"@type": "ListItem", "position": 3, "name": hub["h1"], "item": canonical},
             ],
@@ -1512,10 +1504,10 @@ def render_hub(config: dict, hub: dict, children: list[dict], excerpts: dict[str
   <main id="main-content" class="container">
     <nav aria-label="Breadcrumb">
       <ol class="breadcrumb">
-        <li><a href="https://acrenkey.com/">Home</a></li>
-        <li class="meta-sep" aria-hidden="true">/</li>
+        <li><a href="https://acrenkey.com/">acre&amp;key</a></li>
+        <li class="meta-sep" aria-hidden="true">›</li>
         <li><a href="{esc(abs_url(base))}">Blog</a></li>
-        <li class="meta-sep" aria-hidden="true">/</li>
+        <li class="meta-sep" aria-hidden="true">›</li>
         <li class="bc-current" aria-current="page">{esc(hub['h1'])}</li>
       </ol>
     </nav>
@@ -1828,7 +1820,7 @@ def patch_static_page(page: str, item: dict, links: list[dict], base: str, sente
         if topic_url not in inner:
             insertion = (
                 f'<li><a href="{esc(topic_url)}">{esc(topic)}</a></li>\n'
-                '        <li class="meta-sep" aria-hidden="true">/</li>\n'
+                '        <li class="meta-sep" aria-hidden="true">›</li>\n'
                 "        "
             )
             inner, crumb_count = re.subn(
@@ -1840,6 +1832,9 @@ def patch_static_page(page: str, item: dict, links: list[dict], base: str, sente
             if crumb_count != 1:
                 raise SystemExit(f"Could not patch visible breadcrumb in {item['slug']}")
             page = page[: crumb.start(2)] + inner + page[crumb.end(2) :]
+    page = page.replace('<li><a href="https://acrenkey.com/">Home</a></li>', '<li><a href="https://acrenkey.com/">acre&amp;key</a></li>')
+    page = page.replace('<li class="meta-sep" aria-hidden="true">/</li>', '<li class="meta-sep" aria-hidden="true">›</li>')
+    page = page.replace('{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://acrenkey.com/"}', '{"@type": "ListItem", "position": 1, "name": "acre&key", "item": "https://acrenkey.com/"}')
     digest = asset("style.css").split("?v=", 1)[1]
     page = re.sub(r"style\.css\?v=[A-Za-z0-9]+", f"style.css?v={digest}", page)
     fav_lines = [
@@ -1896,10 +1891,7 @@ def main() -> None:
             unlinked,
             config["baseUrl"],
             plan.get(source, []),
-            [
-                sibling_sentence(post["section"], short_anchor(item["h1"]) or "", abs_url(config["baseUrl"], item["path"]))
-                for item in section_siblings(post, ordered)
-            ],
+            [],
         )
         dropped += prepared[post["slug"]]["dropped_images"]
 
@@ -1948,10 +1940,7 @@ def main() -> None:
             item,
             plan.get(source, []),
             config["baseUrl"],
-            [
-                sibling_sentence(item["section"], short_anchor(other["h1"]) or "", abs_url(config["baseUrl"], other["path"]))
-                for other in section_siblings(item, ordered)
-            ],
+            [],
         )
         path.write_text(page)
         pages[path] = page
