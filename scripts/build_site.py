@@ -117,43 +117,47 @@ AUTHORS = ("Gaurav", "Nitin", "Arvind")
 AUTHOR_PROFILES = {
     "Gaurav": {
         "name": "Gaurav Mongia",
-        "role": "Market Strategy · Product · Tech",
-        "badge": "Co-founder",
+        "role": "Co-Founder · Market Strategy, Product & Tech",
+        "badge": "Co-Founder",
         "jobTitle": "Co-founder & Head of Product & Strategy",
         "avatar": "https://acrenkey.com/style-guide/assets/gaurav-mongia-founder-acre-key.webp",
         "thumb": "https://acrenkey.com/style-guide/assets/gaurav-mongia-founder-acre-key-96.webp",
         "linkedin": "https://www.linkedin.com/in/gaurav-a-mongia/",
-        "description": "Building data-driven evaluation models and micro-market frameworks to give buyers absolute clarity.",
+        "bio_role": "Co-Founder · Market Strategy, Product & Tech",
+        "description": "Technologist and market strategist building transparent valuation and risk-assessment models for East Bengaluru property buyers. Tracks micro-market infrastructure, RERA litigation records, and builder delivery track records.",
     },
     "Nitin": {
         "name": "Nitin Gupta",
-        "role": "Investments · Decision Framework",
-        "badge": "Co-founder",
+        "role": "Co-Founder · Investments & Decision Framework",
+        "badge": "Co-Founder",
         "jobTitle": "Co-founder & Head of Investments",
         "avatar": "https://acrenkey.com/style-guide/assets/nitin-gupta-founder-acre-key.webp",
         "thumb": "https://acrenkey.com/style-guide/assets/nitin-gupta-founder-acre-key-96.webp",
         "linkedin": "https://www.linkedin.com/in/nitin-gupta-7446864/",
-        "description": "Former corporate finance leader applying institutional diligence and quantitative risk models to home buying in Bengaluru.",
+        "bio_role": "Co-Founder · Investments & Decision Framework",
+        "description": "Former corporate finance leader applying institutional diligence and quantitative risk models to home buying in Bengaluru. Advises buyers on payment structuring, home loan eligibility, capital gains, tax optimization, and long-term asset security.",
     },
     "Arvind": {
         "name": "Arvind Patidar",
-        "role": "Advisory · Execution",
-        "badge": "Co-founder",
+        "role": "Co-Founder · Operations, CEX & Tech",
+        "badge": "Co-Founder",
         "jobTitle": "Co-founder & Head of Operations",
         "avatar": "https://acrenkey.com/style-guide/assets/arvind-patidar-founder-acre-key.webp",
         "thumb": "https://acrenkey.com/style-guide/assets/arvind-patidar-founder-acre-key-96.webp",
-        "linkedin": "https://www.linkedin.com/in/arvind-patidar/",
-        "description": "Operations and engineering leader ensuring flawless execution, civic compliance, and zero-compromise due diligence.",
+        "linkedin": "https://www.linkedin.com/in/arvindpatidar123/",
+        "bio_role": "Co-Founder · Operations, CEX & Tech",
+        "description": "Engineering and operations leader specializing in physical due diligence, civic compliance, and execution rigor. Oversees property title inspections, BBMP/BDA/Panchayat approvals, Kaveri 2 registration, defect audits, and society handovers.",
     },
     "Piyush": {
         "name": "Piyush Mittal",
-        "role": "Partner & CBO",
+        "role": "Partner & CBO · Partnerships, Investments & Expansion",
         "badge": "Partner & CBO",
         "jobTitle": "Partner & Chief Business Officer",
         "avatar": "https://acrenkey.com/style-guide/assets/piyush-mittal-cbo-partner-acre-key.webp",
         "thumb": "https://acrenkey.com/style-guide/assets/piyush-mittal-cbo-partner-acre-key-96.webp",
         "linkedin": "https://www.linkedin.com/in/piyushmittal97/",
-        "description": "Leading developer vetting, contract risk management, deal structuring, and strict fiduciary governance for buyers.",
+        "bio_role": "Partner & CBO · Partnerships, Investments & Expansion",
+        "description": "Seasoned real estate strategist leading developer vetting, commercial negotiation, and contractual risk management. Specializes in dissecting sale agreements, eliminating unapproved markups, and enforcing strict RERA compliance for buyers.",
     },
 }
 IMAGE_W, IMAGE_H = 1200, 675
@@ -1196,7 +1200,7 @@ def render_post(config: dict, post: dict, prepared: dict, posts: list[dict], ids
             "description": "Building data-driven evaluation models and micro-market frameworks to give buyers absolute clarity.",
         },
     )
-    bio_role = f"{profile['jobTitle']} · {profile['role']}" if profile.get("jobTitle") and profile["jobTitle"] != profile.get("role") else profile.get("role", "")
+    bio_role = profile.get("bio_role") or (f"{profile['jobTitle']} · {profile['role']}" if profile.get("jobTitle") and profile["jobTitle"] != profile.get("role") else profile.get("role", ""))
     crumb = section_crumb(post, config["baseUrl"])
     if crumb:
         bc_section_html = f'\n        <li><a href="{esc(crumb[1])}">{esc(crumb[0])}</a></li>'
@@ -1884,7 +1888,7 @@ def patch_static_page(page: str, item: dict, links: list[dict], base: str, sente
       </div>"""
         page = re.sub(r'<div class="author-byline-card">[\s\S]*?</header>', f'{new_author_card}\n    </header>', page, count=1)
 
-        bio_role = f"{profile['jobTitle']} · {profile['role']}" if profile.get("jobTitle") and profile["jobTitle"] != profile.get("role") else profile.get("role", "")
+        bio_role = profile.get("bio_role") or (f"{profile['jobTitle']} · {profile['role']}" if profile.get("jobTitle") and profile["jobTitle"] != profile.get("role") else profile.get("role", ""))
         new_bio_card = f"""<aside class="author-bio-card" aria-label="About the author">
           <div class="author-bio-top">
             <div class="author-bio-avatar-wrap">
